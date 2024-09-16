@@ -15,3 +15,17 @@ $govuk-font-family: 'Inter', sans-serif;
 // 
 
 // Add extra styles here
+
+.dfe-page-hero {
+    padding-top: 40px;
+    padding-bottom: 30px;
+    background-color:#1a4e78
+}
+
+.dfe-page-hero .govuk-body, .dfe-page-hero .govuk-body-l, .dfe-page-hero .govuk-heading-l, .dfe-page-hero .govuk-heading-xl, .dfe-page-hero i {
+    color:#fff
+}
+
+.dfe-page-hero .govuk-heading-l, .dfe-page-hero .govuk-heading-xl {
+    margin-bottom:25px
+}

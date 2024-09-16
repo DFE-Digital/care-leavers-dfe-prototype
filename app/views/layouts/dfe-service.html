@@ -14,17 +14,17 @@ https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
 {% block header %}
 
 {{ header({
-    "showNav": "false",
+    "showNav": "true",
     "showSearch": "false",
     "showHeaderActionLinks": "false",
     "logoPath": "public/images",
     "searchAction": "/search/",
     "searchInputName": "q",
     "logoAltText": "Department for Education",
-    "homeHref": "https://gov.uk",
+    "homeHref": "/get-support",
     "selectedNav": view,
     "service": {
-      "name": "Service name",
+      "name": "Care leavers support",
       "serviceUrl": "/"
     },
     "headerActionLinks": [
@@ -40,13 +40,16 @@ https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
     "primaryLinks": [
         {
         "url"  : "#",
-        "label" : "Home"
+        "label" : "Get support"
       }, {
         "url"  : "#",
-        "label" : "About"
+        "label" : "All support"
+      },  {
+        "url"  : "#",
+        "label" : "Leaving care process"
       }, {
         "url"  : "#",
-        "label" : "News"
+        "label" : "Help and advice"
       }
     ]
   })

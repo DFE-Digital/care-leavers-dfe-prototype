@@ -1,0 +1,119 @@
+{% extends "/layouts/dfe-service.html" %}
+
+{% set pageName="Get support" %}
+
+{% block header %}
+
+
+{{ header({
+    "showNav": "true",
+    "showSearch": "false",
+    "showHeaderActionLinks": "false",
+    "logoPath": "public/images",
+    "searchAction": "/search/",
+    "searchInputName": "q",
+    "logoAltText": "Department for Education",
+    "homeHref": "/get-support",
+    "selectedNav": view,
+    "service": {
+      "name": "Care leavers support",
+      "serviceUrl": "/"
+    },
+    "headerActionLinks": [
+      {
+        "url"  : "/",
+        "label" : "My account"
+      },
+      {
+        "url"  : "/",
+        "label" : "Sign out"
+      }
+    ],
+    "primaryLinks": [
+        {
+        "url"  : "#",
+        "label" : "Get support"
+      }, {
+        "url"  : "#",
+        "label" : "All support"
+      },  {
+        "url"  : "#",
+        "label" : "Leaving care process"
+      }, {
+        "url"  : "#",
+        "label" : "Help and advice"
+      }
+    ]
+  })
+}}
+<section class="dfe-page-hero">
+   <div class="govuk-width-container">
+      <div class="govuk-grid-row">
+         <div class="govuk-grid-column-two-thirds">
+            <h1 class="govuk-heading-xl govuk-!-font-size-80">Get support</h1>
+            <p class="govuk-body-l">When you leave care, you're entitled to government support.</p>
+         </div>
+      </div>
+   </div>
+</section>
+
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-l">
+      Check what support you're entitled to
+    </h1>
+    <p>When you leave care, you're entitled to government support.</p>
+    <p>Some of this is the same nationally, but some changes based on who your local council is.</p>
+    <p>How much you get depends on 'care leaver status', which is based on the time you spent in care.</p>
+    <p>Find out your status and what support you are entitled to by answering these questions first.</p>
+    {{ govukButton({
+      text: "Start"
+    }) }}
+  </div>
+  <div class="govuk-grid-column-one-third"></div>
+</div>
+  <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+    <section class="dfe-section govuk-!-margin-top-5">
+       <div class="govuk-width-container">
+          <h2 class="govuk-heading-l">Further support</h2>
+          <div class="dfe-grid-container dfe-grid-container--wider govuk-!-margin-top-5">
+             <div class="dfe-card">
+                <div class="dfe-card-container">
+                   <h3 class="govuk-heading-m">
+                      <a href="/all-support" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">View all support</a>
+                   </h3>
+                   <p>[with short description, including they need to go through checker]</p>
+                </div>
+             </div>
+             <div class="dfe-card">
+                <div class="dfe-card-container">
+                   <h3 class="govuk-heading-m">
+                      <a href="/leaving-care-process" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Leaving care process</a>
+                   </h3>
+                   <p>Aenean vehicula dolor leo, laoreet malesuada ipsum tincidunt et. Nullam sed ornare dolor. Vestibulum tincidunt nisi vitae pellentesque elementum.</p>
+                </div>
+             </div>
+             <div class="dfe-card">
+                <div class="dfe-card-container">
+                   <h3 class="govuk-heading-m">
+                      <a href="/help-and-advice" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Help and advice</a>
+                   </h3>
+                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean bibendum purus in vehicula elementum. Praesent neque ipsum, interdum non fringilla at, iaculis sed erat. 
+                   </p>
+                </div>
+             </div>
+          </div>
+       </div>
+    </section>
+    
+  </div>
+</div>
+
+{% endblock %}
