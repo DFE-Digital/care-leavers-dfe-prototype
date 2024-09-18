@@ -1,0 +1,49 @@
+{% extends "/layouts/dfe-service.html" %}
+
+{% set pageName="Entitlement checker" %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+   {{ govukBackLink({
+     text: "Back",
+     href: "16-care-weeks"
+   }) }}
+
+    <form class="form" action="/16-incare-currently" method="post">
+      <span class="govuk-caption-l">Leaving care entitlement checker</span>
+    {{ govukRadios({
+      name: "incarecurrently",
+      value: data['incarecurrently'],
+      fieldset: {
+        legend: {
+          text: "Are you currently in care?",
+          isPageHeading: true,
+          classes: "govuk-fieldset__legend--l"
+        }
+      },
+      items: [
+        {
+          value: "yes",
+          text: "Yes"
+        },
+        {
+          value: "no",
+          text: "No"
+        }
+      ]
+    }) }}
+
+    {{ govukButton({
+      text: "Continue"
+    }) }}
+
+    </form>
+    
+  </div>
+</div>
+
+{% endblock %}

@@ -5,7 +5,7 @@
 {% block content %}
 
 <div class="govuk-grid-row">
-  <div class="govuk-grid-column-one-quarter">
+  <div class="govuk-grid-column-one-third">
     <div class="care-filter">
       <h2 class="govuk-heading-s">Filter</h2>
       {{ govukCheckboxes({
@@ -66,7 +66,8 @@
         items: [
           {
             value: "all",
-            text: "All"
+            text: "All",
+            checked: true
           },
           {
             value: "relevant-child",
@@ -85,7 +86,7 @@
             text: "Qualifying care leaver"
           },
           {
-            value: "ncare-experience",
+            value: "care-experience",
             text: "Someone with care experience"
           },
           {
@@ -109,7 +110,18 @@
   </div>
 
   
-  <div class="govuk-grid-column-three-quarters">
+  <div class="govuk-grid-column-two-thirds">
+
+    {% set html %}
+      <p>
+        <strong>This is support available to young people, but you may not be entitled to all of it. See what you're entitled to by using our 
+        <a class="govuk-notification-banner__link" href="#">entitlement checker</a>.</strong>
+      </p>
+    {% endset %}
+
+    {{ govukNotificationBanner({
+      html: html
+    }) }}
 
     <h1 class="govuk-heading-xl">
       All support
@@ -122,116 +134,77 @@
   items: [
     {
       heading: {
-        text: "Understanding agile project management"
+        text: "Care leavers allowance"
       },
       summary: {
-        text: "Introductions, methods, core features."
+        html: "<p><strong class='govuk-tag govuk-tag--green' style='max-width: 180px;'>
+          Former relevant child
+        </strong></p><p>Brief description of what it is...</p>"
       },
       content: {
         html:
-        '<ul class="govuk-list">
+        '<p>A little bit more info but not too much</p>
+        <ul class="govuk-list">
             <li>
-              <a class="govuk-link" href="#">Agile and government services: an introduction</a>
-            </li>
-            <li>
-              <a class="govuk-link" href="#">Agile methods: an introduction</a>
-            </li>
-            <li>
-              <a class="govuk-link" href="#">Core principles of agile</a>
-            </li>
+              <a class="govuk-link" href="#">Find out more</a>
+
         </ul>'
       }
     },
     {
       heading: {
-        text: "Working with agile methods"
+        text: "Specific support"
       },
       summary: {
-        text: "Workspaces, tools and techniques, user stories, planning."
+        html: "<p><strong class='govuk-tag govuk-tag--blue' style='max-width: 180px;'>
+          Eligible child
+        </strong></p><p>Brief description of what it is...</p>"
       },
       content: {
         html:
-        '<ul class="govuk-list">
+        '<p>A little bit more info but not too much</p>
+        <ul class="govuk-list">
             <li>
-              <a class="govuk-link" href="#">Creating an agile working environment</a>
-            </li>
-            <li>
-              <a class="govuk-link" href="#">Agile tools and techniques</a>
-            </li>
-            <li>
-              <a class="govuk-link" href="#">Set up a team wall</a>
-            </li>
-            <li>
-              <a class="govuk-link" href="#">Writing user stories</a>
-            </li>
-            <li>
-              <a class="govuk-link" href="#">Planning in agile</a>
-            </li>
-            <li>
-              <a class="govuk-link" href="#">Deciding on priorities</a>
-            </li>
-            <li>
-              <a class="govuk-link" href="#">Developing a roadmap</a>
-            </li>
+              <a class="govuk-link" href="#">Find out more</a>
+
         </ul>'
       }
     },
     {
       heading: {
-        text: "Governing agile services"
+        text: "Specific support"
       },
       summary: {
-        text: "Principles, measuring progress, spending money."
+        html: "<p><strong class='govuk-tag govuk-tag--yellow' style='max-width: 180px;'>
+          Qualifying care leaver
+        </strong></p><p>Brief description of what it is...</p>"
       },
       content: {
         html:
-        '<ul class="govuk-list">
+        '<p>A little bit more info but not too much</p>
+        <ul class="govuk-list">
             <li>
-              <a class="govuk-link" href="#">Governance principles for agile service delivery</a>
-            </li>
-            <li>
-              <a class="govuk-link" href="#">Measuring and reporting progress</a>
-            </li>
-            <li>
-              <a class="govuk-link" href="#">Spend controls: check if you need approval to spend money on a service</a>
-            </li>
-            <li>
-              <a class="govuk-link" href="#">Spend controls: apply for approval to spend money on a service</a>
-            </li>
-            <li>
-              <a class="govuk-link" href="#">Spend controls: the new pipeline process</a>
-            </li>
-            <li>
-              <a class="govuk-link" href="#">Working across organisational boundaries</a>
-            </li>
+              <a class="govuk-link" href="#">Find out more</a>
+
         </ul>'
       }
     },
     {
       heading: {
-        text: "Phases of an agile project"
+        text: "Universal Credit"
       },
       summary: {
-        text: "Discovery, alpha, beta, live and retirement."
+        html: "<p><strong class='govuk-tag govuk-tag--yellow' style='max-width: 180px;'>
+          Qualifying care leaver
+        </strong></p><p>Brief description of what it is...</p>"
       },
       content: {
         html:
-        '<ul class="govuk-list">
+        '<p>A little bit more info but not too much</p>
+        <ul class="govuk-list">
             <li>
-              <a class="govuk-link" href="#">How the discovery phase works</a>
-            </li>
-            <li>
-              <a class="govuk-link" href="#">How the alpha phase works</a>
-            </li>
-            <li>
-              <a class="govuk-link" href="#">How the beta phase works</a>
-            </li>
-            <li>
-              <a class="govuk-link" href="#">How the live phase works</a>
-            </li>
-            <li>
-              <a class="govuk-link" href="#">Retiring your service</a>
-            </li>
+              <a class="govuk-link" href="#">Find out more</a>
+
         </ul>'
       }
     }

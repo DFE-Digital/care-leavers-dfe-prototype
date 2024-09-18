@@ -1,0 +1,125 @@
+{% extends "/layouts/dfe-service.html" %}
+
+{% set pageName="Support for eligible child" %}
+
+
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    {% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+
+    {{ govukBreadcrumbs({
+      collapseOnMobile: true,
+      items: [
+        {
+          text: "Get support",
+          href: "get-support"
+        },
+        {
+          text: "Eligible child",
+          href: "support-eligible-child"
+        }
+      ]
+    }) }}
+
+    
+
+    {{ govukPanel({
+      titleText: "Eligible child",
+      html: "You are considered a 'Eligible child' which means that you are entitled to support"
+    }) }}
+
+    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+    <h1 class="govuk-heading-l">
+      Support for eligible child
+    </h1>
+    
+    <div class="govuk-summary-card">
+      <div class="govuk-summary-card__title-wrapper">
+        <h2 class="govuk-summary-card__title"><a href="support-care-allowance">Care leavers allowance</a></h2>
+      </div>
+      <div class="govuk-summary-card__content">
+        <p>Brief description of what this is...</p>
+        <code>Money and finance</code>
+      </div>
+    </div>
+
+    <div class="govuk-summary-card">
+      <div class="govuk-summary-card__title-wrapper">
+        <h2 class="govuk-summary-card__title"><a href="support-care-allowance">Specific support</a></h2>
+      </div>
+      <div class="govuk-summary-card__content">
+        <p>Brief description of what this is...</p>
+        <code>Housing</code>
+      </div>
+    </div>
+
+    <div class="govuk-summary-card">
+      <div class="govuk-summary-card__title-wrapper">
+        <h2 class="govuk-summary-card__title"><a href="support-care-allowance">Specific support</a></h2>
+      </div>
+      <div class="govuk-summary-card__content">
+        <p>Brief description of what this is...</p>
+        <code>Money and finance</code>
+      </div>
+    </div>
+
+    <div class="govuk-summary-card">
+      <div class="govuk-summary-card__title-wrapper">
+        <h2 class="govuk-summary-card__title"><a href="support-care-allowance">Universal Credit</a></h2>
+      </div>
+      <div class="govuk-summary-card__content">
+        <p>Brief description of what this is...</p>
+        <code>Money and finance</code>
+      </div>
+    </div>
+
+    
+    
+    
+  </div>
+  
+</div>
+  <!-- <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+    <section class="dfe-section govuk-!-margin-top-5">
+       <div class="govuk-width-container">
+          <h2 class="govuk-heading-l">Further support</h2>
+          <div class="dfe-grid-container dfe-grid-container--wider govuk-!-margin-top-5">
+             <div class="dfe-card">
+                <div class="dfe-card-container">
+                   <h3 class="govuk-heading-m">
+                      <a href="/all-support" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">View all support</a>
+                   </h3>
+                   <p>[with short description, including they need to go through checker]</p>
+                </div>
+             </div>
+             <div class="dfe-card">
+                <div class="dfe-card-container">
+                   <h3 class="govuk-heading-m">
+                      <a href="/leaving-care-process" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Leaving care process</a>
+                   </h3>
+                   <p>Aenean vehicula dolor leo, laoreet malesuada ipsum tincidunt et. Nullam sed ornare dolor. Vestibulum tincidunt nisi vitae pellentesque elementum.</p>
+                </div>
+             </div>
+             <div class="dfe-card">
+                <div class="dfe-card-container">
+                   <h3 class="govuk-heading-m">
+                      <a href="/help-and-advice" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Help and advice</a>
+                   </h3>
+                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean bibendum purus in vehicula elementum. Praesent neque ipsum, interdum non fringilla at, iaculis sed erat. 
+                   </p>
+                </div>
+             </div>
+          </div>
+       </div>
+    </section> -->
+    
+  </div>
+</div>
+
+{% endblock %}

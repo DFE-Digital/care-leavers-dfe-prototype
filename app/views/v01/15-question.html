@@ -1,0 +1,72 @@
+{% extends "/layouts/dfe-service.html" %}
+
+{% set pageName="Entitlement checker" %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+   {{ govukBackLink({
+     text: "Back",
+     href: "entitlement-checker"
+   }) }}
+
+    <form class="form" action="/15-question" method="post">
+      <span class="govuk-caption-l">Leaving care entitlement checker</span>
+    {{ govukRadios({
+      name: "check",
+      value: data['check'],
+      fieldset: {
+        legend: {
+          text: "Which of the following apply to you?",
+          isPageHeading: true,
+          classes: "govuk-fieldset__legend--l"
+        }
+      },
+      items: [
+        {
+          value: "incare",
+          text: "I'm in care or have been in care"
+        },
+        {
+          value: "custody",
+          text: "I'm in custody or have been in custody"
+        },
+        {
+          value: "asylum",
+          text: "I came to the UK to seek asylum"
+        },
+        {
+          value: "none",
+          text: "None of these"
+        }
+      ]
+    }) }}
+
+    {{ govukButton({
+      text: "Continue"
+    }) }}
+
+    </form>
+
+    {{ govukDetails({
+      summaryText: "What 'in care' means",
+      text: "In care is a term the government use...."
+    }) }}
+
+    {{ govukDetails({
+      summaryText: "What 'in custody' means",
+      text: "In custody is a term the government use...."
+    }) }}
+
+    {{ govukDetails({
+      summaryText: "What 'seek asylum' means",
+      text: "Seek asylum is a term the government use...."
+    }) }}
+    
+  </div>
+</div>
+
+{% endblock %}
