@@ -44,3 +44,42 @@ $govuk-font-family: 'Inter', sans-serif;
     border: 1px solid $govuk-border-colour;
     padding: 15px;
 }
+
+.full-width-image {
+  max-width: 100%;
+}
+
+
+.hf-card-container {
+  background-color: #f3f2f1;
+  border-bottom: 3px solid #003a69;
+}
+.hf-card a {
+  text-decoration: none;
+}
+.hf-card a .hf-card-details p {
+  color: #0b0c0c;
+}
+.hf-card a .hf-card-details h2,
+.hf-card a h3 {
+  color: #155388;
+}
+.hf-card a:hover .hf-card-container {
+  background-color: #003a69;
+}
+.hf-card a:hover .hf-card-container .hf-card-details p,
+.hf-card a:hover .hf-card-container .hf-card-details h2,
+.hf-card a:hover .hf-card-container .hf-card-details h3 {
+  color: #ffffff;
+}
+
+.hf-card-details {
+  padding: 30px;
+  min-height: 190px;
+}
+@media (max-width: 40.0525em) {
+  .hf-card-details {
+    padding: 25px;
+    min-height: 170px;
+  }
+}
