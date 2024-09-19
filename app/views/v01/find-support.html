@@ -13,7 +13,7 @@
     "searchAction": "/search/",
     "searchInputName": "q",
     "logoAltText": "Department for Education",
-    "homeHref": "/get-support",
+    "homeHref": "/find-support",
     "selectedNav": view,
     "service": {
       "name": "Find support for leaving care",
@@ -31,7 +31,7 @@
     ],
     "primaryLinks": [
         {
-        "url"  : "get-support",
+        "url"  : "find-support",
         "label" : "Find support"
       }, {
         "url"  : "all-support",
@@ -50,8 +50,8 @@
    <div class="govuk-width-container">
       <div class="govuk-grid-row">
          <div class="govuk-grid-column-two-thirds">
-            <h1 class="govuk-heading-xl govuk-!-font-size-80">Find support</h1>
-            <p class="govuk-body-l">When you leave care, you're entitled to government support.</p>
+            <h1 class="govuk-heading-xl govuk-!-font-size-80">Find support for leaving care</h1>
+            <p class="govuk-body-l">You may be entitled to financial, housing and other support if you’re between 15 and 25 and have been in care.</p>
          </div>
       </div>
    </div>
@@ -65,17 +65,28 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    <h1 class="govuk-heading-l">
+    <h2 class="govuk-heading-l">
       Check what support you're entitled to
-    </h1>
-    <p>When you leave care, you're entitled to government support.</p>
-    <p>Some of this is the same nationally, but some changes based on who your local council is.</p>
-    <p>How much you get depends on 'care leaver status', which is based on the time you spent in care.</p>
-    <p>Find out your status and what support you are entitled to by answering these questions first.</p>
-    {{ govukButton({
-      text: "Start",
-      href: "entitlement-checker"
-    }) }}
+    </h2>
+    <p class="govuk-body">What support you’re entitled to depends on your care leaver status.</p>
+    <p class="govuk-body">This is based on how long you were in care and when, as well as your age.</p>
+
+    <h3 class="govuk-heading-m">Who this service is for</h3>
+    <p class="govuk-body">You can use this service if you’re 15 to 25 and have been:
+      <ul class="govuk-list govuk-list--bullet">
+         <li>in foster care</li>
+         <li>in residential care</li>
+         <li>under special guardianship</li>
+         <li>in custody (for example, in a secure children's home, secure training centre or young offender institution)</li>
+         <li>an unaccompanied asylum-seeking child or young person (UASC).</li>
+      </ul></p>
+
+</p>
+       {{ govukButton({
+        text: "Start now",
+        href: "entitlement-checker",
+        isStartButton: true
+      }) }}
   </div>
   <div class="govuk-grid-column-one-third">
      <div><img src="/public/images/care04.jpg" alt="Dad and daughter" style="max-width: 100%;"></div>
@@ -87,16 +98,16 @@
 
           <section class="dfe-section govuk-!-margin-top-5">
              <div class="govuk-width-container">
-                <h2 class="govuk-heading-l">Further support</h2>
+                <h2 class="govuk-heading-l">Helpful links</h2>
                 <div class="dfe-grid-container dfe-grid-container--wider govuk-!-margin-top-5">
 
                   <div class="hf-card">
                      <a href="/support-for-practitioners">
                         <div class="hf-card-container">
-                           <img class="full-width-image" alt="Support for practitioners thumbnail" title="A group of female early years practitioners have a coffee break" src="/public/images/care02.jpg">
+                           <img class="full-width-image" alt="Support for practitioners thumbnail" src="/public/images/care02.jpg">
                            <div class="hf-card-details">
                               <h3 class="govuk-heading-m">View all support</h3>
-                              <p class="govuk-body"> Praesent neque ipsum, interdum non fringilla at, iaculis sed erat. Aenean vehicula dolor leo, laoreet malesuada ipsum tincidunt et.</p>
+                              <p class="govuk-body">If you already know your care leaver status, you can browse and filter all the support available</p>
                            </div>
                         </div>
                      </a>
@@ -105,10 +116,10 @@
                   <div class="hf-card">
                      <a href="/support-for-practitioners">
                         <div class="hf-card-container">
-                           <img class="full-width-image" alt="Support for practitioners thumbnail" title="A group of female early years practitioners have a coffee break" src="/public/images/care01.jpg">
+                           <img class="full-width-image" alt="Support for practitioners thumbnail" src="/public/images/care01.jpg">
                            <div class="hf-card-details">
-                              <h3 class="govuk-heading-m">Leaving care process</h3>
-                              <p class="govuk-body">Aenean vehicula dolor leo, laoreet malesuada ipsum tincidunt et. Nullam sed ornare dolor. Vestibulum tincidunt nisi vitae pellentesque elementum.</p>
+                              <h3 class="govuk-heading-m">Care leaving process</h3>
+                              <p class="govuk-body">Find out what happens before you leave care and how your local council must support you when you leave</p>
                            </div>
                         </div>
                      </a>
@@ -117,10 +128,10 @@
                   <div class="hf-card">
                      <a href="/support-for-practitioners">
                         <div class="hf-card-container">
-                           <img class="full-width-image" alt="Support for practitioners thumbnail" title="A group of female early years practitioners have a coffee break" src="/public/images/care03.jpg">
+                           <img class="full-width-image" alt="Support for practitioners thumbnail" src="/public/images/care03.jpg">
                            <div class="hf-card-details">
                               <h3 class="govuk-heading-m">Help and advice</h3>
-                              <p class="govuk-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean bibendum purus in vehicula elementum.</p>
+                              <p class="govuk-body">If you’re struggling and need someone to talk to, view our list of helplines and services for support</p>
                            </div>
                         </div>
                      </a>
