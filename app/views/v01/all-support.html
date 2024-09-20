@@ -115,7 +115,7 @@
     {% set html %}
       <p>
         <strong>This is support available to young people, but you may not be entitled to all of it. See what you're entitled to by using our 
-        <a class="govuk-notification-banner__link" href="#">entitlement checker</a>.</strong>
+        <a class="govuk-notification-banner__link" href="entitlement-checker">entitlement checker</a>.</strong>
       </p>
     {% endset %}
 
@@ -127,89 +127,46 @@
       All support
     </h1>
 
-    {% from "govuk/components/accordion/macro.njk" import govukAccordion %}
+    <div class="govuk-summary-card">
+      <div class="govuk-summary-card__title-wrapper">
+        <h2 class="govuk-summary-card__title"><a href="help-care-leavers-grant">Care Leavers Grant</a></h2>
+      </div>
+      <div class="govuk-summary-card__content">
+        <p>Brief description of what this is...</p>
+        <code>Money and finance</code>
+      </div>
+    </div>
 
-{{ govukAccordion({
-  id: "accordion-with-summary-sections",
-  items: [
-    {
-      heading: {
-        text: "Care Leavers Grant"
-      },
-      summary: {
-        html: "<p><strong class='govuk-tag govuk-tag--green' style='max-width: 180px;'>
-          Former relevant child
-        </strong></p><p>Brief description of what it is...</p>"
-      },
-      content: {
-        html:
-        '<p>A little bit more info but not too much</p>
-        <ul class="govuk-list">
-            <li>
-              <a class="govuk-link" href="#">Find out more</a>
+    <div class="govuk-summary-card">
+      <div class="govuk-summary-card__title-wrapper">
+        <h2 class="govuk-summary-card__title"><a href="help-care-leavers-grant">Specific support</a></h2>
+      </div>
+      <div class="govuk-summary-card__content">
+        <p>Brief description of what this is...</p>
+        <code>Housing</code>
+      </div>
+    </div>
 
-        </ul>'
-      }
-    },
-    {
-      heading: {
-        text: "Specific support"
-      },
-      summary: {
-        html: "<p><strong class='govuk-tag govuk-tag--blue' style='max-width: 180px;'>
-          Eligible child
-        </strong></p><p>Brief description of what it is...</p>"
-      },
-      content: {
-        html:
-        '<p>A little bit more info but not too much</p>
-        <ul class="govuk-list">
-            <li>
-              <a class="govuk-link" href="#">Find out more</a>
+    <div class="govuk-summary-card">
+      <div class="govuk-summary-card__title-wrapper">
+        <h2 class="govuk-summary-card__title"><a href="help-care-leavers-grant">Specific support</a></h2>
+      </div>
+      <div class="govuk-summary-card__content">
+        <p>Brief description of what this is...</p>
+        <code>Money and finance</code>
+      </div>
+    </div>
 
-        </ul>'
-      }
-    },
-    {
-      heading: {
-        text: "Specific support"
-      },
-      summary: {
-        html: "<p><strong class='govuk-tag govuk-tag--yellow' style='max-width: 180px;'>
-          Qualifying care leaver
-        </strong></p><p>Brief description of what it is...</p>"
-      },
-      content: {
-        html:
-        '<p>A little bit more info but not too much</p>
-        <ul class="govuk-list">
-            <li>
-              <a class="govuk-link" href="#">Find out more</a>
+    <div class="govuk-summary-card">
+      <div class="govuk-summary-card__title-wrapper">
+        <h2 class="govuk-summary-card__title"><a href="help-care-leavers-grant">Universal Credit</a></h2>
+      </div>
+      <div class="govuk-summary-card__content">
+        <p>Brief description of what this is...</p>
+        <code>Money and finance</code>
+      </div>
+    </div>
 
-        </ul>'
-      }
-    },
-    {
-      heading: {
-        text: "Universal Credit"
-      },
-      summary: {
-        html: "<p><strong class='govuk-tag govuk-tag--yellow' style='max-width: 180px;'>
-          Qualifying care leaver
-        </strong></p><p>Brief description of what it is...</p>"
-      },
-      content: {
-        html:
-        '<p>A little bit more info but not too much</p>
-        <ul class="govuk-list">
-            <li>
-              <a class="govuk-link" href="#">Find out more</a>
-
-        </ul>'
-      }
-    }
-  ]
-}) }}
 
   </div>
 </div>
