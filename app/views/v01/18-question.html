@@ -20,7 +20,7 @@
       value: data['checkeighteen'],
       fieldset: {
         legend: {
-          text: "Before you turned 18, did any of these apply to you?",
+          text: "Before you turned 18, which of these applied to you?",
           isPageHeading: true,
           classes: "govuk-fieldset__legend--l"
         }
@@ -28,11 +28,11 @@
       items: [
         {
           value: "incare",
-          text: "I had been in care"
+          text: "I had spent time in care"
         },
         {
           value: "custody",
-          text: "I had been in custody"
+          text: "I had spent time in custody"
         },
         {
           value: "asylum",
@@ -53,17 +53,17 @@
 
     {{ govukDetails({
       summaryText: "What 'in care' means",
-      text: "In care is a term the government use...."
+      html: "<p class='govuk-body'>For example, you were:<ul class='govuk-list govuk-list--bullet'><li>in foster care</li><li>in residential care</li><li>under special guardianship</li></ul></p>"
     }) }}
 
     {{ govukDetails({
       summaryText: "What 'in custody' means",
-      text: "In custody is a term the government use...."
+      html: "<p class='govuk-body'>For example, you were in a:<ul class='govuk-list govuk-list--bullet'><li>secure children's home</li><li>secure training centre</li><li>young offender institution</li></ul></p>"
     }) }}
 
     {{ govukDetails({
       summaryText: "What 'seek asylum' means",
-      text: "Seek asylum is a term the government use...."
+      html: "<p class='govuk-body'>You were born in another country and have applied to live in the UK.</p>"
     }) }}
     
   </div>
