@@ -1,6 +1,6 @@
 {% extends "/layouts/dfe-service.html" %}
 
-{% set pageName="No support available" %}
+{% set pageName="No care leaver status" %}
 
 
 
@@ -19,7 +19,7 @@
           href: "find-support"
         },
         {
-          text: "No results",
+          text: "No care leaver status",
           href: "support-no-results"
         }
       ]
@@ -28,14 +28,14 @@
     
 
     {{ govukPanel({
-      titleText: "No results"
+      titleText: "You do not have any care experience"
     }) }}
 
     <h1 class="govuk-heading-l">What this means</h1>
-    <p>This means that you don't meet criteria for any care-specific support but there's help out there if you need it.</p>
+    <p>It doesn’t look like you have any care experience which means you are not entitled to care-related support.</p>
 
     <h2 class="govuk-heading-m">Other support you could be eligible for</h2>
-      <p>You may be eligible for the following support if you meet certain criteria (note: this is for over 18s only).</p>
+      <p>If you’re 18 or over, you can check if you’re eligible for the following support.</p>
 
     <div class="govuk-summary-card">
       <div class="govuk-summary-card__title-wrapper">
