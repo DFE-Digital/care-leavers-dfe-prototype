@@ -1,6 +1,6 @@
 {% extends "/layouts/dfe-service.html" %}
 
-{% set pageName="Support for relevant child" %}
+{% set pageName="Care leavers grant" %}
 
 
 
@@ -28,55 +28,105 @@
     
 
     {{ govukPanel({
-      titleText: "Relevant child",
-      html: "You are considered a 'Relevant child' which means that you are entitled to support"
+      html: "<h1 class='govuk-panel__title'>You are a <br>&quot;Relevant child&quot;</h1>"
     }) }}
 
     <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
 
-    <h1 class="govuk-heading-l">
-      Support for relevant child
-    </h1>
+    <h2 class="govuk-heading-l">
+      What this means
+    </h2>
+    <p class="govuk-body">As a &quot;Relevant child&quot;, you’re entitled to support because you:
+      <ul class="govuk-list govuk-list--bullet">
+        <li>have left care</li>
+        <li>are between 18 and 25</li>
+        <li>spent more than 13 weeks in care since the age of 14 — this includes time after you turn 16.</li>
+      </ul></p>
+
+      <h2 class="govuk-heading-m">
+      Support you’re entitled to</h2>
+      <p class="govuk-body">Most of the support you’ll be entitled to when you turn 18 is provided by your local council.</p>
+      <p class="govuk-body">If you came to the UK to seek asylum, you could also be entitled to additional <a href="#">support as an asylum-seeking person.</a></p>
+
+      <div class="govuk-summary-card">
+        <div class="govuk-summary-card__title-wrapper">
+          <h2 class="govuk-summary-card__title"><a href="help-care-leavers-grant">Personal advisor</a></h2>
+        </div>
+        <div class="govuk-summary-card__content">
+          <p>Someone who helps you prepare for leaving care and supports you after you’ve left</p>
+        </div>
+      </div>
+
+    <div class="govuk-summary-card">
+      <div class="govuk-summary-card__title-wrapper">
+        <h2 class="govuk-summary-card__title"><a href="help-care-leavers-grant">Pathway plan</a></h2>
+      </div>
+      <div class="govuk-summary-card__content">
+        <p>A document you fill in with your personal advisor to help you prepare for leaving care</p>
+      </div>
+    </div>
+
+    <!-- <div class="govuk-summary-card">
+      <div class="govuk-summary-card__title-wrapper">
+        <h2 class="govuk-summary-card__title"><a href="help-care-leavers-grant">Local Offer</a></h2>
+      </div>
+      <div class="govuk-summary-card__content">
+        <p>Additional support your local council offers you when you leave care</p>
+      </div>
+    </div> -->
+
+    <div class="govuk-summary-card">
+      <div class="govuk-summary-card__title-wrapper">
+        <h2 class="govuk-summary-card__title"><a href="help-care-leavers-grant">16 to 19 Bursary Fund</a></h2>
+      </div>
+      <div class="govuk-summary-card__content">
+        <p>A bursary of up to £1,200 if you stay in full-time education to help with related costs</p>
+      </div>
+    </div>
+
+    <div class="govuk-summary-card">
+      <div class="govuk-summary-card__title-wrapper">
+        <h2 class="govuk-summary-card__title"><a href="help-care-leavers-grant">Care Leaver Covenant</a></h2>
+      </div>
+      <div class="govuk-summary-card__content">
+        <p>Browse discounts and offers, as well as job, education and training opportunities</p>
+      </div>
+    </div>
+
+    <div class="govuk-summary-card">
+      <div class="govuk-summary-card__title-wrapper">
+        <h2 class="govuk-summary-card__title"><a href="help-care-leavers-grant">Advocacy services</a></h2>
+      </div>
+      <div class="govuk-summary-card__content">
+        <p>If you need help getting your voice heard and standing up for your rights</p>
+      </div>
+    </div>
+
+    <h2 class="govuk-heading-m">Support you’ll be entitled to when you turn 18</h2>
+      <p class="govuk-body">Most of the support you’ll be entitled to when you turn 18 is provided by your local council.</p>
+
+
+      <div class="govuk-summary-card">
+      <div class="govuk-summary-card__title-wrapper">
+        <h2 class="govuk-summary-card__title"><a href="help-care-leavers-grant">Care Leaver's Grant</a></h2>
+      </div>
+      <div class="govuk-summary-card__content">
+        <p>A payment of at least £3,000 to help you set up in your next home when you leave care</p>
+      </div>
+    </div>
+
+    <div class="govuk-summary-card">
+      <div class="govuk-summary-card__title-wrapper">
+        <h2 class="govuk-summary-card__title"><a href="help-care-leavers-grant">Local Offer</a></h2>
+      </div>
+      <div class="govuk-summary-card__content">
+        <p>Additional support your local council offers you when you leave care</p>
+      </div>
+    </div>
+
     
-    <div class="govuk-summary-card">
-      <div class="govuk-summary-card__title-wrapper">
-        <h2 class="govuk-summary-card__title"><a href="help-care-leavers-grant">Care Leavers Grant</a></h2>
-      </div>
-      <div class="govuk-summary-card__content">
-        <p>Brief description of what this is...</p>
-        <code>Money and finance</code>
-      </div>
-    </div>
 
-    <div class="govuk-summary-card">
-      <div class="govuk-summary-card__title-wrapper">
-        <h2 class="govuk-summary-card__title"><a href="help-care-leavers-grant">Specific support</a></h2>
-      </div>
-      <div class="govuk-summary-card__content">
-        <p>Brief description of what this is...</p>
-        <code>Housing</code>
-      </div>
-    </div>
-
-    <div class="govuk-summary-card">
-      <div class="govuk-summary-card__title-wrapper">
-        <h2 class="govuk-summary-card__title"><a href="help-care-leavers-grant">Specific support</a></h2>
-      </div>
-      <div class="govuk-summary-card__content">
-        <p>Brief description of what this is...</p>
-        <code>Money and finance</code>
-      </div>
-    </div>
-
-    <div class="govuk-summary-card">
-      <div class="govuk-summary-card__title-wrapper">
-        <h2 class="govuk-summary-card__title"><a href="help-care-leavers-grant">Universal Credit</a></h2>
-      </div>
-      <div class="govuk-summary-card__content">
-        <p>Brief description of what this is...</p>
-        <code>Money and finance</code>
-      </div>
-    </div>
+    <!-- <p class="govuk-body"><a href="all-support">View all support</a></p> -->
 
     
     
@@ -84,40 +134,7 @@
   </div>
   
 </div>
-  <!-- <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
-
-    <section class="dfe-section govuk-!-margin-top-5">
-       <div class="govuk-width-container">
-          <h2 class="govuk-heading-l">Further support</h2>
-          <div class="dfe-grid-container dfe-grid-container--wider govuk-!-margin-top-5">
-             <div class="dfe-card">
-                <div class="dfe-card-container">
-                   <h3 class="govuk-heading-m">
-                      <a href="/all-support" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">View all support</a>
-                   </h3>
-                   <p>[with short description, including they need to go through checker]</p>
-                </div>
-             </div>
-             <div class="dfe-card">
-                <div class="dfe-card-container">
-                   <h3 class="govuk-heading-m">
-                      <a href="/leaving-care-process" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Leaving care process</a>
-                   </h3>
-                   <p>Aenean vehicula dolor leo, laoreet malesuada ipsum tincidunt et. Nullam sed ornare dolor. Vestibulum tincidunt nisi vitae pellentesque elementum.</p>
-                </div>
-             </div>
-             <div class="dfe-card">
-                <div class="dfe-card-container">
-                   <h3 class="govuk-heading-m">
-                      <a href="/help-and-advice" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Help and advice</a>
-                   </h3>
-                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean bibendum purus in vehicula elementum. Praesent neque ipsum, interdum non fringilla at, iaculis sed erat. 
-                   </p>
-                </div>
-             </div>
-          </div>
-       </div>
-    </section> -->
+ 
     
   </div>
 </div>

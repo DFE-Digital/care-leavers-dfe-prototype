@@ -68,7 +68,7 @@ router.post('/16-incare', function(request, response) {
     if (incarebirthday == "yes"){
         response.redirect("/v01/16-incare-weeks")
     } else {
-        response.redirect("/v01/support-care-experienced-under-18")
+        response.redirect("/v01/support-care-experienced")
     }
 })
 
@@ -114,7 +114,7 @@ router.post('/18-incare', function(request, response) {
     if (incareonbirthday == "yes"){
         response.redirect("/v01/18-incare-weeks")
     } else {
-        response.redirect("/v01/support-care-experienced-over-18")
+        response.redirect("/v01/support-care-experienced")
     }
 })
 
@@ -134,7 +134,7 @@ router.post('/25-question', function(request, response) {
 
     var checktwentyfive = request.session.data['checktwentyfive']
     if (checktwentyfive == "incare"){
-        response.redirect("/v01/support-care-experienced-over-25")
+        response.redirect("/v01/support-care-experienced")
     } else if (checktwentyfive == "custody") {  
         response.redirect("/v01/25-custody");
     } else if (checktwentyfive == "asylum") {  
