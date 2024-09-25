@@ -1,9 +1,12 @@
 @import 'node_modules/dfe-frontend/packages/dfefrontend';
 
-.govuk-width-container { @include govuk-width-container; }
-
 @import url('https://rsms.me/inter/inter.css');
 $govuk-font-family: 'Inter', sans-serif;
+
+.govuk-width-container { @include govuk-width-container; }
+
+
+
 
 .tableNumbers{
     font-feature-settings: 'tnum' 1, 'ss01' 1, 'zero' 1;
@@ -16,6 +19,13 @@ $govuk-font-family: 'Inter', sans-serif;
 
 // Add extra styles here
 
+@import url('https://rsms.me/inter/inter.css');
+$govuk-font-family: 'Inter', sans-serif;
+
+
+body, p, .govuk-body, .govuk-body-m, govuk-heading-xl, govuk-heading-l, govuk-heading-m, govuk-heading-s {
+  font-family: 'Inter', sans-seif;
+}
 .dfe-page-hero {
     padding-top: 40px;
     padding-bottom: 30px;
