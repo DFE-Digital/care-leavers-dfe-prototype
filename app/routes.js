@@ -99,9 +99,9 @@ router.post('/18-question', function(request, response) {
     var checkeighteen = request.session.data['checkeighteen']
     if (checkeighteen == "incare"){
         response.redirect("/v01/18-incare")
-    } else if (checksixteen == "custody") {  
+    } else if (checkeighteen == "custody") {  
         response.redirect("/v01/18-incare");
-    } else if (checksixteen == "asylum") {  
+    } else if (checkeighteen == "asylum") {  
         response.redirect("/v01/18-incare");
     } else {
         response.redirect("/v01/support-no-results")
