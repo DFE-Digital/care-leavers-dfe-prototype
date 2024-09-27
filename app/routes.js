@@ -28,9 +28,9 @@ router.post('/15-question', function(request, response) {
     if (check == "incare"){
         response.redirect("/v01/15-incare")
     } else if (check == "custody") {  
-        response.redirect("/v01/support-former-relevant-child");
+        response.redirect("/v01/15-incare");
     } else if (check == "asylum") {  
-        response.redirect("/v01/support-former-relevant-child");
+        response.redirect("/v01/15-incare");
     } else {
         response.redirect("/v01/support-no-results")
     }
@@ -54,9 +54,9 @@ router.post('/16-question', function(request, response) {
     if (checksixteen == "incare"){
         response.redirect("/v01/16-incare")
     } else if (checksixteen == "custody") {  
-        response.redirect("/v01/support-former-relevant-child");
+        response.redirect("/v01/16-incare");
     } else if (checksixteen == "asylum") {  
-        response.redirect("/v01/support-former-relevant-child");
+        response.redirect("/v01/16-incare");
     } else {
         response.redirect("/v01/support-no-results")
     }
@@ -100,9 +100,9 @@ router.post('/18-question', function(request, response) {
     if (checkeighteen == "incare"){
         response.redirect("/v01/18-incare")
     } else if (checksixteen == "custody") {  
-        response.redirect("/v01/support-former-relevant-child");
+        response.redirect("/v01/18-incare");
     } else if (checksixteen == "asylum") {  
-        response.redirect("/v01/support-former-relevant-child");
+        response.redirect("/v01/18-incare");
     } else {
         response.redirect("/v01/support-no-results")
     }
@@ -136,9 +136,9 @@ router.post('/25-question', function(request, response) {
     if (checktwentyfive == "incare"){
         response.redirect("/v01/support-care-experienced")
     } else if (checktwentyfive == "custody") {  
-        response.redirect("/v01/support-former-relevant-child");
+        response.redirect("/v01/support-care-experienced");
     } else if (checktwentyfive == "asylum") {  
-        response.redirect("/v01/support-former-relevant-child");
+        response.redirect("/v01/support-care-experienced");
     } else {
         response.redirect("/v01/support-no-results")
     }
