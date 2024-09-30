@@ -4,6 +4,49 @@
 
 {% block content %}
 
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    // Listen for changes in filter checkboxes and radio buttons
+    document.querySelectorAll("input[name='filter'], input[name='who']").forEach(function(input) {
+      input.addEventListener("change", applyFilter);
+    });
+
+    function applyFilter() {
+      // Get selected types of support from the checkboxes
+      let selectedFilters = Array.from(document.querySelectorAll("input[name='filter']:checked")).map(input => input.value);
+      
+      // Get the selected "who's entitled" value from the radio buttons
+      let whoIsEntitled = document.querySelector("input[name='who']:checked").value;
+
+      // Get all the summary cards
+      let cards = document.querySelectorAll(".govuk-summary-card");
+
+      // Loop through each card and apply the filter
+      cards.forEach(function(card) {
+        // Get the filters and entitlements applied to the card
+        let cardFilters = card.getAttribute("data-filters").split(" ");
+        let cardEntitlements = card.getAttribute("data-entitlement").split(" ");
+
+        // Determine if the card matches the selected filter criteria
+        let matchesFilter = selectedFilters.includes("all") || selectedFilters.some(filter => cardFilters.includes(filter));
+        
+        // Determine if the card matches the selected "who's entitled" criteria
+        let matchesWho = whoIsEntitled === "all" || cardEntitlements.includes(whoIsEntitled);
+
+        // Show or hide the card based on whether it matches both filters
+        if (matchesFilter && matchesWho) {
+          card.style.display = "block"; // Show the card
+        } else {
+          card.style.display = "none"; // Hide the card
+        }
+      });
+    }
+
+    // Initially apply the filter when the page loads
+    applyFilter();
+  });
+</script>
+
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-one-third">
     <div class="care-filter">
@@ -130,7 +173,7 @@
       html: html
     }) }}
 
-    <div class="govuk-summary-card">
+    <div class="govuk-summary-card" data-filters="money work all" data-entitlement="eligible-child relevant-child all">
         <div class="govuk-summary-card__title-wrapper">
           <h2 class="govuk-summary-card__title"><a href="help-care-leavers-grant">Personal advisor</a></h2>
         </div>
@@ -142,7 +185,7 @@
         </div>
       </div>
     
-    <div class="govuk-summary-card">
+    <div class="govuk-summary-card" data-filters="money work all" data-entitlement="eligible-child relevant-child all">
       <div class="govuk-summary-card__title-wrapper">
         <h2 class="govuk-summary-card__title"><a href="help-care-leavers-grant">Care Leaver's Grant</a></h2>
       </div>
@@ -154,7 +197,7 @@
       </div>
     </div>
 
-    <div class="govuk-summary-card">
+    <div class="govuk-summary-card" data-filters="education all" data-entitlement="care-experience all">
       <div class="govuk-summary-card__title-wrapper">
         <h2 class="govuk-summary-card__title"><a href="help-care-leavers-grant">Pathway plan</a></h2>
       </div>
@@ -166,7 +209,7 @@
       </div>
     </div>
 
-    <div class="govuk-summary-card">
+    <div class="govuk-summary-card" data-filters="housing all" data-entitlement="over-25 asylum-seeking all">
       <div class="govuk-summary-card__title-wrapper">
         <h2 class="govuk-summary-card__title"><a href="help-care-leavers-grant">Local Offer</a></h2>
       </div>
@@ -177,7 +220,7 @@
       </div>
     </div>
 
-    <div class="govuk-summary-card">
+    <div class="govuk-summary-card" data-filters="money work all" data-entitlement="eligible-child relevant-child all">
       <div class="govuk-summary-card__title-wrapper">
         <h2 class="govuk-summary-card__title"><a href="help-care-leavers-grant">16 to 19 Bursary Fund</a></h2>
       </div>
@@ -189,7 +232,7 @@
       </div>
     </div>
 
-    <div class="govuk-summary-card">
+    <div class="govuk-summary-card" data-filters="money work all" data-entitlement="eligible-child relevant-child all">
       <div class="govuk-summary-card__title-wrapper">
         <h2 class="govuk-summary-card__title"><a href="help-care-leavers-grant">Care Leaver Covenant</a></h2>
       </div>
@@ -200,7 +243,7 @@
       </div>
     </div>
 
-    <div class="govuk-summary-card">
+    <div class="govuk-summary-card" data-filters="money work all" data-entitlement="eligible-child relevant-child all">
       <div class="govuk-summary-card__title-wrapper">
         <h2 class="govuk-summary-card__title"><a href="help-care-leavers-grant">Advocacy services</a></h2>
       </div>
@@ -209,12 +252,12 @@
 
         <p><strong class="govuk-tag govuk-tag--grey" style="max-width: 180px;">All</strong></p>
       </div>
-    </div>
+    </div>    
 
     <h2 class="govuk-heading-m">Other support you could be eligible for</h2>
       <p class="govuk-body">You’ll need to check you’re eligible for the following support.</p>
 
-    <div class="govuk-summary-card">
+    <div class="govuk-summary-card" data-filters="all general money housing health work education childcare" data-entitlement=" all eligible-child relevant-child qualifying-child former-relevant-child qualifying-care-leaver care-experience over-25 asylum-seeking anyone">
       <div class="govuk-summary-card__title-wrapper">
         <h2 class="govuk-summary-card__title"><a href="help-care-leavers-grant">Universal Credit</a></h2>
       </div>
@@ -223,7 +266,7 @@
       </div>
     </div>
 
-    <div class="govuk-summary-card">
+    <div class="govuk-summary-card" data-filters="all general money housing health work education childcare" data-entitlement=" all eligible-child relevant-child qualifying-child former-relevant-child qualifying-care-leaver care-experience over-25 asylum-seeking anyone">
       <div class="govuk-summary-card__title-wrapper">
         <h2 class="govuk-summary-card__title"><a href="help-care-leavers-grant">Childcare options</a></h2>
       </div>
@@ -232,7 +275,7 @@
       </div>
     </div>
 
-    <div class="govuk-summary-card">
+    <div class="govuk-summary-card" data-filters="all general money housing health work education childcare" data-entitlement=" all eligible-child relevant-child qualifying-child former-relevant-child qualifying-care-leaver care-experience over-25 asylum-seeking anyone">
       <div class="govuk-summary-card__title-wrapper">
         <h2 class="govuk-summary-card__title"><a href="help-care-leavers-grant">Discretionary Housing Payments (DHP)</a></h2>
       </div>
@@ -241,7 +284,7 @@
       </div>
     </div>
 
-    <div class="govuk-summary-card">
+    <div class="govuk-summary-card" data-filters="all general money housing health work education childcare" data-entitlement=" all eligible-child relevant-child qualifying-child former-relevant-child qualifying-care-leaver care-experience over-25 asylum-seeking anyone">
       <div class="govuk-summary-card__title-wrapper">
         <h2 class="govuk-summary-card__title"><a href="help-care-leavers-grant">Youth Offer</a></h2>
       </div>
@@ -250,7 +293,7 @@
       </div>
     </div>
 
-    <div class="govuk-summary-card">
+    <div class="govuk-summary-card" data-filters="all general money housing health work education childcare" data-entitlement=" all eligible-child relevant-child qualifying-child former-relevant-child qualifying-care-leaver care-experience over-25 asylum-seeking anyone">
       <div class="govuk-summary-card__title-wrapper">
         <h2 class="govuk-summary-card__title"><a href="help-care-leavers-grant">Personal Independence Payment (PIP)</a></h2>
       </div>
