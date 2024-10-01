@@ -94,3 +94,26 @@ body, p, .govuk-body, .govuk-body-m, govuk-heading-xl, govuk-heading-l, govuk-he
   }
 }
 p.status { line-height: 1.8em;}
+
+/* Styling for the floating icon */
+.floating-icon {
+    position: fixed;
+    bottom: 20px; /* Distance from the bottom of the window */
+    right: 20px;  /* Distance from the right of the window */
+    z-index: 1000; /* Keeps it above other content */
+}
+
+.floating-icon img {
+    width: 50px;  /* Adjust the size as per your preference */
+    height: 50px;
+    border-radius: 50%; /* Optional: Makes the icon circular */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow */
+}
+
+/* Make sure the icon remains fixed in place even on mobile */
+@media (max-width: 768px) {
+    .floating-icon {
+        bottom: 15px;
+        right: 15px;
+    }
+}
