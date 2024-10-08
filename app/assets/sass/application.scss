@@ -23,9 +23,10 @@ $govuk-font-family: 'Inter', sans-serif;
 $govuk-font-family: 'Inter', sans-serif;
 
 
-body, p, .govuk-body, .govuk-body-m, govuk-heading-xl, govuk-heading-l, govuk-heading-m, govuk-heading-s, a, .govuk-link, .govuk-list, .govuk-inset-text, .govuk-phase-banner__content, .govuk-phase-banner__content__tag {
-  font-family: 'Inter', sans-seif;
+body, p, .govuk-body, .govuk-body-m, .govuk-heading-xl, .govuk-heading-l, .govuk-heading-m, .govuk-heading-s, a, .govuk-link, .govuk-list, .govuk-inset-text, .govuk-phase-banner__content, .govuk-phase-banner__content__tag, .govuk-label, .govuk-tag, .govuk-footer__link, .govuk-footer, .govuk-button {
+  font-family: 'Inter', sans-serif;
 }
+.govuk-footer__link, .govuk-footer, .govuk-tag { font-size: 16px;}
 .dfe-page-hero {
     padding-top: 40px;
     padding-bottom: 30px;
