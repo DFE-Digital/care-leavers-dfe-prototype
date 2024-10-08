@@ -13,6 +13,15 @@ https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
 {% from 'node_modules/dfe-frontend/packages/components/header/macro.njk' import header %}
 {% block header %}
 
+<div class="govuk-width-container">
+{{ govukPhaseBanner({
+  tag: {
+    text: "Alpha"
+  },
+  html: 'This is a new service. Help us improve it and <a class="govuk-link" href="#">give your feedback by email</a>.'
+}) }}
+</div>
+
 {{ header({
     "showNav": "false",
     "showSearch": "false",
@@ -52,12 +61,4 @@ https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
   })
 }}
 
-<div class="govuk-width-container">
-{{ govukPhaseBanner({
-  tag: {
-    text: "Alpha"
-  },
-  html: 'This is a new service. Help us improve it and <a class="govuk-link" href="#">give your feedback by email</a>.'
-}) }}
-</div>
 {% endblock %}
