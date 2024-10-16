@@ -1,0 +1,46 @@
+{% extends "/layouts/dfe-service.html" %}
+
+{% set pageName="Entitlement checker" %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    {{ govukBackLink({
+     text: "Back",
+     href: "find-support"
+   }) }}
+
+    <form id="status-form">
+      <div>
+        <input type="radio" id="relevant-child" name="status" value="relevant-child">
+        <label for="relevant-child">Relevant child</label>
+      </div>
+      <div>
+        <input type="radio" id="former-relevant-child" name="status" value="former-relevant-child">
+        <label for="former-relevant-child">Former relevant child</label>
+      </div>
+      <button type="submit">Continue</button>
+    </form>
+
+<script>
+  document.getElementById('status-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    
+    // Get the selected radio button value
+    let status = document.querySelector('input[name="status"]:checked').value;
+
+    // Store the selected status in localStorage or a session cookie
+    localStorage.setItem('userStatus', status);
+
+    // Continue with form submission or navigation
+    window.location.href = 'category-housing-status'; // Replace with the next page
+  });
+</script>
+    
+  </div>
+</div>
+
+{% endblock %}

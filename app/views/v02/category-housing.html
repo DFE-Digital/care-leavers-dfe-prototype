@@ -1,0 +1,97 @@
+{% extends "/layouts/dfe-service.html" %}
+
+{% set pageName="Check support" %}
+
+{% block header %}
+
+<div class="govuk-width-container">
+{{ govukPhaseBanner({
+  tag: {
+    text: "Alpha"
+  },
+  html: 'This is a new service. Help us improve it and <a class="govuk-link" href="#">give your feedback by email</a>.'
+}) }}
+</div>
+
+
+{{ header({
+    "showNav": "true",
+    "showSearch": "false",
+    "showHeaderActionLinks": "false",
+    "logoPath": "public/images",
+    "searchAction": "/search/",
+    "searchInputName": "q",
+    "logoAltText": "Department for Education",
+    "homeHref": "/find-support",
+    "selectedNav": view,
+    "service": {
+      "name": "Check support for leaving care",
+      "serviceUrl": "/"
+    },
+    "headerActionLinks": [
+      {
+        "url"  : "/",
+        "label" : "My account"
+      },
+      {
+        "url"  : "/",
+        "label" : "Sign out"
+      }
+    ],
+    "primaryLinks": [
+        {
+        "url"  : "find-support",
+        "label" : "Check support"
+      }, {
+        "url"  : "all-support",
+        "label" : "All support"
+      },  {
+        "url"  : "leaving-care-process",
+        "label" : "Leaving care process"
+      }, {
+        "url"  : "help-and-advice",
+        "label" : "Help and advice"
+      }
+    ]
+  })
+}}
+
+
+
+{% endblock %}
+
+{% block content %}
+<script>
+  // Get the stored status from localStorage
+  let status = localStorage.getItem('userStatus');
+
+  if (status === 'former-relevant-child') {
+    document.getElementById('status-message').textContent = 'Former relevant child';
+  } else if (status === 'relevant-child') {
+    document.getElementById('status-message').textContent = 'Relevant child';
+  } else {
+    document.getElementById('status-message').textContent = 'No status selected';
+  }
+</script>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h2 class="govuk-heading-xl">
+      Housing
+    </h2>
+
+    <h3 class="govuk-heading-m">General Housing info</h3>
+    <p class="govuk-body">Everyone can see this.</p>
+
+    <h3 class="govuk-heading-m">Support specific to you</h3>
+
+    <p id="status-message"></p>
+    <p class="govuk-body">To select your status <a href="entitlement-checker">answer a few questions</a></p>
+  </div>
+  <div class="govuk-grid-column-one-third">
+     <div><img src="/public/images/care04.jpg" alt="Dad and daughter" style="max-width: 100%;"></div>
+  </div>
+</div>
+
+{% endblock %}
