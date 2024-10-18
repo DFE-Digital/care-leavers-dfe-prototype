@@ -1,0 +1,203 @@
+{% extends "/layouts/dfe-service.html" %}
+
+{% set pageName="All support" %}
+
+{% block header %}
+
+<div class="govuk-width-container">
+{{ govukPhaseBanner({
+  tag: {
+    text: "Alpha"
+  },
+  html: 'This is a new service. Help us improve it and <a class="govuk-link" href="#">give your feedback by email</a>.'
+}) }}
+</div>
+
+
+{{ header({
+    "showNav": "true",
+    "showSearch": "false",
+    "showHeaderActionLinks": "false",
+    "logoPath": "public/images",
+    "searchAction": "/search/",
+    "searchInputName": "q",
+    "logoAltText": "Department for Education",
+    "homeHref": "/find-support",
+    "selectedNav": view,
+    "service": {
+      "name": "Find support for leaving care",
+      "serviceUrl": "/"
+    },
+    "headerActionLinks": [
+      {
+        "url"  : "/",
+        "label" : "My account"
+      },
+      {
+        "url"  : "/",
+        "label" : "Sign out"
+      }
+    ],
+    "primaryLinks": [
+        {
+        "url"  : "find-support",
+        "label" : "Find support"
+      }, {
+        "url"  : "all-support",
+        "label" : "All support"
+      },  {
+        "url"  : "guides-advice",
+        "label" : "Guides and advice"
+      }, {
+        "url"  : "helplines",
+        "label" : "Helplines"
+      }
+    ]
+  })
+}}
+<div class="govuk-exit-this-page" data-module="govuk-exit-this-page">
+  <a href="https://www.bbc.co.uk/weather" role="button" draggable="false" class="govuk-button govuk-button--warning govuk-exit-this-page__button govuk-js-exit-this-page-button" data-module="govuk-button" rel="nofollow noreferrer">
+    <span class="govuk-visually-hidden">Emergency</span> Exit this page
+  </a>
+</div>
+
+<section class="dfe-page-grey">
+   <div class="govuk-width-container">
+      <div class="govuk-grid-row">
+         <div class="govuk-grid-column-two-thirds">
+
+           <h2 class="govuk-heading-xl">
+            All support
+           </h2>
+
+          
+         </div>
+      </div>
+   </div>
+</section>
+
+
+{% endblock %}
+
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+   <div class="govuk-grid-column-full">
+      <!-- <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible"> -->
+
+          <section class="dfe-section govuk-!-margin-top-5">
+             <div class="govuk-width-container">
+                <h2 class="govuk-heading-l">What do you need help with?</h2>
+                <div class="dfe-grid-container dfe-grid-container--wider govuk-!-margin-top-5">
+
+                  <div class="hf-card">
+                     <a href="category-housing">
+                        <div class="hf-card-container">
+                           <img class="full-width-image" alt="Housing" src="/public/images/icon-housing.png">
+                           <div class="cat-card-details">
+                              <h3 class="govuk-heading-m">Housing</h3>
+                              <p class="govuk-body">I need help with finding and moving house</p>
+                           </div>
+                        </div>
+                     </a>
+                  </div>
+
+                  <div class="hf-card">
+                     <a href="category-money">
+                        <div class="hf-card-container">
+                           <img class="full-width-image" alt="Money" src="/public/images/icon-money.png">
+                           <div class="cat-card-details">
+                              <h3 class="govuk-heading-m">Money and finance</h3>
+                              <p class="govuk-body">I need help with finding and moving house</p>
+                           </div>
+                        </div>
+                     </a>
+                  </div>
+
+                  <div class="hf-card">
+                     <a href="category-work">
+                        <div class="hf-card-container">
+                           <img class="full-width-image" alt="Work and unemployment" src="/public/images/icon-work.png">
+                           <div class="cat-card-details">
+                              <h3 class="govuk-heading-m">Work and unemployment</h3>
+                              <p class="govuk-body">I need help with finding and moving house</p>
+                           </div>
+                        </div>
+                     </a>
+                  </div>
+
+                  <div class="hf-card">
+                     <a href="category-health">
+                        <div class="hf-card-container">
+                           <img class="full-width-image" alt="Health" src="/public/images/icon-health.png">
+                           <div class="cat-card-details">
+                              <h3 class="govuk-heading-m">Health and wellbeing</h3>
+                              <p class="govuk-body">I need help with finding and moving house</p>
+                           </div>
+                        </div>
+                     </a>
+                  </div>
+
+                  <div class="hf-card">
+                     <a href="category-education">
+                        <div class="hf-card-container">
+                           <img class="full-width-image" alt="Education" src="/public/images/icon-education.png">
+                           <div class="cat-card-details">
+                              <h3 class="govuk-heading-m">Education</h3>
+                              <p class="govuk-body">I need help with finding and moving house</p>
+                           </div>
+                        </div>
+                     </a>
+                  </div>
+
+                  <div class="hf-card">
+                     <a href="category-care">
+                        <div class="hf-card-container">
+                           <img class="full-width-image" alt="Care" src="/public/images/icon-care.png">
+                           <div class="cat-card-details">
+                              <h3 class="govuk-heading-m">Care and childcare</h3>
+                              <p class="govuk-body">I need help with finding and moving house</p>
+                           </div>
+                        </div>
+                     </a>
+                  </div>
+
+                  <div class="hf-card">
+                     <a href="category-education">
+                        <div class="hf-card-container">
+                           <img class="full-width-image" alt="Education" src="/public/images/icon-education.png">
+                           <div class="cat-card-details">
+                              <h3 class="govuk-heading-m">People</h3>
+                              <p class="govuk-body">I need help with finding and moving house</p>
+                           </div>
+                        </div>
+                     </a>
+                  </div>
+
+                  <div class="hf-card">
+                     <a href="category-care">
+                        <div class="hf-card-container">
+                           <img class="full-width-image" alt="Care" src="/public/images/icon-care.png">
+                           <div class="cat-card-details">
+                              <h3 class="govuk-heading-m">Seeking Asylum</h3>
+                              <p class="govuk-body">I need help with finding and moving house</p>
+                           </div>
+                        </div>
+                     </a>
+                  </div>
+
+                  <!-- <p><a href="all-support"><strong>View all support</strong></a></p> -->
+
+                </div>
+             </div>
+          </section>
+
+    
+  </div>
+</div>
+
+
+
+{% endblock %}
