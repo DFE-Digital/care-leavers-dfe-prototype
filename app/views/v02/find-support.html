@@ -47,7 +47,7 @@
         "label" : "All support"
       },  {
         "url"  : "guides-advice",
-        "label" : "Guides and advice"
+        "label" : "Guides"
       }, {
         "url"  : "helplines",
         "label" : "Helplines"
@@ -61,19 +61,11 @@
   <div class="govuk-grid-column-two-thirds">
 
     <h2 class="govuk-heading-xl">
-      Find support for leaving care
+      Get support when you leave care
     </h2>
 
-    <h3 class="govuk-heading-m">Who this service is for</h3>
-    <p class="govuk-body">You can use this service if you’re 15 to 25 and have been:
-      <ul class="govuk-list govuk-list--bullet">
-         <li>in foster care</li>
-         <li>in residential care or similar</li>
-         <li>in supported lodgings</li>
-         <li>under special guardianship</li>
-         <li>in custody (for example, in a secure children's home, secure training centre or young offender institution)</li>
-         <li>an unaccompanied asylum-seeking child or young person (UASC).</li>
-      </ul></p>
+    <p class="govuk-body">Leaving care can be a challenging time. Whether you’re leaving or you’ve already left, there’s support.</p>
+
   </div>
   <div class="govuk-grid-column-one-third">
      <div><img src="/public/images/care04.jpg" alt="Young happy man at work" style="max-width: 100%;"></div>
@@ -86,14 +78,25 @@
 {% endblock %}
 
 {% block content %}
-
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+      <h3 class="govuk-heading-m">Who this service is for</h3>
+      <p class="govuk-body">You could be entitled to support if you are between 15 and 25 and have:
+         <ul class="govuk-list govuk-list--bullet">
+            <li><strong>been in care</strong> (for example, in foster care,  residential care or supported lodgings)</li>
+            <li><strong>been in custody</strong> (for example, in a secure children's home, secure training centre or young offender institution)</li>
+            <li><strong>come the UK on your own</strong> (to seek asylum).</li>
+         </ul>
+      </p>
+   </div>
+</div>
 <div class="govuk-grid-row">
    <div class="govuk-grid-column-full">
       <!-- <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible"> -->
 
           <section class="dfe-section govuk-!-margin-top-5">
              <div class="govuk-width-container">
-                <h2 class="govuk-heading-l">What do you need help with?</h2>
+                <h2 class="govuk-heading-l">Types of support</h2>
                 <div class="dfe-grid-container dfe-grid-container--wider govuk-!-margin-top-5">
 
                   <div class="hf-card">
@@ -177,19 +180,21 @@
           <div class="govuk-grid-row">
             <div class="govuk-grid-column-full">
 
+               <h2 class="govuk-heading-l">Helpful guides</h2>
+
 
                <div class="govuk-!-margin-top-3 govuk-!-margin-bottom-5">
-                  <div class="govuk-grid-row split-panel" style="background: #f3f2f1;">
+                  <div class="govuk-grid-row split-panel" style="background: #f3f2f1; vertical-align: text-top;">
                      <div class="govuk-grid-column-one-half text-column">
-                        <strong class="govuk-tag govuk-tag--green">Guides and advice</strong>
-                        <h2 class="govuk-heading-l govuk-!-margin-top-3">Understanding the leaving care process</h2>
-                        <p class="govuk-body-l">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <strong class="govuk-tag govuk-tag--green">Guides</strong>
+                        <h3 class="govuk-heading-m govuk-!-margin-top-3"><a href="guide-leaving-care">Care leaving process</a></h3>
+                        <p class="govuk-body">What happens as you prepare to leave care and how you’ll continue to get support afterwards.</p>
                         <p class="govuk-!-margin-bottom-0">
-                           <a href="guide-leaving-care">Learn more about leaving care</a>
+                           <!-- <a href="guide-leaving-care">Learn more about leaving care</a> -->
                         </p>
                      </div>
                      <div class="govuk-grid-column-one-half image-column">
-                        <a href="#"><img class="full-width-image" alt="Care" src="/public/images/general03.jpg"></a>
+                        <a href="guide-leaving-care"><img class="full-width-image" alt="Care" src="/public/images/general03.jpg"></a>
                      </div>
                   </div>
                </div>
@@ -197,36 +202,38 @@
 
 
                <div class="govuk-!-margin-top-3 govuk-!-margin-bottom-5">
-                  <div class="govuk-grid-row split-panel" style="background: #f3f2f1;">
-                     <div class="govuk-grid-column-one-half image-column">
-                        <a href="#"><img class="full-width-image" alt="Care" src="/public/images/housing02.jpg"></a>
+                  <div class="govuk-grid-row split-panel" style="background: #f3f2f1; vertical-align: text-top;">
+                     <div class="govuk-grid-column-one-half image-column" >
+                        <a href="guide-homeless"><img class="full-width-image" alt="Care" src="/public/images/housing02.jpg"></a>
                      </div>
-                     <div class="govuk-grid-column-one-half text-column">
-                        <strong class="govuk-tag govuk-tag--green">Guides and advice</strong>
-                        <h2 class="govuk-heading-l govuk-!-margin-top-3">Homelessness help</h2>
-                        <p class="govuk-body-l">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                     <div class="govuk-grid-column-one-half text-column" style="vertical-align: text-top;">
+                        <strong class="govuk-tag govuk-tag--green">Guides</strong>
+                        <h3 class="govuk-heading-m govuk-!-margin-top-3"><a href="guide-homeless">Facing homelessness</a></h3>
+                        <p class="govuk-body">What to do next if you’re worried about becoming homeless or having issues with housing.</p>
                         <p class="govuk-!-margin-bottom-0">
-                           <a href="guide-leaving-care">Help finding somewhere to live</a>
+                           <!-- <a href="guide-homeless">Find help</a> -->
                         </p>
                      </div>
                   </div>
                </div>
 
                <div class="govuk-!-margin-top-3 govuk-!-margin-bottom-5">
-                  <div class="govuk-grid-row split-panel" style="background: #f3f2f1;">
+                  <div class="govuk-grid-row split-panel" style="background: #f3f2f1; vertical-align: text-top;">
                      <div class="govuk-grid-column-one-half text-column">
-                        <strong class="govuk-tag govuk-tag--green">Guides and advice</strong>
-                        <h2 class="govuk-heading-l govuk-!-margin-top-3">Have you come to the UK recently?</h2>
-                        <p class="govuk-body-l">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <strong class="govuk-tag govuk-tag--green">Guides</strong>
+                        <h3 class="govuk-heading-m govuk-!-margin-top-3"><a href="guide-asylum">The Asylum process</a></h3>
+                        <p class="govuk-body">What happens if you’ve come to the UK on your own to seek asylum, and how you’ll get support</p>
                         <p class="govuk-!-margin-bottom-0">
-                           <a href="guide-leaving-care">Learn more about seeking asylum</a>
+                           <!-- <a href="guide-leaving-care">Learn more about seeking asylum</a> -->
                         </p>
                      </div>
                      <div class="govuk-grid-column-one-half image-column">
-                        <a href="#"><img class="full-width-image" alt="Care" src="/public/images/general01.jpg"></a>
+                        <a href="guide-asylum"><img class="full-width-image" alt="Care" src="/public/images/general01.jpg"></a>
                      </div>
                   </div>
                </div>
+
+               <p><a href="guide-advice"><strong>View all guides</strong></a></p>
 
             </div>
          </div>
