@@ -184,9 +184,13 @@ padding: 20px;
 
 section.dfe {
     margin-bottom: 15px;
+    margin-top: 60px;
 }
 .box-gov {
     border: 1px solid $govuk-border-colour;
+}
+.box-ext {
+    background-color: #EAF5FF;
 }
 .box-content {
     width: 75%;
