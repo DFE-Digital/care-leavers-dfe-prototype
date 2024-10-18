@@ -1,4 +1,4 @@
-{% extends "/layouts/dfe-service.html" %}
+{% extends "/layouts/dfe-service-v02.html" %}
 
 {% set pageName="Find support for leaving care" %}
 
@@ -64,7 +64,7 @@
       Get support when you leave care
     </h2>
 
-    <p class="govuk-body">Leaving care can be a challenging time. Whether you’re leaving or you’ve already left, there’s support.</p>
+    <p class="govuk-body">Leaving care can be a challenging time. Whether you’re leaving or you’ve already left, there’s support available. </p>
 
   </div>
   <div class="govuk-grid-column-one-third">
@@ -80,12 +80,12 @@
 {% block content %}
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-      <h3 class="govuk-heading-m">Who this service is for</h3>
-      <p class="govuk-body">You could be entitled to support if you are between 15 and 25 and have:
+      <h3 class="govuk-heading-l">Who this service is for</h3>
+      <p class="govuk-body">You may have the right to support if you are between 15 and 25 and: 
          <ul class="govuk-list govuk-list--bullet">
-            <li><strong>been in care</strong> (for example, in foster care,  residential care or supported lodgings)</li>
-            <li><strong>been in custody</strong> (for example, in a secure children's home, secure training centre or young offender institution)</li>
-            <li><strong>come the UK on your own</strong> (to seek asylum).</li>
+            <li><strong>have been in care</strong> (for example, in foster care, residential care or supported lodgings)</li>
+            <li><strong>have been in custody</strong> (for example, in a secure children's home, secure training centre or young offender institution)</li>
+            <li><strong>came the UK on your own</strong> (to seek asylum).</li>
          </ul>
       </p>
    </div>
@@ -96,20 +96,8 @@
 
           <section class="dfe-section govuk-!-margin-top-5">
              <div class="govuk-width-container">
-                <h2 class="govuk-heading-l">Types of support</h2>
+                <h2 class="govuk-heading-l">Find the right support</h2>
                 <div class="dfe-grid-container dfe-grid-container--wider govuk-!-margin-top-5">
-
-                  <div class="hf-card">
-                     <a href="category-housing">
-                        <div class="hf-card-container">
-                           <img class="full-width-image" alt="Housing" src="/public/images/icon-housing.png">
-                           <div class="cat-card-details">
-                              <h3 class="govuk-heading-m">Housing</h3>
-                              <!-- <p class="govuk-body">I need help with finding and moving house</p> -->
-                           </div>
-                        </div>
-                     </a>
-                  </div>
 
                   <div class="hf-card">
                      <a href="category-money">
@@ -124,11 +112,23 @@
                   </div>
 
                   <div class="hf-card">
+                     <a href="category-housing">
+                        <div class="hf-card-container">
+                           <img class="full-width-image" alt="Housing" src="/public/images/icon-housing.png">
+                           <div class="cat-card-details">
+                              <h3 class="govuk-heading-m">Housing</h3>
+                              <!-- <p class="govuk-body">I need help with finding and moving house</p> -->
+                           </div>
+                        </div>
+                     </a>
+                  </div>
+
+                  <div class="hf-card">
                      <a href="category-work">
                         <div class="hf-card-container">
                            <img class="full-width-image" alt="Work and unemployment" src="/public/images/icon-work.png">
                            <div class="cat-card-details">
-                              <h3 class="govuk-heading-m">Work and unemployment</h3>
+                              <h3 class="govuk-heading-m">Work and employment</h3>
                               <!-- <p class="govuk-body">I need help with finding and moving house</p> -->
                            </div>
                         </div>
@@ -187,8 +187,8 @@
                   <div class="govuk-grid-row split-panel" style="background: #f3f2f1; vertical-align: text-top;">
                      <div class="govuk-grid-column-one-half text-column">
                         <strong class="govuk-tag govuk-tag--green">Guides</strong>
-                        <h3 class="govuk-heading-m govuk-!-margin-top-3"><a href="guide-leaving-care">Care leaving process</a></h3>
-                        <p class="govuk-body">What happens as you prepare to leave care and how you’ll continue to get support afterwards.</p>
+                        <h3 class="govuk-heading-m govuk-!-margin-top-3"><a href="guide-leaving-care">Leaving care process</a></h3>
+                        <p class="govuk-body">What happens as you prepare to leave care and how you’ll continue to get support afterwards </p>
                         <p class="govuk-!-margin-bottom-0">
                            <!-- <a href="guide-leaving-care">Learn more about leaving care</a> -->
                         </p>
@@ -222,7 +222,7 @@
                      <div class="govuk-grid-column-one-half text-column">
                         <strong class="govuk-tag govuk-tag--green">Guides</strong>
                         <h3 class="govuk-heading-m govuk-!-margin-top-3"><a href="guide-asylum">The Asylum process</a></h3>
-                        <p class="govuk-body">What happens if you’ve come to the UK on your own to seek asylum, and how you’ll get support</p>
+                        <p class="govuk-body">What happens as you prepare to leave care and how you’ll continue to get support afterward</p>
                         <p class="govuk-!-margin-bottom-0">
                            <!-- <a href="guide-leaving-care">Learn more about seeking asylum</a> -->
                         </p>
