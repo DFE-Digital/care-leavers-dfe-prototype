@@ -1,0 +1,245 @@
+{% extends "/layouts/dfe-service-v02.html" %}
+
+{% set pageName="Guides" %}
+
+{% block header %}
+
+<div class="govuk-width-container">
+{{ govukPhaseBanner({
+  tag: {
+    text: "Alpha"
+  },
+  html: 'This is a new service. Help us improve it and <a class="govuk-link" href="#">give your feedback by email</a>.'
+}) }}
+</div>
+
+
+{{ header({
+    "showNav": "true",
+    "showSearch": "false",
+    "showHeaderActionLinks": "false",
+    "logoPath": "public/images",
+    "searchAction": "/search/",
+    "searchInputName": "q",
+    "logoAltText": "Department for Education",
+    "homeHref": "/find-support",
+    "selectedNav": view,
+    "service": {
+      "name": "Find support for leaving care",
+      "serviceUrl": "/"
+    },
+    "headerActionLinks": [
+      {
+        "url"  : "/",
+        "label" : "My account"
+      },
+      {
+        "url"  : "/",
+        "label" : "Sign out"
+      }
+    ],
+    "primaryLinks": [
+        {
+        "url"  : "find-support",
+        "label" : "Home"
+      }, {
+        "url"  : "all-support",
+        "label" : "Find support"
+      },  {
+        "url"  : "guides-advice",
+        "label" : "Guides"
+      }, {
+        "url"  : "helplines",
+        "label" : "Helplines"
+      }
+    ]
+  })
+}}
+<div class="govuk-exit-this-page" data-module="govuk-exit-this-page">
+  <a href="https://www.bbc.co.uk/weather" role="button" draggable="false" class="govuk-button govuk-button--warning govuk-exit-this-page__button govuk-js-exit-this-page-button" data-module="govuk-button" rel="nofollow noreferrer">
+    <span class="govuk-visually-hidden">Emergency</span> Exit this page
+  </a>
+</div>
+
+<section class="dfe-page-grey">
+   <div class="govuk-width-container">
+      <div class="govuk-grid-row">
+         <div class="govuk-grid-column-two-thirds">
+            <nav class="govuk-breadcrumbs" aria-label="Breadcrumb">
+            <ol class="govuk-breadcrumbs__list">
+              <li class="govuk-breadcrumbs__list-item">
+                <a class="govuk-breadcrumbs__link" href="find-support">Home</a>
+              </li>
+              <li class="govuk-breadcrumbs__list-item">
+                <a class="govuk-breadcrumbs__link" href="helplines">Helplines</a>
+              </li>
+            </ol>
+          </nav>
+
+           <h2 class="govuk-heading-xl">
+            Helplines
+           </h2>
+
+         </div>
+      </div>
+   </div>
+</section>
+
+
+{% endblock %}
+
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+   <div class="govuk-grid-column-two-thirds">
+
+
+
+  <h1 class="govuk-heading-l">Find the support you need</h1>
+  <ul class="govuk-list">
+    <li><a href="#overview">Overview</a></li>
+    <li><a href="#emergency-situation">If you are in an emergency situation</a></li>
+    <li><a href="#distressing-thoughts">Getting support for distressing thoughts</a></li>
+    <li><a href="#immediate-support">If you need immediate support</a></li>
+    <li><a href="#mental-health">Getting back on track with mental health</a></li>
+    <li><a href="#money-help">Getting help with money</a></li>
+    <li><a href="#housing-help">Getting help with homelessness and housing</a></li>
+    <li><a href="#education-help">Getting help with education</a></li>
+    <li><a href="#making-most-support">Making the most out of support</a></li>
+  </ul>
+
+  <h2 id="overview" class="govuk-heading-l">Overview</h2>
+  <div>
+    <p class="govuk-body">If you’re a care leaver or have care experience and need help or advice, there are services available to support you.</p>
+    <p class="govuk-body">This page connects you to services and helplines that can support you in different areas of your life - whether you're facing a crisis, need advice on mental health, financial help or education.</p>
+    <p class="govuk-body">These services are here to help when you need it most.</p>
+    <p class="govuk-body">If you are looking for asylum-specific support, please click <a href="#">here</a>.</p>
+  </div>
+
+  <h2 id="emergency-situation" class="govuk-heading-l">If you are in an emergency situation</h2>
+  <div>
+    <p class="govuk-body">If you’re in immediate danger or need urgent help, <strong>call 999</strong>. This is the UK emergency number for police, fire, ambulance, or other emergency services.</p>
+    <p class="govuk-body">When to Call 999:</p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>If you or someone else is in danger.</li>
+      <li>If you need immediate medical assistance.</li>
+      <li>If there’s a crime happening.</li>
+    </ul>
+  </div>
+
+  <h2 id="distressing-thoughts" class="govuk-heading-l">Getting support for distressing thoughts</h2>
+  <div>
+    <p class="govuk-body">If you're having thoughts of suicide or feel like you can't cope, it's important to reach out for help.</p>
+    <p class="govuk-body">There are people and services who understand what you’re going through and are ready to listen.</p>
+  </div>
+
+  <h2 id="immediate-support" class="govuk-heading-l">If you need immediate support</h2>
+  <div>
+    <p class="govuk-body">If you need urgent support, these helplines are available 24/7 and can help you with mental health, housing, and more.</p>
+
+    <h3 class="govuk-heading-m">Papyrus (Prevention of Young Suicide)</h3>
+    <div>
+      <p class="govuk-body">Support line: 0800 068 4141</p>
+      <p class="govuk-body">Papyrus offer a safe space to talk about what you’re going through and will help you find ways to cope. They operate 24 hours a day, 7 days a week. They have options of accessibility too - just ask.</p>
+      <p class="govuk-body">You can contact them via their webchat service <a href="#">here</a> or email <a href="mailto:pat@papyrus-uk.org">pat@papyrus-uk.org</a>.</p>
+    </div>
+
+    <h3 class="govuk-heading-m">The Samaritans</h3>
+    <div>
+      <p class="govuk-body">Support line: 116 123</p>
+      <p class="govuk-body">For a listening ear or just someone to talk to, the Samaritans are open 24 hours a day, 7 days a week. You can call them on <a href="tel:116123">116 123</a> (Freephone) or email <a href="mailto:jo@samaritans.org">jo@samaritans.org</a>.</p>
+    </div>
+
+    <h3 class="govuk-heading-m">The Mix</h3>
+    <div>
+      <p class="govuk-body">Support line: 0808 808 4994 (free)</p>
+      <p class="govuk-body">For help and advice with anything from mental health to money, from homelessness to finding a job. They’re available 24 hours a day, 7 days a week.</p>
+      <p class="govuk-body">You can also text "THEMIX" to 85258 to contact them. Or visit <a href="https://themix.org.uk" target="_blank">themix.org.uk</a>.</p>
+    </div>
+  </div>
+
+  <h2 id="mental-health" class="govuk-heading-l">Getting back on track with mental health services</h2>
+  <div>
+    <p class="govuk-body">Taking care of your mental health is important. Whether you're feeling anxious, stressed or just need advice, these services can support you.</p>
+    <p class="govuk-body">If you're dealing with ongoing mental health issues, it's important to seek long-term support via your GP.</p>
+    <p class="govuk-body">Please click <a href="#">here</a> to understand more about what this process looks like.</p>
+
+    <h3 class="govuk-heading-m">Young Minds</h3>
+    <div>
+      <p class="govuk-body">Available 24/7 via text. Text "YM" to 85258.</p>
+      <p class="govuk-body">They provide help with mental health and provide information for young people. They can help with everything from anxiety to feeling overwhelmed.</p>
+      <p class="govuk-body">You can visit them here at <a href="https://youngminds.org.uk" target="_blank">youngminds.org.uk</a>.</p>
+    </div>
+  </div>
+
+  <h2 id="money-help" class="govuk-heading-l">Getting help with money</h2>
+  <div>
+    <p class="govuk-body">Money can be a worry, but there are services that can help with managing your finances, accessing your benefits and more.</p>
+
+    <h3 class="govuk-heading-m">Turn2Us</h3>
+    <div>
+      <p class="govuk-body">Available 24/7 online.</p>
+      <p class="govuk-body">They provide advice on financial support, grants and benefits you could receive.</p>
+      <p class="govuk-body">You can visit them here at <a href="https://turn2us.org.uk" target="_blank">turn2us.org.uk</a>.</p>
+    </div>
+  </div>
+
+  <h2 id="housing-help" class="govuk-heading-l">Getting help with housing and homelessness</h2>
+  <div>
+    <p class="govuk-body">If you’re worried about homelessness or need help finding somewhere safe to stay, these services can provide advice and practical support.</p>
+
+    <h3 class="govuk-heading-m">Shelter</h3>
+    <div>
+      <p class="govuk-body">Available from 8am - 6pm, weekdays only.</p>
+      <p class="govuk-body">Shelter offers advice on housing issues, homelessness, and your rights as a care leaver. They can help you understand your options and find emergency accommodation if needed.</p>
+      <p class="govuk-body">You can visit them here at <a href="https://shelter.org.uk" target="_blank">shelter.org.uk</a> or call them on 0808 800 4444 (free).</p>
+    </div>
+  </div>
+
+  <h2 id="education-help" class="govuk-heading-l">Getting help with education</h2>
+  <div>
+    <p class="govuk-body">If you are thinking about continuing your education, there are places that can help you finding funding and support to reach your goals.</p>
+    <p class="govuk-body">When applying to scholarships or bursaries, getting some guidance from personal advisors or teachers can help you get the most out of the service.</p>
+    <p class="govuk-body">They can help review your application and they may know more about additional funding or support options.</p>
+
+    <h3 class="govuk-heading-m">The Unite Foundation</h3>
+    <div>
+      <p class="govuk-body">Support line: 0117 302 7073</p>
+      <p class="govuk-body">They offer scholarships for care leavers to help with living costs while studying.</p>
+      <p class="govuk-body">You can also reach them at <a href="mailto:info@unitefoundation.org.uk">info@unitefoundation.org.uk</a> or visit them at <a href="https://thisisusatuni.org.uk" target="_blank">https://thisisusatuni.org.uk</a>.</p>
+    </div>
+  </div>
+
+  <h2 id="making-most-support" class="govuk-heading-l">Making the most of the support</h2>
+  <div>
+    <p class="govuk-body">For you to make the most of the support out there, think about your specific needs.</p>
+
+    <h3 class="govuk-heading-m">Accessibility:</h3>
+    <p class="govuk-body">Do you need support if you’re hard of hearing or have speech difficulties? Ask if they offer text services, live chat, or Relay UK services for those who are deaf or have speech issues.</p>
+
+    <h3 class="govuk-heading-m">Language:</h3>
+    <p class="govuk-body">If English isn’t your first language, ask if they provide translation services or can speak slowly and clearly.</p>
+
+    <h3 class="govuk-heading-m">Operating Times:</h3>
+    <p class="govuk-body">Check what hours the service is available. Some are 24/7, but others may only be open during specific times.</p>
+
+    <h3 class="govuk-heading-m">Cost:</h3>
+    <p class="govuk-body">Most helplines listed here are free. But always double-check if you’re unsure, especially if you’re calling from a mobile.</p>
+  </div>
+
+</body>
+
+
+
+
+            </div>
+         </div>
+    
+  </div>
+</div>
+
+
+
+{% endblock %}

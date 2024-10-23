@@ -1,6 +1,6 @@
 {% extends "/layouts/dfe-service-v02.html" %}
 
-{% set pageName="All support" %}
+{% set pageName="Find support" %}
 
 {% block header %}
 
@@ -41,10 +41,10 @@
     "primaryLinks": [
         {
         "url"  : "find-support",
-        "label" : "Find support"
+        "label" : "Home"
       }, {
         "url"  : "all-support",
-        "label" : "All support"
+        "label" : "Find support"
       },  {
         "url"  : "guides-advice",
         "label" : "Guides"
@@ -68,19 +68,19 @@
             <nav class="govuk-breadcrumbs" aria-label="Breadcrumb">
             <ol class="govuk-breadcrumbs__list">
               <li class="govuk-breadcrumbs__list-item">
-                <a class="govuk-breadcrumbs__link" href="find-support">Find support</a>
+                <a class="govuk-breadcrumbs__link" href="find-support">Home</a>
               </li>
               <li class="govuk-breadcrumbs__list-item">
-                <a class="govuk-breadcrumbs__link" href="all-support">All support</a>
+                <a class="govuk-breadcrumbs__link" href="all-support">Find support</a>
               </li>
             </ol>
           </nav>
 
            <h2 class="govuk-heading-xl">
-            All support
+            Find support
            </h2>
 
-          
+          <p class="govuk-body">When you leave care, you may have the right to certain support and there’s some you must apply for.</p>
          </div>
       </div>
    </div>
@@ -103,24 +103,24 @@
                 <div class="dfe-grid-container dfe-grid-container--wider govuk-!-margin-top-5">
 
                   <div class="hf-card">
-                     <a href="category-housing">
+                     <a href="category-money">
                         <div class="hf-card-container">
-                           <img class="full-width-image" alt="Housing" src="/public/images/icon-housing.png">
+                           <img class="full-width-image" alt="Money" src="/public/images/icon-money.png">
                            <div class="cat-card-details">
-                              <h3 class="govuk-heading-m">Housing</h3>
-                              <p class="govuk-body">I need help with finding and moving house</p>
+                              <h3 class="govuk-heading-m">Money and benfits</h3>
+                              <p class="govuk-body">Help with money when you leave care and benefits you can apply for</p>
                            </div>
                         </div>
                      </a>
                   </div>
 
                   <div class="hf-card">
-                     <a href="category-money">
+                     <a href="category-housing">
                         <div class="hf-card-container">
-                           <img class="full-width-image" alt="Money" src="/public/images/icon-money.png">
+                           <img class="full-width-image" alt="Housing" src="/public/images/icon-housing.png">
                            <div class="cat-card-details">
-                              <h3 class="govuk-heading-m">Money and finance</h3>
-                              <p class="govuk-body">I need help with finding and moving house</p>
+                              <h3 class="govuk-heading-m">Housing</h3>
+                              <p class="govuk-body">Help finding somewhere to live and other support with housing costs</p>
                            </div>
                         </div>
                      </a>
@@ -131,8 +131,20 @@
                         <div class="hf-card-container">
                            <img class="full-width-image" alt="Work and unemployment" src="/public/images/icon-work.png">
                            <div class="cat-card-details">
-                              <h3 class="govuk-heading-m">Work and unemployment</h3>
-                              <p class="govuk-body">I need help with finding and moving house</p>
+                              <h3 class="govuk-heading-m">Work and employment</h3>
+                              <p class="govuk-body">Support and services to help with finding and staying in work</p>
+                           </div>
+                        </div>
+                     </a>
+                  </div>
+
+                  <div class="hf-card">
+                     <a href="category-education">
+                        <div class="hf-card-container">
+                           <img class="full-width-image" alt="Education" src="/public/images/icon-education.png">
+                           <div class="cat-card-details">
+                              <h3 class="govuk-heading-m">Education and training</h3>
+                              <p class="govuk-body">Support and services to help you start or continue education and training</p>
                            </div>
                         </div>
                      </a>
@@ -144,31 +156,7 @@
                            <img class="full-width-image" alt="Health" src="/public/images/icon-health.png">
                            <div class="cat-card-details">
                               <h3 class="govuk-heading-m">Health and wellbeing</h3>
-                              <p class="govuk-body">I need help with finding and moving house</p>
-                           </div>
-                        </div>
-                     </a>
-                  </div>
-
-                  <div class="hf-card">
-                     <a href="category-education">
-                        <div class="hf-card-container">
-                           <img class="full-width-image" alt="Education" src="/public/images/icon-education.png">
-                           <div class="cat-card-details">
-                              <h3 class="govuk-heading-m">Education</h3>
-                              <p class="govuk-body">I need help with finding and moving house</p>
-                           </div>
-                        </div>
-                     </a>
-                  </div>
-
-                  <div class="hf-card">
-                     <a href="category-care">
-                        <div class="hf-card-container">
-                           <img class="full-width-image" alt="Care" src="/public/images/icon-care.png">
-                           <div class="cat-card-details">
-                              <h3 class="govuk-heading-m">Care and childcare</h3>
-                              <p class="govuk-body">I need help with finding and moving house</p>
+                              <p class="govuk-body">Help with your physical and mental health, including disability support</p>
                            </div>
                         </div>
                      </a>
@@ -180,7 +168,19 @@
                            <img class="full-width-image" alt="Education" src="/public/images/icon-people.png">
                            <div class="cat-card-details">
                               <h3 class="govuk-heading-m">People</h3>
-                              <p class="govuk-body">I need help with finding and moving house</p>
+                              <p class="govuk-body">People that help you prepare for leaving care and support you along the way </p>
+                           </div>
+                        </div>
+                     </a>
+                  </div>
+
+                  <div class="hf-card">
+                     <a href="category-care">
+                        <div class="hf-card-container">
+                           <img class="full-width-image" alt="Care" src="/public/images/icon-care.png">
+                           <div class="cat-card-details">
+                              <h3 class="govuk-heading-m">Care and childcare</h3>
+                              <p class="govuk-body">Help with childcare or support if you are someone’s carer</p>
                            </div>
                         </div>
                      </a>
@@ -191,8 +191,8 @@
                         <div class="hf-card-container">
                            <img class="full-width-image" alt="Care" src="/public/images/icon-asylum.png">
                            <div class="cat-card-details">
-                              <h3 class="govuk-heading-m">Seeking Asylum</h3>
-                              <p class="govuk-body">I need help with finding and moving house</p>
+                              <h3 class="govuk-heading-m">Coming to the UK</h3>
+                              <p class="govuk-body">Support if you have come on your own to the UK to be safe</p>
                            </div>
                         </div>
                      </a>
@@ -201,7 +201,7 @@
                      .status-launch {
                         display: block;
                         width: 100%;
-                        border: 10px #003a6a solid;
+                        border: 1px #003a6a solid;
                         background-color: #f3f2f1;
                         margin: 0;
                         padding: 0;
@@ -225,12 +225,11 @@
                         <h3 class="govuk-heading-m">Check my status</h3>
                         <p class="govuk-body">As a care leaver you are given a "status" by the government depending on your time in care.</p>
                         <p class="govuk-body">It can help you to find out your status</p>
-                        <a href="#" class="govuk-button" data-module="govuk-button">Check my status</a>
+                        <a href="status">Find out more about my care leaver status</a>
 
                      </div>
                   </aside>
 
-                  <!-- <p><a href="all-support"><strong>View all support</strong></a></p> -->
 
                 </div>
              </div>
