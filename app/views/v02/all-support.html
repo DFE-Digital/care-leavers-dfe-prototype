@@ -50,7 +50,7 @@
         "url"  : "status",
         "label" : "Check my status"
       },  {
-        "url"  : "leaving-care",
+        "url"  : "guide-leaving-care",
         "label" : "Leaving care process"
       },  {
         "url"  : "guides-advice",
@@ -110,6 +110,18 @@
                 <div class="dfe-grid-container dfe-grid-container--wider govuk-!-margin-top-5">
 
                   <div class="hf-card">
+                     <a href="local-offer">
+                        <div class="hf-card-container">
+                           <img class="full-width-image" alt="Money" src="/public/images/icon-local.png">
+                           <div class="cat-card-details">
+                              <h3 class="govuk-heading-m">Local support</h3>
+                              <p class="govuk-body">Extra help your local council may offer you through their ‘Local Offer’</p>
+                           </div>
+                        </div>
+                     </a>
+                  </div>
+
+                  <div class="hf-card">
                      <a href="category-money">
                         <div class="hf-card-container">
                            <img class="full-width-image" alt="Money" src="/public/images/icon-money.png">
@@ -139,7 +151,7 @@
                            <img class="full-width-image" alt="Work and unemployment" src="/public/images/icon-work.png">
                            <div class="cat-card-details">
                               <h3 class="govuk-heading-m">Work and employment</h3>
-                              <p class="govuk-body">Support and services to help with finding and staying in work</p>
+                              <p class="govuk-body">Support and services to help with finding and staying in work<br>&nbsp;</p>
                            </div>
                         </div>
                      </a>
@@ -187,7 +199,7 @@
                            <img class="full-width-image" alt="Care" src="/public/images/icon-care.png">
                            <div class="cat-card-details">
                               <h3 class="govuk-heading-m">Care and childcare</h3>
-                              <p class="govuk-body">Help with childcare or support if you are someone’s carer</p>
+                              <p class="govuk-body">Help with childcare or support if you are someone’s carer<br>&nbsp;</p>
                            </div>
                         </div>
                      </a>
@@ -199,43 +211,49 @@
                            <img class="full-width-image" alt="Care" src="/public/images/icon-asylum.png">
                            <div class="cat-card-details">
                               <h3 class="govuk-heading-m">Coming to the UK</h3>
-                              <p class="govuk-body">Support if you have come on your own to the UK to be safe</p>
+                              <p class="govuk-body">Support if you have come on your own to the UK to be safe<br>&nbsp;</p>
                            </div>
                         </div>
                      </a>
                   </div>
                   <style>
-                     .status-launch {
-                        display: block;
-                        width: 100%;
-                        border: 1px #003a6a solid;
-                        background-color: #f3f2f1;
-                        margin: 0;
-                        padding: 0;
-                     }
-                     .header-side {
-                        background-color: #003a6a;
-                        padding: 15px;
-                     }
-                     .header-side h2 {
-                        color: white;
-                     }
-                     .body-side {
-                        padding: 15px;
-                     }
-                  </style>
-                  <aside class="status-launch">
-                     <div class="header-side">
-                        <h2 class="govuk-heading-l">Find out what I can get</h2>
-                     </div>
-                     <div class="body-side">
-                        <h3 class="govuk-heading-m">Check my status</h3>
-                        <p class="govuk-body">As a care leaver you are given a "status" by the government depending on your time in care.</p>
-                        <p class="govuk-body">It can help you to find out your status</p>
-                        <a href="status">Find out more about my care leaver status</a>
+                    .status-launch {
+                       display: block;
+                       width: 99%;
+                       border: 1px #003a6a solid;
+                       background-color: #f3f2f1;
+                       margin: 0;
+                       padding: 0;
+                    }
+                    .header-side {
+                       background-color: #003a6a;
+                       padding: 15px;
+                    }
+                    .header-side h2 {
+                       color: white;
+                    }
+                    .header-side h2 a {
+                     color: white;
+                     text-decoration: none;
+                    }
+                    .header-side h2 a:hover {
+                     color: white;
+                     text-decoration: underline;
+                    }
+                    .body-side {
+                       padding: 15px;
+                    }
+                 </style>
+                 <aside class="status-launch">
+                    <div class="header-side">
+                       <h2 class="govuk-heading-l"><a href="status">Check what support you should get</a></h2>
+                    </div>
+                    <div class="body-side">
+                       <p class="govuk-body">What support you should get depends on your ‘care leaver status’, which is based on the time you spent in care.</p>
+                       <p class="govuk-body"><a href="status">What’s my status?</a></p>
 
-                     </div>
-                  </aside>
+                    </div>
+                 </aside>
 
 
                 </div>

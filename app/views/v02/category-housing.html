@@ -1,6 +1,6 @@
 {% extends "/layouts/dfe-service.html" %}
 
-{% set pageName="Check support" %}
+{% set pageName="Housing and accommodation support" %}
 
 {% block header %}
 
@@ -52,7 +52,7 @@
         "url"  : "status",
         "label" : "Check my status"
       },  {
-        "url"  : "leaving-care",
+        "url"  : "guide-leaving-care",
         "label" : "Leaving care process"
       },  {
         "url"  : "guides-advice",
@@ -80,7 +80,7 @@
                 <a class="govuk-breadcrumbs__link" href="find-support">Home</a>
               </li>
               <li class="govuk-breadcrumbs__list-item">
-                <a class="govuk-breadcrumbs__link" href="#">All support</a>
+                <a class="govuk-breadcrumbs__link" href="all-support">Find support</a>
               </li>
               <li class="govuk-breadcrumbs__list-item">
                 <a class="govuk-breadcrumbs__link" href="#">Housing and accomodation</a>
@@ -341,37 +341,43 @@
   </div>
   <div class="govuk-grid-column-one-third">
      <style>
-                     .status-launch {
-                        display: block;
-                        width: 100%;
-                        border: 10px #003a6a solid;
-                        background-color: #f3f2f1;
-                        margin: 0;
-                        padding: 0;
-                     }
-                     .header-side {
-                        background-color: #003a6a;
-                        padding: 15px;
-                     }
-                     .header-side h2 {
-                        color: white;
-                     }
-                     .body-side {
-                        padding: 15px;
-                     }
-                  </style>
-                  <aside class="status-launch">
-                     <div class="header-side">
-                        <h2 class="govuk-heading-l">Find out what I can get</h2>
-                     </div>
-                     <div class="body-side">
-                        <h3 class="govuk-heading-m">Check my status</h3>
-                        <p class="govuk-body">As a care leaver you are given a "status" by the government depending on your time in care.</p>
-                        <p class="govuk-body">It can help you to find out your status</p>
-                        <a href="status">Find out more about my care leaver status</a>
+      .status-launch {
+         display: block;
+         width: 99%;
+         border: 1px #003a6a solid;
+         background-color: #f3f2f1;
+         margin: 0;
+         padding: 0;
+      }
+      .header-side {
+         background-color: #003a6a;
+         padding: 15px;
+      }
+      .header-side h2 {
+         color: white;
+      }
+      .header-side h2 a {
+       color: white;
+       text-decoration: none;
+      }
+      .header-side h2 a:hover {
+       color: white;
+       text-decoration: underline;
+      }
+      .body-side {
+         padding: 15px;
+      }
+   </style>
+   <aside class="status-launch">
+      <div class="header-side">
+         <h2 class="govuk-heading-l"><a href="status">Check what support you should get</a></h2>
+      </div>
+      <div class="body-side">
+         <p class="govuk-body">What support you should get depends on your ‘care leaver status’, which is based on the time you spent in care.</p>
+         <p class="govuk-body"><a href="status">What’s my status?</a></p>
 
-                     </div>
-                  </aside>
+      </div>
+   </aside>
   </div>
 </div>
 
