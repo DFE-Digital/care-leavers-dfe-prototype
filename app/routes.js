@@ -143,3 +143,163 @@ router.post('/25-question', function(request, response) {
         response.redirect("/v01/support-no-results")
     }
 })
+
+// VERSION 2
+
+router.post('/v02entitlement-checker', function(request, response) {
+
+    var entcheck = request.session.data['entcheck']
+    if (entcheck == "15"){
+        response.redirect("/v02/15-question")
+    } else if (entcheck == "16") {  
+        response.redirect("/v02/16-question");
+    } else if (entcheck == "18") {  
+        response.redirect("/v02/18-question");
+    } else if (entcheck == "dont-know") {  
+        response.redirect("/v02/support-dont-know");
+    } else {
+        response.redirect("/v02/25-question")
+    }
+})
+
+router.post('/v0215-question', function(request, response) {
+
+    var check = request.session.data['check']
+    if (check == "incare"){
+        response.redirect("/v02/15-incare")
+    } else if (check == "custody") {  
+        response.redirect("/v02/15-incare");
+    } else if (check == "asylum") {  
+        response.redirect("/v02/15-incare");
+    } else if (check == "dont-know") {  
+        response.redirect("/v02/support-dont-know");
+    } else {
+        response.redirect("/v02/support-no-results")
+    }
+})
+
+router.post('/v0215-incare', function(request, response) {
+
+    var incare = request.session.data['incare']
+    if (incare == "yes"){
+        response.redirect("/v02/support-child-looked-after")
+    } else if (incare == "dont-know") {  
+        response.redirect("/v02/support-dont-know");
+    } else {
+        response.redirect("/v02/support-previously-looked-after-child")
+    }
+})
+
+// 16-17
+
+router.post('/v0216-question', function(request, response) {
+
+    var checksixteen = request.session.data['checksixteen']
+    if (checksixteen == "incare"){
+        response.redirect("/v02/16-incare")
+    } else if (checksixteen == "custody") {  
+        response.redirect("/v02/16-incare");
+    } else if (checksixteen == "asylum") {  
+        response.redirect("/v02/16-incare");
+    } else if (checksixteen == "dont-know") {  
+        response.redirect("/v02/support-dont-know");
+    } else {
+        response.redirect("/v02/support-no-results")
+    }
+})
+
+router.post('/v0216-incare', function(request, response) {
+
+    var incarebirthday = request.session.data['incarebirthday']
+    if (incarebirthday == "yes"){
+        response.redirect("/v02/16-incare-weeks")
+    } else if (incarebirthday == "dont-know") {  
+        response.redirect("/v02/support-dont-know");
+    } else {
+        response.redirect("/v02/support-care-experienced")
+    }
+})
+
+router.post('/v0216-incare-weeks', function(request, response) {
+
+    var incareweeks = request.session.data['incareweeks']
+    if (incareweeks == "yes"){
+        response.redirect("/v02/16-incare-currently")
+    } else if (incareweeks == "dont-know") {  
+        response.redirect("/v02/support-dont-know");
+    } else {
+        response.redirect("/v02/support-qualifying-child")
+    }
+})
+
+router.post('/v0216-incare-currently', function(request, response) {
+
+    var incarecurrently = request.session.data['incarecurrently']
+    if (incarecurrently == "yes"){
+        response.redirect("/v02/support-eligible-child")
+    } else if (incarecurrently == "dont-know") {  
+        response.redirect("/v02/support-dont-know");
+    } else {
+        response.redirect("/v02/support-relevant-child")
+    }
+})
+
+// 18-24
+
+router.post('/v0218-question', function(request, response) {
+
+    var checkeighteen = request.session.data['checkeighteen']
+    if (checkeighteen == "incare"){
+        response.redirect("/v02/18-incare")
+    } else if (checkeighteen == "custody") {  
+        response.redirect("/v02/18-incare");
+    } else if (checkeighteen == "asylum") {  
+        response.redirect("/v02/18-incare");
+    } else if (checkeighteen == "dont-know") {  
+        response.redirect("/v02/support-dont-know");
+    } else {
+        response.redirect("/v02/support-no-results")
+    }
+})
+
+router.post('/v0218-incare', function(request, response) {
+
+    var incareonbirthday = request.session.data['incareonbirthday']
+    if (incareonbirthday == "yes"){
+        response.redirect("/v02/18-incare-weeks")
+    } else if (incareonbirthday == "dont-know") {  
+        response.redirect("/v02/support-dont-know");
+    } else {
+        response.redirect("/v02/support-care-experienced")
+    }
+})
+
+router.post('/v0218-incare-weeks', function(request, response) {
+
+    var incareforweeks = request.session.data['incareforweeks']
+    if (incareforweeks == "yes"){
+        response.redirect("/v02/support-former-relevant-child")
+    } else if (incareforweeks == "dont-know") {  
+        response.redirect("/v02/support-dont-know");
+    }else {
+        response.redirect("/v02/support-qualifying-care-leaver")
+    }
+})
+
+// 25
+
+router.post('/v0225-question', function(request, response) {
+
+    var checktwentyfive = request.session.data['checktwentyfive']
+    if (checktwentyfive == "incare"){
+        response.redirect("/v02/support-care-experienced")
+    } else if (checktwentyfive == "custody") {  
+        response.redirect("/v02/support-care-experienced");
+    } else if (checktwentyfive == "asylum") {  
+        response.redirect("/v02/support-care-experienced");
+    } else if (checktwentyfive == "dont-know") {  
+        response.redirect("/v02/support-dont-know");
+    } else {
+        response.redirect("/v02/support-no-results")
+    }
+})

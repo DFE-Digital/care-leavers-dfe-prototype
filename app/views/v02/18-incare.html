@@ -8,39 +8,31 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    {{ govukBackLink({
+   {{ govukBackLink({
      text: "Back",
-     href: "status"
+     href: "18-question"
    }) }}
 
-    <form class="form" action="/v02entitlement-checker" method="post">
+    <form class="form" action="/v0218-incare" method="post">
       <span class="govuk-caption-l">Check my status</span>
     {{ govukRadios({
-      name: "entcheck",
-      value: data['entcheck'],
+      name: "incareonbirthday",
+      value: data['incareonbirthday'],
       fieldset: {
         legend: {
-          text: "How old are you?",
+          text: "Were you in care on or after you turned 16?",
           isPageHeading: true,
           classes: "govuk-fieldset__legend--l"
         }
       },
       items: [
         {
-          value: "15",
-          text: "15 or under"
+          value: "yes",
+          text: "Yes"
         },
         {
-          value: "16",
-          text: "16 or 17"
-        },
-        {
-          value: "18",
-          text: "18 to 24"
-        },
-        {
-          value: "25",
-          text: "25 and over"
+          value: "no",
+          text: "No"
         },
         {
           value: "dont-know",
@@ -54,6 +46,8 @@
     }) }}
 
     </form>
+
+
     
   </div>
 </div>

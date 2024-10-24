@@ -1,6 +1,6 @@
 {% extends "/layouts/dfe-service-v02.html" %}
 
-{% set pageName="Entitlement checker" %}
+{% set pageName="Check my status" %}
 
 {% block content %}
 
@@ -13,8 +13,8 @@
      href: "16-care-weeks"
    }) }}
 
-    <form class="form" action="/16-incare-currently" method="post">
-      <span class="govuk-caption-l">Check what support you’re entitled to</span>
+    <form class="form" action="/v0216-incare-currently" method="post">
+      <span class="govuk-caption-l">Check my status</span>
     {{ govukRadios({
       name: "incarecurrently",
       value: data['incarecurrently'],
