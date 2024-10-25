@@ -231,3 +231,48 @@ section.dfe {
 .app-emergency-callout {
     border-left-color: #d4351c;
 }
+
+.metadata-logo-wrapper {
+  padding: 0px;
+  margin-bottom: 20px;
+}
+
+.metadata-column {
+  margin-left: 0;
+}
+
+.gem-c-metadata__term {
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: inline; /* Changed to inline for better flow */
+  color: #0b0c0c; /* GOV.UK dark grey */
+}
+
+.gem-c-metadata__definition {
+  display: inline; /* Align inline with the terms */
+  margin-left: 5px;
+  font-weight: normal;
+}
+
+.govuk-link {
+  color: #1d70b8; /* GOV.UK blue */
+  text-decoration: underline;
+}
+
+.govuk-link:hover {
+  color: #003078;
+}
+
+.gem-c-metadata__definition a {
+  font-weight: bold;
+}
+
+/* Additional styling for better spacing between lines */
+.gem-c-metadata__list dd,
+.gem-c-metadata__list dt {
+  margin-right: 10px;
+}
+
+.gem-c-metadata__list dd {
+  margin-bottom: 10px;
+}
