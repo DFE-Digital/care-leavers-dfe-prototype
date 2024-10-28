@@ -435,3 +435,15 @@ section.dfe {
     color: #000 !important
   }
 }
+
+@media(max-width: 768px) {
+.split-panel .govuk-grid-column-one-half.text-column {
+    display: block;
+    width: 100%;
+    padding: 10px;
+  }
+}
+
+@media(max-width: 768px) {
+
+.split-panel .govuk-grid-column-one-half.image-column{ display: none; }}
