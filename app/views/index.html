@@ -1,3 +1,5 @@
+{% set view = 'Prototypes' %}
+
 {% extends "/layouts/dfe.html" %}
 
 {% set pageName="Home" %}
@@ -5,16 +7,81 @@
 {% block content %}
 
 <div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
+  <div class="govuk-grid-column-full">
 
-    
+    <table class="govuk-table govuk-table--small-text-until-tablet">
+      <caption class="govuk-table__caption govuk-table__caption--l">Prototypes and versions</caption>
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Version</th>
+          <th scope="col" class="govuk-table__header">Status</th>
+          <th scope="col" class="govuk-table__header">Thumb</th>
+          <th scope="col" class="govuk-table__header">Themes</th>
+          <th scope="col" class="govuk-table__header">Action</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
 
-    <h1 class="govuk-heading-xl">
-      {{ serviceName }}
-    </h1>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell govuk-body-s">v2</td>
+          <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--yellow">In research</strong></td>
+          <td class="govuk-table__cell"><img class="full-width-image" style="max-width: 65px;" alt="Version 2" src="/public/images/launch-v2.png"></td>
+          <td class="govuk-table__cell">
+            <h3 class="govuk-body-s" style="font-weight: bold;">Content focussed approach</h3>
+            <ul class="govuk-body-s">
+              <li>DfE branded</li>
+              <li>Categories/icons</li>
+              <li>Making info available by need rather than by entitlement</li>
+              <li>Housing category</li>
+              <li>Guides</li>
+              <li>Leaving care</li>
+            </ul>
+          </td>
+          <td class="govuk-table__cell"><a href="/v02/find-support" class="govuk-button" style="border-radius: 5px; font-size: 14px; font-weight: bold;">Launch v2</a></td>
+        </tr>
 
-    <p><a href="/v02/find-support">v02</a></p>
-    <p><a href="/v01/find-support">v01</a></p>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell govuk-body-s">v1b</td>
+          <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">Research complete</strong></td>
+          <td class="govuk-table__cell"><img class="full-width-image" style="max-width: 65px;" alt="Version 2" src="/public/images/launch-v1b.png"></td>
+          <td class="govuk-table__cell">
+            <h3 class="govuk-body-s" style="font-weight: bold;">Tool focussed approach</h3>
+            <ul class="govuk-body-s">
+              <li>DfE branded</li>
+              <li>Entitlement checker</li>
+              <li>All support filters</li>
+              <li>Status pages</li>
+              <li>UASC page</li>
+            </ul>
+          </td>
+          <td class="govuk-table__cell"><a href="/v01/find-support" class="govuk-button govuk-button--secondary" style="border-radius: 5px; font-size: 14px; font-weight: bold;">Launch v1b</a></td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell govuk-body-s">v1a</td>
+          <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">Research complete</strong></td>
+          <td class="govuk-table__cell"><img class="full-width-image" style="max-width: 65px;" alt="Version 2" src="/public/images/launch-v1a.png"></td>
+          <td class="govuk-table__cell">
+            <h3 class="govuk-body-s" style="font-weight: bold;">Life Carefree</h3>
+            <ul class="govuk-body-s">
+              <li>Third party branded</li>
+              <li>Categories on homepage</li>
+              <li>Red with styled imagery</li>
+              <li>Subscribe for newsletter</li>
+              <li>Socials</li>
+            </ul>
+          </td>
+          <td class="govuk-table__cell"><a href="https://www.figma.com/proto/Xb57sthW9hb9YrSwNbrldA/Life-Carefree?node-id=2-3&node-type=canvas&t=kyWyf1T3pGC9fGja-1&scaling=scale-down-width&content-scaling=fixed&page-id=0%3A1" target="_blank" class="govuk-button govuk-button--secondary" style="border-radius: 5px; font-size: 14px; font-weight: bold;">Launch v1a</a></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 class="govuk-heading-m">Example tags to use</h2>
+    <strong class="govuk-tag govuk-tag--grey">Not started</strong>
+    <strong class="govuk-tag govuk-tag--light-blue">In progress</strong>
+    <strong class="govuk-tag govuk-tag--blue">Design complete</strong>
+    <strong class="govuk-tag govuk-tag--yellow">In research</strong>
+    <strong class="govuk-tag govuk-tag--green">Research complete</strong>
   </div>
 </div>
 
