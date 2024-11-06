@@ -8,135 +8,103 @@
 
 
 
-
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
+    <form method="post" action="">
+      {{ govukBackLink({
+        text: "Back",
+        href: "status"
+      }) }}
 
-    {{ govukBackLink({
-     text: "Back",
-     href: "status"
-   }) }}
-{% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
-{% from "govuk/components/button/macro.njk" import govukButton %}
-{% from "govuk/components/error-message/macro.njk" import govukErrorMessage %}
+      {% if hasError %}
+        {{ govukErrorMessage({
+          text: errorMessage
+        }) }}
+      {% endif %}
 
-{% set hasError = false %}
-{% set errorMessage = "You cannot select 'None of these' or 'I don't know' along with any other options." %}
+      {{ govukCheckboxes({
+        idPrefix: "options",
+        name: "options",
+        fieldset: {
+          legend: {
+            text: "Which of these apply to you?",
+            isPageHeading: true,
+            classes: "govuk-fieldset__legend--l"
+          }
+        },
+        items: [
+          {
+            value: "c",
+            text: "I'm in or have spent time in care",
+            hint: {
+              text: "For example, in foster care, residential care, or under special guardianship"
+            }
+          },
+          {
+            value: "in-custody",
+            text: "I'm in or have spent time in custody before I was 18",
+            hint: {
+              text: "For example, in a secure children's home, a secure training centre, or a young offender institution"
+            }
+          },
+          {
+            value: "seek-asylum",
+            text: "I came to the UK on my own to seek asylum",
+            hint: {
+              text: "'Seek asylum' means you want to stay in the UK as a refugee because it's not safe in your home country"
+            }
+          },
+          {
+            value: "none",
+            text: "None of these"
+          },
+          {
+            value: "dont-know",
+            text: "I don't know"
+          }
+        ]
+      }) }}
 
-{% if errors %}
-  {% set hasError = true %}
-{% endif %}
-
-
-{% if hasError %}
-  {{ govukErrorMessage({
-    text: errorMessage
-  }) }}
-{% endif %}
-
-{{ govukCheckboxes({
-  idPrefix: "options",
-  name: "options",
-  fieldset: {
-    legend: {
-      text: "Which of these apply to you?",
-      isPageHeading: true,
-      classes: "govuk-fieldset__legend--l"
-    }
-  },
-  
-  items: [
-    {
-      value: "in-care",
-      text: "I'm in or have spent time in care",
-      hint: {
-        text: "For example, in foster care, residential care, or under special guardianship"
-      }
-    },
-    {
-      value: "in-custody",
-      text: "I'm in or have spent time in custody before I was 18",
-      hint: {
-        text: "For example, in a secure children's home, a secure training centre, or a young offender institution"
-      }
-    },
-    {
-      value: "seek-asylum",
-      text: "I came to the UK on my own to seek asylum",
-      hint: {
-        text: "'Seek asylum' means you want to stay in the UK as a refugee because it's not safe in your home country"
-      }
-    },
-    {
-      value: "none",
-      text: "None of these"
-    },
-    {
-      value: "dont-know",
-      text: "I don't know"
-    }
-  ]
-}) }}
-
-{{ govukButton({
-  text: "Continue",
-  classes: "govuk-button--primary"
-}) }}
-
-    
+      {{ govukButton({
+        text: "Continue",
+        classes: "govuk-button--primary"
+      }) }}
+    </form>
   </div>
 </div>
 
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
+  // JavaScript code here
+document.addEventListener("DOMContentLoaded", function () {
   const form = document.querySelector("form");
   const checkboxes = document.querySelectorAll('input[name="options"]');
-  const errorContainer = document.querySelector(".govuk-error-message");
-
-  // Values for routing
-  const routes = {
-    "pageA": ["in-care", "in-custody"],
-    "status-asylum": ["seek-asylum"],
-    "status-dont-know": ["none", "dont-know"]
-  };
 
   form.addEventListener("submit", function (event) {
-    // Prevent form submission to handle validation
-    event.preventDefault();
-
-    // Clear previous error state
-    errorContainer.style.display = "none";
-    checkboxes.forEach(cb => cb.classList.remove("govuk-input--error"));
+    event.preventDefault(); // Prevent default form submission
 
     // Collect selected values
     const selectedValues = Array.from(checkboxes)
       .filter(checkbox => checkbox.checked)
       .map(checkbox => checkbox.value);
 
-    // Check for incompatible selections
-    const hasMainSelections = selectedValues.some(val => ["in-care", "in-custody", "seek-asylum"].includes(val));
-    const hasNoneOrDontKnow = selectedValues.some(val => ["none", "dont-know"].includes(val));
-
-    if (hasMainSelections && hasNoneOrDontKnow) {
-      // Display error if incompatible selections are made
-      errorContainer.style.display = "block";
-      selectedValues.forEach(value => {
-        const checkbox = document.querySelector(`input[value="${value}"]`);
-        if (checkbox) checkbox.classList.add("govuk-input--error");
-      });
-      return; // Stop further processing
-    }
-
-    // Determine the route based on selected options
-    if (selectedValues.some(val => routes.pageA.includes(val))) {
-      window.location.href = "/pageA";
-    } else if (selectedValues.includes("seek-asylum")) {
+    // Check for specific combinations to determine the route
+    if (
+      (selectedValues.includes("in-care") && selectedValues.includes("in-custody") && selectedValues.includes("seek-asylum")) ||
+      (selectedValues.includes("in-custody") && selectedValues.includes("seek-asylum")) ||
+      (selectedValues.includes("in-care") && selectedValues.includes("seek-asylum"))
+    ) {
+      // Redirect to /status-asylum for the specified combinations
       window.location.href = "/status-asylum";
-    } else if (selectedValues.some(val => routes.status-dont-know.includes(val))) {
+    } else if (selectedValues.includes("in-care") || selectedValues.includes("in-custody")) {
+      // Redirect to /pageA if only "in-care" or "in-custody" is selected (without "seek-asylum")
+      window.location.href = "/pageA";
+    } else if (selectedValues.includes("none") || selectedValues.includes("dont-know")) {
+      // Redirect to /status-dont-know if either "none" or "dont-know" is selected
       window.location.href = "/status-dont-know";
     }
   });
 });
+
 </script>
 
 {% endblock %}
