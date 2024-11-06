@@ -15,47 +15,49 @@
      href: "status"
    }) }}
 
-    <form class="form" action="/v02entitlement-checker" method="post">
-      <span class="govuk-caption-l">Check my status</span>
-    {{ govukRadios({
-      name: "entcheck",
-      value: data['entcheck'],
-      fieldset: {
-        legend: {
-          text: "How old are you?",
-          isPageHeading: true,
-          classes: "govuk-fieldset__legend--l"
-        }
-      },
-      items: [
-        {
-          value: "15",
-          text: "15 or under"
-        },
-        {
-          value: "16",
-          text: "16 or 17"
-        },
-        {
-          value: "18",
-          text: "18 to 24"
-        },
-        {
-          value: "25",
-          text: "25 and over"
-        },
-        {
-          value: "dont-know",
-          text: "I don't know"
-        }
-      ]
-    }) }}
+ {% from "govuk/components/radios/macro.njk" import govukRadios %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
 
-    {{ govukButton({
-      text: "Continue"
-    }) }}
 
-    </form>
+
+{{ govukRadios({
+  name: "status",
+  fieldset: {
+    legend: {
+      text: "Which of these apply to you?",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--l"
+    }
+  },
+  items: [
+    {
+      value: "british-citizen",
+      text: "I am a British citizen",
+      hint: {
+        text: "You were born in the UK or settled here"
+      }
+    },
+    {
+      value: "with-family",
+      text: "I came to the UK with family to be safe, but we're now separated"
+    },
+    {
+      value: "seek-asylum",
+      text: "I came to the UK on my own to seek asylum",
+      hint: {
+        text: "'Seek asylum' means you want to stay in the UK as a refugee because it's not safe in your home country"
+      }
+    }
+  ]
+}) }}
+
+{{ govukButton({
+  text: "Continue",
+  classes: "govuk-button--primary"
+}) }}
+
+
+
     
   </div>
 </div>
