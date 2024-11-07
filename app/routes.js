@@ -326,11 +326,11 @@ router.post('/your-next-route', function(request, response) {
   const age = request.session.data['age'];
 
   if (age === "25-and-under") {
-    response.redirect("/status-uasc");
+    response.redirect("/v02b/status-uasc");
   } else if (age === "over-26") {
-    response.redirect("/support-dont-know");
+    response.redirect("/v02b/support-dont-know");
   } else if (age === "dont-know") {
-    response.redirect("/support-dont-know");
+    response.redirect("/v02b/support-dont-know");
   }
 });
 
