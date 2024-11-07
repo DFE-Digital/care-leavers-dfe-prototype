@@ -124,7 +124,7 @@ p.status { line-height: 1.8em;}
 /* Styling for the floating icon */
 .floating-icon {
     position: fixed;
-    bottom: 20px; /* Distance from the bottom of the window */
+    top: 120px; /* Distance from the bottom of the window */
     right: 20px;  /* Distance from the right of the window */
     z-index: 1000; /* Keeps it above other content */
 }
