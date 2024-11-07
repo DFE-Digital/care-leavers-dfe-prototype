@@ -1,0 +1,61 @@
+{% set view = 'Check my status' %}
+
+{% extends "/layouts/dfe-service-v02.html" %}
+
+{% set pageName="Care leaver statuses" %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+   {{ govukBackLink({
+     text: "Back",
+     href: "entitlement-checker"
+   }) }}
+
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+<form class="govuk-form-group" action="/your-next-route" method="post">
+  
+  {{ govukRadios({
+    name: "age",
+    fieldset: {
+      legend: {
+        text: "How old are you?",
+        isPageHeading: true,
+        classes: "govuk-fieldset__legend--l"
+      }
+    },
+    hint: {
+      text: "You can also work out your age using the birthday that your personal advisor or social worker gave you."
+    },
+    items: [
+      {
+        value: "25-and-under",
+        text: "25 and under"
+      },
+      {
+        value: "over-26",
+        text: "Over 26"
+      },
+      {
+        value: "dont-know",
+        text: "I don't know"
+      }
+    ]
+  }) }}
+  <br>
+
+  {{ govukButton({
+      text: "Continue"
+    }) }}
+
+</form>
+
+  </div>
+</div>
+
+{% endblock %}
