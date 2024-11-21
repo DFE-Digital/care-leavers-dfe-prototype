@@ -2,14 +2,88 @@
 
 {% extends "/layouts/dfe.html" %}
 
-{% set pageName="Home" %}
+{% set pageName="Images vs icons | Design history" %}
+
+{% block header %}
+
+<div class="govuk-width-container">
+{{ govukPhaseBanner({
+  tag: {
+    text: "Alpha"
+  },
+  html: 'This is a new service. Help us improve it and <a class="govuk-link" href="#">give your feedback by email</a>.'
+}) }}
+</div>
+
+{{ header({
+    "showNav": "true",
+    "showSearch": "false",
+    "showHeaderActionLinks": "false",
+    "logoPath": "public/images",
+    "searchAction": "/search/",
+    "searchInputName": "q",
+    "logoAltText": "Department for Education",
+    "homeHref": "https://gov.uk",
+    "selectedNav": view,
+    "service": {
+      "name": "Find support for care leavers",
+      "serviceUrl": "/"
+    },
+    "headerActionLinks": [
+      {
+        "url"  : "/",
+        "label" : "My account"
+      },
+      {
+        "url"  : "/",
+        "label" : "Sign out"
+      }
+    ],
+    "primaryLinks": [
+        {
+        "url"  : "/",
+        "label" : "Prototypes"
+      },
+      {
+        "url"  : "/design-history/index",
+        "label" : "Design history"
+      }
+    ]
+  })
+}}
+
+
+<section class="dfe-page-grey">
+   <div class="govuk-width-container">
+      <div class="govuk-grid-row">
+         <div class="govuk-grid-column-two-thirds">
+          <nav class="govuk-breadcrumbs" aria-label="Breadcrumb">
+            <ol class="govuk-breadcrumbs__list">
+              <li class="govuk-breadcrumbs__list-item">
+                <a class="govuk-breadcrumbs__link" href="/">Prototypes</a>
+              </li>
+              <li class="govuk-breadcrumbs__list-item">
+                <a class="govuk-breadcrumbs__link" href="/design-history/index">Design history</a>
+              </li>
+
+            </ol>
+          </nav>
+
+           <h1 class="govuk-heading-xl">Images vs icons</h1>
+         </div>
+      </div>
+   </div>
+</section>
+
+{% endblock %}
 
 {% block content %}
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-      <h1 class="govuk-heading-xl">Images vs Icons</h1>
+      <p class="govuk-body govuk-body-s">
+        19 November 2024</p>
 
       <section>
         <h2 class="govuk-heading-l">Summary</h2>
@@ -39,12 +113,16 @@
         </p>
       </section>
 
+      <img src="/public/images/quant-icons.png" alt="Icons" style="max-width:100%;">
+
       <section>
         <h2 class="govuk-heading-l">Why We Did It</h2>
         <p class="govuk-body">
           Initial feedback highlighted that while images could be engaging, they were not always helpful for users with limited English proficiency or those unfamiliar with the context. For example, images that seemed too "staged" or overly cheerful were perceived as inauthentic. By integrating icons, we aimed to improve navigation and accessibility, making the site more intuitive for all users.
         </p>
       </section>
+
+      <img src="/public/images/quant-images.png" alt="Images" style="max-width:100%;">
 
       <section>
         <h2 class="govuk-heading-l">Outcomes</h2>

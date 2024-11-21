@@ -2,19 +2,95 @@
 
 {% extends "/layouts/dfe.html" %}
 
-{% set pageName="Home" %}
+{% set pageName="Status checker vs content driven design | Design history" %}
+
+{% block header %}
+
+<div class="govuk-width-container">
+{{ govukPhaseBanner({
+  tag: {
+    text: "Alpha"
+  },
+  html: 'This is a new service. Help us improve it and <a class="govuk-link" href="#">give your feedback by email</a>.'
+}) }}
+</div>
+
+{{ header({
+    "showNav": "true",
+    "showSearch": "false",
+    "showHeaderActionLinks": "false",
+    "logoPath": "public/images",
+    "searchAction": "/search/",
+    "searchInputName": "q",
+    "logoAltText": "Department for Education",
+    "homeHref": "https://gov.uk",
+    "selectedNav": view,
+    "service": {
+      "name": "Find support for care leavers",
+      "serviceUrl": "/"
+    },
+    "headerActionLinks": [
+      {
+        "url"  : "/",
+        "label" : "My account"
+      },
+      {
+        "url"  : "/",
+        "label" : "Sign out"
+      }
+    ],
+    "primaryLinks": [
+        {
+        "url"  : "/",
+        "label" : "Prototypes"
+      },
+      {
+        "url"  : "/design-history/index",
+        "label" : "Design history"
+      }
+    ]
+  })
+}}
+
+
+<section class="dfe-page-grey">
+   <div class="govuk-width-container">
+      <div class="govuk-grid-row">
+         <div class="govuk-grid-column-two-thirds">
+          <nav class="govuk-breadcrumbs" aria-label="Breadcrumb">
+            <ol class="govuk-breadcrumbs__list">
+              <li class="govuk-breadcrumbs__list-item">
+                <a class="govuk-breadcrumbs__link" href="/">Prototypes</a>
+              </li>
+              <li class="govuk-breadcrumbs__list-item">
+                <a class="govuk-breadcrumbs__link" href="/design-history/index">Design history</a>
+              </li>
+
+            </ol>
+          </nav>
+
+           <h1 class="govuk-heading-xl">Status checker vs content driven design</h1>
+         </div>
+      </div>
+   </div>
+</section>
+
+{% endblock %}
 
 {% block content %}
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-      <h1 class="govuk-heading-xl">Status Checker vs Content-Driven Design</h1>
+      <p class="govuk-body govuk-body-s">
+        20 November 2024</p>
 
       <section>
         <h2 class="govuk-heading-l">Summary</h2>
         <p class="govuk-body">
-          In our first prototype, we used a status-based entitlement checker to tailor user journeys and display the specific support available to care leavers. However, early research revealed that the system created barriers, especially for UASC (Unaccompanied Asylum-Seeking Children) and others unfamiliar with their assigned statuses. In our second iteration, we shifted to a content-first approach, allowing users to browse support by category, while still providing information about statuses further into the site for those who needed it. This approach significantly improved usability and user satisfaction.
+          In our first prototype, we used a status-based entitlement checker to tailor user journeys and display the specific support available to care leavers. However, early research revealed that the system created barriers, especially for UASC (Unaccompanied Asylum-Seeking Children) and others unfamiliar with their assigned statuses.</p>
+
+          <p class="govuk-body"> In our second iteration, we shifted to a content-first approach, allowing users to browse support by category, while still providing information about statuses further into the site for those who needed it. This approach significantly improved usability and user satisfaction.
         </p>
       </section>
 
@@ -29,7 +105,7 @@
         <ul class="govuk-list govuk-list--bullet">
           <li>Overwhelmed users with complex questions.</li>
           <li>Confused UASC participants, preventing them from accessing support.</li>
-          <li>Created a barrier to information by prioritizing the status-checking process over browsing by need.</li>
+          <li>Created a barrier to information by prioritising the status-checking process over browsing by need.</li>
         </ul>
       </section>
 

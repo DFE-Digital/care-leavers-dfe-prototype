@@ -2,14 +2,88 @@
 
 {% extends "/layouts/dfe.html" %}
 
-{% set pageName="Home" %}
+{% set pageName="Choosing the Right Platform for Care Leavers | Design history" %}
+
+{% block header %}
+
+<div class="govuk-width-container">
+{{ govukPhaseBanner({
+  tag: {
+    text: "Alpha"
+  },
+  html: 'This is a new service. Help us improve it and <a class="govuk-link" href="#">give your feedback by email</a>.'
+}) }}
+</div>
+
+{{ header({
+    "showNav": "true",
+    "showSearch": "false",
+    "showHeaderActionLinks": "false",
+    "logoPath": "public/images",
+    "searchAction": "/search/",
+    "searchInputName": "q",
+    "logoAltText": "Department for Education",
+    "homeHref": "https://gov.uk",
+    "selectedNav": view,
+    "service": {
+      "name": "Find support for care leavers",
+      "serviceUrl": "/"
+    },
+    "headerActionLinks": [
+      {
+        "url"  : "/",
+        "label" : "My account"
+      },
+      {
+        "url"  : "/",
+        "label" : "Sign out"
+      }
+    ],
+    "primaryLinks": [
+        {
+        "url"  : "/",
+        "label" : "Prototypes"
+      },
+      {
+        "url"  : "/design-history/index",
+        "label" : "Design history"
+      }
+    ]
+  })
+}}
+
+
+<section class="dfe-page-grey">
+   <div class="govuk-width-container">
+      <div class="govuk-grid-row">
+         <div class="govuk-grid-column-two-thirds">
+          <nav class="govuk-breadcrumbs" aria-label="Breadcrumb">
+            <ol class="govuk-breadcrumbs__list">
+              <li class="govuk-breadcrumbs__list-item">
+                <a class="govuk-breadcrumbs__link" href="/">Prototypes</a>
+              </li>
+              <li class="govuk-breadcrumbs__list-item">
+                <a class="govuk-breadcrumbs__link" href="/design-history/index">Design history</a>
+              </li>
+
+            </ol>
+          </nav>
+
+           <h1 class="govuk-heading-xl">Choosing the right platform for care leavers</h1>
+         </div>
+      </div>
+   </div>
+</section>
+
+{% endblock %}
 
 {% block content %}
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-      <h1 class="govuk-heading-xl">Choosing the Right Platform for Care Leavers</h1>
+      <p class="govuk-body govuk-body-s">
+        18 November 2024</p>
 
       <section>
         <h2 class="govuk-heading-l">Summary</h2>
@@ -40,13 +114,7 @@
         </p>
       </section>
 
-      <p>
-
-      <img class="full-width-image" style="max-width: 300px;" alt="Version 2" src="/public/images/launch-v1a.png">
-<br>
-      <img class="full-width-image" style="max-width: 300px;" alt="Version 2" src="/public/images/launch-v1b.png">
-
-    </p>
+      <p class="govuk-body"><img class="full-width-image" style="max-width: 100%;" alt="Version 2" src="/public/images/launch-v1a.png"></p>
 
       <section>
         <h2 class="govuk-heading-l">Why We Did It</h2>
@@ -54,6 +122,8 @@
           Previous research highlighted varying levels of trust in different brands and sources of information among care leavers. To build a platform that users can confidently rely on, we needed to explore these perceptions and identify what inspires trust and usability.
         </p>
       </section>
+
+       <p class="govuk-body"><img class="full-width-image" style="max-width: 100%;" alt="Version 2" src="/public/images/launch-v1b.png"></p>
 
       <section>
         <h2 class="govuk-heading-l">Outcomes</h2>
