@@ -1,0 +1,101 @@
+{% set view = 'Design history' %}
+
+{% extends "/layouts/dfe.html" %}
+
+{% set pageName="Home" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">Status Checker vs Content-Driven Design</h1>
+
+      <section>
+        <h2 class="govuk-heading-l">Summary</h2>
+        <p class="govuk-body">
+          In our first prototype, we used a status-based entitlement checker to tailor user journeys and display the specific support available to care leavers. However, early research revealed that the system created barriers, especially for UASC (Unaccompanied Asylum-Seeking Children) and others unfamiliar with their assigned statuses. In our second iteration, we shifted to a content-first approach, allowing users to browse support by category, while still providing information about statuses further into the site for those who needed it. This approach significantly improved usability and user satisfaction.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="govuk-heading-l">Problem Statement</h2>
+        <p class="govuk-body">
+          Care leavers in England are assigned statuses such as "Former Relevant Child," "Relevant Child," "Care Experienced," or "Eligible Child" based on their history in care. While these statuses are important for ensuring they receive appropriate support, many care leavers do not understand them and find them confusing.
+        </p>
+        <p class="govuk-body">
+          In our first prototype, the entitlement checker aimed to help users discover their status and access tailored support. However, this approach:
+        </p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>Overwhelmed users with complex questions.</li>
+          <li>Confused UASC participants, preventing them from accessing support.</li>
+          <li>Created a barrier to information by prioritizing the status-checking process over browsing by need.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 class="govuk-heading-l">What We Did</h2>
+        <p class="govuk-body">
+          <strong>First Iteration: Status Checker</strong>
+        </p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>Implemented a questionnaire-based entitlement checker to guide users to support.</li>
+          <li>Displayed statuses prominently, using large green completion boxes.</li>
+        </ul>
+        <p class="govuk-body">
+          <strong>Research Findings:</strong>
+        </p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>Many users struggled with the questions, requesting "Don't know" options.</li>
+          <li>UASC participants often became lost and couldn’t find the support they needed.</li>
+          <li>Users reacted negatively to the display of statuses they didn’t understand.</li>
+          <li>Feedback indicated that many care leavers naturally wanted to search for support by category, such as "Housing" or "Money."</li>
+        </ul>
+        <p class="govuk-body">
+          <strong>Second Iteration: Content-Driven Design</strong>
+        </p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>Reorganized the site to allow users to browse support categories based on their immediate needs.</li>
+          <li>Retained the status checker but buried it deeper into the site to avoid creating barriers.</li>
+          <li>Created a "Care Leaver Statuses" page to educate users about statuses, explaining what they mean and why they exist.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 class="govuk-heading-l">Why We Did It</h2>
+        <p class="govuk-body">
+          The entitlement checker, while useful for tailoring journeys, was more of a hindrance than a help for many users. By moving to a content-first structure:
+        </p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>Users could more naturally navigate the site to find support based on their immediate concerns.</li>
+          <li>Care leavers had the option to learn about statuses in their own time, fostering understanding without confusion or frustration.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 class="govuk-heading-l">Outcomes</h2>
+        <p class="govuk-body">
+          <strong>Content-Driven Design:</strong> Users were able to quickly find support based on their specific needs. Browsing categories such as "Housing" or "Money" aligned better with how care leavers think about their needs.
+        </p>
+        <p class="govuk-body">
+          <strong>Care Leaver Statuses Page:</strong> Initial reactions were mixed as most users were unfamiliar with the concept of statuses. After reading the page, users were more willing to understand and engage with their own status, recognizing its importance for accessing support.
+        </p>
+        <p class="govuk-body">
+          <strong>Status Checker:</strong> By deprioritizing the status checker, we removed a significant barrier for users, particularly UASC participants. The checker remained available for those who preferred it, but it was no longer the primary entry point for support.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="govuk-heading-l">Next Steps</h2>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>Refine the "Care Leaver Statuses" page to make it even more user-friendly and engaging.</li>
+          <li>Rewrite the status checker in language that users could better understand, simplifying terminology and offering clearer explanations.</li>
+          <li>Continue to test and refine the content-first structure to ensure users find what they need efficiently.</li>
+          <li>Monitor the usage and accessibility of the status checker to determine its long-term role on the site.</li>
+        </ul>
+      </section>
+ 
+  </div>
+</div>
+
+{% endblock %}
