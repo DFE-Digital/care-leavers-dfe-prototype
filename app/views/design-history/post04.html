@@ -1,0 +1,160 @@
+{% set view = 'Design history' %}
+
+{% extends "/layouts/dfe.html" %}
+
+{% set pageName="Evaluating the exit button | Design history" %}
+
+{% block header %}
+
+<div class="govuk-width-container">
+{{ govukPhaseBanner({
+  tag: {
+    text: "Alpha"
+  },
+  html: 'This is a new service. Help us improve it and <a class="govuk-link" href="#">give your feedback by email</a>.'
+}) }}
+</div>
+
+{{ header({
+    "showNav": "true",
+    "showSearch": "false",
+    "showHeaderActionLinks": "false",
+    "logoPath": "public/images",
+    "searchAction": "/search/",
+    "searchInputName": "q",
+    "logoAltText": "Department for Education",
+    "homeHref": "https://gov.uk",
+    "selectedNav": view,
+    "service": {
+      "name": "Find support for care leavers",
+      "serviceUrl": "/"
+    },
+    "headerActionLinks": [
+      {
+        "url"  : "/",
+        "label" : "My account"
+      },
+      {
+        "url"  : "/",
+        "label" : "Sign out"
+      }
+    ],
+    "primaryLinks": [
+        {
+        "url"  : "/",
+        "label" : "Prototypes"
+      },
+      {
+        "url"  : "/design-history/index",
+        "label" : "Design history"
+      }
+    ]
+  })
+}}
+
+
+<section class="dfe-page-grey">
+   <div class="govuk-width-container">
+      <div class="govuk-grid-row">
+         <div class="govuk-grid-column-two-thirds">
+          <nav class="govuk-breadcrumbs" aria-label="Breadcrumb">
+            <ol class="govuk-breadcrumbs__list">
+              <li class="govuk-breadcrumbs__list-item">
+                <a class="govuk-breadcrumbs__link" href="/">Prototypes</a>
+              </li>
+              <li class="govuk-breadcrumbs__list-item">
+                <a class="govuk-breadcrumbs__link" href="/design-history/index">Design history</a>
+              </li>
+
+            </ol>
+          </nav>
+
+           <h1 class="govuk-heading-xl">Evaluating the exit button</h1>
+         </div>
+      </div>
+   </div>
+</section>
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <p class="govuk-body govuk-body-s">
+        26 November 2024</p>
+
+
+      <section>
+        <h2 class="govuk-heading-l">Summary</h2>
+        <p class="govuk-body">
+          Given the vulnerable nature of care leavers, we tested the GOV.UK-pattern exit button on the site. While intermediaries saw value in the feature, care leavers themselves did not find it useful and preferred other methods to protect their privacy. Based on user feedback, we decided not to proceed with implementing the exit button.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="govuk-heading-l">Problem Statement</h2>
+        <p class="govuk-body">
+          Care leavers accessing the site might need a quick and discreet way to exit for privacy reasons, especially when using shared devices or browsing in less secure environments. The challenge was to determine whether an exit button, following the GOV.UK design pattern, would meet this need effectively.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="govuk-heading-l">What We Did</h2>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>Implemented the <strong>GOV.UK exit button pattern</strong> on the prototype, ensuring it was visible and accessible.</li>
+          <li>Conducted user testing with care leavers and intermediaries to gather feedback on the button’s visibility, functionality, and relevance.</li>
+          <li>Explored how visisble the button was, particularly on mobile devices.</li>
+        </ul>
+      </section>
+
+      <img src="/public/images/exit-button.png" alt="Icons" style="max-width:100%;">
+
+      <section>
+        <h2 class="govuk-heading-l">Why We Did It</h2>
+        <p class="govuk-body">
+          The exit button was proposed as a safeguard for users in sensitive situations, allowing them to leave the site quickly and discreetly. Its inclusion was based on feedback from intermediaries who felt it could provide a layer of security for care leavers.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="govuk-heading-l">Outcomes</h2>
+        <ul class="govuk-list govuk-list--number">
+          <li>
+            <strong>Visibility and Understanding:</strong>
+            <ul class="govuk-list govuk-list--bullet">
+              <li>The button wasn’t always noticed by users, particularly on desktop.</li>
+              <li>Most care leavers didn’t immediately understand its purpose. After explaining its function, they indicated it wasn’t something they would use.</li>
+            </ul>
+          </li>
+          <li>
+            <strong>User Preferences:</strong>
+            <ul class="govuk-list govuk-list--bullet">
+              <li>Care leavers preferred using existing methods, such as swiping up on mobile to hide the screen.</li>
+              <li>While intermediaries thought the button could be useful, care leavers themselves didn’t see a need for it in their browsing behavior.</li>
+            </ul>
+          </li>
+          <li>
+            <strong>Decision:</strong>
+            <ul class="govuk-list govuk-list--bullet">
+              <li>Based on these findings, we concluded that the exit button didn’t meet a clear user need and could add unnecessary complexity to the site.</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 class="govuk-heading-l">Next Steps</h2>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>Remove the button.</li>
+          <li>Continue gathering feedback from care leavers and intermediaries to identify any emerging needs for privacy tools in future iterations.</li>
+        </ul>
+      </section>
+
+
+ 
+  </div>
+</div>
+
+{% endblock %}
