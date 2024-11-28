@@ -1,0 +1,341 @@
+{% set view = 'Leaving care process' %}
+
+{% extends "/layouts/dfe-service-v02.html" %}
+
+{% set pageName="Guides - Leaving care process" %}
+
+{% block header %}
+
+<div class="govuk-width-container">
+{{ govukPhaseBanner({
+  tag: {
+    text: "Alpha"
+  },
+  html: 'This is a new service. Help us improve it and <a class="govuk-link" href="#">give your feedback by email</a>.'
+}) }}
+</div>
+
+
+{{ header({
+    "showNav": "true",
+    "showSearch": "false",
+    "showHeaderActionLinks": "false",
+    "logoPath": "public/images",
+    "searchAction": "/search/",
+    "searchInputName": "q",
+    "logoAltText": "Department for Education",
+    "homeHref": "/find-support",
+    "selectedNav": view,
+    "service": {
+      "name": "Find support for leaving care",
+      "serviceUrl": "/"
+    },
+    "headerActionLinks": [
+      {
+        "url"  : "/",
+        "label" : "My account"
+      },
+      {
+        "url"  : "/",
+        "label" : "Sign out"
+      }
+    ],
+    "primaryLinks": [
+        {
+        "url"  : "find-support",
+        "label" : "Home"
+      }, {
+        "url"  : "all-support",
+        "label" : "Find support"
+      },  {
+        "url"  : "status",
+        "label" : "Care leaver statuses"
+      },  {
+        "url"  : "guide-leaving-care",
+        "label" : "Leaving care process"
+      },  {
+        "url"  : "guides-advice",
+        "label" : "Guides"
+      }, {
+        "url"  : "helplines",
+        "label" : "Helplines"
+      }
+    ]
+  })
+}}
+<div class="govuk-exit-this-page" data-module="govuk-exit-this-page">
+  <a href="https://www.bbc.co.uk/weather" role="button" draggable="false" class="govuk-button govuk-button--warning govuk-exit-this-page__button govuk-js-exit-this-page-button" data-module="govuk-button" rel="nofollow noreferrer">
+    <span class="govuk-visually-hidden">Emergency</span> Exit this page
+  </a>
+</div>
+
+<section class="dfe-page-grey">
+   <div class="govuk-width-container">
+      <div class="govuk-grid-row">
+         <div class="govuk-grid-column-three-quarters2">
+            <nav class="govuk-breadcrumbs" aria-label="Breadcrumb">
+            <ol class="govuk-breadcrumbs__list">
+              <li class="govuk-breadcrumbs__list-item">
+                <a class="govuk-breadcrumbs__link" href="find-support">Home</a>
+              </li>
+              <li class="govuk-breadcrumbs__list-item">
+                <a class="govuk-breadcrumbs__link" href="guides-advice">Guides</a>
+              </li>
+              <li class="govuk-breadcrumbs__list-item">
+                <a class="govuk-breadcrumbs__link" href="guide-leaving-care">Leaving care process</a>
+              </li>
+            </ol>
+          </nav>
+          
+           <h1 class="govuk-heading-xl">
+            Leaving care process
+           </h1>
+
+         </div>
+      </div>
+   </div>
+</section>
+
+
+{% endblock %}
+
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+   <div class="govuk-grid-column-two-thirds">
+        <span class="govuk-caption-m">Guide</span>
+        <nav>
+           <h2 class="govuk-heading-s">Contents</h2>
+           <ul class="govuk-list">
+             <li class="govuk-body-s"><a href="#what-happens-and-when">What happens and when</a></li>
+             <li class="govuk-body-s"><a href="#meeting-your-personal-advisor">Meeting your personal advisor</a></li>
+             <li class="govuk-body-s"><a href="#preparing-to-leave">Preparing to leave</a></li>
+             <li class="govuk-body-s"><a href="#deciding-where-youll-live">Deciding where you’ll live</a></li>
+             <li class="govuk-body-s"><a href="#getting-support">Getting support</a></li>
+             <li class="govuk-body-s"><a href="#issues-leaving-care">Issues leaving care</a></li>
+           </ul>
+        </nav>
+
+        <h2 id="what-happens-and-when" class="govuk-heading-l">What happens and when</h2>
+
+        <h3 class="govuk-heading-m">When you leave care</h3>
+        <p class="govuk-body">You do not have to leave care leave care until you’re 18.</p>
+        <p class="govuk-body">If you want to, you can leave care at 16 or 17. This is a decision that your social worker can help you with.</p>
+
+        <h3 class="govuk-heading-m">Before you leave care</h3>
+        <p class="govuk-body">You'll get support to start preparing early so that you feel more ready when you leave. This might start when you’re 15, 16, or 17, depending on when you leave.</p>
+        <p class="govuk-body">Your social worker will help you plan your move out of care, or you may get a personal advisor to support you.</p>
+
+        <h3 class="govuk-heading-m">After you leave care</h3>
+        <p class="govuk-body">Your local council must support you until you’re 21, but there is support you can get until you’re 25.</p>
+
+        <h2 id="meeting-your-personal-advisor" class="govuk-heading-l">Meeting your personal advisor</h2>
+
+        <h3 class="govuk-heading-m">What is a personal advisor?</h3>
+        <p class="govuk-body">A personal advisor (PA) is the main person who will support you when you leave care.</p>
+        <p class="govuk-body">Your social worker should introduce you to them when you’re 15, 16, or 17.</p>
+        <p class="govuk-body">Your personal advisor must help you until you’re 21, or 25 if you want.</p>
+
+        <h3 class="govuk-heading-m">How they should help you</h3>
+        <p class="govuk-body">You’ll meet with your personal advisor at least once every 8 weeks to:</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>plan and make decisions about your future (as part of your Pathway Plan)</li>
+          <li>get access to support</li>
+          <li>talk through any issues or worries</li>
+          <li>get guidance and advice when you need it</li>
+          <li>develop practical ‘life skills’ (like shopping, cooking or budgeting)</li>
+          <li>get set up for independence (e.g. apply for benefits, open a bank account)</li>
+        </ul>
+        <p class="govuk-body">If you do not get a personal advisor straight away, your social worker should help you with these things.</p>
+
+        <h2 id="preparing-to-leave" class="govuk-heading-l">Preparing to leave</h2>
+
+        <h3 class="govuk-heading-m">You’ll have a statutory review meeting</h3>
+        <p class="govuk-body">You’ll have a long chat with a few people about your future, to discuss decisions like:</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>where you’ll live</li>
+          <li>whether you’ll start or continue education</li>
+          <li>whether you’ll do training or get a job</li>
+          <li>what support you’ll need</li>
+        </ul>
+        <p class="govuk-body">People at the meeting will include:</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>your social worker</li>
+          <li>your personal advisor, if you have one</li>
+          <li>other people that support you (like a teacher or mentor)</li>
+          <li>an independent advocate, if you ask for one (to explain things and make sure you feel heard)</li>
+          <li>your carers, if you live with a foster family</li>
+          <li>an independent reviewing officer (someone that makes sure things are done properly)</li>
+        </ul>
+
+        <h3 class="govuk-heading-m">You’ll have a needs assessment</h3>
+        <p class="govuk-body">You’ll have a ‘needs assessment’ with your social worker or personal advisor, which will feel like a chat.</p>
+        <p class="govuk-body">This is how they work out what advice and support you’ll need to be independent.</p>
+        <p class="govuk-body">This will help make your Pathway Plan too.</p>
+
+        <h3 class="govuk-heading-m">You'll make a Pathway Plan</h3>
+        <p class="govuk-body">A Pathway Plan is a document that you work on with your personal advisor or social worker to prepare you for leaving care.</p>
+        <p class="govuk-body">You should meet to review it at least once every 6 months.</p>
+        <p class="govuk-body">You’ll use it to set plans and goals around things like:</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>where you’ll live</li>
+          <li>managing money</li>
+          <li>education, training or work</li>
+          <li>your health and wellbeing</li>
+          <li>contact with your family (if you want to)</li>
+          <li>finding your community</li>
+          <li>support you’ll need</li>
+        </ul>
+
+        <h2 id="deciding-where-youll-live" class="govuk-heading-l">Deciding where you’ll live</h2>
+
+        <h3 class="govuk-heading-m">Your housing rights</h3>
+        <p class="govuk-body">Your local council must make sure you move to ‘suitable accommodation’ when you leave care. This means somewhere you feel safe and comfortable.</p>
+        <p class="govuk-body">You may also be able to get help with living expenses if you have moved somewhere for education or training.</p>
+        <p class="govuk-body"><a href="#">Find out more about housing support.</a></p>
+
+        <h3 class="govuk-heading-m">Living arrangements</h3>
+        <p class="govuk-body">You’ll work out where to live with your Personal Adviser or Social Worker.</p>
+        <p class="govuk-body">If you’re not ready to live on your own yet, there are options to ease you into independent life.</p>
+        <p class="govuk-body"><a href="#">To learn more about your options, read our guide on finding somewhere to live.</a></p>
+        <p class="govuk-body"><a href="#">If you’re in crisis, read our guide on facing homelessness.</a></p>
+
+        <h2 id="getting-support" class="govuk-heading-l">Getting support</h2>
+
+        <h3 class="govuk-heading-m">Support you should get</h3>
+        <p class="govuk-body">Leaving care can be a challenging time, so your local council must support you in different areas of your life.</p>
+        <p class="govuk-body">What support you could get depends on your ‘care leaver status’, which is based on the time you spent in care.</p>
+        <p class="govuk-body"><a href="#">Check your care leaver status.</a></p>
+
+        <h3 class="govuk-heading-m">Your Local Offer</h3>
+        <p class="govuk-body">Your local council will offer you extra support through their Local Offer. This might include things like Council Tax discount or driving lessons.</p>
+        <p class="govuk-body">Different councils offer different things, so <a href="#">go to your local council’s website to find their Local Offer.</a></p>
+        <p class="govuk-body"><a href="#">Check who your local council is.</a></p>
+
+        <h2 id="issues-leaving-care" class="govuk-heading-l">Issues leaving care</h2>
+
+        <h3 class="govuk-heading-m">Having your voice heard</h3>
+        <p class="govuk-body">When leaving care, it’s important you feel heard when making decisions about your life.</p>
+        <p class="govuk-body">If you do not feel heard, you have the right to get an independent advocate to:</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>help you have your say in decisions about your life</li>
+          <li>explain things to you (like your rights)</li>
+          <li>make sure you’re treated fairly</li>
+          <li>make a complaint</li>
+        </ul>
+
+        <h3 class="govuk-heading-m">Making a complaint</h3>
+        <p class="govuk-body">Before making a complaint, if you can, speak to your social worker or personal advisor first to see if they can help.</p>
+        <p class="govuk-body">You have the right to make a complaint if you:</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>did not get the support you should have had</li>
+          <li>are unhappy with decisions made around your life</li>
+          <li>have been treated poorly or unfairly</li>
+        </ul>
+
+        <h2 class="govuk-heading-l">Related guides</h2>
+        <p class="govuk-body">Guides to help you through leaving care and navigate any challenges.</p>
+
+        <div class="dfe-box box-gov">
+        <div class="box-icon"><img src="/public/images/housing03.jpg"></div>
+        <div class="box-content">
+          <h3 class="govuk-heading-s"><a href="#" target="_blank">Finding somewhere to live</a></h3>
+          <p class="govuk-body-s">How your local council must help you find somewhere to live when you leave care.</p>
+        </div>
+      </div>
+
+      <div class="dfe-box box-gov">
+        <div class="box-icon"><img src="/public/images/general01.jpg"></div>
+        <div class="box-content">
+          <h3 class="govuk-heading-s"><a href="#" target="_blank">Staying in the UK</a></h3>
+          <p class="govuk-body-s">How to claim asylum (ask to stay in the UK as a refugee)</p>
+        </div>
+      </div>
+
+      <div class="dfe-box box-gov">
+        <div class="box-icon"><img src="/public/images/money01.jpg"></div>
+        <div class="box-content">
+          <h3 class="govuk-heading-s"><a href="#" target="_blank">Planning your finances</a></h3>
+          <p class="govuk-body-s">What to think about when it comes to money and expenses as you leave care</p>
+        </div>
+      </div>
+
+      <hr>
+
+ <div class="metadata-logo-wrapper">
+  <div class="govuk-grid-column-two-thirds metadata-column">
+    <div class="gem-c-metadata" data-module="gem-toggle metadata" data-gem-toggle-module-started="true" data-metadata-module-started="true">
+      <dl class="gem-c-metadata__list">
+        <dt class="gem-c-metadata__term">From:</dt>
+          <dd class="gem-c-metadata__definition">
+            <a class="govuk-link" href="https://www.gov.uk/government/organisations/department-for-education">Department for Education</a>
+
+          </dd>
+          <dt class="gem-c-metadata__term">Published</dt>
+          <dd class="gem-c-metadata__definition">07 October 2024</dd>
+          <dt class="gem-c-metadata__term">Last updated</dt>
+          <dd class="gem-c-metadata__definition">25 October 2024</dd>
+      </dl>
+    </div>
+    <div class="gem-c-print-link govuk-!-display-none-print govuk-!-margin-top-3 govuk-!-margin-bottom-8">
+              <button class="govuk-link govuk-body-s gem-c-print-link__button" data-module="print-link" data-print-link-module-started="true">Print this page</button>
+          </div>
+  </div>
+
+</div>
+
+
+
+
+            </div>
+            <div class="govuk-grid-column-one-third">
+              <img src="/public/images/guide-leave-care.jpg" style="max-width: 100%;">
+              <div class="x-govuk-related-navigation">
+                <nav class="x-govuk-related-navigation__nav-section" role="navigation" aria-labelledby="related-navigation-related-content">
+                  <h2 class="x-govuk-related-navigation__main-heading" id="related-navigation-related-content">
+                    Related support
+                  </h2>
+                  <ul class="x-govuk-related-navigation__link-list">
+                    <li class="x-govuk-related-navigation__link">
+                      <a class="govuk-link x-govuk-related-navigation__section-link x-govuk-related-navigation__section-link--other" href="help-care-leavers-grant">Care Leaver’s Grant</a>
+                    </li>
+                    <li class="x-govuk-related-navigation__link">
+                      <a class="govuk-link x-govuk-related-navigation__section-link x-govuk-related-navigation__section-link--other" href="help-care-leavers-grant">Advanced claims for Universal Credit</a>
+                    </li>
+                    <li class="x-govuk-related-navigation__link">
+                      <a class="govuk-link x-govuk-related-navigation__section-link x-govuk-related-navigation__section-link--other" href="help-care-leavers-grant">Designated teacher</a>
+                    </li>
+                    <li class="x-govuk-related-navigation__link">
+                      <a class="govuk-link x-govuk-related-navigation__section-link x-govuk-related-navigation__section-link--other" href="help-care-leavers-grant">Virtual School Head</a>
+                    </li>
+                    <li class="x-govuk-related-navigation__link">
+                      <a class="govuk-link x-govuk-related-navigation__section-link x-govuk-related-navigation__section-link--other" href="help-care-leavers-grant">Personal advisor</a>
+                    </li>
+                    <li class="x-govuk-related-navigation__link">
+                      <a class="govuk-link x-govuk-related-navigation__section-link x-govuk-related-navigation__section-link--other" href="help-care-leavers-grant">Pathway Plan</a>
+                    </li>
+                    <li class="x-govuk-related-navigation__link">
+                      <a class="govuk-link x-govuk-related-navigation__section-link x-govuk-related-navigation__section-link--other" href="help-care-leavers-grant">Civil Service Care Leavers Internship Scheme</a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+
+              <a href="#"><img class="full-width-image" alt="Care" src="/public/images/share.png" style="max-width: 300px;"></a>
+
+
+
+            </div>
+
+         </div>
+
+    
+  </div>
+  
+</div>
+
+
+
+{% endblock %}

@@ -1,0 +1,55 @@
+{% set view = 'Check my status' %}
+
+{% extends "/layouts/dfe-service-v02.html" %}
+
+{% set pageName="Care leaver statuses" %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+   {{ govukBackLink({
+     text: "Back",
+     href: "16-incare"
+   }) }}
+
+    <form class="form" action="/v02b16-incare-weeks" method="post">
+      <span class="govuk-caption-l">Check my status</span>
+    {{ govukRadios({
+      name: "incareweeks",
+      value: data['incareweeks'],
+      fieldset: {
+        legend: {
+          text: "Were you in care for at least 13 weeks after you turned 14?",
+          isPageHeading: true,
+          classes: "govuk-fieldset__legend--l"
+        }
+      },
+      items: [
+        {
+          value: "yes",
+          text: "Yes"
+        },
+        {
+          value: "no",
+          text: "No"
+        },
+        {
+          value: "dont-know",
+          text: "I don't know"
+        }
+      ]
+    }) }}
+
+    {{ govukButton({
+      text: "Continue"
+    }) }}
+
+    </form>
+    
+  </div>
+</div>
+
+{% endblock %}

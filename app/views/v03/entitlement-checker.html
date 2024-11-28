@@ -1,0 +1,63 @@
+{% set view = 'Check my status' %}
+
+{% extends "/layouts/dfe-service-v02.html" %}
+
+{% set pageName="Care leaver statuses" %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    {{ govukBackLink({
+     text: "Back",
+     href: "status"
+   }) }}
+
+   <form class="form" action="/v02bent-checker" method="post">
+
+ {% from "govuk/components/radios/macro.njk" import govukRadios %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+
+
+{{ govukRadios({
+  name: "status",
+  fieldset: {
+    legend: {
+      text: "Which of these apply to you?",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--l"
+    }
+  },
+  items: [
+    {
+      value: "british-citizen",
+      text: "I am a British citizen",
+      hint: {
+        text: "You were born in the UK or settled here"
+      }
+    },
+    {
+      value: "seek-asylum",
+      text: "I came to the UK to seek asylum and I am not with my family",
+      hint: {
+        text: "'Seek asylum' means you want to stay in the UK as a refugee because it's not safe in your home country"
+      }
+    }
+  ]
+}) }}
+
+{{ govukButton({
+  text: "Continue",
+  classes: "govuk-button--primary"
+}) }}
+</form>
+
+
+    
+  </div>
+</div>
+
+{% endblock %}

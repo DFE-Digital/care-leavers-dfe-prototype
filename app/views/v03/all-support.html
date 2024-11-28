@@ -1,0 +1,271 @@
+{% set view = 'Find support' %}
+
+{% extends "/layouts/dfe-service-v02.html" %}
+
+{% set pageName="Find support" %}
+
+{% block header %}
+
+<div class="govuk-width-container">
+{{ govukPhaseBanner({
+  tag: {
+    text: "Alpha"
+  },
+  html: 'This is a new service. Help us improve it and <a class="govuk-link" href="#">give your feedback by email</a>.'
+}) }}
+</div>
+
+
+{{ header({
+    "showNav": "true",
+    "showSearch": "false",
+    "showHeaderActionLinks": "false",
+    "logoPath": "public/images",
+    "searchAction": "/search/",
+    "searchInputName": "q",
+    "logoAltText": "Department for Education",
+    "homeHref": "/find-support",
+    "selectedNav": view,
+    "service": {
+      "name": "Find support for leaving care",
+      "serviceUrl": "/"
+    },
+    "headerActionLinks": [
+      {
+        "url"  : "/",
+        "label" : "My account"
+      },
+      {
+        "url"  : "/",
+        "label" : "Sign out"
+      }
+    ],
+    "primaryLinks": [
+        {
+        "url"  : "find-support",
+        "label" : "Home"
+      }, {
+        "url"  : "all-support",
+        "label" : "Find support",
+        "active" : false
+      },  {
+        "url"  : "status",
+        "label" : "Care leaver statuses"
+      },  {
+        "url"  : "guide-leaving-care",
+        "label" : "Leaving care process"
+      },  {
+        "url"  : "guides-advice",
+        "label" : "Guides"
+      }, {
+        "url"  : "helplines",
+        "label" : "Helplines"
+      }
+    ]
+  })
+}}
+<div class="govuk-exit-this-page" data-module="govuk-exit-this-page">
+  <a href="https://www.bbc.co.uk/weather" role="button" draggable="false" class="govuk-button govuk-button--warning govuk-exit-this-page__button govuk-js-exit-this-page-button" data-module="govuk-button" rel="nofollow noreferrer">
+    <span class="govuk-visually-hidden">Emergency</span> Exit this page
+  </a>
+</div>
+
+<section class="dfe-page-grey">
+   <div class="govuk-width-container">
+      <div class="govuk-grid-row">
+         <div class="govuk-grid-column-two-thirds">
+            <nav class="govuk-breadcrumbs" aria-label="Breadcrumb">
+            <ol class="govuk-breadcrumbs__list">
+              <li class="govuk-breadcrumbs__list-item">
+                <a class="govuk-breadcrumbs__link" href="find-support">Home</a>
+              </li>
+              <li class="govuk-breadcrumbs__list-item">
+                <a class="govuk-breadcrumbs__link" href="all-support">Find support</a>
+              </li>
+            </ol>
+          </nav>
+
+           <h2 class="govuk-heading-xl">
+            Find support
+           </h2>
+
+          <p class="govuk-body">When you leave care, you may have the right to certain support and there’s some you must apply for.</p>
+         </div>
+      </div>
+   </div>
+</section>
+
+
+{% endblock %}
+
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+   <div class="govuk-grid-column-full">
+      <!-- <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible"> -->
+
+          <section class="dfe-section govuk-!-margin-top-5">
+             <div class="govuk-width-container">
+                <h2 class="govuk-heading-l">What do you need help with?</h2>
+                <div class="dfe-grid-container dfe-grid-container--wider govuk-!-margin-top-5">
+
+                  <div class="hf-card">
+                     <a href="local-offer">
+                        <div class="hf-card-container">
+                           <img class="full-width-image" alt="Money" src="/public/images/icon-local.png">
+                           <div class="cat-card-details">
+                              <h3 class="govuk-heading-m">Local support</h3>
+                              <p class="govuk-body">Extra help your local council may offer you through their ‘Local Offer’</p>
+                           </div>
+                        </div>
+                     </a>
+                  </div>
+
+                  <div class="hf-card">
+                     <a href="category-money">
+                        <div class="hf-card-container">
+                           <img class="full-width-image" alt="Money" src="/public/images/icon-money.png">
+                           <div class="cat-card-details">
+                              <h3 class="govuk-heading-m">Money and benefits</h3>
+                              <p class="govuk-body">Help with money when you leave care and benefits you can apply for</p>
+                           </div>
+                        </div>
+                     </a>
+                  </div>
+
+                  <div class="hf-card">
+                     <a href="category-housing">
+                        <div class="hf-card-container">
+                           <img class="full-width-image" alt="Housing" src="/public/images/icon-housing.png">
+                           <div class="cat-card-details">
+                              <h3 class="govuk-heading-m">Housing</h3>
+                              <p class="govuk-body">Help finding somewhere to live and other support with housing costs</p>
+                           </div>
+                        </div>
+                     </a>
+                  </div>
+
+                  <div class="hf-card">
+                     <a href="category-work">
+                        <div class="hf-card-container">
+                           <img class="full-width-image" alt="Work and unemployment" src="/public/images/icon-work.png">
+                           <div class="cat-card-details">
+                              <h3 class="govuk-heading-m">Work and employment</h3>
+                              <p class="govuk-body">Support and services to help with finding and staying in work<br>&nbsp;</p>
+                           </div>
+                        </div>
+                     </a>
+                  </div>
+
+                  <div class="hf-card">
+                     <a href="category-education">
+                        <div class="hf-card-container">
+                           <img class="full-width-image" alt="Education" src="/public/images/icon-education.png">
+                           <div class="cat-card-details">
+                              <h3 class="govuk-heading-m">Education and training</h3>
+                              <p class="govuk-body">Support and services to help you start or continue education and training</p>
+                           </div>
+                        </div>
+                     </a>
+                  </div>
+
+                  <div class="hf-card">
+                     <a href="category-health">
+                        <div class="hf-card-container">
+                           <img class="full-width-image" alt="Health" src="/public/images/icon-health.png">
+                           <div class="cat-card-details">
+                              <h3 class="govuk-heading-m">Health and wellbeing</h3>
+                              <p class="govuk-body">Help with your physical and mental health, including disability support</p>
+                           </div>
+                        </div>
+                     </a>
+                  </div>
+
+                  <div class="hf-card">
+                     <a href="category-education">
+                        <div class="hf-card-container">
+                           <img class="full-width-image" alt="Education" src="/public/images/icon-people.png">
+                           <div class="cat-card-details">
+                              <h3 class="govuk-heading-m">People</h3>
+                              <p class="govuk-body">People that help you prepare for leaving care and support you along the way </p>
+                           </div>
+                        </div>
+                     </a>
+                  </div>
+
+                  <div class="hf-card">
+                     <a href="category-care">
+                        <div class="hf-card-container">
+                           <img class="full-width-image" alt="Care" src="/public/images/icon-care.png">
+                           <div class="cat-card-details">
+                              <h3 class="govuk-heading-m">Care and childcare</h3>
+                              <p class="govuk-body">Help with childcare or support if you are someone’s carer<br>&nbsp;</p>
+                           </div>
+                        </div>
+                     </a>
+                  </div>
+
+                  <div class="hf-card">
+                     <a href="status-uasc">
+                        <div class="hf-card-container">
+                           <img class="full-width-image" alt="Care" src="/public/images/icon-asylum.png">
+                           <div class="cat-card-details">
+                              <h3 class="govuk-heading-m">Coming to the UK</h3>
+                              <p class="govuk-body">Help if you came to the UK to seek asylum (to be safe)<br>&nbsp;</p>
+                           </div>
+                        </div>
+                     </a>
+                  </div>
+                  <style>
+                    .status-launch {
+                       display: block;
+                       width: 99%;
+                       border: 1px #003a6a solid;
+                       background-color: #f3f2f1;
+                       margin: 0;
+                       padding: 0;
+                    }
+                    .header-side {
+                       background-color: #003a6a;
+                       padding: 15px;
+                    }
+                    .header-side h2 {
+                       color: white;
+                    }
+                    .header-side h2 a {
+                     color: white;
+                     text-decoration: none;
+                    }
+                    .header-side h2 a:hover {
+                     color: white;
+                     text-decoration: underline;
+                    }
+                    .body-side {
+                       padding: 15px;
+                    }
+                 </style>
+                 <aside class="status-launch">
+                    <div class="header-side">
+                       <h2 class="govuk-heading-l"><a href="status">Check what support you should get</a></h2>
+                    </div>
+                    <div class="body-side">
+                       <p class="govuk-body">What support you should get depends on your ‘care leaver status’, which is based on the time you spent in care.</p>
+                       <p class="govuk-body"><a href="status">What’s my status?</a></p>
+
+                    </div>
+                 </aside>
+
+
+                </div>
+             </div>
+          </section>
+
+    
+  </div>
+</div>
+
+
+
+{% endblock %}

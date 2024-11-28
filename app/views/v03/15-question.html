@@ -1,0 +1,74 @@
+{% set view = 'Check my status' %}
+
+{% extends "/layouts/dfe-service-v02.html" %}
+
+{% set pageName="Care leaver statuses" %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+   {{ govukBackLink({
+     text: "Back",
+     href: "entitlement-checker"
+   }) }}
+
+    <form class="form" action="/v02b15-question" method="post">
+      <span class="govuk-caption-l">Check my status</span>
+    {{ govukRadios({
+      name: "check",
+      value: data['check'],
+      fieldset: {
+        legend: {
+          text: "Which of these apply to you?",
+          isPageHeading: true,
+          classes: "govuk-fieldset__legend--l"
+        }
+      },
+      items: [
+        {
+          value: "incare",
+          text: "I'm in or have spent time in care"
+        },
+        {
+          value: "custody",
+          text: "I'm in or have spent time in custody"
+        },
+        {
+          value: "none",
+          text: "None of these"
+        },
+        {
+          value: "dont-know",
+          text: "I don't know"
+        }
+      ]
+    }) }}
+
+    {{ govukButton({
+      text: "Continue"
+    }) }}
+
+    </form>
+
+    {{ govukDetails({
+      summaryText: "What 'in care' means",
+      html: "<p class='govuk-body'>For example, you were:<ul class='govuk-list govuk-list--bullet'><li>in foster care</li><li>in residential care</li><li>under special guardianship</li></ul></p>"
+    }) }}
+
+    {{ govukDetails({
+      summaryText: "What 'in custody' means",
+      html: "<p class='govuk-body'>For example, you were in a:<ul class='govuk-list govuk-list--bullet'><li>secure children's home</li><li>secure training centre</li><li>young offender institution</li></ul></p>"
+    }) }}
+
+    {{ govukDetails({
+      summaryText: "What 'seek asylum' means",
+      html: "<p class='govuk-body'>You were born in another country and have applied to live in the UK.</p>"
+    }) }}
+    
+  </div>
+</div>
+
+{% endblock %}
