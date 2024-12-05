@@ -1,8 +1,8 @@
 {% set view = 'Check my status' %}
 
-{% extends "/layouts/dfe-service-v02.html" %}
+{% extends "/layouts/dfe-service-v03.html" %}
 
-{% set pageName="Support for Qualifying care leaver" %}
+{% set pageName="Support for care experienced person" %}
 
 
 
@@ -21,8 +21,8 @@
           href: "status"
         },
         {
-          text: "Qualifying care leaver",
-          href: "support-qualifying-care-leaver"
+          text: "Care experienced person over 18",
+          href: "support-care-experienced-over-18"
         }
       ]
     }) }}
@@ -30,7 +30,7 @@
     
 
     {{ govukPanel({
-      titleText: "You are a 'Qualifying care leaver'"
+      titleText: "You are a 'Care experienced person'"
     }) }}
 
     <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
@@ -38,16 +38,12 @@
     <h2 class="govuk-heading-l">
       What this means
     </h2>
-    <p class="govuk-body">As a ‘Qualifying care leaver’, you’re entitled to support because you:
-      <ul class="govuk-list govuk-list--bullet">
-        <li>have left care</li>
-        <li>are between 18 and 25</li>
-        <li>spent less than 13 weeks in care since the agee of 14 - this includes time after you turned 16.</li>
-      </ul></p>
+    <p class="govuk-body">As a ‘Care experienced person’, you do not qualify for a care leaver status based on the time you spent in care.</p>
+    <p class="govuk-body">Depending on your local council, you may still get some support.</p>
 
       <h2 class="govuk-heading-m">
-      Support you’re entitled to</h2>
-      <p class="govuk-body">Most of the support you’re entitled to is provided by your local council.</p>
+      Support you could be entitled to</h2>
+      <p class="govuk-body">It’s up to your local council what support they provide to you. </p>
       <p class="govuk-body">If you came to the UK to seek asylum, you could also be entitled to additional <a href="help-uasc">support as an asylum-seeking person.</a></p>
     
     <div class="govuk-summary-card">
@@ -56,16 +52,6 @@
       </div>
       <div class="govuk-summary-card__content">
         <p>Additional support your local council offers you when you leave care</p>
-      </div>
-    </div>
-
-    <div class="govuk-summary-card">
-      <div class="govuk-summary-card__title-wrapper">
-        <h2 class="govuk-summary-card__title"><a href="help-care-leavers-grant">16 to 19 Bursary Fund</a></h2>
-      </div>
-      <div class="govuk-summary-card__content">
-        <p>A bursary of up to £1,200 if you stay in full-time education to help with related costs
- </p>
       </div>
     </div>
 
@@ -88,7 +74,7 @@
     </div>
 
     <h2 class="govuk-heading-m">Other support you could be eligible for</h2>
-      <p class="govuk-body">You’ll need to check you’re eligible for the following support.</p>
+      <p class="govuk-body">If you’re 18 or over, you can check if you’re eligible for the following support.X</p>
 
     <div class="govuk-summary-card">
       <div class="govuk-summary-card__title-wrapper">
@@ -138,9 +124,44 @@
     <p class="govuk-body"><a href="all-support">View all support</a></p>
     
     
+    
   </div>
   
 </div>
+  <!-- <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+    <section class="dfe-section govuk-!-margin-top-5">
+       <div class="govuk-width-container">
+          <h2 class="govuk-heading-l">Further support</h2>
+          <div class="dfe-grid-container dfe-grid-container--wider govuk-!-margin-top-5">
+             <div class="dfe-card">
+                <div class="dfe-card-container">
+                   <h3 class="govuk-heading-m">
+                      <a href="/all-support" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">View all support</a>
+                   </h3>
+                   <p>[with short description, including they need to go through checker]</p>
+                </div>
+             </div>
+             <div class="dfe-card">
+                <div class="dfe-card-container">
+                   <h3 class="govuk-heading-m">
+                      <a href="/leaving-care-process" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Leaving care process</a>
+                   </h3>
+                   <p>Aenean vehicula dolor leo, laoreet malesuada ipsum tincidunt et. Nullam sed ornare dolor. Vestibulum tincidunt nisi vitae pellentesque elementum.</p>
+                </div>
+             </div>
+             <div class="dfe-card">
+                <div class="dfe-card-container">
+                   <h3 class="govuk-heading-m">
+                      <a href="/help-and-advice" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Help and advice</a>
+                   </h3>
+                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean bibendum purus in vehicula elementum. Praesent neque ipsum, interdum non fringilla at, iaculis sed erat. 
+                   </p>
+                </div>
+             </div>
+          </div>
+       </div>
+    </section> -->
     
   </div>
 </div>

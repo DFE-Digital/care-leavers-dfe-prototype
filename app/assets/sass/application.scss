@@ -462,3 +462,15 @@ section.dfe {
     padding: 10px 10px 10px 36px;
     text-decoration: none;
 }
+
+.gem-c-contents-list__list-item--dashed .gem-c-contents-list__list-item-dash::before {
+    content: "—";
+    position: absolute;
+    left: 0px;
+    width: 20px;
+    overflow: hidden;
+}
+
+govuk-breadcrumbs {
+margin-top: -15px;
+margin-bottom: 25px; }
