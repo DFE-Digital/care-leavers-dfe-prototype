@@ -1,0 +1,275 @@
+{% set view = 'Finding somewhere to live' %}
+
+{% extends "/layouts/dfe-service-v03.html" %}
+
+{% set pageName="Guides - Finding somewhere to live" %}
+
+{% block header %}
+
+
+<div class="govuk-width-container">
+{{ govukPhaseBanner({
+  tag: {
+    text: "Alpha"
+  },
+  html: 'This is a new service. Help us improve it and <a class="govuk-link" href="#">give your feedback by email</a>.'
+}) }}
+</div>
+
+
+{{ header({
+    "showNav": "true",
+    "showSearch": "false",
+    "showHeaderActionLinks": "false",
+    "logoPath": "public/images",
+    "searchAction": "/search/",
+    "searchInputName": "q",
+    "logoAltText": "Department for Education",
+    "homeHref": "/home",
+    "selectedNav": view,
+    "service": {
+      "name": "Find support for leaving care",
+      "serviceUrl": "/"
+    },
+    "headerActionLinks": [
+      {
+        "url"  : "/",
+        "label" : "My account"
+      },
+      {
+        "url"  : "/",
+        "label" : "Sign out"
+      }
+    ],
+    "primaryLinks": [
+        {
+        "url"  : "home",
+        "label" : "Home"
+      }, {
+        "url"  : "all-support",
+        "label" : "Find support"
+      },  {
+        "url"  : "status",
+        "label" : "Your rights"
+      },  {
+        "url"  : "guide-leaving-care",
+        "label" : "Leaving care process"
+      },  {
+        "url"  : "guides-advice",
+        "label" : "Guides"
+      }, {
+        "url"  : "helplines",
+        "label" : "Helplines"
+      }
+    ]
+  })
+}}
+
+
+<section class="dfe-page-grey">
+   <div class="govuk-width-container">
+      <div class="govuk-grid-row">
+         <div class="govuk-grid-column-three-quarters2">
+            <nav class="govuk-breadcrumbs" aria-label="Breadcrumb">
+            <ol class="govuk-breadcrumbs__list">
+              <li class="govuk-breadcrumbs__list-item">
+                <a class="govuk-breadcrumbs__link" href="home">Home</a>
+              </li>
+              <li class="govuk-breadcrumbs__list-item">
+                <a class="govuk-breadcrumbs__link" href="guides-advice">Guides</a>
+              </li>
+            </ol>
+          </nav>
+          
+           <h1 class="govuk-heading-xl">
+            Finding somewhere to live
+           </h1>
+
+           <p class="govuk-body">
+    If you're not sure where to live when you leave care, we’ll talk through your options and what help you could get.
+  </p>
+
+         </div>
+      </div>
+   </div>
+</section>
+
+
+{% endblock %}
+
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+   <div class="govuk-grid-column-two-thirds">
+        <div class="govuk-main-wrapper">
+  
+
+  <h2 class="govuk-heading-s">Contents</h2>
+  <ul class="govuk-list govuk-list--bullet">
+    <li><a class="govuk-link" href="guide-finding-somewhere-to-live">Suitable accommodation</a></li>
+    <li><span>Types of accommodation</span></li>
+    <li><a class="govuk-link" href="guide-finding-somewhere-to-live-03">Housing help for your situation</a></li>
+    <li><a class="govuk-link" href="guide-finding-somewhere-to-live-04">Moving areas</a></li>
+    <li><a class="govuk-link" href="guide-finding-somewhere-to-live-05">Help with housing costs</a></li>
+  </ul>
+
+  <div class="bluebox"><!-- Types of Accommodation -->
+  <h2 class="govuk-heading-l" id="types-of-accommodation">Types of accommodation</h2>
+  <p class="govuk-body">
+    Whether you’re ready to live on your own or not, there are many housing options for care leavers.
+  </p>
+
+  <h3 class="govuk-heading-m">Supported accommodation</h3>
+  <p class="govuk-body">
+    Supported accommodation is where there are people around to help you develop life skills. It helps to prepare you for independent, adult life.
+  </p>
+  <p class="govuk-body">
+    This is sometimes called ‘supported housing’ or ‘semi-independent accommodation’.
+  </p>
+  <p class="govuk-body">
+    It includes supported lodgings, where a person or family rents a room in their home to you. These people are also called ‘hosts’.
+  </p>
+  <p class="govuk-body">
+    This is a good option if you leave care at 16 or 17 and you’re not ready to live on your own yet.
+  </p>
+
+  <h3 class="govuk-heading-m">Shared accommodation</h3>
+  <p class="govuk-body">
+    Shared accommodation is where you live with other young people.
+  </p>
+  <p class="govuk-body">
+    This is sometimes called ‘group houses’ or ‘shared houses’.
+  </p>
+  <p class="govuk-body">
+    You would have your own bedroom but share spaces like a living room, kitchen and bathroom.
+  </p>
+
+  <h3 class="govuk-heading-m">Specialist accommodation</h3>
+  <p class="govuk-body">
+    Specialist accommodation is somewhere you might live if you:
+  </p>
+  <ul class="govuk-list govuk-list--bullet">
+    <li>are disabled</li>
+    <li>have a health condition</li>
+    <li>have difficulties with your mental health</li>
+    <li>are vulnerable (at higher risk of harm)</li>
+  </ul>
+  <p class="govuk-body">
+    This is sometimes called ‘specialised support housing’.
+  </p>
+  <p class="govuk-body">
+    If you live here, there are always support workers available to help you.
+  </p>
+
+  <h3 class="govuk-heading-m">Living independently</h3>
+  <p class="govuk-body">
+    Living independently means living on your own.
+  </p>
+  <p class="govuk-body">
+    There are different types of housing that may be available to you, like social housing or a privately rented house or flat.
+  </p>
+  <p class="govuk-body">
+    You may be moved up the waiting list for social housing if you have a priority need.
+  </p>
+  <p class="govuk-body">
+    You’ll have to pay for household bills like:
+  </p>
+  <ul class="govuk-list govuk-list--bullet">
+    <li>energy (electricity and gas)</li>
+    <li>water</li>
+    <li>council tax</li>
+  </ul>
+  <p class="govuk-body">
+    You may be able to get help with housing costs.
+  </p>
+
+  <h3 class="govuk-heading-m">Staying with your foster family</h3>
+  <p class="govuk-body">
+    If you're already living with a foster family or a foster carer, you can choose to stay with them.
+  </p>
+  <p class="govuk-body">
+    This is called a ‘stay put’ arrangement.
+  </p>
+  <p class="govuk-body">
+    You and your foster family must make this decision together.
+  </p>
+
+  <h3 class="govuk-heading-m">Returning to your birth family</h3>
+  <p class="govuk-body">
+    If it’s possible and it feels right for you, you can return to live with your birth family.
+  </p>
+  <p class="govuk-body">
+    Your PA or social worker can help you with this decision.
+  </p>
+</div>
+
+{{ govukPagination({
+            previous: {
+              labelText: "Suitable accomodation",
+              href: "guide-finding-somewhere-to-live"
+            },
+            next: {
+              labelText: "Housing help for your situation",
+              href: "guide-finding-somewhere-to-live-03"
+            }
+          }) }}
+
+
+  <!-- More Guides -->
+  <!-- <h2 class="govuk-heading-l">More guides</h2>
+  <ul class="govuk-list govuk-list--bullet">
+    <li><a class="govuk-link" href="#facing-homelessness">Guide: What to do if you’re facing homelessness</a></li>
+    <li><a class="govuk-link" href="#leaving-care">Guide: What happens when you leave care</a></li>
+    <li><a class="govuk-link" href="#make-a-complaint">Guide: How to make a complaint</a></li>
+  </ul> -->
+</div>
+
+
+      <hr>
+
+ <div class="metadata-logo-wrapper">
+  <div class="govuk-grid-column-two-thirds metadata-column">
+    <div class="gem-c-metadata" data-module="gem-toggle metadata" data-gem-toggle-module-started="true" data-metadata-module-started="true">
+      <dl class="gem-c-metadata__list">
+        <dt class="gem-c-metadata__term">From:</dt>
+          <dd class="gem-c-metadata__definition">
+            <a class="govuk-link" href="https://www.gov.uk/government/organisations/department-for-education">Department for Education</a>
+
+          </dd>
+          <dt class="gem-c-metadata__term">Published</dt>
+          <dd class="gem-c-metadata__definition">07 October 2024</dd>
+          <dt class="gem-c-metadata__term">Last updated</dt>
+          <dd class="gem-c-metadata__definition">25 October 2024</dd>
+      </dl>
+    </div>
+    <div class="gem-c-print-link govuk-!-display-none-print govuk-!-margin-top-3 govuk-!-margin-bottom-8">
+              <button class="govuk-link govuk-body-s gem-c-print-link__button" data-module="print-link" data-print-link-module-started="true">Print this page</button>
+          </div>
+  </div>
+
+</div>
+
+
+
+
+            </div>
+            
+
+              <a href="#"><img class="full-width-image" alt="Care" src="/public/images/share.png" style="max-width: 300px;"></a>
+
+
+
+            </div>
+
+         </div>
+
+    
+  </div>
+  
+</div>
+
+
+
+{% endblock %}

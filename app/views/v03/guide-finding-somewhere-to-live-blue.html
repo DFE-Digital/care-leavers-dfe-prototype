@@ -1,0 +1,452 @@
+{% set view = 'Leaving care process' %}
+
+{% extends "/layouts/dfe-service-v03.html" %}
+
+{% set pageName="Guides - Leaving care process" %}
+
+{% block header %}
+
+<div class="govuk-width-container">
+{{ govukPhaseBanner({
+  tag: {
+    text: "Alpha"
+  },
+  html: 'This is a new service. Help us improve it and <a class="govuk-link" href="#">give your feedback by email</a>.'
+}) }}
+</div>
+
+
+{{ header({
+    "showNav": "true",
+    "showSearch": "false",
+    "showHeaderActionLinks": "false",
+    "logoPath": "public/images",
+    "searchAction": "/search/",
+    "searchInputName": "q",
+    "logoAltText": "Department for Education",
+    "homeHref": "/home",
+    "selectedNav": view,
+    "service": {
+      "name": "Find support for leaving care",
+      "serviceUrl": "/"
+    },
+    "headerActionLinks": [
+      {
+        "url"  : "/",
+        "label" : "My account"
+      },
+      {
+        "url"  : "/",
+        "label" : "Sign out"
+      }
+    ],
+    "primaryLinks": [
+        {
+        "url"  : "home",
+        "label" : "Home"
+      }, {
+        "url"  : "all-support",
+        "label" : "Find support"
+      },  {
+        "url"  : "status",
+        "label" : "Your rights"
+      },  {
+        "url"  : "guide-leaving-care",
+        "label" : "Leaving care process"
+      },  {
+        "url"  : "guides-advice",
+        "label" : "Guides"
+      }, {
+        "url"  : "helplines",
+        "label" : "Helplines"
+      }
+    ]
+  })
+}}
+
+
+<section class="dfe-page-grey">
+   <div class="govuk-width-container">
+      <div class="govuk-grid-row">
+         <div class="govuk-grid-column-three-quarters2">
+            <nav class="govuk-breadcrumbs" aria-label="Breadcrumb">
+            <ol class="govuk-breadcrumbs__list">
+              <li class="govuk-breadcrumbs__list-item">
+                <a class="govuk-breadcrumbs__link" href="home">Home</a>
+              </li>
+              <li class="govuk-breadcrumbs__list-item">
+                <a class="govuk-breadcrumbs__link" href="guides-advice">Guides</a>
+              </li>
+            </ol>
+          </nav>
+          
+           <h1 class="govuk-heading-xl">
+            Leaving care process
+           </h1>
+
+         </div>
+      </div>
+   </div>
+</section>
+
+
+{% endblock %}
+
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+   <div class="govuk-grid-column-two-thirds">
+        <div class="govuk-main-wrapper">
+  <h1 class="govuk-heading-xl">Finding somewhere to live</h1>
+  <p class="govuk-body">
+    If you're not sure where to live when you leave care, we’ll talk through your options and what help you could get.
+  </p>
+
+  <h2 class="govuk-heading-s">Contents</h2>
+  <ul class="govuk-list govuk-list--bullet">
+    <li><a class="govuk-link" href="#suitable-accommodation">Suitable accommodation</a></li>
+    <li><a class="govuk-link" href="#types-of-accommodation">Types of accommodation</a></li>
+    <li><a class="govuk-link" href="#housing-help">Housing help for your situation</a></li>
+    <li><a class="govuk-link" href="#moving-areas">Moving areas</a></li>
+    <li><a class="govuk-link" href="#help-with-housing-costs">Help with housing costs</a></li>
+  </ul>
+
+  <!-- Suitable Accommodation -->
+  <h2 class="govuk-heading-l" id="suitable-accommodation">Suitable accommodation</h2>
+  <h3 class="govuk-heading-m">Help finding suitable accommodation</h3>
+  <p class="govuk-body">
+    Your local council must find you suitable accommodation if you:
+  </p>
+  <ul class="govuk-list govuk-list--bullet">
+    <li>are between 16 and 21 (or 25 if you’re in full-time education)</li>
+    <li>
+      have spent at least 13 weeks in care, in total, between the age of 14 to 16 (this needs to include time after your 16th birthday)
+    </li>
+  </ul>
+  <p class="govuk-body">
+    This also means your care leaver status is:
+  </p>
+  <ul class="govuk-list govuk-list--bullet">
+    <li>former relevant child</li>
+    <li>eligible child</li>
+    <li>relevant child</li>
+  </ul>
+  <p class="govuk-body">
+    If your status is qualifying child, you’ll only get this support if you’re in full-time education.
+  </p>
+  <p class="govuk-body">
+    If you’re not sure, you can <a class="govuk-link" href="#check-care-leaver-status">check your care leaver status</a>.
+  </p>
+
+  <h3 class="govuk-heading-m">What is suitable accommodation?</h3>
+  <p class="govuk-body">
+    Suitable accommodation is somewhere safe and suitable to live that must:
+  </p>
+  <ul class="govuk-list govuk-list--bullet">
+    <li>consider your needs</li>
+    <li>consider your wishes and feelings</li>
+    <li>meet housing health and safety requirements</li>
+    <li>be affordable for you</li>
+    <li>meet any health or disability needs</li>
+  </ul>
+  <p class="govuk-body">
+    It should not be too far from:
+  </p>
+  <ul class="govuk-list govuk-list--bullet">
+    <li>your work</li>
+    <li>your school or college</li>
+    <li>where your training is taking place</li>
+  </ul>
+
+  <h3 class="govuk-heading-m">Visiting accommodation</h3>
+  <p class="govuk-body">
+    You should be able to visit somewhere before you move in to make sure it’s safe and suitable for you.
+  </p>
+  <p class="govuk-body">
+    Your personal adviser (PA) or social worker must also visit you when you have moved in.
+  </p>
+
+  <h3 class="govuk-heading-m">Issues with your accommodation</h3>
+  <p class="govuk-body">
+    If your home is not safe or suitable, your council must help you find somewhere else to live.
+  </p>
+  <p class="govuk-body">
+    Whilst they find you somewhere else to live, you might be given temporary emergency accommodation.
+  </p>
+
+  <!-- Types of Accommodation -->
+  <h2 class="govuk-heading-l" id="types-of-accommodation">Types of accommodation</h2>
+  <p class="govuk-body">
+    Whether you’re ready to live on your own or not, there are many housing options for care leavers.
+  </p>
+
+  <h3 class="govuk-heading-m">Supported accommodation</h3>
+  <p class="govuk-body">
+    Supported accommodation is where there are people around to help you develop life skills. It helps to prepare you for independent, adult life.
+  </p>
+  <p class="govuk-body">
+    This is sometimes called ‘supported housing’ or ‘semi-independent accommodation’.
+  </p>
+  <p class="govuk-body">
+    It includes supported lodgings, where a person or family rents a room in their home to you. These people are also called ‘hosts’.
+  </p>
+  <p class="govuk-body">
+    This is a good option if you leave care at 16 or 17 and you’re not ready to live on your own yet.
+  </p>
+
+  <h3 class="govuk-heading-m">Shared accommodation</h3>
+  <p class="govuk-body">
+    Shared accommodation is where you live with other young people.
+  </p>
+  <p class="govuk-body">
+    This is sometimes called ‘group houses’ or ‘shared houses’.
+  </p>
+  <p class="govuk-body">
+    You would have your own bedroom but share spaces like a living room, kitchen and bathroom.
+  </p>
+
+  <h3 class="govuk-heading-m">Specialist accommodation</h3>
+  <p class="govuk-body">
+    Specialist accommodation is somewhere you might live if you:
+  </p>
+  <ul class="govuk-list govuk-list--bullet">
+    <li>are disabled</li>
+    <li>have a health condition</li>
+    <li>have difficulties with your mental health</li>
+    <li>are vulnerable (at higher risk of harm)</li>
+  </ul>
+  <p class="govuk-body">
+    This is sometimes called ‘specialised support housing’.
+  </p>
+  <p class="govuk-body">
+    If you live here, there are always support workers available to help you.
+  </p>
+
+  <h3 class="govuk-heading-m">Living independently</h3>
+  <p class="govuk-body">
+    Living independently means living on your own.
+  </p>
+  <p class="govuk-body">
+    There are different types of housing that may be available to you, like social housing or a privately rented house or flat.
+  </p>
+  <p class="govuk-body">
+    You may be moved up the waiting list for social housing if you have a priority need.
+  </p>
+  <p class="govuk-body">
+    You’ll have to pay for household bills like:
+  </p>
+  <ul class="govuk-list govuk-list--bullet">
+    <li>energy (electricity and gas)</li>
+    <li>water</li>
+    <li>council tax</li>
+  </ul>
+  <p class="govuk-body">
+    You may be able to get help with housing costs.
+  </p>
+
+  <h3 class="govuk-heading-m">Staying with your foster family</h3>
+  <p class="govuk-body">
+    If you're already living with a foster family or a foster carer, you can choose to stay with them.
+  </p>
+  <p class="govuk-body">
+    This is called a ‘stay put’ arrangement.
+  </p>
+  <p class="govuk-body">
+    You and your foster family must make this decision together.
+  </p>
+
+  <h3 class="govuk-heading-m">Returning to your birth family</h3>
+  <p class="govuk-body">
+    If it’s possible and it feels right for you, you can return to live with your birth family.
+  </p>
+  <p class="govuk-body">
+    Your PA or social worker can help you with this decision.
+  </p>
+
+  <!-- Housing Help for Your Situation -->
+  <h2 class="govuk-heading-l" id="housing-help">Housing help for your situation</h2>
+
+  <h3 class="govuk-heading-m">If you’re a full-time student aged 16 to 25</h3>
+  <p class="govuk-body">
+    Your council must provide or pay for student accommodation during term holidays if you:
+  </p>
+  <ul class="govuk-list govuk-list--bullet">
+    <li>are a full-time student</li>
+    <li>are aged 16 to 25</li>
+    <li>have a care leaver status</li>
+  </ul>
+  <p class="govuk-body">
+    This is for full-time students in:
+  </p>
+  <ul class="govuk-list govuk-list--bullet">
+    <li>residential further education (like a college with a campus you live on)</li>
+    <li>higher education (like a university with student halls or housing)</li>
+  </ul>
+  <p class="govuk-body">
+    You might also be able to get other <a class="govuk-link" href="#education-support">education and training support</a>.
+  </p>
+
+  <h3 class="govuk-heading-m">If you’re in custody</h3>
+  <p class="govuk-body">
+    You're ‘in care’ if you are 17 or younger and in custody. This might mean you live in a:
+  </p>
+  <ul class="govuk-list govuk-list--bullet">
+    <li>secure children’s home</li>
+    <li>secure training centre</li>
+    <li>young offender institution</li>
+  </ul>
+  <p class="govuk-body">
+    When you leave, you may get help:
+  </p>
+  <ul class="govuk-list govuk-list--bullet">
+    <li>finding suitable accommodation</li>
+    <li>with housing costs</li>
+  </ul>
+  <p class="govuk-body">
+    This support depends on your care leaver status, which is based on your time in care.
+  </p>
+
+  <h3 class="govuk-heading-m">If you’re seeking asylum</h3>
+  <p class="govuk-body">
+    You’re an ‘unaccompanied asylum-seeking child or young person’ or ‘UASC’ if you arrived in the UK:
+  </p>
+  <ul class="govuk-list govuk-list--bullet">
+    <li>when you were 17 or younger</li>
+    <li>alone or without a parent or adult</li>
+  </ul>
+  <p class="govuk-body">
+    Social services will care for you until you become 18.
+  </p>
+  <p class="govuk-body">
+    When you are 18, you will ‘leave care’ and get:
+  </p>
+  <ul class="govuk-list govuk-list--bullet">
+    <li>help finding suitable accommodation</li>
+    <li>help with housing costs</li>
+    <li>other leaving care support</li>
+  </ul>
+
+  <!-- Moving Areas -->
+  <h2 class="govuk-heading-l" id="moving-areas">Moving areas</h2>
+
+  <h3 class="govuk-heading-m">What happens if you move areas</h3>
+  <p class="govuk-body">
+    If you move to a new area under a different council, the council that cares for you will stay the same.
+  </p>
+  <p class="govuk-body">
+    Your council must still give you housing support, including their Local Offer for care leavers.
+  </p>
+  <p class="govuk-body">
+    Sometimes they may work with the council for your new area to support you, but this is up to them to decide.
+  </p>
+
+  <h3 class="govuk-heading-m">Who your council is</h3>
+  <p class="govuk-body">
+    To find out what your council is, use the <a class="govuk-link" href="https://www.gov.uk/find-local-council">Find your council service</a>.
+  </p>
+  <p class="govuk-body">
+    You’ll need the postcode of where you lived when you first went into care.
+  </p>
+
+  <!-- Help with Housing Costs -->
+  <h2 class="govuk-heading-l" id="help-with-housing-costs">Help with housing costs</h2>
+
+  <h3 class="govuk-heading-m">If you’re 16 or 17</h3>
+  <p class="govuk-body">
+    If you’re 16 or 17, your council must pay for your housing costs, like rent, bills and other housing expenses.
+  </p>
+
+  <h3 class="govuk-heading-m">If you’re 18 or over</h3>
+  <p class="govuk-body">
+    If you’re 18 or over, you’ll have to pay your own housing costs, but you may be able to get housing support.
+  </p>
+
+  <!-- More Guides -->
+  <h2 class="govuk-heading-l">More guides</h2>
+  <ul class="govuk-list govuk-list--bullet">
+    <li><a class="govuk-link" href="#facing-homelessness">Guide: What to do if you’re facing homelessness</a></li>
+    <li><a class="govuk-link" href="#leaving-care">Guide: What happens when you leave care</a></li>
+    <li><a class="govuk-link" href="#make-a-complaint">Guide: How to make a complaint</a></li>
+  </ul>
+</div>
+
+
+      <hr>
+
+ <div class="metadata-logo-wrapper">
+  <div class="govuk-grid-column-two-thirds metadata-column">
+    <div class="gem-c-metadata" data-module="gem-toggle metadata" data-gem-toggle-module-started="true" data-metadata-module-started="true">
+      <dl class="gem-c-metadata__list">
+        <dt class="gem-c-metadata__term">From:</dt>
+          <dd class="gem-c-metadata__definition">
+            <a class="govuk-link" href="https://www.gov.uk/government/organisations/department-for-education">Department for Education</a>
+
+          </dd>
+          <dt class="gem-c-metadata__term">Published</dt>
+          <dd class="gem-c-metadata__definition">07 October 2024</dd>
+          <dt class="gem-c-metadata__term">Last updated</dt>
+          <dd class="gem-c-metadata__definition">25 October 2024</dd>
+      </dl>
+    </div>
+    <div class="gem-c-print-link govuk-!-display-none-print govuk-!-margin-top-3 govuk-!-margin-bottom-8">
+              <button class="govuk-link govuk-body-s gem-c-print-link__button" data-module="print-link" data-print-link-module-started="true">Print this page</button>
+          </div>
+  </div>
+
+</div>
+
+
+
+
+            </div>
+            <div class="govuk-grid-column-one-third">
+              <img src="/public/images/guide-leave-care.jpg" style="max-width: 100%;">
+              <div class="x-govuk-related-navigation">
+                <nav class="x-govuk-related-navigation__nav-section" role="navigation" aria-labelledby="related-navigation-related-content">
+                  <h2 class="x-govuk-related-navigation__main-heading" id="related-navigation-related-content">
+                    Related support
+                  </h2>
+                  <ul class="x-govuk-related-navigation__link-list">
+                    <li class="x-govuk-related-navigation__link">
+                      <a class="govuk-link x-govuk-related-navigation__section-link x-govuk-related-navigation__section-link--other" href="help-care-leavers-grant">Care Leaver’s Grant</a>
+                    </li>
+                    <li class="x-govuk-related-navigation__link">
+                      <a class="govuk-link x-govuk-related-navigation__section-link x-govuk-related-navigation__section-link--other" href="help-care-leavers-grant">Advanced claims for Universal Credit</a>
+                    </li>
+                    <li class="x-govuk-related-navigation__link">
+                      <a class="govuk-link x-govuk-related-navigation__section-link x-govuk-related-navigation__section-link--other" href="help-care-leavers-grant">Designated teacher</a>
+                    </li>
+                    <li class="x-govuk-related-navigation__link">
+                      <a class="govuk-link x-govuk-related-navigation__section-link x-govuk-related-navigation__section-link--other" href="help-care-leavers-grant">Virtual School Head</a>
+                    </li>
+                    <li class="x-govuk-related-navigation__link">
+                      <a class="govuk-link x-govuk-related-navigation__section-link x-govuk-related-navigation__section-link--other" href="help-care-leavers-grant">Personal advisor</a>
+                    </li>
+                    <li class="x-govuk-related-navigation__link">
+                      <a class="govuk-link x-govuk-related-navigation__section-link x-govuk-related-navigation__section-link--other" href="help-care-leavers-grant">Pathway Plan</a>
+                    </li>
+                    <li class="x-govuk-related-navigation__link">
+                      <a class="govuk-link x-govuk-related-navigation__section-link x-govuk-related-navigation__section-link--other" href="help-care-leavers-grant">Civil Service Care Leavers Internship Scheme</a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+
+              <a href="#"><img class="full-width-image" alt="Care" src="/public/images/share.png" style="max-width: 300px;"></a>
+
+
+
+            </div>
+
+         </div>
+
+    
+  </div>
+  
+</div>
+
+
+
+{% endblock %}
