@@ -474,3 +474,34 @@ section.dfe {
 govuk-breadcrumbs {
 margin-top: -15px;
 margin-bottom: 25px; }
+
+
+
+.dfe-header__menu-toggle {
+  background-color: #ffffff;
+  border: 1px solid #ffffff;
+  color: #003a69;
+  cursor: pointer;
+  display: block;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  margin-right: 0;
+  /* [6] */
+  padding: 7px 16px;
+  position: relative;
+  text-decoration: none;
+  z-index: 1;
+}
+
+.dfe-header__menu-toggle:hover {
+  background-color: #002644;
+  border-color: #f0f4f5;
+  box-shadow: none;
+}
+
+.dfe-header__menu-toggle:active, .dfe-header__menu-toggle.is-active {
+  background-color: #001d35;
+  border-color: #f0f4f5;
+  color: #fff;
+}
