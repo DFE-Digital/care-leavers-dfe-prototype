@@ -476,7 +476,7 @@ margin-top: -15px;
 margin-bottom: 25px; }
 
 
-
+@media (max-width: 40.0525em) {
 .dfe-header__menu-toggle {
   background-color: #ffffff;
   border: 1px solid #ffffff;
@@ -504,4 +504,5 @@ margin-bottom: 25px; }
   background-color: #001d35;
   border-color: #f0f4f5;
   color: #fff;
+}
 }
