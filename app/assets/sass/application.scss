@@ -6,7 +6,10 @@ $govuk-font-family: 'Inter', sans-serif;
 
 .govuk-width-container { @include govuk-width-container; }
 
+.dfe-header .dfe-header__service-name {
+  text-align:right;}
 
+a.dfe-header__link--service { font-weight: 800;}
 
 
 .tableNumbers{
@@ -226,6 +229,26 @@ section.dfe {
     .box-icon {
         display: none;
     }
+}
+
+.mini-guide {
+  border-bottom: 1px solid #b1b4b6;
+  display:block;
+  margin-bottom: 15px;
+}
+.mini-guide h3 {
+  padding-left: 10px;
+  margin-top: 10px;
+  margin-bottom: 8px;
+}
+.guide-image {
+  float:left;
+  display: block;
+  max-width: 120px;
+  margin-right: 10px;
+}
+.guide-image img {
+  max-width: 120px;
 }
 
 .app-emergency-callout {

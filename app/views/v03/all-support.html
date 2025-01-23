@@ -2,7 +2,7 @@
 
 {% extends "/layouts/dfe-service-v03.html" %}
 
-{% set pageName="Find support" %}
+{% set pageName="All support" %}
 
 {% block header %}
 
@@ -27,7 +27,7 @@
     "homeHref": "/home",
     "selectedNav": view,
     "service": {
-      "name": "Leaving care support",
+      "name": "Support for care leavers",
       "serviceUrl": "/home"
     },
     "headerActionLinks": [
@@ -46,8 +46,7 @@
         "label" : "Home"
       }, {
         "url"  : "all-support",
-        "label" : "Find support",
-        "active" : false
+        "label" : "All support"
       },  {
         "url"  : "status",
         "label" : "Your rights"
@@ -107,7 +106,7 @@
                 <h2 class="govuk-heading-l">What do you need help with?</h2>
                 <div class="dfe-grid-container dfe-grid-container--wider govuk-!-margin-top-5">
 
-                  <div class="hf-card">
+                  <!-- <div class="hf-card">
                      <a href="local-offer">
                         <div class="hf-card-container">
                            <img class="full-width-image" alt="Money" src="/public/images/icon-local.png">
@@ -117,7 +116,7 @@
                            </div>
                         </div>
                      </a>
-                  </div>
+                  </div> -->
 
                   <div class="hf-card">
                      <a href="category-money">
