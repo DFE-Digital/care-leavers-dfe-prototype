@@ -195,8 +195,15 @@ section.dfe {
 }
 .box-ext {
     background-color: #EAF5FF;
+    border-radius: 15px;
+    padding: 25px;
+    display: block;
 }
+.box-ext p { 
+  line-height: 1.5em;
 
+}
+ 
 .box-guide{
     background-color: #EAF5FF;
 }
