@@ -539,14 +539,16 @@ margin-bottom: 25px; }
 
 .translate {
   text-align: right; 
-  width: 30%; 
+  width: 90px; 
   float: right;
   font-size:1em;
-  background: no-repeat url("/public/assets/images/google-translate.png") 10px 50%;
+  background-image: url("/public/images/google-translate.png");
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 @media (max-width: 768px) {
 .translate {
-  width:100%;
+  width: 70px;
   font-size:0.8em;
   }
 }
