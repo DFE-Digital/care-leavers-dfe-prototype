@@ -10,44 +10,52 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-   {{ govukBackLink({
+    {{ govukBackLink({
      text: "Back",
-     href: "16-care-weeks"
+     href: "status"
    }) }}
 
-    <form class="form" action="/v02b16-incare-currently" method="post">
-      <span class="govuk-caption-l">Check my status</span>
-    {{ govukRadios({
-      name: "incarecurrently",
-      value: data['incarecurrently'],
-      fieldset: {
-        legend: {
-          text: "Are you currently in care?",
-          isPageHeading: true,
-          classes: "govuk-fieldset__legend--l"
-        }
-      },
-      items: [
-        {
-          value: "yes",
-          text: "Yes"
-        },
-        {
-          value: "no",
-          text: "No"
-        },
-        {
-          value: "dont-know",
-          text: "I don't know"
-        }
-      ]
-    }) }}
+   <form class="form" action="/v02bent-checker" method="post">
 
-    {{ govukButton({
-      text: "Continue"
-    }) }}
+ {% from "govuk/components/radios/macro.njk" import govukRadios %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
 
-    </form>
+
+
+{{ govukRadios({
+  name: "status",
+  fieldset: {
+    legend: {
+      text: "Which of these apply to you?",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--l"
+    }
+  },
+  items: [
+    {
+      value: "british-citizen",
+      text: "I am a British citizen",
+      hint: {
+        text: "You were born in the UK or settled here"
+      }
+    },
+    {
+      value: "seek-asylum",
+      text: "I came to the UK to seek asylum and I am not with my family",
+      hint: {
+        text: "'Seek asylum' means you want to stay in the UK as a refugee because it's not safe in your home country"
+      }
+    }
+  ]
+}) }}
+
+{{ govukButton({
+  text: "Continue",
+  classes: "govuk-button--primary"
+}) }}
+</form>
+
+
     
   </div>
 </div>

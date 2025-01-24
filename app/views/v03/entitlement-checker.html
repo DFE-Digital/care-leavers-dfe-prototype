@@ -7,58 +7,105 @@
 {% block content %}
 
 
+
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
+    <form method="post" action="">
+      {{ govukBackLink({
+        text: "Back",
+        href: "status"
+      }) }}
 
-    {{ govukBackLink({
-     text: "Back",
-     href: "status"
-   }) }}
+      {% if hasError %}
+        {{ govukErrorMessage({
+          text: errorMessage
+        }) }}
+      {% endif %}
 
-   <form class="form" action="/v02bent-checker" method="post">
+      {{ govukCheckboxes({
+        idPrefix: "options",
+        name: "options",
+        fieldset: {
+          legend: {
+            text: "Which of these apply to you?",
+            isPageHeading: true,
+            classes: "govuk-fieldset__legend--l"
+          }
+        },
+        items: [
+          {
+            value: "c",
+            text: "I'm in or have spent time in care",
+            hint: {
+              text: "For example, in foster care, residential care, or under special guardianship"
+            }
+          },
+          {
+            value: "in-custody",
+            text: "I'm in or have spent time in custody before I was 18",
+            hint: {
+              text: "For example, in a secure children's home, a secure training centre, or a young offender institution"
+            }
+          },
+          {
+            value: "seek-asylum",
+            text: "I came to the UK on my own to seek asylum",
+            hint: {
+              text: "'Seek asylum' means you want to stay in the UK as a refugee because it's not safe in your home country"
+            }
+          },
+          {
+            value: "none",
+            text: "None of these"
+          },
+          {
+            value: "dont-know",
+            text: "I don't know"
+          }
+        ]
+      }) }}
 
- {% from "govuk/components/radios/macro.njk" import govukRadios %}
-{% from "govuk/components/button/macro.njk" import govukButton %}
-
-
-
-{{ govukRadios({
-  name: "status",
-  fieldset: {
-    legend: {
-      text: "Which of these apply to you?",
-      isPageHeading: true,
-      classes: "govuk-fieldset__legend--l"
-    }
-  },
-  items: [
-    {
-      value: "british-citizen",
-      text: "I am a British citizen",
-      hint: {
-        text: "You were born in the UK or settled here"
-      }
-    },
-    {
-      value: "seek-asylum",
-      text: "I came to the UK to seek asylum and I am not with my family",
-      hint: {
-        text: "'Seek asylum' means you want to stay in the UK as a refugee because it's not safe in your home country"
-      }
-    }
-  ]
-}) }}
-
-{{ govukButton({
-  text: "Continue",
-  classes: "govuk-button--primary"
-}) }}
-</form>
-
-
-    
+      {{ govukButton({
+        text: "Continue",
+        classes: "govuk-button--primary"
+      }) }}
+    </form>
   </div>
 </div>
+
+<script>
+  // JavaScript code here
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.querySelector("form");
+  const checkboxes = document.querySelectorAll('input[name="options"]');
+
+  form.addEventListener("submit", function (event) {
+    event.preventDefault(); // Prevent default form submission
+
+    // Collect selected values
+    const selectedValues = Array.from(checkboxes)
+      .filter(checkbox => checkbox.checked)
+      .map(checkbox => checkbox.value);
+
+    // Check for specific combinations to determine the route
+    if (
+      (selectedValues.includes("in-care") && selectedValues.includes("in-custody") && selectedValues.includes("seek-asylum")) ||
+      (selectedValues.includes("in-custody") && selectedValues.includes("seek-asylum")) ||
+      (selectedValues.includes("in-care") && selectedValues.includes("seek-asylum"))
+    ) {
+      // Redirect to /status-asylum for the specified combinations
+      window.location.href = "/v02b/status-uasc";
+    } else if (selectedValues.includes("in-care") || selectedValues.includes("in-custody")) {
+      // Redirect to /pageA if only "in-care" or "in-custody" is selected (without "seek-asylum")
+      window.location.href = "/v02b/entitlement-checker-age";
+    } else if (selectedValues.includes("none") || selectedValues.includes("dont-know")) {
+      // Redirect to /status-dont-know if either "none" or "dont-know" is selected
+      window.location.href = "/v02b/support-dont-know";
+    }
+  });
+});
+
+</script>
 
 {% endblock %}
 
