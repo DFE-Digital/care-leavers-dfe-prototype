@@ -15,12 +15,19 @@ https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
 {% block header %}
 
 <div class="govuk-width-container">
-{{ govukPhaseBanner({
-  tag: {
-    text: "Alpha"
-  },
-  html: 'This is a new service. Help us improve it and <a class="govuk-link" href="#">give your feedback by email</a>.'
-}) }}
+  <div class="govuk-phase-banner">
+    <p class="translate" class="govuk-body-s"><a href="#" class="govuk-link">English</a></p>
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+        Alpha
+      </strong>
+      <span class="govuk-phase-banner__text">
+        This is a new service. Help us improve it and <a class="govuk-link" href="#">give your feedback by email</a>.
+      </span>
+    </p>
+    
+  </div>
+  
 </div>
 
 {{ header({
