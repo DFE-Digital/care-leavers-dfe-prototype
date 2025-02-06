@@ -192,7 +192,12 @@ padding: 20px;
     }
 
     .split-panel .image-container {
-        height: 200px
+        height: 200px;
+        min-height: 200px;
+    }
+
+    .split-panel .govuk-grid-column-one-half.text-column {
+        padding: 25px;
     }
 }
 
