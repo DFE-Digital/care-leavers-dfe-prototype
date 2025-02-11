@@ -1,0 +1,144 @@
+{% set view = 'Check my status' %}
+
+{% extends "/layouts/dfe-service-v03.html" %}
+
+{% set pageName="Support for Relevant child" %}
+
+
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    {% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+
+    {{ govukBreadcrumbs({
+      collapseOnMobile: true,
+      items: [
+        {
+          text: "Your rights",
+          href: "status"
+        },
+        {
+          text: "Relevant child",
+          href: "support-relevant-child"
+        }
+      ]
+    }) }}
+
+    
+
+    {{ govukPanel({
+      html: "<h1 class='govuk-panel__title'>You are a <br>'Relevant child'</h1>"
+    }) }}
+
+    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+    <h2 class="govuk-heading-l">
+      What this means
+    </h2>
+    <p class="govuk-body">As a 'Relevant child', you’re entitled to support because you:
+      <ul class="govuk-list govuk-list--bullet">
+        <li>have left care</li>
+        <li>are 16 or 17</li>
+        <li>spent more than 13 weeks in care since the age of 14 — this includes time after you turned 16.</li>
+      </ul></p>
+
+      <h2 class="govuk-heading-m">
+      Support you’re entitled to</h2>
+      <p class="govuk-body">Most of the support you’re entitled to is provided by your local council.</p>
+      <p class="govuk-body">If you came to the UK to seek asylum, you could also be entitled to additional <a href="help-uasc">support as an asylum-seeking person.</a></p>
+
+      <div class="govuk-summary-card">
+        <div class="govuk-summary-card__title-wrapper">
+          <h2 class="govuk-summary-card__title"><a href="help-care-leavers-grant">Personal advisor</a></h2>
+        </div>
+        <div class="govuk-summary-card__content">
+          <p>Someone who helps you prepare for leaving care and supports you after you’ve left</p>
+        </div>
+      </div>
+
+    <div class="govuk-summary-card">
+      <div class="govuk-summary-card__title-wrapper">
+        <h2 class="govuk-summary-card__title"><a href="help-care-leavers-grant">Pathway plan</a></h2>
+      </div>
+      <div class="govuk-summary-card__content">
+        <p>A document you fill in with your personal advisor to help you prepare for leaving care</p>
+      </div>
+    </div>
+
+    <!-- <div class="govuk-summary-card">
+      <div class="govuk-summary-card__title-wrapper">
+        <h2 class="govuk-summary-card__title"><a href="help-care-leavers-grant">Local Offer</a></h2>
+      </div>
+      <div class="govuk-summary-card__content">
+        <p>Additional support your local council offers you when you leave care</p>
+      </div>
+    </div> -->
+
+    <div class="govuk-summary-card">
+      <div class="govuk-summary-card__title-wrapper">
+        <h2 class="govuk-summary-card__title"><a href="help-care-leavers-grant">16 to 19 Bursary Fund</a></h2>
+      </div>
+      <div class="govuk-summary-card__content">
+        <p>A bursary of up to £1,200 if you stay in full-time education to help with related costs</p>
+      </div>
+    </div>
+
+    <div class="govuk-summary-card">
+      <div class="govuk-summary-card__title-wrapper">
+        <h2 class="govuk-summary-card__title"><a href="help-care-leavers-grant">Care Leaver Covenant</a></h2>
+      </div>
+      <div class="govuk-summary-card__content">
+        <p>Browse discounts and offers, as well as job, education and training opportunities</p>
+      </div>
+    </div>
+
+    <div class="govuk-summary-card">
+      <div class="govuk-summary-card__title-wrapper">
+        <h2 class="govuk-summary-card__title"><a href="help-care-leavers-grant">Advocacy services</a></h2>
+      </div>
+      <div class="govuk-summary-card__content">
+        <p>If you need help getting your voice heard and standing up for your rights</p>
+      </div>
+    </div>
+
+    <h2 class="govuk-heading-m">Support you’ll be entitled to when you turn 18</h2>
+      <p class="govuk-body">Most of the support you’ll be entitled to when you turn 18 is provided by your local council.</p>
+
+
+      <div class="govuk-summary-card">
+      <div class="govuk-summary-card__title-wrapper">
+        <h2 class="govuk-summary-card__title"><a href="help-care-leavers-grant">Care Leaver's Grant</a></h2>
+      </div>
+      <div class="govuk-summary-card__content">
+        <p>A payment of at least £3,000 to help you set up in your next home when you leave care</p>
+      </div>
+    </div>
+
+    <div class="govuk-summary-card">
+      <div class="govuk-summary-card__title-wrapper">
+        <h2 class="govuk-summary-card__title"><a href="help-care-leavers-grant">Local Offer</a></h2>
+      </div>
+      <div class="govuk-summary-card__content">
+        <p>Additional support your local council offers you when you leave care</p>
+      </div>
+    </div>
+
+    
+
+    <!-- <p class="govuk-body"><a href="all-support">View all support</a></p> -->
+
+    
+    
+    
+  </div>
+  
+</div>
+ 
+    
+  </div>
+</div>
+
+{% endblock %}

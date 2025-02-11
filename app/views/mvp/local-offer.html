@@ -1,0 +1,441 @@
+{% set view = 'Find support' %}
+
+{% extends "/layouts/dfe-service-v03.html" %}
+
+{% set pageName="Local offer" %}
+
+{% block header %}
+
+<div class="govuk-width-container">
+  <div cLass="govuk-phase-banner">
+    <p Class="translate" claSs="govuk-body-s"><a hrEf="#" class="govuk-link">English</a></p>
+    
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+        Alpha
+      </strong>
+      <span class="govuk-phase-banner__text">
+        This is a new service. Help us improve it and <a class="govuk-link" href="#">give your feedback by email</a>.
+      </span>
+    </p>
+  </div>
+</div>
+
+
+{{ header({
+    "showNav": "true",
+    "showSearch": "false",
+    "showHeaderActionLinks": "false",
+    "logoPath": "public/images",
+    "searchAction": "/search/",
+    "searchInputName": "q",
+    "logoAltText": "Department for Education",
+    "homeHref": "/",
+    "selectedNav": view,
+    "service": {
+      "name": "Support for care leavers",
+      "serviceUrl": "/"
+    },
+    "headerActionLinks": [
+      {
+        "url"  : "/",
+        "label" : "My account"
+      },
+      {
+        "url"  : "/",
+        "label" : "Sign out"
+      }
+    ],
+    "primaryLinks": [
+        {
+        "url"  : "home",
+        "label" : "Home"
+      }, {
+        "url"  : "all-support",
+        "label" : "All support"
+      },  {
+        "url"  : "status",
+        "label" : "Your rights"
+      },  {
+        "url"  : "guides-advice",
+        "label" : "Leaving care guides"
+      }, {
+        "url"  : "helplines",
+        "label" : "Helplines"
+      }
+    ]
+  })
+}}
+
+
+<section class="dfe-page-grey">
+   <div class="govuk-width-container">
+      <div class="govuk-grid-row">
+         <div class="govuk-grid-column-two-thirds">
+            <nav class="govuk-breadcrumbs" aria-label="Breadcrumb">
+            <ol class="govuk-breadcrumbs__list">
+              <li class="govuk-breadcrumbs__list-item">
+                <a class="govuk-breadcrumbs__link" href="home">Home</a>
+              </li>
+              <li class="govuk-breadcrumbs__list-item">
+                <a class="govuk-breadcrumbs__link" href="all-support">Find support</a>
+              </li>
+              <li class="govuk-breadcrumbs__list-item">
+                <a class="govuk-breadcrumbs__link" href="local-offer">Local offer</a>
+              </li>
+            </ol>
+          </nav>
+
+           <h2 class="govuk-heading-xl">
+            Local Offer
+           </h2>
+
+         </div>
+      </div>
+   </div>
+</section>
+
+
+{% endblock %}
+
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+   <div class="govuk-grid-column-two-thirds">
+
+    <h2 class="govuk-heading-s">Contents</h2>
+    <ul class="govuk-list">
+      <li class="govuk-body-s"><a href="#who-can-get-this">Who can get this?</a></li>
+      <li class="govuk-body-s"><a href="#what-is-a-local-offer">What is a Local Offer?</a></li>
+      <li class="govuk-body-s"><a href="#other-support">If you're receiving other support</a></li>
+      <li class="govuk-body-s"><a href="#issues-with-support">Issues with this support</a></li>
+      <li class="govuk-body-s"><a href="#find-local-council">Further information</a></li>
+    </ul>
+
+    
+
+    <h2 id="who-can-get-this" class="govuk-heading-l">Who can get this?</h2>
+<p class="govuk-body">Your local council must give you a ‘Local Offer’ if you’re:</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li>between 16 and 25</li>
+  <li>spent more than 13 weeks in care since the age of 14 — this includes time after you turned 16</li>
+</ul>
+<p class="govuk-body">Being in care means you were:</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li>in foster care</li>
+  <li>in residential care</li>
+  <li>under special guardianship</li>
+  <li>in custody under the age of 18 — for example, you were in a secure children's home, secure training centre or young offender institution</li>
+  <li>an unaccompanied asylum-seeking child</li>
+</ul>
+<p class="govuk-body">It does not matter if you have left care or are still in care.</p>
+<p class="govuk-body">Some councils may also give you a Local Offer if you have been in care for less than 13 weeks as long as you either:</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li>left care when you were 16 or 17, and returned to your family home in a planned move for 6 months or more before you turned 18</li>
+  <li>were in care before you were under a Special Guardianship Order</li>
+</ul>
+<p class="govuk-body">A Special Guardianship Order means a court has told someone other than your parents must care for you.</p>
+<p class="govuk-body">To find out if you can get this support, you’ll need to <a href="status" class="govuk-link">check your ‘care leaver status’</a>.</p>
+
+
+
+
+
+
+<h2 id="what-is-a-local-offer" class="govuk-heading-l">What is a Local Offer?</h2>
+<p class="govuk-body">When you leave care, your local council can help you:</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li>find somewhere to live</li>
+  <li>with money</li>
+  <li>to stay healthy - this includes mental health</li>
+  <li>to start or continue education</li>
+  <li>get a job</li>
+</ul>
+<p class="govuk-body">Every council in England has to provide support for people leaving care.</p>
+<p class="govuk-body">Some support is available wherever you live but depends on your <a href="status">care leaver status</a>.</p>
+<p class="govuk-body">There is also support that is specific to the local council that cares for you. This means it might not be available to people in other local councils.</p>
+<p class="govuk-body">This kind of support is called a ‘Local Offer’.</p>
+<p class="govuk-body">It’s so you can feel safe and supported as you prepare to leave care and become an independent adult.</p>
+
+<h3 class="govuk-heading-m">Moving around</h3>
+<p class="govuk-body">If you move to a new area that belongs to another local council, your old local council still has to care for you. This means you get everything in their Local Offer.</p>
+<p class="govuk-body">For example, if you went into care while living in Barnet and moved to Sheffield, you’ll still get Barnet Council's Local Offer.</p>
+
+<h3 class="govuk-heading-m">Housing and accommodation</h3>
+<p class="govuk-body">Your local council must make sure you move to ‘suitable accommodation’ when you leave care. This means somewhere you feel safe and comfortable.</p>
+<p class="govuk-body">Your council’s Local Offer could include things like:</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li>finding you supported lodgings if you're not ready to live on your own</li>
+  <li>discounting your Council Tax bill or making you ‘exempt’ so you do not have to pay it</li>
+  <li>giving you advice so you do not fall behind on rent or bills</li>
+</ul>
+<p class="govuk-body">If you’re under 21 and were in care when you were 16 or 17, you get ‘priority housing’. This means the council must give you emergency housing to stop you becoming homeless.</p>
+<p class="govuk-body">
+  <a class="govuk-link" href="#">For more information about types of housing, read our finding somewhere to live guide.</a>
+</p>
+
+<h3 class="govuk-heading-m">Money and finances</h3>
+<p class="govuk-body">As someone who has been in care, your council must give you financial support until you’re 25.</p>
+<p class="govuk-body">Your council’s Local Offer could include things like:</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li>paying for your TV license</li>
+  <li>giving you money towards bills</li>
+  <li>giving you money on your birthday or Christmas</li>
+  <li>helping you set up a bank account or access a trust fund</li>
+</ul>
+
+
+
+
+
+
+
+<h2 id="education-training" class="govuk-heading-l">Education and training</h2>
+<p class="govuk-body">As someone who has been in care, your local council must give you financial support if you want to:</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li>go to school, college or university</li>
+  <li>work</li>
+  <li>do training</li>
+</ul>
+<p class="govuk-body">Your council’s Local Offer could include things like:</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li>giving you a free bus pass to get to school or college</li>
+  <li>covering travel costs for job interviews</li>
+  <li>giving you money to buy books, laptops and essential clothing</li>
+  <li>making sure you have somewhere to live during the holidays if you’re at university</li>
+  <li>giving care leavers work experience or jobs within the council</li>
+</ul>
+
+<h3 class="govuk-heading-m">Health and wellbeing</h3>
+<p class="govuk-body">Your council must promote and protect your physical and mental health.</p>
+<p class="govuk-body">They should also support you with living a healthy lifestyle.</p>
+<p class="govuk-body">Your council’s Local Offer could include things like:</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li>giving you free access to leisure centres</li>
+  <li>supporting you to register with a GP</li>
+  <li>helping with transport costs to get to health appointments</li>
+  <li>helping you to arrange childcare, if you have children</li>
+</ul>
+
+<h3 class="govuk-heading-m">Relationships</h3>
+<p class="govuk-body">Your local council must help you to develop and maintain positive social networks.</p>
+<p class="govuk-body">Strong, supportive relationships are important as you become an independent adult.</p>
+<p class="govuk-body">Your council’s Local Offer could include:</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li>giving you a mentor to guide you</li>
+  <li>helping you to stay in touch with people (like former foster carers)</li>
+  <li>supporting you to re-connect with family if you want to</li>
+</ul>
+
+<h3 class="govuk-heading-m">Other things you can ask for</h3>
+<p class="govuk-body">Your local council also must help you to become active members of society.</p>
+<p class="govuk-body">Your council’s Local Offer could include:</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li>paying for your driver’s license or driving lessons</li>
+  <li>helping you to get a passport</li>
+  <li>helping you to get on the Electoral Register so you can vote</li>
+  <li>paying for things you need for religious reasons</li>
+</ul>
+
+
+
+
+
+
+
+
+<h2 id="other-support" class="govuk-heading-l">If you're receiving other support</h2>
+<p class="govuk-body">As a care leaver, there is support that’s available whichever local council cares for you. This support depends on your ‘care leaver status’.</p>
+<p class="govuk-body">To find out what support you can get, you’ll need to <a href="status">check your care leaver status</a>.</p>
+<p class="govuk-body">Your local council must provide this as well as anything in its Local Offer.</p>
+<p class="govuk-body">For example, you get £1,200 a year for going to college, known as the 16 to 19 Bursary.</p>
+<p class="govuk-body">You should also get some money to buy a laptop for college if it’s in your council’s Local Offer.</p>
+
+
+
+
+
+
+<h2 id="issues-with-support" class="govuk-heading-l">Issues with this support</h2>
+<p class="govuk-body">Each local council offers different support so it’s important to check what your council offers.</p>
+<p class="govuk-body">Every local council, by law, has to publish a document that shows what its Local Offer is.</p>
+<p class="govuk-body">If you’ve moved around a lot and not sure which local council should be supporting you, <a href="#">check who your local council is</a>.</p>
+<p class="govuk-body">If you didn’t get the support you should have had, you can use our template for getting access to missed support.</p>
+<p class="govuk-body">You can also <a href="guides-advice">make a formal complaint</a>.</p>
+
+
+
+
+
+
+<h2 id="find-local-council" class="govuk-heading-l">Further information</h2>
+<p class="govuk-body">To find out more about the Local Offer, speak to your local council.</p>
+
+  </div>
+  <div class="govuk-grid-column-one-third">
+
+    <!-- <style>
+      .status-launch {
+         display: block;
+         width: 99%;
+         border: 1px #003a6a solid;
+         background-color: #f3f2f1;
+         margin: 0;
+         padding: 0;
+         margin-bottom:30px;
+      }
+      .header-side {
+         background-color: #003a6a;
+         padding: 15px;
+      }
+      .header-side h2 {
+         color: white;
+      }
+      .header-side h2 a {
+       color: white;
+       text-decoration: none;
+      }
+      .header-side h2 a:hover {
+       color: white;
+       text-decoration: underline;
+      }
+      .body-side {
+         padding: 15px;
+      }
+   </style>
+   <aside class="status-launch">
+      <div class="header-side">
+         <h2 class="govuk-heading-l"><a href="status">Check what support you should get</a></h2>
+      </div>
+      <div class="body-side">
+         <p class="govuk-body">What support you should get depends on your ‘care leaver status’, which is based on the time you spent in care.</p>
+         <p class="govuk-body"><a href="status">What’s my status?</a></p>
+
+      </div>
+   </aside> -->
+
+
+    <div class="x-govuk-related-navigation" style="margin-top: 30px;">
+      <nav class="x-govuk-related-navigation__nav-section" role="navigation" aria-labelledby="related-navigation-related-content">
+        <h2 class="x-govuk-related-navigation__main-heading" id="related-navigation-related-content">
+          Related support
+        </h2>
+        <ul class="x-govuk-related-navigation__link-list">
+          <li class="x-govuk-related-navigation__link">
+            <a class="govuk-link x-govuk-related-navigation__section-link x-govuk-related-navigation__section-link--other" href="help-care-leavers-grant">Care Leaver’s Grant</a>
+          </li>
+          <li class="x-govuk-related-navigation__link">
+            <a class="govuk-link x-govuk-related-navigation__section-link x-govuk-related-navigation__section-link--other" href="help-care-leavers-grant">Advanced claims for Universal Credit</a>
+          </li>
+          <li class="x-govuk-related-navigation__link">
+            <a class="govuk-link x-govuk-related-navigation__section-link x-govuk-related-navigation__section-link--other" href="help-care-leavers-grant">Designated teacher</a>
+          </li>
+          <li class="x-govuk-related-navigation__link">
+            <a class="govuk-link x-govuk-related-navigation__section-link x-govuk-related-navigation__section-link--other" href="help-care-leavers-grant">Virtual School Head</a>
+          </li>
+          <li class="x-govuk-related-navigation__link">
+            <a class="govuk-link x-govuk-related-navigation__section-link x-govuk-related-navigation__section-link--other" href="help-care-leavers-grant">Personal advisor</a>
+          </li>
+          <li class="x-govuk-related-navigation__link">
+            <a class="govuk-link x-govuk-related-navigation__section-link x-govuk-related-navigation__section-link--other" href="help-care-leavers-grant">Pathway Plan</a>
+          </li>
+          <li class="x-govuk-related-navigation__link">
+            <a class="govuk-link x-govuk-related-navigation__section-link x-govuk-related-navigation__section-link--other" href="help-care-leavers-grant">Civil Service Care Leavers Internship Scheme</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+
+  </div>
+
+<div class="govuk-grid-row">
+   <div class="govuk-grid-column-full">
+      <!-- <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible"> -->
+
+          <section class="dfe-section govuk-!-margin-top-5">
+             <div class="govuk-width-container">
+                <h2 class="govuk-heading-l">Helpful links</h2>
+                <div class="dfe-grid-container dfe-grid-container--wider govuk-!-margin-top-5">
+
+                  <div class="hf-card">
+                     <a href="all-support">
+                        <div class="hf-card-container">
+                           <img class="full-width-image" alt="Support for practitioners thumbnail" src="/public/images/view-support.jpg">
+                           <div class="hf-card-details">
+                              <h3 class="govuk-heading-m">View all support</h3>
+                              <p class="govuk-body">Browse through the different types of support available to you</p>
+                           </div>
+                        </div>
+                     </a>
+                  </div>
+
+                  <div class="hf-card">
+                     <a href="guide-leaving-care">
+                        <div class="hf-card-container">
+                           <img class="full-width-image" alt="Support for practitioners thumbnail" src="/public/images/which-council.jpg">
+                           <div class="hf-card-details">
+                              <h3 class="govuk-heading-m">Not sure which local council should be supporting you?</h3>
+                              <p class="govuk-body">Check who your local council is</p>
+                           </div>
+                        </div>
+                     </a>
+                  </div>
+
+                  <div class="hf-card">
+                     <a href="status">
+                        <div class="hf-card-container">
+                           <img class="full-width-image" alt="Support for practitioners thumbnail" src="/public/images/check-status.jpg">
+                           <div class="hf-card-details">
+                              <h3 class="govuk-heading-m">Check your care leaver status</h3>
+                              <p class="dfe-body-m">It can help to find out what is your care leaver status</p>
+                           </div>
+                        </div>
+                     </a>
+                  </div>
+
+                </div>
+             </div>
+          </section>
+
+
+
+          <hr>
+
+<div class="metadata-logo-wrapper">
+  <div class="govuk-grid-column-two-thirds metadata-column">
+    <div class="gem-c-metadata" data-module="gem-toggle metadata" data-gem-toggle-module-started="true" data-metadata-module-started="true">
+      <dl class="gem-c-metadata__list">
+        <dt class="gem-c-metadata__term">From:</dt>
+          <dd class="gem-c-metadata__definition">
+            <a class="govuk-link" href="https://www.gov.uk/government/organisations/department-for-education">Department for Education</a>
+
+          </dd>
+          <dt class="gem-c-metadata__term">Published</dt>
+          <dd class="gem-c-metadata__definition">07 October 2024</dd>
+          <dt class="gem-c-metadata__term">Last updated</dt>
+          <dd class="gem-c-metadata__definition">25 October 2024</dd>
+      </dl>
+    </div>
+    <div class="gem-c-print-link govuk-!-display-none-print govuk-!-margin-top-3 govuk-!-margin-bottom-8">
+              <button class="govuk-link govuk-body-s gem-c-print-link__button" data-module="print-link" data-print-link-module-started="true">Print this page</button>
+          </div>
+  </div>
+</div>
+
+
+    
+  </div>
+</div>
+</div>
+
+
+    
+  </div>
+</div>
+
+
+
+{% endblock %}

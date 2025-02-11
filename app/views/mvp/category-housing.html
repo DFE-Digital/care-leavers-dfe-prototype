@@ -1,0 +1,351 @@
+{% set view = 'All support' %}
+
+{% extends "/layouts/dfe-service-v03.html" %}
+
+{% set pageName="Housing and accommodation" %}
+
+{% block header %}
+
+
+<div class="govuk-width-container">
+  <div cLass="govuk-phase-banner">
+    <p Class="translate" claSs="govuk-body-s"><a hrEf="#" class="govuk-link">English</a></p>
+    
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+        Alpha
+      </strong>
+      <span class="govuk-phase-banner__text">
+        This is a new service. Help us improve it and <a class="govuk-link" href="#">give your feedback by email</a>.
+      </span>
+    </p>
+  </div>
+</div>
+
+
+
+
+{{ header({
+    "showNav": "true",
+    "showSearch": "false",
+    "showHeaderActionLinks": "false",
+    "logoPath": "public/images",
+    "searchAction": "/search/",
+    "searchInputName": "q",
+    "logoAltText": "Department for Education",
+    "homeHref": "/",
+    "selectedNav": view,
+    "service": {
+      "name": "Support for care leavers",
+      "serviceUrl": "/home"
+    },
+    "headerActionLinks": [
+      {
+        "url"  : "/",
+        "label" : "My account"
+      },
+      {
+        "url"  : "/",
+        "label" : "Sign out"
+      }
+    ],
+    "primaryLinks": [
+        {
+        "url"  : "home",
+        "label" : "Home"
+      }, {
+        "url"  : "all-support",
+        "label" : "All support"
+      },  {
+        "url"  : "status",
+        "label" : "Your rights"
+      },  {
+        "url"  : "guides-advice",
+        "label" : "Leaving care guides"
+      }, {
+        "url"  : "helplines",
+        "label" : "Helplines"
+      }
+    ]
+  })
+}}
+
+
+<section class="dfe-page-grey">
+   <div class="govuk-width-container">
+      <div class="govuk-grid-row">
+         <div class="govuk-grid-column-two-thirds">
+          <nav class="govuk-breadcrumbs" aria-label="Breadcrumb">
+            <ol class="govuk-breadcrumbs__list">
+              <li class="govuk-breadcrumbs__list-item">
+                <a class="govuk-breadcrumbs__link" href="find-support">Home</a>
+              </li>
+              <li class="govuk-breadcrumbs__list-item">
+                <a class="govuk-breadcrumbs__link" href="all-support">All support</a>
+              </li>
+
+            </ol>
+          </nav>
+
+           <h1 class="govuk-heading-xl">Housing and accommodation</h1>
+           <p class="govuk-body">
+            When you leave care, you could get support with housing costs and finding somewhere to live.
+          </p>
+          
+         </div>
+      </div>
+   </div>
+</section>
+
+
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <section>
+      <h2 class="govuk-heading-l">Support you may have the right to</h2>
+
+
+    
+        <p class="govuk-body">When you leave care, your local council may have a duty to help you find somewhere safe and suitable to live (suitable accommodation).</p>
+        <p class="govuk-body">If you leave care at 16 or 17, your council must pay for your housing costs, like rent, bills and other expenses.</p>
+        <p class="govuk-body">If you’re between 15 and 25, you may also have the right to the following support:</p>
+
+        <hr style="margin-top:30px;">
+                <h3 class="govuk-heading-s" style="margin-top:30px;"><a href="leaving-care-allowance" class="govuk-link">Leaving Care Allowance</a></h3>
+                <p class="govuk-body">Financial support to help you set up your first home.</p>
+            <hr style="margin-top:30px;">
+                <h3 class="govuk-heading-s" style="margin-top:30px;"><a href="" class="govuk-link">Advanced Claims for Universal Credit</a></h3>
+                <p class="govuk-body">Help to start a Universal Credit claim early, before leaving care.</p>
+            <hr style="margin-top:30px;">
+                <h3 class="govuk-heading-s" style="margin-top:30px;"><a href="" class="govuk-link">Pathway Plan</a></h3>
+                <p class="govuk-body">A plan to set out the support you’ll get as you transition to living independently.</p>
+            <hr style="margin-top:30px;">
+                <h3 class="govuk-heading-s" style="margin-top:30px;"><a href="" class="govuk-link">Personal Adviser (PA)</a></h3>
+                <p class="govuk-body">A dedicated person to help guide and support you as a care leaver.</p>
+            <hr style="margin-top:30px;">
+                <h3 class="govuk-heading-s" style="margin-top:30px;"><a href="" class="govuk-link">Advocacy Services</a></h3>
+                <p class="govuk-body">Someone to help ensure your voice is heard and support you in making decisions.</p>
+
+
+        <p class="govuk-body"><a class="govuk-link" href="all-support">View all support</a></p>
+    </section>
+
+    <!-- <section class="govuk-section">
+        <h2 class="govuk-heading-l">Check what support you should get</h2>
+        <p class="govuk-body">You may have the right to certain support. This depends on your care leaver status, which is based on your time in care.</p>
+        <p class="govuk-body"><a class="govuk-link" href="#">Check your care leaver status</a></p>
+    </section> -->
+
+    <section class="dfe">
+        <h2 class="govuk-heading-l">Support your council might give you</h2>
+        <p class="govuk-body">Every council has a ‘Local Offer for leaving care’, which might include extra housing help like:</p>
+        <ul class="govuk-list govuk-list--bullet">
+            <li><strong>Council tax discount or exemption</strong> – money off your council tax bill or not needing to pay it at all.</li>
+            <li><strong>Acting as a guarantor</strong> – your council might act as a guarantor so you can live in private rented property or help with a deposit.</li>
+            <li><strong>Help with living costs</strong> – financial assistance for things like a TV licence, broadband, or home and contents insurance.</li>
+        </ul>
+        <p class="govuk-body">Talk to your council to find out what’s included in your Local Offer for leaving care.</p>
+    </section>
+
+    <section class="dfe">
+
+            <div class="govuk-!-margin-top-5 govuk-!-margin-bottom-5">
+               <div class="govuk-grid-row split-panel">
+                  <div class="govuk-grid-column-one-half image-column">
+                     <div class="image-container" style="background-image: url('/public/images/your-rights.png');"></div>
+                  </div>
+                  <div class="govuk-grid-column-one-half text-column">
+                     <h2 class="govuk-heading-m"><a href="status">What support can you get?</a></h2>
+                     <p class="govuk-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+                     <p class="govuk-body">
+                        <a href="status">Visit Your rights</a>
+                     </p>
+                  </div>
+                  
+               </div>
+            </div>
+
+         </section>
+
+    
+
+    <section class="dfe">
+        <h2 class="govuk-heading-l">Benefits and other support</h2>
+        <p class="govuk-body">You might also be able to get other housing help from the government, which you can apply for:</p>
+        <hr style="margin-top:30px;">
+                <h3 class="govuk-heading-s" style="margin-top:30px;"><a href="https://www.gov.uk/apply-council-tax-reduction" class="govuk-link" target="_blank">Council Tax Reduction on GOV.UK <span class="govuk-body-s">(Opens in a new tab)</span></a></h3>
+                <p class="govuk-body">A discount on your council tax bill if you have a low income or claim benefits.</p>
+            <hr style="margin-top:30px;">
+                <h3 class="govuk-heading-s" style="margin-top:30px;"><a href="https://www.gov.uk/government/publications/claiming-discretionary-housing-payments/claiming-discretionary-housing-payments" class="govuk-link" target="_blank">Applying for a Discretionary Housing Payment on GOV.UK <span class="govuk-body-s">(Opens in a new tab)</span></a></h3>
+                <p class="govuk-body">Help with rent and housing, such as a deposit or moving costs.</p>
+            <hr style="margin-top:30px;">
+                <h3 class="govuk-heading-s" style="margin-top:30px;"><a href="https://www.gov.uk/housing-benefit" class="govuk-link" target="_blank">Housing Benefit on GOV.UK <span class="govuk-body-s">(Opens in a new tab)</span></a></h3>
+                <p class="govuk-body">Help to pay your rent if you’re out of work, on a low income, or claiming benefits.</p>
+            <hr style="margin-top:30px;">
+                <h3 class="govuk-heading-s" style="margin-top:30px;"><a href="https://www.gov.uk/cost-living-help-local-council" class="govuk-link" target="_blank">Household Support Fund on GOV.UK <span class="govuk-body-s">(Opens in a new tab)</span></a></h3>
+                <p class="govuk-body">Help with essential costs like your energy and water bills or food.</p>
+            <hr style="margin-top:30px;">
+                <h3 class="govuk-heading-s" style="margin-top:30px;"><a href="https://www.gov.uk/the-warm-home-discount-scheme" class="govuk-link" target="_blank">Warm House Discount Scheme on GOV.UK <span class="govuk-body-s">(Opens in a new tab)</span></a></h3>
+                <p class="govuk-body">A one-off discount on your electricity or gas bill.</p>
+            <hr style="margin-top:30px;">
+                <h3 class="govuk-heading-s" style="margin-top:30px;"><a href="https://www.gov.uk/universal-credit" class="govuk-link" target="_blank">Universal Credit on GOV.UK <span class="govuk-body-s">(Opens in a new tab)</span></a></h3>
+                <p class="govuk-body">A regular payment if you’re on a low income, out of work, or cannot work.</p>
+
+        <!-- <p class="govuk-body"><a class="govuk-link" href="#">View all support</a></p> -->
+    </section>
+
+
+    <section id="guides" class="dfe">
+      <h2 class="govuk-heading-l">Helpful guides</h2>
+
+      <p class="govuk-body">Guides to help you through leaving care and navigate any challenges.</p>
+
+      <div class="govuk-grid-column-full govuk-!-margin-bottom-5">
+        <div class="govuk-grid-row split-panel">
+           <div class="govuk-grid-column-one-half image-column">
+              <div class="image-container" style="background-image: url('/public/images/guide-find-house.jpg');"></div>
+           </div>
+           <div class="govuk-grid-column-one-half text-column">
+              <span class="govuk-caption-m">Guide</span>
+                 <h3 class="govuk-heading-m"><a href="guide-finding-somewhere-to-live">Finding somewhere to live </a></h3>
+              <p class="govuk-body">How your council helps you decide where you’ll live and your options might be</p>
+           </div>
+        </div>
+     </div>
+
+     <div class="govuk-grid-column-full govuk-!-margin-bottom-5">
+        <div class="govuk-grid-row split-panel">
+           <div class="govuk-grid-column-one-half image-column">
+              <div class="image-container" style="background-image: url('/public/images/guide-homeless.jpg');"></div>
+           </div>
+           <div class="govuk-grid-column-one-half text-column">
+              <span class="govuk-caption-m">Guide</span>
+                 <h3 class="govuk-heading-m"><a href="guide-leaving-care">What to do if you’re facing homelessness </a></h3>
+                 <p class="govuk-body">What steps to take if you’re homeless or worried about becoming homeless</p>
+           </div>
+        </div>
+     </div>
+
+      <!-- <div class="mini-guide">
+        <div class="guide-image"><img src="/public/images/housing03.jpg"></div>
+        <div class="box-content">
+          <h3 class="govuk-heading-s"><a href="#" target="_blank">Finding somewhere to live</a></h3>
+          <p class="govuk-body-s">How your local council must help you find somewhere to live when you leave care.</p> -->
+
+          <!-- <div class="box-link"><strong class="govuk-tag govuk-tag--green govuk-!-font-size-14">Guides</strong></div> -->
+        <!-- </div>
+      </div>
+ -->
+      <!-- <div class="mini-guide">
+        <div class="guide-image"><img src="/public/images/education01.jpg"></div>
+        <div class="box-content">
+          <h3 class="govuk-heading-s"><a href="#" target="_blank">Making a complaint</a></h3>
+          <p class="govuk-body-s">If you’re not happy with your local council or  have missed support, you can complain.</p> -->
+
+          <!-- <div class="box-link"><strong class="govuk-tag govuk-tag--green govuk-!-font-size-14">Guides</strong></div> -->
+        <!-- </div>
+      </div> -->
+
+      <!-- <div class="mini-guide">
+        <div class="guide-image"><img src="/public/images/housing01.jpg"></div>
+        <div class="box-content">
+          <h3 class="govuk-heading-s"><a href="#" target="_blank">Facing homelessness</a></h3>
+          <p class="govuk-body-s">If you’re worried about becoming homeless, we’ll talk you through your next steps.</p>
+ -->
+          <!-- <div class="box-link"><strong class="govuk-tag govuk-tag--green govuk-!-font-size-14">Guides</strong></div> -->
+       <!--  </div>
+      </div>
+ -->
+       
+    </section>
+
+    <!-- <section id="help" class="dfe">
+      <h2 class="govuk-heading-l">
+        If you need help now
+      </h2>
+
+      <p class="govuk-body">If you’re in crisis or need urgent advice, there’s help available now.</p>
+
+      <div class="dfe-box box-ext">
+        <div class="box-icon"><img src="/public/images/help-at-hand.png"></div>
+        <div class="box-content">
+          <h3 class="govuk-heading-s"><a href="https://www.childrenscommissioner.gov.uk/help-at-hand/" target="_blank">Help at Hand</a> <span class="govuk-body-s">(Opens in a new tab)</span></h3>
+          <p class="govuk-body-s">Free support, advice and information for young people in care and leaving care</p>
+          
+          <div class="box-link"><span class="govuk-!-font-size-14"><strong>CHILDRENSCOMMISSIONER.GOV.UK</strong></span></div>
+        </div>
+      </div>
+
+      <div class="dfe-box box-ext">
+        <div class="box-icon"><img src="/public/images/shelter.png"></div>
+        <div class="box-content">
+          <h3 class="govuk-heading-s"><a href="https://england.shelter.org.uk/get_help" target="_blank">Shelter - Get Help</a> <span class="govuk-body-s">(Opens in a new tab)</span></h3>
+          <p class="govuk-body-s">Free help and advice for anyone struggling with housing and homelessness</p>
+          
+          <div class="box-link"><span class="govuk-!-font-size-14"><strong>SHELTER.ORG.UK</strong></span></div>
+        </div>
+      </div>
+
+      <div class="dfe-box box-ext">
+        <div class="box-icon"><img src="/public/images/mind.png"></div>
+        <div class="box-content">
+          <h3 class="govuk-heading-s"><a href="https://www.mind.org.uk/information-support/tips-for-everyday-living/housing-and-mental-health/" target="_blank">Mind - Housing and mental health</a> <span class="govuk-body-s">(Opens in a new tab)</span></h3>
+          <p class="govuk-body-s">Information and guidance for when housing problems are affecting your mental health</p>
+          
+          <div class="box-link"><span class="govuk-!-font-size-14"><strong>MIND.ORG.UK</strong></span></div>
+        </div>
+      </div>
+
+
+    </section> -->
+
+<hr>
+
+    <div class="metadata-logo-wrapper">
+  <div class="govuk-grid-column-two-thirds metadata-column">
+    <div class="gem-c-metadata" data-module="gem-toggle metadata" data-gem-toggle-module-started="true" data-metadata-module-started="true">
+      <dl class="gem-c-metadata__list">
+        <dt class="gem-c-metadata__term">From:</dt>
+          <dd class="gem-c-metadata__definition">
+            <a class="govuk-link" href="https://www.gov.uk/government/organisations/department-for-education">Department for Education</a>
+
+          </dd>
+          <dt class="gem-c-metadata__term">Published</dt>
+          <dd class="gem-c-metadata__definition">07 October 2024</dd>
+          <dt class="gem-c-metadata__term">Last updated</dt>
+          <dd class="gem-c-metadata__definition">25 October 2024</dd>
+      </dl>
+    </div>
+    <div class="gem-c-print-link govuk-!-display-none-print govuk-!-margin-top-3 govuk-!-margin-bottom-8">
+              <button class="govuk-link govuk-body-s gem-c-print-link__button" data-module="print-link" data-print-link-module-started="true">Print this page</button>
+          </div>
+  </div>
+</div>
+
+
+
+
+  </div>
+  <div class="govuk-grid-column-one-third">
+     
+   <!-- <div class="hf-card">
+     <a href="status">
+        <div class="hf-card-container">
+           <img class="full-width-image" alt="Support for practitioners thumbnail" src="/public/images/your-rights.png">
+           <div class="hf-card-details">
+              <h3 class="govuk-heading-m">Your rights</h3>
+              <p class="govuk-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+           </div>
+        </div>
+     </a>
+  </div> -->
+
+  </div>
+</div>
+
+{% endblock %}

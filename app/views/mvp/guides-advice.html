@@ -1,0 +1,274 @@
+{% set view = 'Leaving care guides' %}
+
+{% extends "/layouts/dfe-service-v03.html" %}
+
+{% set pageName="Guides" %}
+
+{% block header %}
+
+<div class="govuk-width-container">
+  <div cLass="govuk-phase-banner">
+    <p Class="translate" claSs="govuk-body-s"><a hrEf="#" class="govuk-link">English</a></p>
+    
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+        Alpha
+      </strong>
+      <span class="govuk-phase-banner__text">
+        This is a new service. Help us improve it and <a class="govuk-link" href="#">give your feedback by email</a>.
+      </span>
+    </p>
+  </div>
+</div>
+
+
+{{ header({
+    "showNav": "true",
+    "showSearch": "false",
+    "showHeaderActionLinks": "false",
+    "logoPath": "public/images",
+    "searchAction": "/search/",
+    "searchInputName": "q",
+    "logoAltText": "Department for Education",
+    "homeHref": "/",
+    "selectedNav": view,
+    "service": {
+      "name": "Support for care leavers",
+      "serviceUrl": "/"
+    },
+    "headerActionLinks": [
+      {
+        "url"  : "/",
+        "label" : "My account"
+      },
+      {
+        "url"  : "/",
+        "label" : "Sign out"
+      }
+    ],
+    "primaryLinks": [
+        {
+        "url"  : "home",
+        "label" : "Home"
+      }, {
+        "url"  : "all-support",
+        "label" : "All support"
+      },  {
+        "url"  : "status",
+        "label" : "Your rights"
+      },  {
+        "url"  : "guides-advice",
+        "label" : "Leaving care guides"
+      }, {
+        "url"  : "helplines",
+        "label" : "Helplines"
+      }
+    ]
+  })
+}}
+
+
+<section class="dfe-page-grey">
+   <div class="govuk-width-container">
+      <div class="govuk-grid-row">
+         <div class="govuk-grid-column-two-thirds">
+            <nav class="govuk-breadcrumbs" aria-label="Breadcrumb">
+            <ol class="govuk-breadcrumbs__list">
+              <li class="govuk-breadcrumbs__list-item">
+                <a class="govuk-breadcrumbs__link" href="home">Home</a>
+              </li>
+             <!--  <li class="govuk-breadcrumbs__list-item">
+                <a class="govuk-breadcrumbs__link" href="guides">Leaving care guides</a>
+              </li> -->
+            </ol>
+          </nav>
+
+           <h2 class="govuk-heading-xl">
+            Leaving care guides
+           </h2>
+
+           <p class="govuk-body">Guides to help you prepare for leaving care, understand your rights and find support. </p>
+
+         </div>
+      </div>
+   </div>
+</section>
+
+
+{% endblock %}
+
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+   <div class="govuk-grid-column-full">
+      <!-- <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible"> -->
+
+ 
+
+
+ 
+
+ 
+
+ 
+         
+          <div class="govuk-grid-row">
+
+               <!-- <div class="govuk-grid-column-full govuk-!-margin-bottom-5">
+                  <div class="govuk-grid-row split-panel">
+                     <div class="govuk-grid-column-one-half image-column">
+                        <div class="image-container" style="background-image: url('/public/images/guide-education01.jpg');"></div>
+                     </div>
+                     <div class="govuk-grid-column-one-half text-column">
+                        <span class="govuk-caption-l">Guide</span>
+                           <h3 class="govuk-heading-l"><a href="guide-in-care">What does 'in care’ mean?</a></h3>
+                        <p class="govuk-body">What counts as being in care and what this means for support</p>
+                     </div>
+                  </div>
+               </div> -->
+
+               <!-- <div class="govuk-grid-column-full govuk-!-margin-bottom-5">
+                  <div class="govuk-grid-row split-panel">
+                     <div class="govuk-grid-column-one-half image-column">
+                        <div class="image-container" style="background-image: url('/public/images/education03.jpg');"></div>
+                     </div>
+                     <div class="govuk-grid-column-one-half text-column">
+                        <span class="govuk-caption-l">Guide</span>
+                           <h3 class="govuk-heading-l"><a href="guide-in-care">How does leaving care support work?</a></h3>
+                        <p class="govuk-body">How support works when you leave care and how it relates to your rights</p>
+                     </div>
+                  </div>
+               </div> -->
+
+
+               <div class="govuk-grid-column-full govuk-!-margin-bottom-5">
+                  <div class="govuk-grid-row split-panel">
+                     <div class="govuk-grid-column-one-half image-column">
+                        <div class="image-container" style="background-image: url('/public/images/guide-leave-care.jpg');"></div>
+                     </div>
+                     <div class="govuk-grid-column-one-half text-column">
+                        <span class="govuk-caption-l">Guide</span>
+                           <h3 class="govuk-heading-l"><a href="guide-leaving-care">What happens when you leave care</a></h3>
+                           <p class="govuk-body">What to expect as you prepare to leave care and what happens after</p>
+                     </div>
+                  </div>
+               </div>
+
+               <!-- <div class="govuk-grid-column-full govuk-!-margin-bottom-5">
+                  <div class="govuk-grid-row split-panel">
+                     <div class="govuk-grid-column-one-half image-column">
+                        <div class="image-container" style="background-image: url('/public/images/guide-find-house.jpg');"></div>
+                     </div>
+                     <div class="govuk-grid-column-one-half text-column">
+                        <span class="govuk-caption-l">Guide</span>
+                           <h3 class="govuk-heading-l"><a href="guide-finding-somewhere-to-live">Finding somewhere to live </a></h3>
+                        <p class="govuk-body">How your council helps you decide where you’ll live and your options might be</p>
+                     </div>
+                  </div>
+               </div> -->
+
+               <div class="govuk-grid-column-full govuk-!-margin-bottom-5">
+                  <div class="govuk-grid-row split-panel">
+                     <div class="govuk-grid-column-one-half image-column">
+                        <div class="image-container" style="background-image: url('/public/images/care-leavers-04.jpg');"></div>
+                     </div>
+                     <div class="govuk-grid-column-one-half text-column">
+                        <span class="govuk-caption-l">Guide</span>
+                           <h3 class="govuk-heading-l"><a href="guide-leaving-care">What to do if you’re facing homelessness </a></h3>
+                           <p class="govuk-body">What steps to take if you’re homeless or worried about becoming homeless</p>
+                     </div>
+                  </div>
+               </div>
+
+               <!-- <div class="govuk-grid-column-full govuk-!-margin-bottom-5">
+                  <div class="govuk-grid-row split-panel">
+                     <div class="govuk-grid-column-one-half image-column">
+                        <div class="image-container" style="background-image: url('/public/images/guide-asylum.jpg');"></div>
+                     </div>
+                     <div class="govuk-grid-column-one-half text-column">
+                        <span class="govuk-caption-l">Guide</span>
+                           <h3 class="govuk-heading-l"><a href="guide-leaving-care">Staying in the UK</a></h3>
+                           <p class="govuk-body">How to claim asylum (ask to stay in the UK as a refugee)</p>
+                     </div>
+                  </div>
+               </div> -->
+
+               
+
+               <!-- <div class="govuk-grid-column-full govuk-!-margin-bottom-5">
+                  <div class="govuk-grid-row split-panel">
+                     <div class="govuk-grid-column-one-half image-column">
+                        <div class="image-container" style="background-image: url('/public/images/guide-finances.jpg');"></div>
+                     </div>
+                     <div class="govuk-grid-column-one-half text-column">
+                        <span class="govuk-caption-l">Guide</span>
+                           <h3 class="govuk-heading-l"><a href="guide-asylum">Planning your finances</a></h3>
+                        <p class="govuk-body">What to do think about when it comes to money and expenses as you leave care</p>
+                     </div>
+                  </div>
+               </div> -->
+
+               <!-- <div class="govuk-grid-column-full govuk-!-margin-bottom-5">
+                  <div class="govuk-grid-row split-panel">
+                     <div class="govuk-grid-column-one-half image-column">
+                        <div class="image-container" style="background-image: url('/public/images/guide-education01.jpg');"></div>
+                     </div>
+                     <div class="govuk-grid-column-one-half text-column">
+                        <span class="govuk-caption-l">Guide</span>
+                           <h3 class="govuk-heading-l"><a href="guide-homeless">How to complain </a></h3>
+                        <p class="govuk-body">How to complain if you’re unhappy with your experience leaving care or have missed support</p>
+                     </div>
+                  </div>
+               </div> -->
+
+               <!-- <div class="govuk-grid-column-full govuk-!-margin-bottom-5">
+                  <div class="govuk-grid-row split-panel">
+                     <div class="govuk-grid-column-one-half image-column">
+                        <div class="image-container" style="background-image: url('/public/images/guide-complain.jpg');"></div>
+                     </div>
+                     <div class="govuk-grid-column-one-half text-column">
+                        <span class="govuk-caption-l">Guide</span>
+                         <h3 class="govuk-heading-l"><a href="guide-asylum">Accessing your records</a></h3>
+                        <p class="govuk-body">What to do if you’re struggling to get access to your records (files and information on your time in care)</p>
+                     </div>
+                  </div>
+               </div> -->
+
+               <!-- <div class="govuk-grid-column-full govuk-!-margin-bottom-5">
+                  <div class="govuk-grid-row split-panel">
+                     <div class="govuk-grid-column-one-half image-column">
+                        <div class="image-container" style="background-image: url('/public/images/guide-general02.jpg');"></div>
+                     </div>
+                     <div class="govuk-grid-column-one-half text-column">
+                        <span class="govuk-caption-l">Guide</span>
+                        <h3 class="govuk-heading-l"><a href="guide-homeless">Finding community and belonging</a></h3>
+                        <p class="govuk-body">Ways to find your community and sense of belonging when you leave care and move to a new home </p>
+                     </div>
+                  </div>
+               </div> -->
+
+
+               <!-- <div class="govuk-grid-column-full govuk-!-margin-bottom-5">
+                  <div class="govuk-grid-row split-panel">
+                     <div class="govuk-grid-column-one-half image-column">
+                        <div class="image-container" style="background-image: url('/public/images/guide-25.jpg');"></div>
+                     </div>
+                     <div class="govuk-grid-column-one-half text-column">
+                        <span class="govuk-caption-l">Guide</span>
+                        <h3 class="govuk-heading-l"><a href="guide-asylum">Getting support after 25</a></h3>
+                        <p class="govuk-body">What happens when you leave the care system at 25 and what support you might still be able to get</p>
+                     </div> 
+                  </div>
+               </div> -->
+
+            
+         </div>
+    
+  </div>
+</div>
+
+
+
+{% endblock %}

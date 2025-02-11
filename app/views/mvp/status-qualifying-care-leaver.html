@@ -1,0 +1,148 @@
+{% set view = 'Check my status' %}
+
+{% extends "/layouts/dfe-service-v03.html" %}
+
+{% set pageName="Support for Qualifying care leaver" %}
+
+
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    {% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+
+    {{ govukBreadcrumbs({
+      collapseOnMobile: true,
+      items: [
+        {
+          text: "Your rights",
+          href: "status"
+        },
+        {
+          text: "Qualifying care leaver",
+          href: "support-qualifying-care-leaver"
+        }
+      ]
+    }) }}
+
+    
+
+    {{ govukPanel({
+      titleText: "You are a 'Qualifying care leaver'"
+    }) }}
+
+    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+    <h2 class="govuk-heading-l">
+      What this means
+    </h2>
+    <p class="govuk-body">As a ‘Qualifying care leaver’, you’re entitled to support because you:
+      <ul class="govuk-list govuk-list--bullet">
+        <li>have left care</li>
+        <li>are between 18 and 25</li>
+        <li>spent less than 13 weeks in care since the agee of 14 - this includes time after you turned 16.</li>
+      </ul></p>
+
+      <h2 class="govuk-heading-m">
+      Support you’re entitled to</h2>
+      <p class="govuk-body">Most of the support you’re entitled to is provided by your local council.</p>
+      <p class="govuk-body">If you came to the UK to seek asylum, you could also be entitled to additional <a href="help-uasc">support as an asylum-seeking person.</a></p>
+    
+    <div class="govuk-summary-card">
+      <div class="govuk-summary-card__title-wrapper">
+        <h2 class="govuk-summary-card__title"><a href="help-care-leavers-grant">Check what support you’re entitled to</a></h2>
+      </div>
+      <div class="govuk-summary-card__content">
+        <p>Additional support your local council offers you when you leave care</p>
+      </div>
+    </div>
+
+    <div class="govuk-summary-card">
+      <div class="govuk-summary-card__title-wrapper">
+        <h2 class="govuk-summary-card__title"><a href="help-care-leavers-grant">16 to 19 Bursary Fund</a></h2>
+      </div>
+      <div class="govuk-summary-card__content">
+        <p>A bursary of up to £1,200 if you stay in full-time education to help with related costs
+ </p>
+      </div>
+    </div>
+
+    <div class="govuk-summary-card">
+      <div class="govuk-summary-card__title-wrapper">
+        <h2 class="govuk-summary-card__title"><a href="help-care-leavers-grant">Care Leaver Covenant</a></h2>
+      </div>
+      <div class="govuk-summary-card__content">
+        <p>Browse discounts and offers, as well as job, education and training opportunities</p>
+      </div>
+    </div>
+
+    <div class="govuk-summary-card">
+      <div class="govuk-summary-card__title-wrapper">
+        <h2 class="govuk-summary-card__title"><a href="help-care-leavers-grant">Advocacy services</a></h2>
+      </div>
+      <div class="govuk-summary-card__content">
+        <p>If you need help getting your voice heard and standing up for your rights</p>
+      </div>
+    </div>
+
+    <h2 class="govuk-heading-m">Other support you could be eligible for</h2>
+      <p class="govuk-body">You’ll need to check you’re eligible for the following support.</p>
+
+    <div class="govuk-summary-card">
+      <div class="govuk-summary-card__title-wrapper">
+        <h2 class="govuk-summary-card__title"><a href="help-care-leavers-grant">Universal Credit</a></h2>
+      </div>
+      <div class="govuk-summary-card__content">
+        <p>A regular payment to help with living costs if you are on a lower income or out of work</p>
+      </div>
+    </div>
+
+    <div class="govuk-summary-card">
+      <div class="govuk-summary-card__title-wrapper">
+        <h2 class="govuk-summary-card__title"><a href="help-care-leavers-grant">Childcare options</a></h2>
+      </div>
+      <div class="govuk-summary-card__content">
+        <p>Various options for support with childcare costs for parents based on circumstances</p>
+      </div>
+    </div>
+
+    <div class="govuk-summary-card">
+      <div class="govuk-summary-card__title-wrapper">
+        <h2 class="govuk-summary-card__title"><a href="help-care-leavers-grant">Discretionary Housing Payments (DHP)</a></h2>
+      </div>
+      <div class="govuk-summary-card__content">
+        <p>A grant to help people with housing costs (like help with rent or deposits)</p>
+      </div>
+    </div>
+
+    <div class="govuk-summary-card">
+      <div class="govuk-summary-card__title-wrapper">
+        <h2 class="govuk-summary-card__title"><a href="help-care-leavers-grant">Youth Offer</a></h2>
+      </div>
+      <div class="govuk-summary-card__content">
+        <p>Department for Work and Pensions’ support for finding and staying in work</p>
+      </div>
+    </div>
+
+    <div class="govuk-summary-card">
+      <div class="govuk-summary-card__title-wrapper">
+        <h2 class="govuk-summary-card__title"><a href="help-care-leavers-grant">Personal Independence Payment (PIP)</a></h2>
+      </div>
+      <div class="govuk-summary-card__content">
+        <p>Help with living costs if you have a long-term health condition or a disability</p>
+      </div>
+    </div>
+
+    <p class="govuk-body"><a href="all-support">View all support</a></p>
+    
+    
+  </div>
+  
+</div>
+    
+  </div>
+</div>
+
+{% endblock %}

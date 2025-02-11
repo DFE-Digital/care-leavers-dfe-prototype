@@ -1,0 +1,424 @@
+{% set view = 'All support' %}
+
+{% extends "/layouts/dfe-service.html" %}
+
+{% set pageName="UASC - Coming to the UK" %}
+
+{% block header %}
+
+
+<div class="govuk-width-container">
+  <div cLass="govuk-phase-banner">
+    <p Class="translate" claSs="govuk-body-s"><a hrEf="#" class="govuk-link">English</a></p>
+    
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+        Alpha
+      </strong>
+      <span class="govuk-phase-banner__text">
+        This is a new service. Help us improve it and <a class="govuk-link" href="#">give your feedback by email</a>.
+      </span>
+    </p>
+  </div>
+</div>
+
+
+
+
+{{ header({
+    "showNav": "true",
+    "showSearch": "false",
+    "showHeaderActionLinks": "false",
+    "logoPath": "public/images",
+    "searchAction": "/search/",
+    "searchInputName": "q",
+    "logoAltText": "Department for Education",
+    "homeHref": "/",
+    "selectedNav": view,
+    "service": {
+      "name": "Check support for leaving care",
+      "serviceUrl": "/"
+    },
+    "headerActionLinks": [
+      {
+        "url"  : "/",
+        "label" : "My account"
+      },
+      {
+        "url"  : "/",
+        "label" : "Sign out"
+      }
+    ],
+    "primaryLinks": [
+        {
+        "url"  : "home",
+        "label" : "Home"
+      }, {
+        "url"  : "all-support",
+        "label" : "All support"
+      },  {
+        "url"  : "status",
+        "label" : "Your rights"
+      },  {
+        "url"  : "guides-advice",
+        "label" : "Leaving care guides"
+      }, {
+        "url"  : "helplines",
+        "label" : "Helplines"
+      }
+    ]
+  })
+}}
+
+
+<section class="dfe-page-grey">
+   <div class="govuk-width-container">
+      <div class="govuk-grid-row">
+         <div class="govuk-grid-column-two-thirds">
+          <nav class="govuk-breadcrumbs" aria-label="Breadcrumb">
+            <ol class="govuk-breadcrumbs__list">
+              <li class="govuk-breadcrumbs__list-item">
+                <a class="govuk-breadcrumbs__link" href="home">Home</a>
+              </li>
+              <li class="govuk-breadcrumbs__list-item">
+                <a class="govuk-breadcrumbs__link" href="all-support">Find support</a>
+              </li>
+              <li class="govuk-breadcrumbs__list-item">
+                <a class="govuk-breadcrumbs__link" href="status-uasc">Coming to the UK </a>
+              </li>
+            </ol>
+          </nav>
+
+           <h1 class="govuk-heading-xl">
+            Coming to the UK 
+           </h1>
+           <!-- <p class="govuk-body">When you leave care at 18, you might be able to get support with housing.</p> -->
+          
+         </div>
+      </div>
+   </div>
+</section>
+
+
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+     <div class="floating-icon">
+        <a href="https://translate.google.co.uk" target="_blank">
+            <img src="/public/images/google-translate.svg.png" alt="Google Translate">
+        </a>
+    </div>
+
+
+  <h2 class="govuk-heading-m">Support you should get</h2>
+  
+  <p class="govuk-body">If you came to the UK because it was not safe in your home country, this is called ‘seeking asylum’.</p>
+  
+  <p class="govuk-body">As a young person seeking asylum under 18, your local council (part of the UK Government) should help you with:</p>
+  
+  <ul class="govuk-list govuk-list--bullet">
+    <li>finding somewhere safe to live</li>
+    <li>money for clothes, food and travel</li>
+    <li>school or college</li>
+    <li>finding your family</li>
+    <li>your health and happiness</li>
+    <li>learning English (like 
+      <a class="govuk-link" href="https://nationalcareers.service.gov.uk/find-a-course/page?searchTerm=esol&distance=10%20miles&town=&orderByValue=Relevance&startDate=Anytime&courseType=&courseHours=&courseStudyTime=&filterA=true&page=1&D=0&coordinates=&campaignCode=" target="_blank">finding a course to learn English</a>)
+    </li>
+    <li>planning your future</li>
+  </ul>
+
+  <p class="govuk-body">It is your legal right to get support, but some of it will depend on your asylum claim (ask to stay in the UK as a refugee).</p>
+  
+  <p class="govuk-body"><a class="govuk-link" href="guide-asylum">Read our guide to staying in the UK</a>.</p>
+
+  <h2 class="govuk-heading-m">Legal advice</h2>
+  
+  <p class="govuk-body">If you need legal advice, you can ask your:</p>
+  
+  <ul class="govuk-list govuk-list--bullet">
+    <li>support worker</li>
+    <li>social worker</li>
+    <li>or personal advisor (if you have one)</li>
+  </ul>
+  
+  <p class="govuk-body">They will be able to help you find someone who can explain your rights or help you with your asylum claim.</p>
+  
+  <p class="govuk-body">You can also call one of the <a class="govuk-link" href="#">free helplines</a>.</p>
+  
+  <p class="govuk-body">You may be able to get extra legal help too, but you will have to apply for it (fill in forms to ask for it).</p>
+
+  <h2 class="govuk-heading-m">Support you can ask for </h2>
+  <p class="govuk-body">You’ll need to apply for this support (fill in forms to ask for it). </p>
+
+  <div class="dfe-box box-gov">
+  <div class="box-icon"><img src="/public/images/HMG_logo.webp"></div>
+  <div class="box-content">
+    <h3 class="govuk-heading-s"><a href="https://www.gov.uk/find-an-immigration-adviser/what-advisers-can-do" target="_blank">Immigration adviser</a> <span class="govuk-body-s">(Opens in a new tab)</span></h3>
+    <p class="govuk-body-s">Someone who can give you advice and help you understand your rights.</p>
+    <div class="box-link"><span class="govuk-!-font-size-14"><strong>GOV.UK</strong></span></div>
+  </div>
+</div>
+
+<div class="dfe-box box-gov">
+  <div class="box-icon"><img src="/public/images/HMG_logo.webp"></div>
+  <div class="box-content">
+    <h3 class="govuk-heading-s"><a href="https://www.gov.uk/check-legal-aid" target="_blank">Legal aid</a> <span class="govuk-body-s">(Opens in a new tab)</span></h3>
+    <p class="govuk-body-s">If you are unhappy with an asylum decision and need help with money for legal fees.</p>
+    <div class="box-link"><span class="govuk-!-font-size-14"><strong>GOV.UK</strong></span></div>
+  </div>
+</div>
+
+<div class="dfe-box box-gov">
+  <div class="box-icon"><img src="/public/images/HMG_logo.webp"></div>
+  <div class="box-content">
+    <h3 class="govuk-heading-s"><a href="https://www.gov.uk/asylum-support" target="_blank">Asylum support</a> <span class="govuk-body-s">(Opens in a new tab)</span></h3>
+    <p class="govuk-body-s">Extra support if you are 18 or older and still waiting for a decision on your asylum claim.</p>
+    <div class="box-link"><span class="govuk-!-font-size-14"><strong>GOV.UK</strong></span></div>
+  </div>
+</div>
+
+<div class="dfe-box box-gov">
+  <div class="box-icon"><img src="/public/images/HMG_logo.webp"></div>
+  <div class="box-content">
+    <h3 class="govuk-heading-s"><a href="https://www.gov.uk/refugee-integration-loan" target="_blank">Refugee integration loan</a> <span class="govuk-body-s">(Opens in a new tab)</span></h3>
+    <p class="govuk-body-s">Money you can borrow to help with living costs if you are a refugee who is 18 or older.</p>
+    <div class="box-link"><span class="govuk-!-font-size-14"><strong>GOV.UK</strong></span></div>
+  </div>
+</div>
+
+
+
+  <h2 class="govuk-heading-m">Support when you are 18</h2>
+  
+  <p class="govuk-body">If you came to the UK before you were 18, you may be able to get support as a ‘care leaver’.</p>
+  
+  <p class="govuk-body">Read about how you might be a care leaver in our <a class="govuk-link" href="guide-asylum">guide to staying in the UK</a>.</p>
+  
+  <p class="govuk-body">What care leaver support you get depends on:</p>
+  <ul class="govuk-list govuk-list--bullet">
+    <li>where you live</li>
+    <li>how long you have been in the UK</li>
+    <li>if you are in school, college or university</li>
+    <li>your asylum claim</li>
+  </ul>
+  
+  <p class="govuk-body">You might hear about ‘care leaver status’. This is how the UK government works out what support you can get.</p>
+  
+  <p class="govuk-body">To find out your care leaver status, ask your social worker or personal advisor.</p>
+  
+  <p class="govuk-body"><a class="govuk-link" href="all-support">View all care leaver support</a></p>
+
+
+
+
+   <h3 class="govuk-heading-s">Get help and advice </h3>
+  <p class="govuk-body">To get help and advice about your asylum claim, support or your rights, call one of these <a href="helplines" class="govuk-link">free helplines</a>.</p>
+
+  <div class="dfe-box box-ext">
+    <div class="box-icon"><img src="/public/images/asylum-aid.png" alt="Asylum Aid logo"></div>
+    <div class="box-content">
+      <h3 class="govuk-heading-s"><a href="https://www.asylumaid.org.uk/" target="_blank">Asylum Aid</a> <span class="govuk-body-s">(Opens in a new tab)</span></h3>
+      <p class="govuk-body-s">For help understanding and moving through the asylum process</p>
+      <p class="govuk-body-s"><strong>Call:</strong> 0808 8010 503</p>
+      <p class="govuk-body-s"><strong>Opening times:</strong> 24 hours a day</p>
+      <p class="govuk-body-s"><strong>Free:</strong> Yes</p>
+      <p class="govuk-body-s"><strong>Accessibility:</strong> Other language options</p>
+    </div>
+  </div>
+
+  <div class="dfe-box box-ext">
+    <div class="box-icon"><img src="/public/images/refugee-council.png" alt="Refugee Council logo"></div>
+    <div class="box-content">
+      <h3 class="govuk-heading-s"><a href="https://www.refugeecouncil.org.uk/" target="_blank">The Refugee Council</a> <span class="govuk-body-s">(Opens in a new tab)</span></h3>
+      <p class="govuk-body-s">For help and advice for young people coming to the UK</p>
+      <p class="govuk-body-s"><strong>Call:</strong> 0808 196 7272</p>
+      <p class="govuk-body-s"><strong>Opening times:</strong> Mondays and Thursdays, 9.30am to 12.30pm</p>
+      <p class="govuk-body-s"><strong>Free:</strong> Yes</p>
+      <p class="govuk-body-s"><strong>Accessibility:</strong> Other language options</p>
+    </div>
+  </div>
+
+  <div class="dfe-box box-ext">
+    <div class="box-icon"></div>
+    <div class="box-content">
+      <h3 class="govuk-heading-s"><a href="https://www.migranthelpuk.org/" target="_blank">Migrant Help</a> <span class="govuk-body-s">(Opens in a new tab)</span></h3>
+      <p class="govuk-body-s">Call for free on 0808 8010 503 or visit the Migrant Help website </p>
+      <p class="govuk-body-s">Opening times: 24 hours a day  </p>
+
+
+      <p class="govuk-body-s"><strong>Accessibility:</strong> Other language options</p>
+    </div>
+  </div>
+  <p class="govuk-body"><a class="govuk-link" href="helplines">View all asylum helplines</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <section id="guides" class="dfe">
+      <h2 class="govuk-heading-l">Helpful guides</h2>
+
+      <p class="govuk-body">Guides to help you through leaving care and navigate any challenges.</p>
+
+      <div class="dfe-box box-gov">
+        <div class="box-icon"><img src="/public/images/housing03.jpg"></div>
+        <div class="box-content">
+          <h3 class="govuk-heading-s"><a href="#" target="_blank">Finding somewhere to live</a></h3>
+          <p class="govuk-body-s">How your local council must help you find somewhere to live when you leave care.</p>
+
+          <!-- <div class="box-link"><strong class="govuk-tag govuk-tag--green govuk-!-font-size-14">Guides</strong></div> -->
+        </div>
+      </div>
+
+      <div class="dfe-box box-gov">
+        <div class="box-icon"><img src="/public/images/education01.jpg"></div>
+        <div class="box-content">
+          <h3 class="govuk-heading-s"><a href="#" target="_blank">Making a complaint</a></h3>
+          <p class="govuk-body-s">If you’re not happy with your local council or  have missed support, you can complain.</p>
+
+          <!-- <div class="box-link"><strong class="govuk-tag govuk-tag--green govuk-!-font-size-14">Guides</strong></div> -->
+        </div>
+      </div>
+
+      <div class="dfe-box box-gov">
+        <div class="box-icon"><img src="/public/images/housing01.jpg"></div>
+        <div class="box-content">
+          <h3 class="govuk-heading-s"><a href="#" target="_blank">Facing homelessness</a></h3>
+          <p class="govuk-body-s">If you’re worried about becoming homeless, we’ll talk you through your next steps.</p>
+
+          <!-- <div class="box-link"><strong class="govuk-tag govuk-tag--green govuk-!-font-size-14">Guides</strong></div> -->
+        </div>
+      </div>
+
+       
+    </section>
+
+    <section id="help" class="dfe">
+      <h2 class="govuk-heading-l">
+        If you need help now
+      </h2>
+
+      <p class="govuk-body">If you’re in crisis or need urgent advice, there’s help available now.</p>
+
+      <div class="dfe-box box-ext">
+        <div class="box-icon"><img src="/public/images/help-at-hand.png"></div>
+        <div class="box-content">
+          <h3 class="govuk-heading-s"><a href="https://www.childrenscommissioner.gov.uk/help-at-hand/" target="_blank">Help at Hand</a> <span class="govuk-body-s">(Opens in a new tab)</span></h3>
+          <p class="govuk-body-s">Free support, advice and information for young people in care and leaving care</p>
+          
+          <div class="box-link"><span class="govuk-!-font-size-14"><strong>CHILDRENSCOMMISSIONER.GOV.UK</strong></span></div>
+        </div>
+      </div>
+
+      <div class="dfe-box box-ext">
+        <div class="box-icon"><img src="/public/images/shelter.png"></div>
+        <div class="box-content">
+          <h3 class="govuk-heading-s"><a href="https://england.shelter.org.uk/get_help" target="_blank">Shelter - Get Help</a> <span class="govuk-body-s">(Opens in a new tab)</span></h3>
+          <p class="govuk-body-s">Free help and advice for anyone struggling with housing and homelessness</p>
+          
+          <div class="box-link"><span class="govuk-!-font-size-14"><strong>SHELTER.ORG.UK</strong></span></div>
+        </div>
+      </div>
+
+      <div class="dfe-box box-ext">
+        <div class="box-icon"><img src="/public/images/mind.png"></div>
+        <div class="box-content">
+          <h3 class="govuk-heading-s"><a href="https://www.mind.org.uk/information-support/tips-for-everyday-living/housing-and-mental-health/" target="_blank">Mind - Housing and mental health</a> <span class="govuk-body-s">(Opens in a new tab)</span></h3>
+          <p class="govuk-body-s">Information and guidance for when housing problems are affecting your mental health</p>
+          
+          <div class="box-link"><span class="govuk-!-font-size-14"><strong>MIND.ORG.UK</strong></span></div>
+        </div>
+      </div>
+
+
+    </section>
+
+    <hr>
+
+    <div class="metadata-logo-wrapper">
+  <div class="govuk-grid-column-two-thirds metadata-column">
+    <div class="gem-c-metadata" data-module="gem-toggle metadata" data-gem-toggle-module-started="true" data-metadata-module-started="true">
+      <dl class="gem-c-metadata__list">
+        <dt class="gem-c-metadata__term">From:</dt>
+          <dd class="gem-c-metadata__definition">
+            <a class="govuk-link" href="https://www.gov.uk/government/organisations/department-for-education">Department for Education</a>
+
+          </dd>
+          <dt class="gem-c-metadata__term">Published</dt>
+          <dd class="gem-c-metadata__definition">07 October 2024</dd>
+          <dt class="gem-c-metadata__term">Last updated</dt>
+          <dd class="gem-c-metadata__definition">25 October 2024</dd>
+      </dl>
+    </div>
+    <div class="gem-c-print-link govuk-!-display-none-print govuk-!-margin-top-3 govuk-!-margin-bottom-8">
+              <button class="govuk-link govuk-body-s gem-c-print-link__button" data-module="print-link" data-print-link-module-started="true">Print this page</button>
+          </div>
+  </div>
+</div>
+
+
+
+
+  </div>
+  <div class="govuk-grid-column-one-third">
+     <!-- <style>
+      .status-launch {
+         display: block;
+         width: 99%;
+         border: 1px #003a6a solid;
+         background-color: #f3f2f1;
+         margin: 0;
+         padding: 0;
+      }
+      .header-side {
+         background-color: #003a6a;
+         padding: 15px;
+      }
+      .header-side h2 {
+         color: white;
+      }
+      .header-side h2 a {
+       color: white;
+       text-decoration: none;
+      }
+      .header-side h2 a:hover {
+       color: white;
+       text-decoration: underline;
+      }
+      .body-side {
+         padding: 15px;
+      }
+   </style>
+   <aside class="status-launch">
+      <div class="header-side">
+         <h2 class="govuk-heading-l"><a href="status">Check what support you should get</a></h2>
+      </div>
+      <div class="body-side">
+         <p class="govuk-body">What support you should get depends on your ‘care leaver status’, which is based on the time you spent in care.</p>
+         <p class="govuk-body"><a href="status">What’s my status?</a></p>
+
+      </div>
+   </aside> -->
+
+  </div>
+</div>
+
+{% endblock %}

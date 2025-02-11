@@ -1,0 +1,335 @@
+{% set view = 'Helplines' %}
+
+{% extends "/layouts/dfe-service-v03.html" %}
+
+{% set pageName="Helplines" %}
+
+{% block header %}
+
+<div class="govuk-width-container">
+  <div cLass="govuk-phase-banner">
+    <p Class="translate" claSs="govuk-body-s"><a hrEf="#" class="govuk-link">English</a></p>
+    
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+        Alpha
+      </strong>
+      <span class="govuk-phase-banner__text">
+        This is a new service. Help us improve it and <a class="govuk-link" href="#">give your feedback by email</a>.
+      </span>
+    </p>
+  </div>
+</div>
+
+
+{{ header({
+    "showNav": "true",
+    "showSearch": "false",
+    "showHeaderActionLinks": "false",
+    "logoPath": "public/images",
+    "searchAction": "/search/",
+    "searchInputName": "q",
+    "logoAltText": "Department for Education",
+    "homeHref": "/",
+    "selectedNav": view,
+    "service": {
+      "name": "Support for care leavers",
+      "serviceUrl": "/"
+    },
+    "headerActionLinks": [
+      {
+        "url"  : "/",
+        "label" : "My account"
+      },
+      {
+        "url"  : "/",
+        "label" : "Sign out"
+      }
+    ],
+    "primaryLinks": [
+        {
+        "url"  : "home",
+        "label" : "Home"
+      }, {
+        "url"  : "all-support",
+        "label" : "All support"
+      },  {
+        "url"  : "status",
+        "label" : "Your rights"
+      },  {
+        "url"  : "guides-advice",
+        "label" : "Leaving care guides"
+      }, {
+        "url"  : "helplines",
+        "label" : "Helplines"
+      }
+    ]
+  })
+}}
+
+
+<section class="dfe-page-grey">
+   <div class="govuk-width-container">
+      <div class="govuk-grid-row">
+         <div class="govuk-grid-column-two-thirds">
+            <nav class="govuk-breadcrumbs" aria-label="Breadcrumb">
+            <ol class="govuk-breadcrumbs__list">
+              <li class="govuk-breadcrumbs__list-item">
+                <a class="govuk-breadcrumbs__link" href="home">Home</a>
+              </li>
+              <li class="govuk-breadcrumbs__list-item">
+                <a class="govuk-breadcrumbs__link" href="helplines">Helplines</a>
+              </li>
+            </ol>
+          </nav>
+
+           <h2 class="govuk-heading-xl">
+            Helplines
+           </h2>
+
+         </div>
+      </div>
+   </div>
+</section>
+
+
+{% endblock %}
+
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+   <div class="govuk-grid-column-two-thirds">
+
+    <!-- <div class="govuk-inset-text app-emergency-callout">
+  <strong class="govuk-tag govuk-tag--red">
+    EMERGENCY
+  </strong>
+  
+    <h2 class="govuk-heading-l">
+      If it’s an emergency
+    </h2>
+    <p class="govuk-body">If you’re in immediate danger, need urgent help or a crime has happened:</p>
+    <p class="govuk-heading-xl" style="margin-bottom: 15px; margin-top: 15px;">Call 999</p>
+    <p class="govuk-body">If you’re not sure what to do:</p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>For the Police, <strong>call 101</strong></li>
+      <li>To get medical help and advice, <strong>call 111</strong></li>
+    </ul>
+</div> -->
+
+  <h2 class="govuk-heading-s">Contents</h2>
+  <ul class="govuk-list">
+    <li><a href="#talk-to">Someone to talk to</a></li>
+    <li><a href="#your-rights">Understanding your rights</a></li>
+    <li><a href="#housing">Housing and money</a></li>
+    <li><a href="#asylum">Help with asylum</a></li>
+  </ul>
+  
+  <h2 class="govuk-heading-m" id="talk-to" style="margin-top:40px;">Someone to talk to</h2>
+
+  <div class="dfe-box box-ext">
+    <div class="box-icon"><img src="/public/images/samaritans.png" alt="Samaritans logo"></div>
+    <div class="box-content">
+      <h3 class="govuk-heading-s"><a href="https://www.samaritans.org/" target="_blank">Samaritans <span class="govuk-body-s">(Opens in a new tab)</span></a> </h3>
+      <p class="govuk-body-s">For someone to talk to if you’re struggling<br>
+      <p class="govuk-body-s"><strong>Phone:</strong> 116 123<br>
+      <strong>Opening times:</strong> 24 hours a day<br>
+      <strong>Cost:</strong> Free<br>
+      <strong>Accessibility:</strong> Other language options</p>
+    </div>
+  </div>
+
+  <div class="dfe-box box-ext">
+    <div class="box-icon"><img src="/public/images/papyrus.png" alt="Papyrus logo"></div>
+    <div class="box-content">
+      <h3 class="govuk-heading-s"><a href="https://www.papyrus-uk.org/" target="_blank">Papyrus <span class="govuk-body-s">(Opens in a new tab)</span></a></h3>
+      <p class="govuk-body-s">For support if you’re feeling suicidal or hopeless</p>
+      <strong>Phone:</strong> 0800 068 4141<br>
+      <strong>Opening times:</strong> 24 hours a day<br>
+      <strong>Cost:</strong> Free<br>
+      <strong>Accessibility:</strong> BSL and other language options</p>
+    </div>
+  </div>
+
+  <div class="dfe-box box-ext">
+    <div class="box-icon"><img src="/public/images/childline.png" alt="Childline logo"></div>
+    <div class="box-content">
+      <h3 class="govuk-heading-s"><a href="https://www.childline.org.uk/" target="_blank">Childline <span class="govuk-body-s">(Opens in a new tab)</span></a></h3>
+      <p class="govuk-body-s">For help and advice if you’re worried or don’t feel safe</p>
+      <strong>Phone:</strong> 0800 1111<br>
+      <strong>Opening times:</strong> 24 hours a day<br>
+      <strong>Cost:</strong> Yes<br>
+      <strong>Accessibility:</strong> BSL and other language options</p>
+    </div>
+  </div>
+
+  <h2 class="govuk-heading-m" id="your-rights" style="margin-top:40px;">Understanding your rights</h2>
+
+  <div class="dfe-box box-ext">
+    <div class="box-icon"><img src="/public/images/help-at-hand.png" alt="Help at Hand logo"></div>
+    <div class="box-content">
+      <h3 class="govuk-heading-s"><a href="https://www.childrenscommissioner.gov.uk/help-at-hand/" target="_blank">Help at Hand <span class="govuk-body-s">(Opens in a new tab)</span></a></h3>
+      <p class="govuk-body-s">For support and advice if you’re in care or have left care</p>
+      <p class="govuk-body-s"><strong>Phone:</strong> 0800 528 0731<br>
+      <strong>Opening times:</strong> Monday to Friday, 9am to 5pm<br>
+      <strong>Cost:</strong> Free<br>
+      <strong>Accessibility:</strong> None</p>
+    </div>
+  </div>
+
+  <div class="dfe-box box-ext">
+    <div class="box-icon"><img src="/public/images/nyas.png" alt="NYAS logo"></div>
+    <div class="box-content">
+      <h3 class="govuk-heading-s"><a href="https://www.nyas.net/" target="_blank">National Youth Advocacy Services (NYAS) <span class="govuk-body-s">(Opens in a new tab)</span></a></h3>
+      <p class="govuk-body-s">For legal advice and help feeling heard as a young person</p>
+      <p class="govuk-body-s"><strong>Phone:</strong> 0800 808 1001<br>
+      <strong>Opening times:</strong> Monday to Friday, 9am to 8pm<br>
+      <strong>Cost:</strong> Free<br>
+      <strong>Accessibility:</strong> Other language options</p>
+    </div>
+  </div>
+
+  <h2 class="govuk-heading-m" id="housing" style="margin-top:40px;">Housing and money</h2>
+
+  <div class="dfe-box box-ext">
+    <div class="box-icon"><img src="/public/images/shelter.png" alt="Shelter logo"></div>
+    <div class="box-content">
+      <h3 class="govuk-heading-s"><a href="https://www.shelter.org.uk/" target="_blank">Shelter <span class="govuk-body-s">(Opens in a new tab)</span></a></h3>
+      <p class="govuk-body-s">For housing advice and help with homelessness</p>
+      <p class="govuk-body-s"><strong>Phone:</strong> 0808 800 4444<br>
+      <strong>Opening times:</strong> Monday to Friday, 8am to 6pm<br>
+      <strong>Cost:</strong> Free<br>
+      <strong>Accessibility:</strong> Other language options</p>
+    </div>
+  </div>
+
+  <div class="dfe-box box-ext">
+    <div class="box-icon"><img src="/public/images/centre-point.png" alt="Centre Point logo"></div>
+    <div class="box-content">
+      <h3 class="govuk-heading-s"><a href="https://centrepoint.org.uk/" target="_blank">Centre Point <span class="govuk-body-s">(Opens in a new tab)</span></a></h3>
+      <p class="govuk-body-s">For housing advice and help with homelessness<br>
+      <p class="govuk-body-s"><strong>Phone:</strong> 0808 800 0661<br>
+      <strong>Opening times:</strong> Monday to Friday, 9am to 5pm<br>
+      <strong>Cost:</strong> Free<br>
+      <strong>Accessibility:</strong> Other language options</p>
+    </div>
+  </div>
+
+  <div class="dfe-box box-ext">
+    <div class="box-icon"><img src="/public/images/national-debtline.png" alt="National Debtline logo"></div>
+    <div class="box-content">
+      <h3 class="govuk-heading-s"><a href="https://www.nationaldebtline.org/" target="_blank">National Debtline <span class="govuk-body-s">(Opens in a new tab)</span></a></h3>
+      <p class="govuk-body-s">For housing advice and help with homelessness</p>
+      <p class="govuk-body-s"><strong>Phone:</strong> 0808 808 4000<br>
+      <strong>Opening times:</strong> Monday to Saturday, 9am to 8pm<br>
+      <strong>Cost:</strong> Free<<br>
+      <strong>Accessibility:</strong> None</p>
+    </div>
+  </div>
+
+  <h2 class="govuk-heading-m" id="asylum" style="margin-top:40px;">Help with asylum</h2>
+
+  <div class="dfe-box box-ext">
+    <div class="box-icon"><img src="/public/images/asylum-aid.png" alt="Asylum Aid logo"></div>
+    <div class="box-content">
+      <h3 class="govuk-heading-s"><a href="https://www.asylumaid.org.uk/" target="_blank">Asylum Aid <span class="govuk-body-s">(Opens in a new tab)</span></a></h3>
+      <p class="govuk-body-s">For help understanding and moving through the asylum process</p>
+      <p class="govuk-body-s"><strong>Phone:</strong> 0808 8010 503<br>
+      <strong>Opening times:</strong> 24 hours a day<br>
+      <strong>Cost:</strong> Free<br>
+      <strong>Accessibility:</strong> Other language options</p>
+    </div>
+  </div>
+
+  <div class="dfe-box box-ext">
+    <div class="box-icon"><img src="/public/images/refugee-council.png" alt="Refugee Council logo"></div>
+    <div class="box-content">
+      <h3 class="govuk-heading-s"><a href="https://www.refugeecouncil.org.uk/" target="_blank">The Refugee Council <span class="govuk-body-s">(Opens in a new tab)</span></a></h3>
+      <p class="govuk-body-s">For help and advice for young people coming to the UK</p>
+      <p class="govuk-body-s"><strong>Phone:</strong> 0808 196 7272<br>
+      <strong>Opening times:</strong> Mondays and Thursdays, 9.30am to 12.30pm<br>
+      <strong>Cost:</strong> Free<br>
+      <strong>Accessibility:</strong> Other language options</p>
+    </div>
+  </div>
+
+  <!-- <p class="govuk-body"><a href="#" class="govuk-link">View all asylum helplines</a></p> -->
+
+  <hr>
+
+  <div class="metadata-logo-wrapper">
+  <div class="govuk-grid-column-two-thirds metadata-column">
+    
+    <div class="gem-c-print-link govuk-!-display-none-print govuk-!-margin-top-3 govuk-!-margin-bottom-8">
+              <button class="govuk-link govuk-body-s gem-c-print-link__button" data-module="print-link" data-print-link-module-started="true">Print this page</button>
+          </div>
+    <a href="#"><img class="full-width-image" alt="Care" src="/public/images/share.png" style="max-width: 300px;"></a>
+  </div>
+</div>
+
+
+
+
+
+            </div>
+         </div>
+    
+  </div>
+</div>
+
+
+
+{% endblock %}
+
+{% block footer %}
+
+
+  <footer class="govuk-footer">
+  <div class="govuk-width-container">
+    
+    <div class="govuk-footer__meta">
+      <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
+        
+        <h2 class="govuk-visually-hidden">Footer links</h2>
+        
+        <ul class="govuk-footer__inline-list">
+        
+          <li class="govuk-footer__inline-list-item">
+            <a class="govuk-footer__link" href="/manage-prototype">
+              Manage your prototype
+            </a>
+          </li>
+        
+          <li class="govuk-footer__inline-list-item">
+            <a class="govuk-footer__link" href="/manage-prototype/clear-data">
+              Clear data
+            </a>
+          </li>
+        
+        </ul>
+        
+        
+        
+        <svg aria-hidden="true" focusable="false" class="govuk-footer__licence-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 483.2 195.7" height="17" width="41">
+          <path fill="currentColor" d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145"></path>
+        </svg>
+        <span class="govuk-footer__licence-description">
+        
+          All content is available under the
+          <a class="govuk-footer__link" href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="license">Open Government Licence v3.0</a>, except where otherwise stated
+        
+        </span>
+      </div>
+      <div class="govuk-footer__meta-item">
+        <a class="govuk-footer__link govuk-footer__copyright-logo" href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/">
+        
+          © Crown copyright
+        
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+{% endblock %}

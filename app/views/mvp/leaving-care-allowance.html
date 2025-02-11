@@ -1,0 +1,286 @@
+{% set view = 'All support' %}
+
+{% extends "/layouts/dfe-service-v03.html" %}
+
+{% set pageName="Leaving care allowance" %}
+
+{% block header %}
+
+<div class="govuk-width-container">
+  <div cLass="govuk-phase-banner">
+    <p Class="translate" claSs="govuk-body-s"><a hrEf="#" class="govuk-link">English</a></p>
+    
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+        Alpha
+      </strong>
+      <span class="govuk-phase-banner__text">
+        This is a new service. Help us improve it and <a class="govuk-link" href="#">give your feedback by email</a>.
+      </span>
+    </p>
+  </div>
+</div>
+
+
+{{ header({
+    "showNav": "true",
+    "showSearch": "false",
+    "showHeaderActionLinks": "false",
+    "logoPath": "public/images",
+    "searchAction": "/search/",
+    "searchInputName": "q",
+    "logoAltText": "Department for Education",
+    "homeHref": "/",
+    "selectedNav": view,
+    "service": {
+      "name": "Support for care leavers",
+      "serviceUrl": "/"
+    },
+    "headerActionLinks": [
+      {
+        "url"  : "/",
+        "label" : "My account"
+      },
+      {
+        "url"  : "/",
+        "label" : "Sign out"
+      }
+    ],
+    "primaryLinks": [
+        {
+        "url"  : "home",
+        "label" : "Home"
+      }, {
+        "url"  : "all-support",
+        "label" : "All support"
+      },  {
+        "url"  : "status",
+        "label" : "Your rights"
+      },  {
+        "url"  : "guides-advice",
+        "label" : "Leaving care guides"
+      }, {
+        "url"  : "helplines",
+        "label" : "Helplines"
+      }
+    ]
+  })
+}}
+
+<section class="dfe-page-grey">
+   <div class="govuk-width-container">
+      <div class="govuk-grid-row">
+         <div class="govuk-grid-column-two-thirds">
+
+            <nav class="govuk-breadcrumbs govuk-body-s" aria-label="Breadcrumb">
+            <ol class="govuk-breadcrumbs__list govuk-body-s">
+              <li class="govuk-breadcrumbs__list-item">
+                <a class="govuk-breadcrumbs__link" href="home">Home</a>
+              </li>
+              <li class="govuk-breadcrumbs__list-item">
+                <a class="govuk-breadcrumbs__link" href="all-support">All support</a>
+              </li>
+              <li class="govuk-breadcrumbs__list-item">
+                <a class="govuk-breadcrumbs__link" href="category-housing">Housing and accomodation</a>
+              </li>
+              
+            </ol>
+          </nav>
+
+           <h1 class="govuk-heading-xl">
+            Leaving Care Allowance 
+           </h1>
+           <p class="govuk-body">Money to help you set up your home when you leave care. It’s also called the ‘Care Leaver’s Grant’ and ‘Setting Up Home Allowance’.</p>
+          
+         </div>
+      </div>
+   </div>
+</section>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h2 class="govuk-heading-s">Contents</h2>
+    <ul class="govuk-list contents">
+      <li class="govuk-body-s"><a href="#what-is-the-leaving-care-allowance">What is the Leaving Care Allowance?</a></li>
+      <li class="govuk-body-s"><a href="#who-is-it-for">Who is it for?</a></li>
+      <li class="govuk-body-s"><a href="#how-much-will-i-get">How much will I get?</a></li>
+      <li class="govuk-body-s"><a href="#how-and-when-will-i-get-it">How and when will I get it?</a></li>
+      <li class="govuk-body-s"><a href="#how-does-it-affect-other-support">How does it affect other support?</a></li>
+      <li class="govuk-body-s"><a href="#issues-with-this-support">Issues with this support</a></li>
+      <li class="govuk-body-s"><a href="#further-info">Further information</a></li>
+    </ul>
+
+      <section id="what-is-the-leaving-care-allowance" class="bluebox">
+        <h2 class="govuk-heading-l">What is the Leaving Care Allowance?</h2>
+        <p class="govuk-body">When you leave care, you’ll get some money to help you set up your next home.</p>
+        <p class="govuk-body">Leaving Care Allowance is also called:</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>Setting Up Home Allowance</li>
+          <li>Care Leaver’s Grant</li>
+          <li>Care Leaver’s Allowance</li>
+          <li>Leaving Care Grant</li>
+        </ul>
+
+        <h3 class="govuk-heading-m">What can you use it for?</h3>
+        <p class="govuk-body">You can use the money to buy things for your home, like furniture and kitchen appliances. It cannot be used for utility bills or rent, but there is other <a href="category-housing">housing support you could get.</a></p>
+      </section>
+
+      <section id="who-is-it-for" class="bluebox">
+        <h2 class="govuk-heading-l">Who is it for?</h2>
+        <p class="govuk-body">You have a legal right to access the Leaving Care Allowance (you’re ‘entitled to it’) if you:</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>are between 18 and 25</li>
+          <li>were <a href="guide-in-care">in care</a> for more than 13 weeks between the age of 14 to 16 (this does not include any time after your 16th birthday)</li>
+          <li>have left care</li>
+        </ul>
+        <p class="govuk-body">This also means your care leaver status is <a href="status-former-relevant-child">‘former relevant child’.</a></p>
+        <p class="govuk-body">This allowance is for people in England. If you live in:</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li><strong>Scotland</strong> - you get the <a href="https://www.gov.scot/news/payment-for-care-leavers/">Care Leaver Payment</a></li>
+          <li><strong>Wales</strong> - you get the Basic Income for Care Leavers in Wales</li>
+        </ul>
+
+        <h3 class="govuk-heading-m">If you’re under 18</h3>
+        <p class="govuk-body">If you’re under 18 and are a <a href="status-relevant-child">'relevant child'</a> or <a href="status-eligible-child">'eligible child'</a>, you’ll be able to access the allowance after your 18th birthday.</p>
+        <p class="govuk-body"><a href="status">Check your care leaver status</a> if you’re not sure what it is.</p>
+        <p class="govuk-body">If you want to leave care when you’re 16, you can access the allowance after your 16th birthday.</p>
+      </section>
+
+      <section id="how-much-will-i-get" class="bluebox">
+        <h2 class="govuk-heading-l">How much will I get?</h2>
+        <p class="govuk-body">If your 18th birthday is after 1 April 2023, you’ll get up to £3,000. Your council might give you more depending on your situation.</p>
+        <p class="govuk-body">If your 18th birthday was before 1 April 2023 and you haven’t had your allowance yet, you should still get up to £3,000 when you move into your first home.</p>
+        <p class="govuk-body">If you got part of your allowance before 1 April 2023, your council will decide what to do.</p>
+
+        <h3 class="govuk-heading-m">Who is my local council?</h3>
+        <p class="govuk-body">Use the postcode of where you lived when you went into care to <a href="https://www.gov.uk/find-local-council">find your council.</a></p>
+      </section>
+
+      <section id="how-and-when-will-i-get-it" class="bluebox">
+        <h2 class="govuk-heading-l">How and when will I get it?</h2>
+        <p class="govuk-body">Ask your personal adviser (PA) or council for the Leaving Care Allowance after your 18th birthday.</p>
+        <p class="govuk-body">You can access the allowance sooner if you’re planning to leave care before you’re 18.</p>
+
+        <h3 class="govuk-heading-m">If you’re in a ‘stay put’ arrangement</h3>
+        <p class="govuk-body">If you’re in a ‘Stay Put' arrangement, you can ask for the allowance when you move out or after your 21st birthday.</p>
+
+        <h3 class="govuk-heading-m">How it works</h3>
+        <p class="govuk-body">Your PA can help you access the allowance.</p>
+        <p class="govuk-body">All councils do things differently. Ask your PA to find out how it works in your area.</p>
+        <p class="govuk-body">You may:</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>need to ask your PA to buy things with the allowance</li>
+          <li>get the allowance in one payment</li>
+          <li>get the allowance in smaller payments at different times</li>
+        </ul>
+      </section>
+
+      <section id="how-does-it-affect-other-support" class="bluebox">
+        <h2 class="govuk-heading-l">How does it affect other support?</h2>
+        <p class="govuk-body">Your council should give you this allowance even if you get benefits or other help with money, like Universal Credit.</p>
+      </section>
+
+      <section id="issues-with-this-support" class="bluebox">
+        <h2 class="govuk-heading-l">Issues with this support</h2>
+        <p class="govuk-body">If you have issues with accessing the allowance, talk to your PA or someone else from your council.</p>
+        <p class="govuk-body">It might be that:</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>you did not get it when you became 18</li>
+          <li>you didn’t get the minimum amount (£2,000 if your 18th birthday was before 1 April 2023 or £3,000 if it was after)</li>
+          <li>you were not happy with how much you got</li>
+          <li>you did not agree with how it was spent</li>
+        </ul>
+        <p class="govuk-body">If you’re still not happy, you can make a complaint.</p>
+      </section>
+
+      <section id="further-info" class="bluebox">
+        <h2 class="govuk-heading-l">Further information</h3>
+        <p class="govuk-body">To find out more about Leaving Care Allowance, speak to your PA or council.</p>
+      </section>
+
+    <hr class="govuk-section-break govuk-section-break--s govuk-section-break--visible">
+
+    <div class="gem-c-metadata" data-module="gem-toggle metadata" data-gem-toggle-module-started="true" data-metadata-module-started="true">
+      <dl class="gem-c-metadata__list">
+        <dt class="gem-c-metadata__term">From:</dt>
+          <dd class="gem-c-metadata__definition">
+            <a class="govuk-link" href="https://www.gov.uk/government/organisations/department-for-education">Department for Education</a>
+          </dd>
+          <dt class="gem-c-metadata__term">Published</dt>
+          <dd class="gem-c-metadata__definition">07 October 2024</dd>
+          <dt class="gem-c-metadata__term">Last updated</dt>
+          <dd class="gem-c-metadata__definition">25 October 2024</dd>
+      </dl>
+    </div>
+    <div class="gem-c-print-link govuk-!-display-none-print govuk-!-margin-top-3 govuk-!-margin-bottom-8">
+      <button class="govuk-link govuk-body-s gem-c-print-link__button" data-module="print-link" data-print-link-module-started="true">Print this page</button>
+    </div>
+    <a href="#"><img class="full-width-image" alt="Care" src="/public/images/share.png" style="max-width: 300px;"></a>
+
+    
+
+  </div>
+  <div class="govuk-grid-column-one-third">
+
+    
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+   <div class="govuk-grid-column-full">
+      <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+          <section class="dfe-section govuk-!-margin-top-5">
+             <div class="govuk-width-container">
+                <h2 class="govuk-heading-m">Helpful links</h2>
+                <div class="dfe-grid-container dfe-grid-container--wider govuk-!-margin-top-5">
+
+                  <div class="hf-card">
+                     <a href="category-housing">
+                        <div class="hf-card-container">
+                           <img class="full-width-image" alt="Support for practitioners thumbnail" src="/public/images/view-support.jpg">
+                           <div class="hf-card-details">
+                              <h3 class="govuk-heading-m">Housing and accommodation support </h3>
+                              <p class="govuk-body">Browse through the different types of support for housing</p>
+                           </div>
+                        </div>
+                     </a>
+                  </div>
+
+                  <div class="hf-card">
+                     <a href="guide-leaving-care">
+                        <div class="hf-card-container">
+                           <img class="full-width-image" alt="Support for practitioners thumbnail" src="/public/images/which-council.jpg">
+                           <div class="hf-card-details">
+                              <h3 class="govuk-heading-m">What to do if you’re facing homelessness </h3>
+                              <p class="govuk-body">A guide to help you navigate homelessness</p>
+                           </div>
+                        </div>
+                     </a>
+                  </div>
+
+                  <div class="hf-card">
+                     <a href="status">
+                        <div class="hf-card-container">
+                           <img class="full-width-image" alt="Support for practitioners thumbnail" src="/public/images/check-status.jpg">
+                           <div class="hf-card-details">
+                              <h3 class="govuk-heading-m">What happens when you leave care </h3>
+                              <p class="dfe-body-m">A guide to help you leave care well</p>
+                           </div>
+                        </div>
+                     </a>
+                  </div>
+
+                </div>
+             </div>
+          </section>
+    
+  </div>
+  
+</div>
+
+{% endblock %}
