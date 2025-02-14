@@ -1,144 +1,256 @@
-{% set view = 'Check my status' %}
-
+{% set view = 'Your rights' %}
 {% extends "/layouts/dfe-service-v03.html" %}
 
-{% set pageName="Support for Eligible child" %}
+{% set pageName="Eligible child - Your rights" %}
+
+{% block header %}
+
+<div class="govuk-width-container">
+  <div cLass="govuk-phase-banner">
+    <p Class="translate" claSs="govuk-body-s"><a hrEf="#" class="govuk-link">English</a></p>
+    
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+        Alpha
+      </strong>
+      <span class="govuk-phase-banner__text">
+        This is a new service. Help us improve it and <a class="govuk-link" href="#">give your feedback by email</a>.
+      </span>
+    </p>
+  </div>
+</div>
+
+
+{{ header({
+    "showNav": "true",
+    "showSearch": "false",
+    "showHeaderActionLinks": "false",
+    "logoPath": "public/images",
+    "searchAction": "/search/",
+    "searchInputName": "q",
+    "logoAltText": "Department for Education",
+    "homeHref": "/",
+    "selectedNav": view,
+    "service": {
+      "name": "Support for care leavers",
+      "serviceUrl": "/"
+    },
+    "headerActionLinks": [
+      {
+        "url"  : "/",
+        "label" : "My account"
+      },
+      {
+        "url"  : "/",
+        "label" : "Sign out"
+      }
+    ],
+    "primaryLinks": [
+       {
+        "url"  : "home",
+        "label" : "Home"
+      }, {
+        "url"  : "all-support",
+        "label" : "All support"
+      },  {
+        "url"  : "status",
+        "label" : "Your rights"
+      },  {
+        "url"  : "guides-advice",
+        "label" : "Leaving care guides"
+      }, {
+        "url"  : "helplines",
+        "label" : "Helplines"
+      }
+    ]
+  })
+}}
+
+
+<section class="dfe-page-grey">
+   <div class="govuk-width-container">
+      <div class="govuk-grid-row">
+         <div class="govuk-grid-column-two-thirds">
+            <nav class="govuk-breadcrumbs" aria-label="Breadcrumb">
+            <ol class="govuk-breadcrumbs__list">
+              <li class="govuk-breadcrumbs__list-item">
+                <a class="govuk-breadcrumbs__link" href="home">Home</a>
+              </li>
+              <li class="govuk-breadcrumbs__list-item">
+                <a class="govuk-breadcrumbs__link" href="status">Your rights</a>
+              </li>
+            </ol>
+          </nav>
+
+           <h1 class="govuk-heading-xl">
+            Eligible child
+           </h1>
+           <p class="govuk-body-l">What this care leaver status means and how it affects what support you have the right to.</p>
+
+         </div>
+      </div>
+   </div>
+</section>
+
+
+{% endblock %}
 
 
 
 {% block content %}
 
-
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    {% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
-
-    {{ govukBreadcrumbs({
-      collapseOnMobile: true,
-      items: [
-        {
-          text: "Your rights",
-          href: "status"
-        },
-        {
-          text: "Eligible child",
-          href: "support-eligible-child"
-        }
-      ]
-    }) }}
-
-    
-
-    {{ govukPanel({
-      html: "<h1 class='govuk-panel__title'>You are an <br>'Eligible child'</h1>"
-    }) }}
-
-    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
-
-    <h2 class="govuk-heading-l">
-      What this means
-    </h2>
-    <p class="govuk-body">As a 'Eligible child', you’re entitled to support because you:
-      <ul class="govuk-list govuk-list--bullet">
-        <li>are still in care</li>
-        <li>are 16 or 17</li>
-        <li>spent more than 13 weeks in care since the age of 14 — this includes time after you turned 16.</li>
-      </ul></p>
-
-      <h2 class="govuk-heading-m">
-      Support you’re entitled to</h2>
-      <p class="govuk-body">Most of the support you’re entitled to is provided by your local council.</p>
-      <p class="govuk-body">If you came to the UK to seek asylum, you could also be entitled to additional <a href="help-uasc">support as an asylum-seeking person.</a></p>
-
-      <div class="govuk-summary-card">
-        <div class="govuk-summary-card__title-wrapper">
-          <h2 class="govuk-summary-card__title"><a href="help-care-leavers-grant">Personal advisor</a></h2>
-        </div>
-        <div class="govuk-summary-card__content">
-          <p>Someone who helps you prepare for leaving care and supports you after you’ve left</p>
-        </div>
-      </div>
-
-    <div class="govuk-summary-card">
-      <div class="govuk-summary-card__title-wrapper">
-        <h2 class="govuk-summary-card__title"><a href="help-care-leavers-grant">Pathway plan</a></h2>
-      </div>
-      <div class="govuk-summary-card__content">
-        <p>A document you fill in with your personal advisor to help you prepare for leaving care</p>
-      </div>
-    </div>
-
-    <!-- <div class="govuk-summary-card">
-      <div class="govuk-summary-card__title-wrapper">
-        <h2 class="govuk-summary-card__title"><a href="help-care-leavers-grant">Local Offer</a></h2>
-      </div>
-      <div class="govuk-summary-card__content">
-        <p>Additional support your local council offers you when you leave care</p>
-      </div>
-    </div> -->
-
-    <div class="govuk-summary-card">
-      <div class="govuk-summary-card__title-wrapper">
-        <h2 class="govuk-summary-card__title"><a href="help-care-leavers-grant">16 to 19 Bursary Fund</a></h2>
-      </div>
-      <div class="govuk-summary-card__content">
-        <p>A bursary of up to £1,200 if you stay in full-time education to help with related costs</p>
-      </div>
-    </div>
-
-    <div class="govuk-summary-card">
-      <div class="govuk-summary-card__title-wrapper">
-        <h2 class="govuk-summary-card__title"><a href="help-care-leavers-grant">Care Leaver Covenant</a></h2>
-      </div>
-      <div class="govuk-summary-card__content">
-        <p>Browse discounts and offers, as well as job, education and training opportunities</p>
-      </div>
-    </div>
-
-    <div class="govuk-summary-card">
-      <div class="govuk-summary-card__title-wrapper">
-        <h2 class="govuk-summary-card__title"><a href="help-care-leavers-grant">Advocacy services</a></h2>
-      </div>
-      <div class="govuk-summary-card__content">
-        <p>If you need help getting your voice heard and standing up for your rights</p>
-      </div>
-    </div>
-
-    <h2 class="govuk-heading-m">Support you’ll be entitled to when you turn 18</h2>
-      <p class="govuk-body">Most of the support you’ll be entitled to when you turn 18 is provided by your local council.</p>
 
 
-      <div class="govuk-summary-card">
-      <div class="govuk-summary-card__title-wrapper">
-        <h2 class="govuk-summary-card__title"><a href="help-care-leavers-grant">Care Leaver's Grant</a></h2>
-      </div>
-      <div class="govuk-summary-card__content">
-        <p>A payment of at least £3,000 to help you set up in your next home when you leave care</p>
-      </div>
-    </div>
+  <h2 class="govuk-heading-s">Contents</h2>
+  <ul class="govuk-list contents">
+    <li><a href="#what-is-status">What is a eligible child’?</a></li>
+    <li><a href="#support-right">Support you have the right to</a></li>
+    <li><a href="#other-support">Other support you could get</a></li>
+  </ul>
 
-    <div class="govuk-summary-card">
-      <div class="govuk-summary-card__title-wrapper">
-        <h2 class="govuk-summary-card__title"><a href="help-care-leavers-grant">Local Offer</a></h2>
-      </div>
-      <div class="govuk-summary-card__content">
-        <p>Additional support your local council offers you when you leave care</p>
-      </div>
-    </div>
+  <h2 id="what-is-status" class="govuk-heading-l">What is a eligible child’?</h2>
 
-    
+  <p class="govuk-body">Your status is eligible child if:
+  <ul class="govuk-list govuk-list--bullet">
+    <li>have left care </li>
+    <li>are aged 18 to 25 </li>
+    <li>were in care for more than 13 weeks between 14 and 16 </li>
+  </ul></p>
+  <p class="govuk-body">Before you became 18, your status may have been ‘<a href="status-eligible-child">eligible child</a>’ or ‘<a href="status-relevant-child">relevant child</a>’.</p>
+  <p class="govuk-body">If you’re not sure about any details, you can ask your local council for access to your care records. </p>
 
-    <!-- <p class="govuk-body"><a href="all-support">View all support</a></p> -->
+  <section class="dfe">
 
-    
-    
-    
-  </div>
+    <h2 id="support-right" class="govuk-heading-l">Support you have the right to </h2>
+    <p class="govuk-body">Your council must give you the support listed. </p>
+
+    <section class="dfe">
+      <h3 class="govuk-heading-m">General support</h3>
+
+      <h4 class="govuk-heading-s" style="margin-top:30px;"><a href="local-offer" class="govuk-link">Local Offer for leaving care</a></h4>
+      <p class="govuk-body">Your local council’s own support package, which covers things like housing and money</p>
+
+      <hr style="margin-top:30px;">
+
+      <h4 class="govuk-heading-s" style="margin-top:30px;"><a href="support-personal-adviser" class="govuk-link">Personal adviser (PA)</a></h4>
+      <p class="govuk-body">Someone who supports and prepares you as you leave care</p>
+
+      <hr style="margin-top:30px;">
+
+      <h4 class="govuk-heading-s" style="margin-top:30px;"><a href="support-pathway-plan" class="govuk-link">Pathway Plan </a></h4>
+      <p class="govuk-body">A plan for your future that you do with your personal adviser </p>
+
+    </section>
+
+    <section class="dfe">
+
+      <h3 class="govuk-heading-m">Housing and money</h3>
+
+      <h4 class="govuk-heading-s" style="margin-top:30px;"><a href="leaving-care-allowance" class="govuk-link">Leaving Care Allowance </a></h4>
+      <p class="govuk-body">Money to set up your next home (also called ‘Setting Up Home Allowance’)</p>
+
+      <hr style="margin-top:30px;">
+
+      <h4 class="govuk-heading-s" style="margin-top:30px;"><a href="#" target="_blank" class="govuk-link">Junior Individual Savings Account (ISA) <span class="govuk-body-s">(Opens in a new tab)</span></a></h4>
+      <p class="govuk-body">A bank account containing money you can get from your 18th birthday</p>
+
+    </section>
+
+    <section class="dfe">
+
+      <h3 class="govuk-heading-m dfe">Education and training</h3>
+
+      <h4 class="govuk-heading-s" style="margin-top:30px;"><a href="local-offer" class="govuk-link">Higher Education Bursary</a></h4>
+      <p class="govuk-body">Money to help you go to university or college</p>
+
+      <hr style="margin-top:30px;">
+
+      <h4 class="govuk-heading-s" style="margin-top:30px;"><a href="#" target="_blank" class="govuk-link">Apprenticeships Care Leaver’s Bursary <span class="govuk-body-s">(Opens in a new tab)</span></a></h4>
+      <p class="govuk-body">Money to help you if you're doing an apprenticeship</p>
+
+    </section>
+  </section>
+
+  <section class="dfe">
+    <h2 id="other-support" class="govuk-heading-l">Other support you could get</h2>
+    <p class="govuk-body">Government-funded services for care experienced young people.</p>
+
+    <h4 class="govuk-heading-s" style="margin-top:30px;"><a href="#" target="_blank" class="govuk-link">Care Leaver Covenant <span class="govuk-body-s">(Opens in a new tab)</span></a></h4>
+      <p class="govuk-body">Opportunities and offers for care leavers, including jobs, apprenticeships and discounts</p>
+      <hr style="margin-top:30px;">
+
+
+<h4 class="govuk-heading-s" style="margin-top:30px;"><a href="#" target="_blank" class="govuk-link">Help at Hand <span class="govuk-body-s">(Opens in a new tab)</span></a></h4>
+      <p class="govuk-body">Free support, advice and information service for care leavers and children in care</p>
+      <hr style="margin-top:30px;">
+
+
+<h4 class="govuk-heading-s" style="margin-top:30px;"><a href="#" target="_blank" class="govuk-link">Civil Service Care Leavers Internship Scheme <span class="govuk-body-s">(Opens in a new tab)</span></a></h4>
+      <p class="govuk-body">Scheme offering care leavers an 18-month paid internship in UK government</p>
+
+  </section>
+
   
-</div>
- 
-    
+
+ <hr style="margin-top:30px;">
+
+<div class="metadata-logo-wrapper">
+  <div class="govuk-grid-column-two-thirds metadata-column">
+    <div class="gem-c-metadata" data-module="gem-toggle metadata" data-gem-toggle-module-started="true" data-metadata-module-started="true">
+      <dl class="gem-c-metadata__list">
+        <dt class="gem-c-metadata__term">From:</dt>
+          <dd class="gem-c-metadata__definition">
+            <a class="govuk-link" href="https://www.gov.uk/government/organisations/department-for-education">Department for Education</a>
+
+          </dd>
+          <dt class="gem-c-metadata__term">Published</dt>
+          <dd class="gem-c-metadata__definition">12 September 2024</dd>
+          <dt class="gem-c-metadata__term">Last updated</dt>
+          <dd class="gem-c-metadata__definition">25 January 2025</dd>
+      </dl>
+    </div>
+    <div class="gem-c-print-link govuk-!-display-none-print govuk-!-margin-top-3 govuk-!-margin-bottom-8">
+              <button class="govuk-link govuk-body-s gem-c-print-link__button" data-module="print-link" data-print-link-module-started="true">Print this page</button>
+          </div>
   </div>
 </div>
+
+
+<a href="#"><img class="full-width-image" alt="Care" src="/public/images/share.png" style="max-width: 300px;"></a>
+
+    
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+    <div class="x-govuk-related-navigation" style="margin-top: 30px;">
+      <nav class="x-govuk-related-navigation__nav-section" role="navigation" aria-labelledby="related-navigation-related-content">
+        <h2 class="x-govuk-related-navigation__main-heading" id="related-navigation-related-content">
+          Related statuses
+        </h2>
+        <ul class="x-govuk-related-navigation__link-list">
+          <li class="x-govuk-related-navigation__link">
+            <a class="govuk-link x-govuk-related-navigation__section-link x-govuk-related-navigation__section-link--other" href="status-former-relevant-child">Former relevant child</a>
+          </li>
+          <li class="x-govuk-related-navigation__link">
+            <a class="govuk-link x-govuk-related-navigation__section-link x-govuk-related-navigation__section-link--other" href="status-qualifying-care-leaver">Qualifying care leaver</a>
+          </li>
+          <li class="x-govuk-related-navigation__link">
+            <a class="govuk-link x-govuk-related-navigation__section-link x-govuk-related-navigation__section-link--other" href="status-relevant-child">Relevant child</a>
+          </li>
+          <li class="x-govuk-related-navigation__link">
+            <a class="govuk-link x-govuk-related-navigation__section-link x-govuk-related-navigation__section-link--other" href="status-eligible-child">Eligible child</a>
+          </li>
+          
+        </ul>
+      </nav>
+    </div>
+
+    <a href="#"><img class="full-width-image" alt="Care" src="/public/images/share.png" style="max-width: 300px;"></a>
+  </div>
+</div>
+
+
 
 {% endblock %}
