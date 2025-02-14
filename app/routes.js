@@ -530,11 +530,11 @@ router.post('/v03entitlement-checker', function(request, response) {
 
     var entcheck = request.session.data['entcheck']
     if (entcheck == "15"){
-        response.redirect("/v03/15-question")
+        response.redirect("/v03/15-incare")
     } else if (entcheck == "16") {  
-        response.redirect("/v03/16-question");
+        response.redirect("/v03/16-incare");
     } else if (entcheck == "18") {  
-        response.redirect("/v03/18-question");
+        response.redirect("/v03/18-incare");
     } else if (entcheck == "dont-know") {  
         response.redirect("/v03/status-dont-know");
     } else {
