@@ -94,13 +94,13 @@ document.addEventListener("DOMContentLoaded", function () {
       (selectedValues.includes("in-care") && selectedValues.includes("seek-asylum"))
     ) {
       // Redirect to /status-asylum for the specified combinations
-      window.location.href = "/v02b/status-uasc";
+      window.location.href = "/v03/status-uasc";
     } else if (selectedValues.includes("in-care") || selectedValues.includes("in-custody")) {
       // Redirect to /pageA if only "in-care" or "in-custody" is selected (without "seek-asylum")
-      window.location.href = "/v02b/entitlement-checker-age";
+      window.location.href = "/v03/entitlement-checker-age";
     } else if (selectedValues.includes("none") || selectedValues.includes("dont-know")) {
       // Redirect to /status-dont-know if either "none" or "dont-know" is selected
-      window.location.href = "/v02b/support-dont-know";
+      window.location.href = "/v03/status-dont-know";
     }
   });
 });

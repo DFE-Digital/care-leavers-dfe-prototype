@@ -492,3 +492,195 @@ router.post('/v02b25-question', function(request, response) {
     }
 })
 
+
+
+
+
+//VERSION 03
+
+// Route for the form submission
+router.post('/v03ent-checker', function(request, response) {
+  const status = request.session.data['status'];
+
+  if (status === "british-citizen") {
+    response.redirect("/v03/entitlement-checker-age");
+  } else if (status === "with-family") {
+    response.redirect("/v03/25-uasc");
+  } else if (status === "seek-asylum") {
+    response.redirect("/v03/status-uasc");
+  } else {
+    // Optional: handle any unexpected input (e.g., redirect to an error page)
+    response.redirect("/v03/error");
+  }
+});
+
+router.post('/your-next-route', function(request, response) {
+  const age = request.session.data['age'];
+
+  if (age === "25-and-under") {
+    response.redirect("/v03/status-uasc");
+  } else if (age === "over-26") {
+    response.redirect("/v03/status-dont-know");
+  } else if (age === "dont-know") {
+    response.redirect("/v03/status-dont-know");
+  }
+});
+
+router.post('/v03entitlement-checker', function(request, response) {
+
+    var entcheck = request.session.data['entcheck']
+    if (entcheck == "15"){
+        response.redirect("/v03/15-question")
+    } else if (entcheck == "16") {  
+        response.redirect("/v03/16-question");
+    } else if (entcheck == "18") {  
+        response.redirect("/v03/18-question");
+    } else if (entcheck == "dont-know") {  
+        response.redirect("/v03/status-dont-know");
+    } else {
+        response.redirect("/v03/25-question")
+    }
+})
+
+router.post('/v0315-question', function(request, response) {
+
+    var check = request.session.data['check']
+    if (check == "incare"){
+        response.redirect("/v03/15-incare")
+    } else if (check == "custody") {  
+        response.redirect("/v03/15-incare");
+    } else if (check == "asylum") {  
+        response.redirect("/v03/15-incare");
+    } else if (check == "dont-know") {  
+        response.redirect("/v03/status-dont-know");
+    } else {
+        response.redirect("/v03/status-no-results")
+    }
+})
+
+router.post('/v0315-incare', function(request, response) {
+
+    var incare = request.session.data['incare']
+    if (incare == "yes"){
+        response.redirect("/v03/status-child-looked-after")
+    } else if (incare == "dont-know") {  
+        response.redirect("/v03/status-dont-know");
+    } else {
+        response.redirect("/v03/status-previously-looked-after-child")
+    }
+})
+
+// 16-17
+
+router.post('/v0316-question', function(request, response) {
+
+    var checksixteen = request.session.data['checksixteen']
+    if (checksixteen == "incare"){
+        response.redirect("/v03/16-incare")
+    } else if (checksixteen == "custody") {  
+        response.redirect("/v03/16-incare");
+    } else if (checksixteen == "asylum") {  
+        response.redirect("/v03/16-incare");
+    } else if (checksixteen == "dont-know") {  
+        response.redirect("/v03/status-dont-know");
+    } else {
+        response.redirect("/v03/status-no-results")
+    }
+})
+
+router.post('/v0316-incare', function(request, response) {
+
+    var incarebirthday = request.session.data['incarebirthday']
+    if (incarebirthday == "yes"){
+        response.redirect("/v03/16-incare-weeks")
+    } else if (incarebirthday == "dont-know") {  
+        response.redirect("/v03/status-dont-know");
+    } else {
+        response.redirect("/v03/status-care-experienced")
+    }
+})
+
+router.post('/v0316-incare-weeks', function(request, response) {
+
+    var incareweeks = request.session.data['incareweeks']
+    if (incareweeks == "yes"){
+        response.redirect("/v03/16-incare-currently")
+    } else if (incareweeks == "dont-know") {  
+        response.redirect("/v03/status-dont-know");
+    } else {
+        response.redirect("/v03/status-qualifying-child")
+    }
+})
+
+router.post('/v0316-incare-currently', function(request, response) {
+
+    var incarecurrently = request.session.data['incarecurrently']
+    if (incarecurrently == "yes"){
+        response.redirect("/v03/status-eligible-child")
+    } else if (incarecurrently == "dont-know") {  
+        response.redirect("/v03/status-dont-know");
+    } else {
+        response.redirect("/v03/status-relevant-child")
+    }
+})
+
+// 18-24
+
+router.post('/v0318-question', function(request, response) {
+
+    var checkeighteen = request.session.data['checkeighteen']
+    if (checkeighteen == "incare"){
+        response.redirect("/v03/18-incare")
+    } else if (checkeighteen == "custody") {  
+        response.redirect("/v03/18-incare");
+    } else if (checkeighteen == "asylum") {  
+        response.redirect("/v03/18-incare");
+    } else if (checkeighteen == "dont-know") {  
+        response.redirect("/v03/status-dont-know");
+    } else {
+        response.redirect("/v03/status-no-results")
+    }
+})
+
+router.post('/v0318-incare', function(request, response) {
+
+    var incareonbirthday = request.session.data['incareonbirthday']
+    if (incareonbirthday == "yes"){
+        response.redirect("/v03/18-incare-weeks")
+    } else if (incareonbirthday == "dont-know") {  
+        response.redirect("/v03/status-dont-know");
+    } else {
+        response.redirect("/v03/status-care-experienced")
+    }
+})
+
+router.post('/v0318-incare-weeks', function(request, response) {
+
+    var incareforweeks = request.session.data['incareforweeks']
+    if (incareforweeks == "yes"){
+        response.redirect("/v03/status-former-relevant-child")
+    } else if (incareforweeks == "dont-know") {  
+        response.redirect("/v03/status-dont-know");
+    }else {
+        response.redirect("/v03/status-qualifying-care-leaver")
+    }
+})
+
+// 25
+
+router.post('/v0325-question', function(request, response) {
+
+    var checktwentyfive = request.session.data['checktwentyfive']
+    if (checktwentyfive == "incare"){
+        response.redirect("/v03/status-care-experienced")
+    } else if (checktwentyfive == "custody") {  
+        response.redirect("/v03/status-care-experienced");
+    } else if (checktwentyfive == "asylum") {  
+        response.redirect("/v03/status-care-experienced");
+    } else if (checktwentyfive == "dont-know") {  
+        response.redirect("/v03/status-dont-know");
+    } else {
+        response.redirect("/v03/status-no-results")
+    }
+})
+
