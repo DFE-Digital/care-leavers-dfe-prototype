@@ -1,0 +1,270 @@
+{% set view = 'All support' %}
+
+{% extends "/layouts/dfe-service-v03.html" %}
+
+{% set pageName="Leaving care allowance" %}
+
+{% block header %}
+
+<div class="govuk-width-container">
+  <div cLass="govuk-phase-banner">
+    <p Class="translate" claSs="govuk-body-s"><a hrEf="#" class="govuk-link">English</a></p>
+    
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+        Alpha
+      </strong>
+      <span class="govuk-phase-banner__text">
+        This is a new service. Help us improve it and <a class="govuk-link" href="#">give your feedback by email</a>.
+      </span>
+    </p>
+  </div>
+</div>
+
+
+{{ header({
+    "showNav": "true",
+    "showSearch": "false",
+    "showHeaderActionLinks": "false",
+    "logoPath": "public/images",
+    "searchAction": "/search/",
+    "searchInputName": "q",
+    "logoAltText": "Department for Education",
+    "homeHref": "/",
+    "selectedNav": view,
+    "service": {
+      "name": "Support for care leavers",
+      "serviceUrl": "/"
+    },
+    "headerActionLinks": [
+      {
+        "url"  : "/",
+        "label" : "My account"
+      },
+      {
+        "url"  : "/",
+        "label" : "Sign out"
+      }
+    ],
+    "primaryLinks": [
+        {
+        "url"  : "home",
+        "label" : "Home"
+      }, {
+        "url"  : "all-support",
+        "label" : "All support"
+      },  {
+        "url"  : "status",
+        "label" : "Your rights"
+      },  {
+        "url"  : "guides-advice",
+        "label" : "Leaving care guides"
+      }, {
+        "url"  : "helplines",
+        "label" : "Helplines"
+      }
+    ]
+  })
+}}
+
+<section class="dfe-page-grey">
+   <div class="govuk-width-container">
+      <div class="govuk-grid-row">
+         <div class="govuk-grid-column-two-thirds">
+
+            <nav class="govuk-breadcrumbs govuk-body-s" aria-label="Breadcrumb">
+            <ol class="govuk-breadcrumbs__list govuk-body-s">
+              <li class="govuk-breadcrumbs__list-item">
+                <a class="govuk-breadcrumbs__link" href="home">Home</a>
+              </li>
+              <li class="govuk-breadcrumbs__list-item">
+                <a class="govuk-breadcrumbs__link" href="all-support">All support</a>
+              </li>
+              <li class="govuk-breadcrumbs__list-item">
+                <a class="govuk-breadcrumbs__link" href="category-housing">Housing and accomodation</a>
+              </li>
+              
+            </ol>
+          </nav>
+
+           <h1 class="govuk-heading-xl">Pathway Plan</h1>
+            <p class="govuk-body-l">Your pathway plan is there to help you get ready for leaving care. It includes the type of support you need to help you become independent.</p>
+          
+         </div>
+      </div>
+   </div>
+</section>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+  
+    
+
+    <h4 class="govuk-heading-s">Contents</h4>
+    <ul class="govuk-list contents">
+        <li class="govuk-body-s"><a href="#what-is">What is a Pathway Plan?</a></li>
+        <li class="govuk-body-s"><a href="#who-gets-one">Who gets one?</a></li>
+        <li class="govuk-body-s"><a href="#how-it-works">How does it work?</a></li>
+        <li class="govuk-body-s"><a href="#after-care">After you have left care?</a></li>
+        <li class="govuk-body-s"><a href="#special-considerations">Special Considerations</a></li>
+        <li class="govuk-body-s"><a href="#issues">Issues with this support</a></li>
+    </ul>
+
+    <section id="what-is" class="bluebox">
+        <h2 class="govuk-heading-l">What is a Pathway Plan?</h2>
+        <p class="govuk-body">A pathway plan is your own personal roadmap to help you transition from being in care to living independently. It will help you to feel prepared and have plans ready for when you leave care.</p>
+    </section>
+
+    <section id="who-gets-one" class="bluebox">
+        <h2 class="govuk-heading-l">Who gets one?</h2>
+        <p class="govuk-body">You have the right to get a pathway plan (you’re entitled to one) if you:</p>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>are aged 16 to 21</li>
+            <li>have spent at least 13 weeks in care, in total, between the age of 14 to 16 (this needs to include time after your 16th birthday)</li>
+        </ul>
+        <p class="govuk-body">It does not matter if:</p>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>you have left care</li>
+            <li>are in custody</li>
+            <li>you are seeking asylum</li>
+        </ul>
+        <p class="govuk-body">This also means your care leaver status is:</p>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>former relevant child</li>
+            <li>eligible child</li>
+            <li>relevant child</li>
+        </ul>
+        <p class="govuk-body">Pathway plans are for people living in England. Scotland, Wales and Northern Ireland have similar people and teams that support care leavers.</p>
+    </section>
+
+    <section id="how-it-works" class="bluebox">
+        <h2 class="govuk-heading-l">How does it work?</h2>
+        <p class="govuk-body">When you’re preparing to leave care, you will have a needs assessment with your personal adviser (PA) or social worker, to understand what support you need. Your PA will make your pathway plan from what is in your needs assessment.</p>
+        <p class="govuk-body">Your plan will be checked every 6 months to make sure the support is right for you. It will be updated sooner if your care or support needs change.</p>
+        <p class="govuk-body">Before you leave care, you will have a statutory review meeting with your PA and the leaving care team, to make sure you are ready to move into independence.</p>
+    </section>
+
+    <section id="after-care" class="bluebox">
+        <h2 class="govuk-heading-l">After you have left care?</h2>
+        <p class="govuk-body">Your pathway plan can include:</p>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>plans for any studying or training you might need</li>
+            <li>support to help you find work (like career advice or work experience)</li>
+            <li>plans to find you somewhere safe to live</li>
+            <li>support for your health and wellbeing</li>
+            <li>help with looking after your finances</li>
+            <li>support for helping you meet new people or things you are interested in</li>
+            <li>details about who supports you in care (personal advisers, social workers and mentors)</li>
+        </ul>
+        <p class="govuk-body">Your pathway plan might be different if you are:</p>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>a young person seeking asylum</li>
+            <li>in custody (like a secure children’s home or young offender’s institute)</li>
+        </ul>
+    </section>
+
+    <section id="special-considerations" class="bluebox">
+        <h2 class="govuk-heading-l">Special Considerations</h2>
+        <h3 class="govuk-heading-m">If you’re in custody</h3>
+        <p class="govuk-body">Your pathway plan will focus on what support you will need after you have left custody and finding you somewhere safe to live.</p>
+        <h3 class="govuk-heading-m">If you’re seeking asylum</h3>
+        <p class="govuk-body">Your pathway plan will focus on what support you need depending on your immigration status and the outcome of your asylum claims.</p>
+    </section>
+
+    <section id="issues" class="bluebox">
+        <h2 class="govuk-heading-l">Issues with this support</h2>
+        <p class="govuk-body">If you have an issue with your pathway plan or you have not been given one yet, talk to your PA, social worker or someone from your council. It might be that:</p>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>you don’t feel prepared to leave care</li>
+            <li>you have not had enough time with PA or social worker</li>
+            <li>you have not had the right support</li>
+        </ul>
+    </section>
+
+
+    <hr class="govuk-section-break govuk-section-break--s govuk-section-break--visible">
+
+    <div class="gem-c-metadata" data-module="gem-toggle metadata" data-gem-toggle-module-started="true" data-metadata-module-started="true">
+      <dl class="gem-c-metadata__list">
+        <dt class="gem-c-metadata__term">From:</dt>
+          <dd class="gem-c-metadata__definition">
+            <a class="govuk-link" href="https://www.gov.uk/government/organisations/department-for-education">Department for Education</a>
+          </dd>
+          <dt class="gem-c-metadata__term">Published</dt>
+          <dd class="gem-c-metadata__definition">07 October 2024</dd>
+          <dt class="gem-c-metadata__term">Last updated</dt>
+          <dd class="gem-c-metadata__definition">25 October 2024</dd>
+      </dl>
+    </div>
+    <div class="gem-c-print-link govuk-!-display-none-print govuk-!-margin-top-3 govuk-!-margin-bottom-8">
+      <button class="govuk-link govuk-body-s gem-c-print-link__button" data-module="print-link" data-print-link-module-started="true">Print this page</button>
+    </div>
+    <a href="#"><img class="full-width-image" alt="Care" src="/public/images/share.png" style="max-width: 300px;"></a>
+
+    
+
+  </div>
+  <div class="govuk-grid-column-one-third">
+
+    
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+   <div class="govuk-grid-column-full">
+      <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+          <section class="dfe-section govuk-!-margin-top-5">
+             <div class="govuk-width-container">
+                <h2 class="govuk-heading-m">Helpful links</h2>
+                <div class="dfe-grid-container dfe-grid-container--wider govuk-!-margin-top-5">
+
+                  <div class="hf-card">
+                     <a href="category-housing">
+                        <div class="hf-card-container">
+                           <img class="full-width-image" alt="Support for practitioners thumbnail" src="/public/images/view-support.jpg">
+                           <div class="hf-card-details">
+                              <h3 class="govuk-heading-m">Housing and accommodation support </h3>
+                              <p class="govuk-body">Browse through the different types of support for housing</p>
+                           </div>
+                        </div>
+                     </a>
+                  </div>
+
+                  <div class="hf-card">
+                     <a href="guide-leaving-care">
+                        <div class="hf-card-container">
+                           <img class="full-width-image" alt="Support for practitioners thumbnail" src="/public/images/which-council.jpg">
+                           <div class="hf-card-details">
+                              <h3 class="govuk-heading-m">What to do if you’re facing homelessness </h3>
+                              <p class="govuk-body">A guide to help you navigate homelessness</p>
+                           </div>
+                        </div>
+                     </a>
+                  </div>
+
+                  <div class="hf-card">
+                     <a href="status">
+                        <div class="hf-card-container">
+                           <img class="full-width-image" alt="Support for practitioners thumbnail" src="/public/images/check-status.jpg">
+                           <div class="hf-card-details">
+                              <h3 class="govuk-heading-m">What happens when you leave care </h3>
+                              <p class="dfe-body-m">A guide to help you leave care well</p>
+                           </div>
+                        </div>
+                     </a>
+                  </div>
+
+                </div>
+             </div>
+          </section>
+    
+  </div>
+  
+</div>
+
+{% endblock %}

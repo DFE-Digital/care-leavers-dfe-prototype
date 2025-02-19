@@ -1,0 +1,269 @@
+{% set view = 'All support' %}
+
+{% extends "/layouts/dfe-service-v03.html" %}
+
+{% set pageName="Personal Adviser (PA)" %}
+
+{% block header %}
+
+<div class="govuk-width-container">
+  <div cLass="govuk-phase-banner">
+    <p Class="translate" claSs="govuk-body-s"><a hrEf="#" class="govuk-link">English</a></p>
+    
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+        Alpha
+      </strong>
+      <span class="govuk-phase-banner__text">
+        This is a new service. Help us improve it and <a class="govuk-link" href="#">give your feedback by email</a>.
+      </span>
+    </p>
+  </div>
+</div>
+
+
+{{ header({
+    "showNav": "true",
+    "showSearch": "false",
+    "showHeaderActionLinks": "false",
+    "logoPath": "public/images",
+    "searchAction": "/search/",
+    "searchInputName": "q",
+    "logoAltText": "Department for Education",
+    "homeHref": "/",
+    "selectedNav": view,
+    "service": {
+      "name": "Support for care leavers",
+      "serviceUrl": "/"
+    },
+    "headerActionLinks": [
+      {
+        "url"  : "/",
+        "label" : "My account"
+      },
+      {
+        "url"  : "/",
+        "label" : "Sign out"
+      }
+    ],
+    "primaryLinks": [
+        {
+        "url"  : "home",
+        "label" : "Home"
+      }, {
+        "url"  : "all-support",
+        "label" : "All support"
+      },  {
+        "url"  : "status",
+        "label" : "Your rights"
+      },  {
+        "url"  : "guides-advice",
+        "label" : "Leaving care guides"
+      }, {
+        "url"  : "helplines",
+        "label" : "Helplines"
+      }
+    ]
+  })
+}}
+
+<section class="dfe-page-grey">
+   <div class="govuk-width-container">
+      <div class="govuk-grid-row">
+         <div class="govuk-grid-column-two-thirds">
+
+            <nav class="govuk-breadcrumbs govuk-body-s" aria-label="Breadcrumb">
+            <ol class="govuk-breadcrumbs__list govuk-body-s">
+              <li class="govuk-breadcrumbs__list-item">
+                <a class="govuk-breadcrumbs__link" href="home">Home</a>
+              </li>
+              <li class="govuk-breadcrumbs__list-item">
+                <a class="govuk-breadcrumbs__link" href="all-support">All support</a>
+              </li>
+              <li class="govuk-breadcrumbs__list-item">
+                <a class="govuk-breadcrumbs__link" href="category-housing">Housing and accomodation</a>
+              </li>
+              
+            </ol>
+          </nav>
+
+          <h1 class="govuk-heading-xl">Personal Adviser (PA)</h1>
+          <p class="govuk-body-l">Find out how a personal adviser can help support and guide you when leaving care.</p>
+          
+         </div>
+      </div>
+   </div>
+</section>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+
+
+    <h4 class="govuk-heading-s">Contents</h4>
+    <ul class="govuk-list contents">
+        <li class="govuk-body-s"><a href="#what-is">What is a personal adviser?</a></li>
+        <li class="govuk-body-s"><a href="#who-gets-one">Who gets one?</a></li>
+        <li class="govuk-body-s"><a href="#when-do-i-get">When do I get a personal adviser?</a></li>
+        <li class="govuk-body-s"><a href="#how-often">How often will I meet with them?</a></li>
+        <li class="govuk-body-s"><a href="#what-does-pa-do">What does a personal adviser do?</a></li>
+        <li class="govuk-body-s"><a href="#issues">Issues with your personal adviser</a></li>
+    </ul>
+
+    <section id="what-is" class="bluebox">
+        <h2 class="govuk-heading-l">What is a personal adviser?</h2>
+        <p class="govuk-body">A personal adviser (PA) helps you prepare and make plans for when you leave care. They must also continue to support you after you leave, to help you live independently.</p>
+    </section>
+
+    <section id="who-gets-one" class="bluebox">
+        <h2 class="govuk-heading-l">Who gets one?</h2>
+        <p class="govuk-body">You have the right to get a PA (you’re entitled to one) if you:</p>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>are aged 15 to 21</li>
+            <li>have spent at least 13 weeks in care, in total, between the age of 14 to 16 (this needs to include time after your 16th birthday)</li>
+        </ul>
+        <p class="govuk-body">It does not matter if:</p>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>you have left care</li>
+            <li>are in custody</li>
+            <li>you are seeking asylum</li>
+        </ul>
+        <p class="govuk-body">This also means your care leaver status is:</p>
+        <ul class="govuk-list govuk-list--bullet">
+            <li><a href="status-former-relevant-child" class="govuk-link">former relevant child</a></li>
+            <li><a href="status-eligible-child" class="govuk-link">eligible child</a></li>
+            <li><a href="status-relevant-child" class="govuk-link">relevant child</a></li>
+        </ul>
+        <p class="govuk-body">PAs are for people living in England. Scotland, Wales and Northern Ireland have similar people and teams that support care leavers.</p>
+    </section>
+
+    <section id="when-do-i-get" class="bluebox">
+        <h2 class="govuk-heading-l">When do I get a personal adviser?</h2>
+        <p class="govuk-body">Your social worker must introduce you to your PA before you become 18. This might be when you’re 16 or 17.</p>
+        <p class="govuk-body">They must support you until you’re 21, or until your 25th birthday if you ask them to (opt-in).</p>
+    </section>
+
+    <section id="how-often" class="bluebox">
+        <h2 class="govuk-heading-l">How often will I meet with them?</h2>
+        <p class="govuk-body">Your PA must meet with you at least once every 8 weeks.</p>
+        <p class="govuk-body">You might see them more often, depending on what support you need.</p>
+        <p class="govuk-body">How often you see your PA may vary if you’re:</p>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>a young person seeking asylum</li>
+            <li>in custody (like a secure children’s home or young offender’s institute)</li>
+        </ul>
+        <h3 class="govuk-heading-m">If you’re in custody</h3>
+        <p class="govuk-body">You might sometimes have phone or video calls with your PA instead. Having face-to-face visits may depend on other visits you have planned.</p>
+    </section>
+
+    <section id="what-does-pa-do" class="bluebox">
+        <h2 class="govuk-heading-l">What does a personal adviser do?</h2>
+        <p class="govuk-body">Your PA must:</p>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>help you plan and make decisions about your future (using your Pathway Plan)</li>
+            <li>help you find somewhere to live that meets your needs (suitable accommodation)</li>
+            <li>help you understand what support you have the right to and get access to it</li>
+            <li>talk through any issues or worries with you and offer guidance</li>
+            <li>help you develop practical life skills (like shopping, cooking or budgeting)</li>
+            <li>help you get set up for independent life (like help applying for benefits or opening a bank account)</li>
+        </ul>
+        <p class="govuk-body">A PA is different from a social worker, who helps you with decisions around your care (care plan).</p>
+    </section>
+
+    <section id="issues" class="bluebox">
+        <h2 class="govuk-heading-l">Issues with your personal adviser</h2>
+        <p class="govuk-body">If you have an issue with your PA or you have not been given one yet, talk to your social worker or someone from your council. It might be that your PA:</p>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>is not meeting with you often enough</li>
+            <li>is not giving you the right support</li>
+            <li>has done something to upset you</li>
+        </ul>
+        <p class="govuk-body">If you’re still not happy, you can <a href="guide-make-a-complaint" class="govuk-link">make a complaint</a>.</p>
+    </section>
+
+    <hr class="govuk-section-break govuk-section-break--s govuk-section-break--visible">
+
+    <div class="gem-c-metadata" data-module="gem-toggle metadata" data-gem-toggle-module-started="true" data-metadata-module-started="true">
+      <dl class="gem-c-metadata__list">
+        <dt class="gem-c-metadata__term">From:</dt>
+          <dd class="gem-c-metadata__definition">
+            <a class="govuk-link" href="https://www.gov.uk/government/organisations/department-for-education">Department for Education</a>
+          </dd>
+          <dt class="gem-c-metadata__term">Published</dt>
+          <dd class="gem-c-metadata__definition">07 October 2024</dd>
+          <dt class="gem-c-metadata__term">Last updated</dt>
+          <dd class="gem-c-metadata__definition">25 October 2024</dd>
+      </dl>
+    </div>
+    <div class="gem-c-print-link govuk-!-display-none-print govuk-!-margin-top-3 govuk-!-margin-bottom-8">
+      <button class="govuk-link govuk-body-s gem-c-print-link__button" data-module="print-link" data-print-link-module-started="true">Print this page</button>
+    </div>
+    <a href="#"><img class="full-width-image" alt="Care" src="/public/images/share.png" style="max-width: 300px;"></a>
+
+    
+
+  </div>
+  <div class="govuk-grid-column-one-third">
+
+    
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+   <div class="govuk-grid-column-full">
+      <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+          <section class="dfe-section govuk-!-margin-top-5">
+             <div class="govuk-width-container">
+                <h2 class="govuk-heading-m">Helpful links</h2>
+                <div class="dfe-grid-container dfe-grid-container--wider govuk-!-margin-top-5">
+
+                  <div class="hf-card">
+                     <a href="category-housing">
+                        <div class="hf-card-container">
+                           <img class="full-width-image" alt="Support for practitioners thumbnail" src="/public/images/view-support.jpg">
+                           <div class="hf-card-details">
+                              <h3 class="govuk-heading-m">Housing and accommodation support </h3>
+                              <p class="govuk-body">Browse through the different types of support for housing</p>
+                           </div>
+                        </div>
+                     </a>
+                  </div>
+
+                  <div class="hf-card">
+                     <a href="guide-leaving-care">
+                        <div class="hf-card-container">
+                           <img class="full-width-image" alt="Support for practitioners thumbnail" src="/public/images/which-council.jpg">
+                           <div class="hf-card-details">
+                              <h3 class="govuk-heading-m">What to do if you’re facing homelessness </h3>
+                              <p class="govuk-body">A guide to help you navigate homelessness</p>
+                           </div>
+                        </div>
+                     </a>
+                  </div>
+
+                  <div class="hf-card">
+                     <a href="status">
+                        <div class="hf-card-container">
+                           <img class="full-width-image" alt="Support for practitioners thumbnail" src="/public/images/check-status.jpg">
+                           <div class="hf-card-details">
+                              <h3 class="govuk-heading-m">What happens when you leave care </h3>
+                              <p class="dfe-body-m">A guide to help you leave care well</p>
+                           </div>
+                        </div>
+                     </a>
+                  </div>
+
+                </div>
+             </div>
+          </section>
+    
+  </div>
+  
+</div>
+
+{% endblock %}

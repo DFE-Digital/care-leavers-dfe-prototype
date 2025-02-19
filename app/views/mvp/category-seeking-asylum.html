@@ -1,0 +1,262 @@
+{% set view = 'All support' %}
+
+{% extends "/layouts/dfe-service-v03.html" %}
+
+{% set pageName="Support for young people seeking asylum" %}
+
+{% block header %}
+
+<div class="govuk-width-container">
+  <div cLass="govuk-phase-banner">
+    <p Class="translate" claSs="govuk-body-s"><a hrEf="#" class="govuk-link">English</a></p>
+    
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+        Alpha
+      </strong>
+      <span class="govuk-phase-banner__text">
+        This is a new service. Help us improve it and <a class="govuk-link" href="#">give your feedback by email</a>.
+      </span>
+    </p>
+  </div>
+</div>
+
+
+{{ header({
+    "showNav": "true",
+    "showSearch": "false",
+    "showHeaderActionLinks": "false",
+    "logoPath": "public/images",
+    "searchAction": "/search/",
+    "searchInputName": "q",
+    "logoAltText": "Department for Education",
+    "homeHref": "/",
+    "selectedNav": view,
+    "service": {
+      "name": "Support for care leavers",
+      "serviceUrl": "/"
+    },
+    "headerActionLinks": [
+      {
+        "url"  : "/",
+        "label" : "My account"
+      },
+      {
+        "url"  : "/",
+        "label" : "Sign out"
+      }
+    ],
+    "primaryLinks": [
+        {
+        "url"  : "home",
+        "label" : "Home"
+      }, {
+        "url"  : "all-support",
+        "label" : "All support"
+      },  {
+        "url"  : "status",
+        "label" : "Your rights"
+      },  {
+        "url"  : "guides-advice",
+        "label" : "Leaving care guides"
+      }, {
+        "url"  : "helplines",
+        "label" : "Helplines"
+      }
+    ]
+  })
+}}
+
+<section class="dfe-page-grey">
+   <div class="govuk-width-container">
+      <div class="govuk-grid-row">
+         <div class="govuk-grid-column-two-thirds">
+
+            <nav class="govuk-breadcrumbs govuk-body-s" aria-label="Breadcrumb">
+            <ol class="govuk-breadcrumbs__list govuk-body-s">
+              <li class="govuk-breadcrumbs__list-item">
+                <a class="govuk-breadcrumbs__link" href="home">Home</a>
+              </li>
+              <li class="govuk-breadcrumbs__list-item">
+                <a class="govuk-breadcrumbs__link" href="all-support">All support</a>
+              </li>
+              
+            </ol>
+          </nav>
+
+          <h1 class="govuk-heading-xl">Support for young people seeking asylum</h1>
+    <p class="govuk-body-l">Find out about support, help and advice if you are a young asylum seeker.</p>
+          
+         </div>
+      </div>
+   </div>
+</section>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    
+
+    <h4 class="govuk-heading-s">Contents</h4>
+    <ul class="govuk-list contents">
+        <li class="govuk-body-s"><a href="#who-is-this-support-for">Who is this support for?</a></li>
+        <li class="govuk-body-s"><a href="#support-if-you-are-17-or-younger">Support if you are 17 or younger</a></li>
+        <li class="govuk-body-s"><a href="#support-when-you-are-18">Support when you are 18</a></li>
+        <li class="govuk-body-s"><a href="#who-can-help-you">Who can help you</a></li>
+        <li class="govuk-body-s"><a href="#helpful-links">Helpful links</a></li>
+    </ul>
+
+    <section id="who-is-this-support-for" class="bluebox">
+        <h2 class="govuk-heading-l">Who is this support for?</h2>
+        <p class="govuk-body">This support is for unaccompanied asylum-seeking children (UASC). This means you arrived in the UK:</p>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>when you were 17 or younger</li>
+            <li>alone or without a parent or adult</li>
+            <li>to claim asylum</li>
+        </ul>
+        <p class="govuk-body">You might also be called a ‘migrant child’ or a ‘displaced child’.</p>
+        <p class="govuk-body">Social services must take care of you until you become 18.</p>
+    </section>
+
+    <section id="support-if-you-are-17-or-younger" class="bluebox">
+        <h2 class="govuk-heading-l">Support if you are 17 or younger</h2>
+        <p class="govuk-body">If you are 17 or younger, social services must help you:</p>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>find you somewhere safe to live</li>
+            <li>find your family (if you want to)</li>
+            <li>with clothes, food and travel</li>
+            <li>go to school or college</li>
+            <li>with your health and happiness</li>
+            <li>with your asylum claim</li>
+            <li>prepare you for adult life at 18</li>
+        </ul>
+    </section>
+
+    <section id="support-when-you-are-18" class="bluebox">
+        <h2 class="govuk-heading-l">Support when you are 18</h2>
+        <p class="govuk-body">When you are 18, social services will no longer take care of you (you will leave care).</p>
+        <p class="govuk-body">Your local council may give you leaving care support. This support depends on your asylum claim.</p>
+    </section>
+
+    <section id="who-can-help-you" class="bluebox">
+        <h2 class="govuk-heading-l">Who can help you</h2>
+        <p class="govuk-body">To find out more information about support, you can talk to:</p>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>your personal adviser (PA)</li>
+            <li>your social worker</li>
+            <li>your support worker</li>
+            <li>someone from your local council</li>
+        </ul>
+        <p class="govuk-body">You can also call the <a href="https://www.gov.uk/asylum-helplines" class="govuk-link">asylum helplines</a> or contact the <a href="https://www.refugeecouncil.org.uk/" class="govuk-link" target="_blank">Refugee Council <span class="govuk-body-s">(Opens in a new tab)</span></a>.</p>
+    </section>
+
+    <section id="helpful-links" class="bluebox">
+        <h2 class="govuk-heading-l">Helpful links</h2>
+        <p class="govuk-body">Information, help and advice if you are an asylum seeker.</p>
+        <ul class="govuk-list govuk-list--bullet">
+            <li><a href="https://www.gov.uk/claim-asylum-in-uk" class="govuk-link">Claim asylum in the UK</a> - How you must apply for asylum if you want to stay in the UK as a refugee.</li>
+            <li><a href="https://www.gov.uk/your-asylum-application" class="govuk-link">Your asylum application</a> - What happens when you claim asylum in the UK.</li>
+            <li><a href="https://www.gov.uk/government/publications/statement-of-evidence-form-sef-completion-instructions" class="govuk-link">Statement of evidence form (SEF) completion instructions</a> - Help filling in forms needed for your asylum claim.</li>
+            <li><a href="https://www.gov.uk/asylum-applicants-rights-and-responsibilities" class="govuk-link">Asylum applicants’ rights and responsibilities</a> - Rights and responsibilities if you are applying for asylum in the UK.</li>
+            <li><a href="https://www.gov.uk/asylum-support" class="govuk-link">Asylum support</a> - Apply for housing and money if you are waiting for an asylum decision.</li>
+            <li><a href="https://www.gov.uk/immigration-asylum-tribunal/appeal-decision" class="govuk-link">Appeal a decision by the immigration and asylum tribunal</a> - How to appeal an asylum decision if you are not happy with it.</li>
+            <li><a href="https://www.gov.uk/find-an-immigration-adviser" class="govuk-link">Find an immigration adviser</a> - Find someone to give you advice about your asylum claim.</li>
+            <li><a href="https://www.gov.uk/legal-aid" class="govuk-link">Legal aid</a> - Apply for money to help with legal fees.</li>
+        </ul>
+    </section>
+
+
+
+
+
+
+
+
+
+
+    <hr class="govuk-section-break govuk-section-break--s govuk-section-break--visible">
+
+    <div class="gem-c-metadata" data-module="gem-toggle metadata" data-gem-toggle-module-started="true" data-metadata-module-started="true">
+      <dl class="gem-c-metadata__list">
+        <dt class="gem-c-metadata__term">From:</dt>
+          <dd class="gem-c-metadata__definition">
+            <a class="govuk-link" href="https://www.gov.uk/government/organisations/department-for-education">Department for Education</a>
+          </dd>
+          <dt class="gem-c-metadata__term">Published</dt>
+          <dd class="gem-c-metadata__definition">07 October 2024</dd>
+          <dt class="gem-c-metadata__term">Last updated</dt>
+          <dd class="gem-c-metadata__definition">25 October 2024</dd>
+      </dl>
+    </div>
+    <div class="gem-c-print-link govuk-!-display-none-print govuk-!-margin-top-3 govuk-!-margin-bottom-8">
+      <button class="govuk-link govuk-body-s gem-c-print-link__button" data-module="print-link" data-print-link-module-started="true">Print this page</button>
+    </div>
+    <a href="#"><img class="full-width-image" alt="Care" src="/public/images/share.png" style="max-width: 300px;"></a>
+
+    
+
+  </div>
+  <div class="govuk-grid-column-one-third">
+
+    
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+   <div class="govuk-grid-column-full">
+      <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+          <section class="dfe-section govuk-!-margin-top-5">
+             <div class="govuk-width-container">
+                <h2 class="govuk-heading-m">Helpful links</h2>
+                <div class="dfe-grid-container dfe-grid-container--wider govuk-!-margin-top-5">
+
+                  <div class="hf-card">
+                     <a href="category-housing">
+                        <div class="hf-card-container">
+                           <img class="full-width-image" alt="Support for practitioners thumbnail" src="/public/images/view-support.jpg">
+                           <div class="hf-card-details">
+                              <h3 class="govuk-heading-m">Housing and accommodation support </h3>
+                              <p class="govuk-body">Browse through the different types of support for housing</p>
+                           </div>
+                        </div>
+                     </a>
+                  </div>
+
+                  <div class="hf-card">
+                     <a href="guide-leaving-care">
+                        <div class="hf-card-container">
+                           <img class="full-width-image" alt="Support for practitioners thumbnail" src="/public/images/which-council.jpg">
+                           <div class="hf-card-details">
+                              <h3 class="govuk-heading-m">What to do if you’re facing homelessness </h3>
+                              <p class="govuk-body">A guide to help you navigate homelessness</p>
+                           </div>
+                        </div>
+                     </a>
+                  </div>
+
+                  <div class="hf-card">
+                     <a href="status">
+                        <div class="hf-card-container">
+                           <img class="full-width-image" alt="Support for practitioners thumbnail" src="/public/images/check-status.jpg">
+                           <div class="hf-card-details">
+                              <h3 class="govuk-heading-m">What happens when you leave care </h3>
+                              <p class="dfe-body-m">A guide to help you leave care well</p>
+                           </div>
+                        </div>
+                     </a>
+                  </div>
+
+                </div>
+             </div>
+          </section>
+    
+  </div>
+  
+</div>
+
+{% endblock %}
