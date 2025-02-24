@@ -1,0 +1,296 @@
+{% set view = 'All support' %}
+
+{% extends "/layouts/dfe-service-v03.html" %}
+
+{% set pageName="Higher Education Bursary" %}
+
+{% block header %}
+
+<div class="govuk-width-container">
+  <div cLass="govuk-phase-banner">
+    <p Class="translate" claSs="govuk-body-s"><a hrEf="#" class="govuk-link">English</a></p>
+    
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+        Alpha
+      </strong>
+      <span class="govuk-phase-banner__text">
+        This is a new service. Help us improve it and <a class="govuk-link" href="#">give your feedback by email</a>.
+      </span>
+    </p>
+  </div>
+</div>
+
+
+{{ header({
+    "showNav": "true",
+    "showSearch": "false",
+    "showHeaderActionLinks": "false",
+    "logoPath": "public/images",
+    "searchAction": "/search/",
+    "searchInputName": "q",
+    "logoAltText": "Department for Education",
+    "homeHref": "/",
+    "selectedNav": view,
+    "service": {
+      "name": "Support for care leavers",
+      "serviceUrl": "/"
+    },
+    "headerActionLinks": [
+      {
+        "url"  : "/",
+        "label" : "My account"
+      },
+      {
+        "url"  : "/",
+        "label" : "Sign out"
+      }
+    ],
+    "primaryLinks": [
+        {
+        "url"  : "home",
+        "label" : "Home"
+      }, {
+        "url"  : "all-support",
+        "label" : "All support"
+      },  {
+        "url"  : "status",
+        "label" : "Your rights"
+      },  {
+        "url"  : "guides-advice",
+        "label" : "Leaving care guides"
+      }, {
+        "url"  : "helplines",
+        "label" : "Helplines"
+      }
+    ]
+  })
+}}
+
+<section class="dfe-page-grey">
+   <div class="govuk-width-container">
+      <div class="govuk-grid-row">
+         <div class="govuk-grid-column-two-thirds">
+
+            <nav class="govuk-breadcrumbs govuk-body-s" aria-label="Breadcrumb">
+            <ol class="govuk-breadcrumbs__list govuk-body-s">
+              <li class="govuk-breadcrumbs__list-item">
+                <a class="govuk-breadcrumbs__link" href="home">Home</a>
+              </li>
+              <li class="govuk-breadcrumbs__list-item">
+                <a class="govuk-breadcrumbs__link" href="all-support">All support</a>
+              </li>
+              <li class="govuk-breadcrumbs__list-item">
+                <a class="govuk-breadcrumbs__link" href="category-housing">Housing and accomodation</a>
+              </li>
+              
+            </ol>
+          </nav>
+
+           <h1 class="govuk-heading-xl">Higher Education Bursary</h1>
+            <p class="govuk-body-l">Find out what a Higher Education Bursary for care leavers is and how to apply for one.</p>
+          
+         </div>
+      </div>
+   </div>
+</section>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+  
+    
+
+<h4 class="govuk-heading-s">Contents</h4>
+<ul class="govuk-list contents">
+    <li class="govuk-body-s"><a href="#what-is">What is the Higher Education Bursary?</a></li>
+    <li class="govuk-body-s"><a href="#what-you-can-use-it-for">What you can use it for</a></li>
+    <li class="govuk-body-s"><a href="#who-is-it-for">Who is it for?</a></li>
+    <li class="govuk-body-s"><a href="#how-much-will-i-get">How much will I get?</a></li>
+    <li class="govuk-body-s"><a href="#who-is-my-local-council">Who is my local council?</a></li>
+    <li class="govuk-body-s"><a href="#how-and-when-will-i-get-it">How and when will I get it?</a></li>
+    <li class="govuk-body-s"><a href="#how-does-it-affect-other-support">How does it affect other support?</a></li>
+    <li class="govuk-body-s"><a href="#issues-with-this-support">Issues with this support</a></li>
+    <!-- <li class="govuk-body-s"><a href="#helpful-links">Helpful links</a></li> -->
+</ul>
+
+<section id="what-is" class="bluebox">
+    <h2 class="govuk-heading-l">What is the Higher Education Bursary?</h2>
+    <p class="govuk-body">A Higher Education Bursary is money to help you go to university or college that you do not have to pay back.</p>
+    <p class="govuk-body">The Higher Education Bursary for care leavers is sometimes called:</p>
+    <ul class="govuk-list govuk-list--bullet">
+        <li>the HE bursary</li>
+        <li>the care leavers’ university bursary</li>
+    </ul>
+    <p class="govuk-body">It’s different to:</p>
+    <ul class="govuk-list govuk-list--bullet">
+        <li>the <a href="https://www.gov.uk/government/publications/apprenticeships-bursary-for-care-leavers/apprenticeships-care-leavers-bursary-policy-summary" target="_blank" class="govuk-link">Apprenticeships Care Leavers’ Bursary (opens in a new tab)</a></li>
+        <li>the <a href="https://www.gov.uk/1619-bursary-fund" target="_blank" class="govuk-link">16 to 19 bursary</a></li>
+        <li>other discretionary <a href="https://www.gov.uk/extra-money-pay-university" target="_blank" class="govuk-link">bursaries, scholarships and awards</a></li>
+    </ul>
+</section>
+
+<section id="what-you-can-use-it-for" class="bluebox">
+    <h2 class="govuk-heading-l">What you can use it for</h2>
+    <p class="govuk-body">You can use it on things like:</p>
+    <ul class="govuk-list govuk-list--bullet">
+        <li>student accommodation or rent</li>
+        <li>household bills</li>
+        <li>books and stationery</li>
+        <li>commuting to and from university or college</li>
+        <li>laptops, tablets, or other tech equipment</li>
+        <li>specialist items for specific courses or disabilities</li>
+    </ul>
+</section>
+
+<section id="who-is-it-for" class="bluebox">
+    <h2 class="govuk-heading-l">Who is it for?</h2>
+    <p class="govuk-body">You have the right to get the Higher Education Bursary (you’re entitled to it) if you:</p>
+    <ul class="govuk-list govuk-list--bullet">
+        <li>are between 17 to 25</li>
+        <li>were in care or custody for more than 13 weeks between the age of 14 to 16 (this does not include any time after your 16th birthday)</li>
+        <li>are starting higher education for the first time</li>
+    </ul>
+    <p class="govuk-body">This also means your care leaver status is ‘<a href="status-former-relevant-child" class="govuk-link">former relevant child</a>’, ‘<a href="status-eligible-child" class="govuk-link">eligible child</a>’ or ‘<a href="status-relevant-child" class="govuk-link">relevant child</a>’.</p>
+    <p class="govuk-body">This bursary is for people living in England. Scotland, Wales and Northern Ireland provide their own higher education support for care leavers.</p>
+</section>
+
+<section id="how-much-will-i-get" class="bluebox">
+    <h2 class="govuk-heading-l">How much will I get?</h2>
+    <p class="govuk-body">You’ll get £2,000, which you can get in one payment or instalments.</p>
+    <p class="govuk-body">Speak to your personal adviser (PA) or someone from your local council about how you will get your payments.</p>
+</section>
+
+<section id="who-is-my-local-council" class="bluebox">
+    <h2 class="govuk-heading-l">Who is my local council?</h2>
+    <p class="govuk-body">Use the postcode of where you lived when you went into care to <a href="https://www.gov.uk/find-local-council" target="_blank" class="govuk-link">find your council</a>.</p>
+</section>
+
+<section id="how-and-when-will-i-get-it" class="bluebox">
+    <h2 class="govuk-heading-l">How and when will I get it?</h2>
+    <h3 class="govuk-heading-m">How do I apply for a bursary?</h3>
+    <p class="govuk-body">Your council pays the bursary, so you must apply for it through them.</p>
+    <p class="govuk-body">First, you’ll need to show your council proof you have a place on a course (like an offer letter).</p>
+    <p class="govuk-body">Your personal adviser (PA) can help you to apply. They can also help you make plans to study and find other support available.</p>
+
+    <h3 class="govuk-heading-m">How and when it's paid</h3>
+    <p class="govuk-body">You’ll only receive the bursary once you have proof that you have been enrolled on the course.</p>
+    <p class="govuk-body">The bursary will then be paid:</p>
+    <ul class="govuk-list govuk-list--bullet">
+        <li>in one payment or instalments</li>
+        <li>directly into your bank account</li>
+        <li>at the start of the academic term</li>
+    </ul>
+    <p class="govuk-body">How and when your bursary is paid may depend on your circumstances if you’re:</p>
+    <ul class="govuk-list govuk-list--bullet">
+        <li>in custody</li>
+        <li>a young person seeking asylum</li>
+    </ul>
+</section>
+
+<section id="how-does-it-affect-other-support" class="bluebox">
+    <h2 class="govuk-heading-l">How does it affect other support?</h2>
+    <p class="govuk-body">Your council should give you this bursary even if you get:</p>
+    <ul class="govuk-list govuk-list--bullet">
+        <li>benefits or other help with money, like Universal Credit</li>
+        <li>other bursaries or student finance</li>
+    </ul>
+</section>
+
+<section id="issues-with-this-support" class="bluebox">
+    <h2 class="govuk-heading-l">Issues with this support</h2>
+    <p class="govuk-body">If you have issues with getting the bursary, talk to your PA or someone from your council. It might be that:</p>
+    <ul class="govuk-list govuk-list--bullet">
+        <li>you're having difficulties applying for it</li>
+        <li>you're struggling to get proof of your place on a course</li>
+        <li>your bursary payments are delayed</li>
+    </ul>
+    <p class="govuk-body">If you’re still not happy, you can <a href="guide-make-a-complaint" class="govuk-link">make a complaint</a>.</p>
+</section>
+
+
+    <hr class="govuk-section-break govuk-section-break--s govuk-section-break--visible">
+
+    <div class="gem-c-metadata" data-module="gem-toggle metadata" data-gem-toggle-module-started="true" data-metadata-module-started="true">
+      <dl class="gem-c-metadata__list">
+        <dt class="gem-c-metadata__term">From:</dt>
+          <dd class="gem-c-metadata__definition">
+            <a class="govuk-link" href="https://www.gov.uk/government/organisations/department-for-education">Department for Education</a>
+          </dd>
+          <dt class="gem-c-metadata__term">Published</dt>
+          <dd class="gem-c-metadata__definition">07 October 2024</dd>
+          <dt class="gem-c-metadata__term">Last updated</dt>
+          <dd class="gem-c-metadata__definition">25 October 2024</dd>
+      </dl>
+    </div>
+    <div class="gem-c-print-link govuk-!-display-none-print govuk-!-margin-top-3 govuk-!-margin-bottom-8">
+      <button class="govuk-link govuk-body-s gem-c-print-link__button" data-module="print-link" data-print-link-module-started="true">Print this page</button>
+    </div>
+    <a href="#"><img class="full-width-image" alt="Care" src="/public/images/share.png" style="max-width: 300px;"></a>
+
+    
+
+  </div>
+  <div class="govuk-grid-column-one-third">
+
+    
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+   <div class="govuk-grid-column-full">
+      <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+          <section class="dfe-section govuk-!-margin-top-5">
+             <div class="govuk-width-container">
+                <h2 class="govuk-heading-m">Helpful links</h2>
+                <div class="dfe-grid-container dfe-grid-container--wider govuk-!-margin-top-5">
+
+                  <div class="hf-card">
+                     <a href="category-education">
+                        <div class="hf-card-container">
+                           <img class="full-width-image" alt="Support for practitioners thumbnail" src="/public/images/care-leavers-07.jpg">
+                           <div class="hf-card-details">
+                              <h3 class="govuk-heading-m">Education and training support</h3>
+                              <p class="govuk-body">Help with costs and making plans to do a course or training</p>
+                           </div>
+                        </div>
+                     </a>
+                  </div>
+
+                  <div class="hf-card">
+                     <a href="guide-leaving-care">
+                        <div class="hf-card-container">
+                           <img class="full-width-image" alt="Support for practitioners thumbnail" src="/public/images/guide-planning-your-finances.jpg">
+                           <div class="hf-card-details">
+                              <h3 class="govuk-heading-m">Money and benefits support </h3>
+                              <p class="govuk-body">Help with money and benefits you can apply for</p>
+                           </div>
+                        </div>
+                     </a>
+                  </div>
+
+                  <div class="hf-card">
+                     <a href="status">
+                        <div class="hf-card-container">
+                           <img class="full-width-image" alt="Support for practitioners thumbnail" src="/public/images/care-leavers-03.jpg">
+                           <div class="hf-card-details">
+                              <h3 class="govuk-heading-m">All support</h3>
+                              <p class="dfe-body-m">Support to help you prepare to leave care</p>
+                           </div>
+                        </div>
+                     </a>
+                  </div>
+
+                </div>
+             </div>
+          </section>
+    
+  </div>
+  
+</div>
+
+{% endblock %}
