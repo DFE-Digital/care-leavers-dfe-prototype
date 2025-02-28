@@ -1,0 +1,265 @@
+{% set view = 'Leaving care guides' %}
+
+{% extends "/layouts/dfe-service-v03.html" %}
+
+{% set pageName="Guides - Care terms explained" %}
+
+{% block header %}
+
+<div class="govuk-width-container">
+  <div cLass="govuk-phase-banner">
+    <p Class="translate" claSs="govuk-body-s"><a hrEf="#" class="govuk-link">English</a></p>
+    
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+        Alpha
+      </strong>
+      <span class="govuk-phase-banner__text">
+        This is a new service. Help us improve it and <a class="govuk-link" href="#">give your feedback by email</a>.
+      </span>
+    </p>
+  </div>
+</div>
+
+
+{{ header({
+    "showNav": "true",
+    "showSearch": "false",
+    "showHeaderActionLinks": "false",
+    "logoPath": "public/images",
+    "searchAction": "/search/",
+    "searchInputName": "q",
+    "logoAltText": "Department for Education",
+    "homeHref": "/",
+    "selectedNav": view,
+    "service": {
+      "name": "Support for care leavers",
+      "serviceUrl": "/"
+    },
+    "headerActionLinks": [
+      {
+        "url"  : "/",
+        "label" : "My account"
+      },
+      {
+        "url"  : "/",
+        "label" : "Sign out"
+      }
+    ],
+    "primaryLinks": [
+        {
+        "url"  : "home",
+        "label" : "Home"
+      }, {
+        "url"  : "all-support",
+        "label" : "All support"
+      },  {
+        "url"  : "status",
+        "label" : "Your rights"
+      },  {
+        "url"  : "guides-advice",
+        "label" : "Leaving care guides"
+      }, {
+        "url"  : "helplines",
+        "label" : "Helplines"
+      }
+    ]
+  })
+}}
+
+
+<section class="dfe-page-grey">
+   <div class="govuk-width-container">
+      <div class="govuk-grid-row">
+         <div class="govuk-grid-column-three-quarters2">
+            <nav class="govuk-breadcrumbs" aria-label="Breadcrumb">
+            <ol class="govuk-breadcrumbs__list">
+              <li class="govuk-breadcrumbs__list-item">
+                <a class="govuk-breadcrumbs__link" href="home">Home</a>
+              </li>
+              <li class="govuk-breadcrumbs__list-item">
+                <a class="govuk-breadcrumbs__link" href="guides-advice">Leaving care guides</a>
+              </li>
+            </ol>
+          </nav>
+          
+          <h1 class="govuk-heading-xl">Care terms explained</h1>
+          <p class="govuk-body-l">Learn what the terms ‘in care’, ‘looked after’, and ‘care leaver’ mean.</p>
+
+         </div>
+      </div>
+   </div>
+</section>
+
+{% endblock %}
+
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+   <div class="govuk-grid-column-two-thirds">
+
+    <h4 class="govuk-heading-s">Contents</h4>
+    <ul class="govuk-list contents">
+        <li class="govuk-body-s"><a href="#what-does-in-care-mean">What does ‘in care’ mean?</a></li>
+        <li class="govuk-body-s"><a href="#what-does-looked-after-mean">What does ‘looked after’ mean?</a></li>
+        <li class="govuk-body-s"><a href="#who-is-not-looked-after">Who is not ‘looked after’?</a></li>
+        <li class="govuk-body-s"><a href="#what-is-a-care-leaver">What is a care leaver?</a></li>
+    </ul>
+
+    <section id="what-does-in-care-mean" class="bluebox">
+        <h2 class="govuk-heading-l">What does ‘in care’ mean?</h2>
+        <p class="govuk-body">If you’re in care, it means you’re a young person who is ‘looked after’ by the local authority. You might live in:</p>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>a children’s home</li>
+            <li>supported lodgings</li>
+            <li>a young offender institution</li>
+            <li>a secure children’s home</li>
+            <li>a foster home</li>
+        </ul>
+        <p class="govuk-body">The local authority has legal responsibility for you and must support you.</p>
+        <p class="govuk-body">Depending on the time you were looked after for, you may have a ‘care leaver status’. Having a status gives you the right to get certain support.</p>
+
+        <h3 class="govuk-heading-m">What is foster care?</h3>
+        <p class="govuk-body">When you live with a foster carer or foster family. This is also called a foster placement. A foster carer’s role is to look after you as if you were their own child. They make sure you’re:</p>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>fed and clothed</li>
+            <li>go to school</li>
+            <li>supported emotionally</li>
+        </ul>
+    </section>
+
+    <section id="what-is-a-care-leaver" class="bluebox">
+        <h2 class="govuk-heading-l">What is a care leaver?</h2>
+        <p class="govuk-body">If you’re a care leaver, it means you:</p>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>are aged 16 to 25</li>
+            <li>were in a care setting (like a foster home or children’s home) or looked after</li>
+            <li>are getting ready to live independently</li>
+        </ul>
+        <p class="govuk-body">This is a big change, but there's help to do this. <a href="#" class="govuk-link">Learn about what happens when you leave care.</a></p>
+    </section>
+
+    <section id="what-does-looked-after-mean" class="bluebox">
+        <h2 class="govuk-heading-l">What does ‘looked after’ mean?</h2>
+        <p class="govuk-body">You’re ‘looked after’ if the local authority takes care of you for more than 24 hours. This can happen if:</p>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>the local authority gave you a place to stay (for example, a children’s home or emergency foster home)</li>
+            <li>a court decided that you needed to be looked after</li>
+            <li>a court decided where you must live (for example, in a foster home)</li>
+            <li>you got into trouble with the law and had to stay in a secure place (like a young offender institution or a secure children’s home)</li>
+        </ul>
+        <p class="govuk-body">Sometime people may call you:</p>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>child looked after or ‘CLA’ for short</li>
+            <li>‘looked after child’ or ‘LAC’ for short</li>
+        </ul>
+    </section>
+
+    <section id="who-is-not-looked-after" class="bluebox">
+        <h2 class="govuk-heading-l">Who is not ‘looked after’?</h2>
+        <p class="govuk-body">You are not ‘looked after’ if you:</p>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>live with a parent or someone with parental responsibility for more than 6 months after the age of 16 (this includes someone that a court has ordered you to live with)</li>
+            <li>have been adopted</li>
+            <li>are under a Special Guardianship Order</li>
+        </ul>
+
+        <h3 class="govuk-heading-m">What is a Special Guardianship Order?</h3>
+        <p class="govuk-body">This is where a judge has given someone other than your birth parents ‘parental responsibility’. This person is called a ‘special guardian’. Your special guardian has legal responsibility to care for you.</p>
+    </section>
+
+    <section id="what-is-a-care-leaver-status" class="bluebox">
+        <h2 class="govuk-heading-l">What is a care leaver status?</h2>
+        <p class="govuk-body">Depending on the time you were looked after for, you may have a ‘care leaver status’. Having a status gives you the right to get certain support.</p>
+    </section>
+
+        
+      <hr>
+
+ <div class="metadata-logo-wrapper">
+  <div class="govuk-grid-column-two-thirds metadata-column">
+    <div class="gem-c-metadata" data-module="gem-toggle metadata" data-gem-toggle-module-started="true" data-metadata-module-started="true">
+      <dl class="gem-c-metadata__list">
+        <dt class="gem-c-metadata__term">From:</dt>
+          <dd class="gem-c-metadata__definition">
+            <a class="govuk-link" href="https://www.gov.uk/government/organisations/department-for-education">Department for Education</a>
+          </dd>
+          <dt class="gem-c-metadata__term">Published</dt>
+          <dd class="gem-c-metadata__definition">07 October 2024</dd>
+          <dt class="gem-c-metadata__term">Last updated</dt>
+          <dd class="gem-c-metadata__definition">25 October 2024</dd>
+      </dl>
+    </div>
+    <div class="gem-c-print-link govuk-!-display-none-print govuk-!-margin-top-3 govuk-!-margin-bottom-8">
+        <button class="govuk-link govuk-body-s gem-c-print-link__button" data-module="print-link" data-print-link-module-started="true">Print this page</button>
+    </div>
+  </div>
+</div>
+<a href="#"><img class="full-width-image" alt="Care" src="/public/images/share.png" style="max-width: 300px;"></a>
+
+
+
+
+</div>
+<div class="govuk-grid-column-one-third">
+  
+
+</div>
+</div>
+<div class="govuk-grid-row">
+   <div class="govuk-grid-column-full">
+      <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+          <section class="dfe-section govuk-!-margin-top-5">
+             <div class="govuk-width-container">
+                <h2 class="govuk-heading-m">Helpful links</h2>
+                <div class="dfe-grid-container dfe-grid-container--wider govuk-!-margin-top-5">
+
+                  <div class="hf-card">
+                     <a href="category-housing">
+                        <div class="hf-card-container">
+                           <img class="full-width-image" alt="Support for practitioners thumbnail" src="/public/images/view-support.jpg">
+                           <div class="hf-card-details">
+                              <h3 class="govuk-heading-m">Housing and accommodation</h3>
+                              <p class="govuk-body">Help with housing costs and finding somewhere to liv</p>
+                           </div>
+                        </div>
+                     </a>
+                  </div>
+
+                  <div class="hf-card">
+                     <a href="guide-leaving-care">
+                        <div class="hf-card-container">
+                           <img class="full-width-image" alt="Support for practitioners thumbnail" src="/public/images/guide-planning-your-finances.jpg">
+                           <div class="hf-card-details">
+                              <h3 class="govuk-heading-m">Money and benefits support </h3>
+                              <p class="govuk-body">Help with money and benefits you can apply for</p>
+                           </div>
+                        </div>
+                     </a>
+                  </div>
+
+                  <div class="hf-card">
+                     <a href="status">
+                        <div class="hf-card-container">
+                           <img class="full-width-image" alt="Support for practitioners thumbnail" src="/public/images/care-leavers-03.jpg">
+                           <div class="hf-card-details">
+                              <h3 class="govuk-heading-m">All support</h3>
+                              <p class="dfe-body-m">Support to help you prepare to leave care</p>
+                           </div>
+                        </div>
+                     </a>
+                  </div>
+
+                </div>
+             </div>
+          </section>
+    
+  </div>
+  
+</div>
+
+
+{% endblock %}
