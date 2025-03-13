@@ -593,3 +593,8 @@ margin-bottom: 25px; }
   .contents {
   margin-bottom:2.5em;
   }
+
+  a.dfe-header__link--service, a.dfe-header__link--service:hover {
+  cursor: default;
+  text-decoration: none;
+  }
