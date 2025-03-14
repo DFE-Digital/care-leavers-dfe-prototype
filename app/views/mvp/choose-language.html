@@ -1,0 +1,573 @@
+{% set view = 'Language' %}
+
+{% extends "/layouts/dfe-service-v03.html" %}
+
+{% set pageName="Choose language" %}
+
+{% block header %}
+
+<div class="govuk-width-container">
+  <div cLass="govuk-phase-banner">
+    <p Class="translate" claSs="govuk-body-s"><a hrEf="choose-language" class="govuk-link">English</a></p>
+    
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+        Alpha
+      </strong>
+      <span class="govuk-phase-banner__text">
+        This is a new service. Help us improve it and <a class="govuk-link" href="#">give your feedback by email</a>.
+      </span>
+    </p>
+  </div>
+</div>
+
+
+{{ header({
+    "showNav": "true",
+    "showSearch": "false",
+    "showHeaderActionLinks": "false",
+    "logoPath": "public/images",
+    "searchAction": "/search/",
+    "searchInputName": "q",
+    "logoAltText": "Department for Education",
+    "homeHref": "/",
+    "selectedNav": view,
+    "service": {
+      "name": "Support for care leavers",
+      "serviceUrl": "/"
+    },
+    "headerActionLinks": [
+      {
+        "url"  : "/",
+        "label" : "My account"
+      },
+      {
+        "url"  : "/",
+        "label" : "Sign out"
+      }
+    ],
+    "primaryLinks": [
+        {
+        "url"  : "home",
+        "label" : "Home"
+      }, {
+        "url"  : "all-support",
+        "label" : "All support"
+      },  {
+        "url"  : "status",
+        "label" : "Your rights"
+      },  {
+        "url"  : "guides-advice",
+        "label" : "Leaving care guides"
+      }, {
+        "url"  : "helplines",
+        "label" : "Helplines"
+      }
+    ]
+  })
+}}
+
+
+<section class="dfe-page-grey">
+   <div class="govuk-width-container">
+      <div class="govuk-grid-row">
+         <div class="govuk-grid-column-two-thirds">
+
+           <h2 class="govuk-heading-xl">
+            Choose a language
+           </h2>
+
+           <p class="govuk-body-l">This language translater tool uses A.I. to translate the website. Some translations may not be 100% accurate.
+
+         </div>
+      </div>
+   </div>
+</section>
+
+
+{% endblock %}
+
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+   <div class="govuk-grid-column-one-third">
+
+    <ul class="govuk-list">
+    <li>
+        <a class="govuk-link" href="/?languageCode=af" rel="nofollow">Afrikaans (Afrikaans)</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=am" rel="nofollow">አማርኛ (Amharic)</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=ar" rel="nofollow">العربية (Arabic)</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=as" rel="nofollow">অসমীয়া (Assamese)</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=az" rel="nofollow">Azərbaycan (Azerbaijani)</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=ba" rel="nofollow">Bashkir (Bashkir)</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=bg" rel="nofollow">Български (Bulgarian)</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=bho" rel="nofollow">भोजपुरी (Bhojpuri)</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=bn" rel="nofollow">বাংলা (Bangla)</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=bo" rel="nofollow">བོད་སྐད་ (Tibetan)</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=brx" rel="nofollow">बड़ो (Bodo)</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=bs" rel="nofollow">Bosanski (Bosnian)</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=ca" rel="nofollow">Català (Catalan)</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=cs" rel="nofollow">Čeština (Czech)</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=cy" rel="nofollow">Cymraeg (Welsh)</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=da" rel="nofollow">Dansk (Danish)</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=de" rel="nofollow">Deutsch (German)</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=doi" rel="nofollow">डोगरी (Dogri)</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=dsb" rel="nofollow">Dolnoserbšćina (Lower Sorbian)</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=dv" rel="nofollow">ދިވެހިބަސް (Divehi)</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=el" rel="nofollow">Ελληνικά (Greek)</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=en" rel="nofollow">English (English)</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=es" rel="nofollow">Español (Spanish)</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=et" rel="nofollow">Eesti (Estonian)</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=eu" rel="nofollow">Euskara (Basque)</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=fa" rel="nofollow">فارسی (Persian)</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=fi" rel="nofollow">Suomi (Finnish)</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=fil" rel="nofollow">Filipino (Filipino)</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=fj" rel="nofollow">Na Vosa Vakaviti (Fijian)</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=fo" rel="nofollow">Føroyskt (Faroese)</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=fr" rel="nofollow">Français (French)</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=fr-CA" rel="nofollow">Français (Canada) (French (Canada))</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=ga" rel="nofollow">Gaeilge (Irish)</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=gl" rel="nofollow">Galego (Galician)</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=gom" rel="nofollow">कोंकणी (Konkani)</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=gu" rel="nofollow">ગુજરાતી (Gujarati)</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=ha" rel="nofollow">Hausa (Hausa)</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=he" rel="nofollow">עברית (Hebrew)</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=hi" rel="nofollow">हिन्दी (Hindi)</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=hne" rel="nofollow">छत्तीसगढ़ी (Chhattisgarhi)</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=hr" rel="nofollow">Hrvatski (Croatian)</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=hsb" rel="nofollow">Hornjoserbšćina (Upper Sorbian)</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=ht" rel="nofollow">Haitian Creole (Haitian Creole)</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=hu" rel="nofollow">Magyar (Hungarian)</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=hy" rel="nofollow">Հայերեն (Armenian)</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=id" rel="nofollow">Indonesia (Indonesian)</a>
+    </li>
+  </ul>
+</div>
+<div class="govuk-grid-column-one-third">
+
+    <ul class="govuk-list">
+    
+    <li>
+        <a class="govuk-link" href="/?languageCode=ig" rel="nofollow">Ásụ̀sụ́ Ìgbò (Igbo)</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=ikt" rel="nofollow">Inuinnaqtun (Inuinnaqtun)</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=is" rel="nofollow">Íslenska (Icelandic)</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=it" rel="nofollow">Italiano (Italian)</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=iu" rel="nofollow">ᐃᓄᒃᑎᑐᑦ (Inuktitut)</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=iu-Latn" rel="nofollow">Inuktitut (Latin) (Inuktitut (Latin))</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=ja" rel="nofollow">日本語 (Japanese)</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=ka" rel="nofollow">ქართული (Georgian)</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=kk" rel="nofollow">Қазақ Тілі (Kazakh)</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=km" rel="nofollow">ខ្មែរ (Khmer)</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=kmr" rel="nofollow">Kurdî (Bakur) (Kurdish (Northern))</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=kn" rel="nofollow">ಕನ್ನಡ (Kannada)</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=ko" rel="nofollow">한국어 (Korean)</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=ks" rel="nofollow">کٲشُر (Kashmiri)</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=ku" rel="nofollow">Kurdî (Navîn) (Kurdish (Central))</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=ky" rel="nofollow">Кыргызча (Kyrgyz)</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=ln" rel="nofollow">Lingála (Lingala)</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=lo" rel="nofollow">ລາວ (Lao)</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=lt" rel="nofollow">Lietuvių (Lithuanian)</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=lug" rel="nofollow">Ganda (Ganda)</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=lv" rel="nofollow">Latviešu (Latvian)</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=lzh" rel="nofollow">中文 (文言文) (Chinese (Literary))</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=mai" rel="nofollow">मैथिली (Maithili)</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=mg" rel="nofollow">Malagasy (Malagasy)</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=mi" rel="nofollow">Te Reo Māori (Māori)</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=mk" rel="nofollow">Македонски (Macedonian)</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=ml" rel="nofollow">മലയാളം (Malayalam)</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=mn-Cyrl" rel="nofollow">Монгол (Mongolian (Cyrillic))</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=mn-Mong" rel="nofollow">ᠮᠣᠩᠭᠣᠯ ᠬᠡᠯᠡ (Mongolian (Traditional))</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=mni" rel="nofollow">ꯃꯩꯇꯩꯂꯣꯟ (Manipuri)</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=mr" rel="nofollow">मराठी (Marathi)</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=ms" rel="nofollow">Melayu (Malay)</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=mt" rel="nofollow">Malti (Maltese)</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=mww" rel="nofollow">Hmong Daw (Hmong Daw)</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=my" rel="nofollow">မြန်မာ (Myanmar (Burmese))</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=nb" rel="nofollow">Norsk Bokmål (Norwegian)</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=ne" rel="nofollow">नेपाली (Nepali)</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=nl" rel="nofollow">Nederlands (Dutch)</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=nso" rel="nofollow">Sesotho sa Leboa (Sesotho sa Leboa)</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=nya" rel="nofollow">Nyanja (Nyanja)</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=or" rel="nofollow">ଓଡ଼ିଆ (Odia)</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=otq" rel="nofollow">Hñähñu (Querétaro Otomi)</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=pa" rel="nofollow">ਪੰਜਾਬੀ (Punjabi)</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=pl" rel="nofollow">Polski (Polish)</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=prs" rel="nofollow">دری (Dari)</a>
+    </li>
+  </ul>
+</div>
+<div class="govuk-grid-column-one-third">
+
+    <ul class="govuk-list">
+    
+    <li>
+        <a class="govuk-link" href="/?languageCode=ps" rel="nofollow">پښتو (Pashto)</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=pt" rel="nofollow">Português (Brasil) (Portuguese (Brazil))</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=pt-PT" rel="nofollow">Português (Portugal) (Portuguese (Portugal))</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=ro" rel="nofollow">Română (Romanian)</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=ru" rel="nofollow">Русский (Russian)</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=run" rel="nofollow">Rundi (Rundi)</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=rw" rel="nofollow">Kinyarwanda (Kinyarwanda)</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=sd" rel="nofollow">سنڌي (Sindhi)</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=si" rel="nofollow">සිංහල (Sinhala)</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=sk" rel="nofollow">Slovenčina (Slovak)</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=sl" rel="nofollow">Slovenščina (Slovenian)</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=sm" rel="nofollow">Gagana Sāmoa (Samoan)</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=sn" rel="nofollow">chiShona (Shona)</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=so" rel="nofollow">Soomaali (Somali)</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=sq" rel="nofollow">Shqip (Albanian)</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=sr-Cyrl" rel="nofollow">Српски (ћирилица) (Serbian (Cyrillic))</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=sr-Latn" rel="nofollow">Srpski (latinica) (Serbian (Latin))</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=st" rel="nofollow">Sesotho (Sesotho)</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=sv" rel="nofollow">Svenska (Swedish)</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=sw" rel="nofollow">Kiswahili (Swahili)</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=ta" rel="nofollow">தமிழ் (Tamil)</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=te" rel="nofollow">తెలుగు (Telugu)</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=th" rel="nofollow">ไทย (Thai)</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=ti" rel="nofollow">ትግር (Tigrinya)</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=tk" rel="nofollow">Türkmen Dili (Turkmen)</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=tlh-Latn" rel="nofollow">Klingon (Latin) (Klingon (Latin))</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=tlh-Piqd" rel="nofollow">Klingon (pIqaD) (Klingon (pIqaD))</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=tn" rel="nofollow">Setswana (Setswana)</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=to" rel="nofollow">Lea Fakatonga (Tongan)</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=tr" rel="nofollow">Türkçe (Turkish)</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=tt" rel="nofollow">Татар (Tatar)</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=ty" rel="nofollow">Reo Tahiti (Tahitian)</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=ug" rel="nofollow">ئۇيغۇرچە (Uyghur)</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=uk" rel="nofollow">Українська (Ukrainian)</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=ur" rel="nofollow">اردو (Urdu)</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=uz" rel="nofollow">O‘Zbek (Uzbek (Latin))</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=vi" rel="nofollow">Tiếng Việt (Vietnamese)</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=xh" rel="nofollow">isiXhosa (Xhosa)</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=yo" rel="nofollow">Èdè Yorùbá (Yoruba)</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=yua" rel="nofollow">Yucatec Maya (Yucatec Maya)</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=yue" rel="nofollow">粵語 (繁體) (Cantonese (Traditional))</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=zh-Hans" rel="nofollow">中文 (简体) (Chinese Simplified)</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=zh-Hant" rel="nofollow">繁體中文 (繁體) (Chinese Traditional)</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="/?languageCode=zu" rel="nofollow">Isi-Zulu (Zulu)</a>
+    </li>
+</ul>
+    
+  </div>
+</div>
+
+
+
+{% endblock %}
+
+{% block footer %}
+
+
+  <footer class="govuk-footer">
+  <div class="govuk-width-container">
+    
+    <div class="govuk-footer__meta">
+      <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
+        
+        <h2 class="govuk-visually-hidden">Footer links</h2>
+        
+        <ul class="govuk-footer__inline-list">
+        
+          <li class="govuk-footer__inline-list-item">
+            <a class="govuk-footer__link" href="/manage-prototype">
+              Manage your prototype
+            </a>
+          </li>
+        
+          <li class="govuk-footer__inline-list-item">
+            <a class="govuk-footer__link" href="/manage-prototype/clear-data">
+              Clear data
+            </a>
+          </li>
+        
+        </ul>
+        
+        
+        
+        <svg aria-hidden="true" focusable="false" class="govuk-footer__licence-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 483.2 195.7" height="17" width="41">
+          <path fill="currentColor" d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145"></path>
+        </svg>
+        <span class="govuk-footer__licence-description">
+        
+          All content is available under the
+          <a class="govuk-footer__link" href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="license">Open Government Licence v3.0</a>, except where otherwise stated
+        
+        </span>
+      </div>
+      <div class="govuk-footer__meta-item">
+        <a class="govuk-footer__link govuk-footer__copyright-logo" href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/">
+        
+          © Crown copyright
+        
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+{% endblock %}
