@@ -1,6 +1,6 @@
 {% set view = 'Home' %}
 
-{% extends "/layouts/dfe-service-v03.html" %}
+{% extends "/layouts/dfe-service-v03-nav.html" %}
 
 {% set pageName="Support for care leavers" %}
 
@@ -38,37 +38,32 @@
   })
 }}
 
-<section aria-label="Service information" class="govuk-service-navigation" data-module="govuk-service-navigation">
-   <div class="govuk-width-container">
-       <div class="govuk-service-navigation__container">
-           <span class="govuk-service-navigation__service-name">
-               <a href="/" class="govuk-service-navigation__link govuk-service-navigation__item--active">
-               Home
-           </a>
-           </span>
-           <nav aria-label="Menu" class="govuk-service-navigation__wrapper">
-               <button type="button" class="govuk-service-navigation__toggle govuk-js-service-navigation-toggle"
-               aria-controls="navigation" hidden>
-               Menu
-           </button>
-               <ul class="govuk-service-navigation__list" id="navigation">
-                   <li class="govuk-service-navigation__item ">
-                       <a class="govuk-service-navigation__link" href="all-support">All support</a>
-                   </li>
-                   <li class="govuk-service-navigation__item ">
-                       <a class="govuk-service-navigation__link" href="status">Your rights</a>
-                   </li>
-                   <li class="govuk-service-navigation__item ">
-                       <a class="govuk-service-navigation__link" href="guides-advice">Leaving care guides</a>
-                   </li>
-                   <li class="govuk-service-navigation__item ">
-                       <a class="govuk-service-navigation__link" href="helplines">Helplines</a>
-                   </li>
-               </ul>
-           </nav>
-       </div>
-   </div>
-</section>
+
+{{ govukServiceNavigation({
+  navigation: [
+    {
+      href: "home",
+      text: "Home",
+      active: true
+    },
+    {
+      href: "all-support",
+      text: "All support"
+    },
+    {
+      href: "status",
+      text: "Your rights"
+    },
+    {
+      href: "guides-advice",
+      text: "Leaving care guides"
+    },
+    {
+      href: "helplines",
+      text: "Helplines"
+    }
+  ]
+}) }}
 
 
 <section class="dfe-page-grey">

@@ -1,6 +1,6 @@
 {% set view = 'Leaving care guides' %}
 
-{% extends "/layouts/dfe-service-v03.html" %}
+{% extends "/layouts/dfe-service-v03-nav.html" %}
 
 {% set pageName="Guides" %}
 
@@ -35,37 +35,35 @@
     "service": {
       "name": "Support for care leavers",
       "serviceUrl": "/"
-    },
-    "headerActionLinks": [
-      {
-        "url"  : "/",
-        "label" : "My account"
-      },
-      {
-        "url"  : "/",
-        "label" : "Sign out"
-      }
-    ],
-    "primaryLinks": [
-        {
-        "url"  : "home",
-        "label" : "Home"
-      }, {
-        "url"  : "all-support",
-        "label" : "All support"
-      },  {
-        "url"  : "status",
-        "label" : "Your rights"
-      },  {
-        "url"  : "guides-advice",
-        "label" : "Leaving care guides"
-      }, {
-        "url"  : "helplines",
-        "label" : "Helplines"
-      }
-    ]
+    }
   })
 }}
+
+{{ govukServiceNavigation({
+  navigation: [
+    {
+      href: "home",
+      text: "Home"
+    },
+    {
+      href: "all-support",
+      text: "All support"
+    },
+    {
+      href: "status",
+      text: "Your rights"
+    },
+    {
+      href: "guides-advice",
+      text: "Leaving care guides",
+      active: true
+    },
+    {
+      href: "helplines",
+      text: "Helplines"
+    }
+  ]
+}) }}
 
 
 <section class="dfe-page-grey">

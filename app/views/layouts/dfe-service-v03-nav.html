@@ -1,69 +1,97 @@
-{% set view = 'Check my status' %}
+{#
+For guidance on how to use layouts see:
+https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
+#}
 
-{% extends "/layouts/dfe-service-v03-nav.html" %}
+{% extends "govuk-prototype-kit/layouts/govuk-branded.njk" %}
 
-{% set pageName="Your rights" %}
+{% block scripts %}
+  {{ super() }}
+  <script src="/public/javascripts/dfefrontend.min.js"></script>
+  <link rel="icon" sizes="any" href="/plugin-assets/govuk-frontend/dist/govuk/assets/images/favicon.svg" type="image/svg+xml">
+{% endblock %}
 
-{% block content %}
+{% from 'node_modules/dfe-frontend/packages/components/header/macro.njk' import header %}
+{% block header %}
 
+<div class="govuk-width-container">
+  <div class="govuk-phase-banner">
+    <p class="translate" class="govuk-body-s"><a href="choose-language" class="govuk-link">English</a></p>
+    
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+        Beta
+      </strong>
+      <span class="govuk-phase-banner__text">
+        This is a new service. Help us improve it and <a class="govuk-link" href="#">give your feedback by email</a>.
+      </span>
+    </p>
+  </div>
+</div>
 
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
-
-    {{ govukBackLink({
-     text: "Back",
-     href: "status"
-   }) }}
-
-   <form class="form" action="/v03ent-checker" method="post">
-
- {% from "govuk/components/radios/macro.njk" import govukRadios %}
-{% from "govuk/components/button/macro.njk" import govukButton %}
-
-
-
-{{ govukRadios({
-  name: "status",
-  fieldset: {
-    legend: {
-      text: "Which of these apply to you?",
-      isPageHeading: true,
-      classes: "govuk-fieldset__legend--l"
+{{ header({
+    "showNav": "true",
+    "showSearch": "false",
+    "showHeaderActionLinks": "false",
+    "logoPath": "public/images",
+    "searchAction": "/search/",
+    "searchInputName": "q",
+    "logoAltText": "Department for Education",
+    "homeHref": "home",
+    "selectedNav": view,
+    "service": {
+      "name": "Support for care leavers"
     }
-  },
-  items: [
+  })
+}}
+
+{{ govukServiceNavigation({
+  navigation: [
     {
-      value: "british-citizen",
-      text: "I am a British citizen",
-      hint: {
-        text: "You were born in the UK or settled here"
-      }
+      href: "home",
+      text: "Home"
     },
     {
-      value: "seek-asylum",
-      text: "I came to the UK to seek asylum and I am not with my family",
-      hint: {
-        text: "'Seek asylum' means you want to stay in the UK as a refugee because it's not safe in your home country"
-      }
+      href: "all-support",
+      text: "All support"
+    },
+    {
+      href: "status",
+      text: "Your rights"
+    },
+    {
+      href: "guides-advice",
+      text: "Leaving care guides"
+    },
+    {
+      href: "helplines",
+      text: "Helplines"
     }
   ]
 }) }}
 
-{{ govukButton({
-  text: "Continue",
-  classes: "govuk-button--primary"
-}) }}
-</form>
-
-
-    
-  </div>
-</div>
 
 {% endblock %}
 
 {% block footer %}
 
+<section class="dfe-page-grey">
+   <div class="govuk-width-container">
+      <div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h2 class="govuk-heading-l">
+      Talk to someone
+    </h2>
+
+    <p class="govuk-body">If you’re in crisis, need advice or just someone to talk to, there are people who can help.</p>
+    <p class="govuk-body"><a href="helplines"><strong>View all helplines</strong></a></p>
+
+  </div>
+  
+</div>
+   </div>
+</section>
   <footer class="govuk-footer">
   <div class="govuk-width-container">
     
@@ -111,3 +139,7 @@
   </div>
 </footer>
 {% endblock %}
+
+
+
+
