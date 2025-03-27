@@ -273,8 +273,9 @@ section.dfe {
 
 @media (max-width: 768px) {
     .box-icon {
-        display: none;
-    }
+        width:100%;
+        text-align:center;
+        margin-bottom: 10px;    }
 }
 
 .mini-guide {
