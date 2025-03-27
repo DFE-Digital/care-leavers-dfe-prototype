@@ -7,7 +7,15 @@ $govuk-font-family: 'Inter', sans-serif;
 .govuk-width-container { @include govuk-width-container; }
 
 .dfe-header .dfe-header__service-name {
-  text-align:right;}
+  text-align:right;
+}
+ @media (max-width: 40.0525em) {
+ .dfe-header .dfe-header__service-name { 
+  text-align:left;
+   margin-top: 10px;
+   }
+ }
+
 
 a.dfe-header__link--service { font-weight: 800;}
 
